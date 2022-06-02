@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_clientes_8c_source" xml:lang="en-US">
+<title>clientes.c</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_clientes_8c_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&lt;string.h&gt;</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;unistd.h&gt;</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&lt;time.h&gt;</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00006"/>00006 
+<anchor xml:id="_clientes_8c_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_definitions_8h">definitions.h</link>&quot;</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00008"/>00008 
+<anchor xml:id="_clientes_8c_source_1l00009"/>00009 <emphasis role="comment">/*&#32;===========================&#32;Operation&#32;Related&#32;Functions&#32;===========================&#32;*/</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00010"/>00010 
+<anchor xml:id="_clientes_8c_source_1l00011"/>00011 <emphasis role="preprocessor">#pragma&#32;region&#32;addClient</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00016"/><link linkend="_clientes_8c_1a8b6e5471fc3162030e02624aa4e0a71c">00016</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_clientes_8c_1a8b6e5471fc3162030e02624aa4e0a71c">addCliente</link>()
+<anchor xml:id="_clientes_8c_source_1l00017"/>00017 {
+<anchor xml:id="_clientes_8c_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a52a6a14bd8e9463315ea114aceda1d92">cyan</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n_______&#32;Adicionar&#32;Cliente&#32;_______\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a941fa13e3d505e5a9a3f9c082bfeff89">reallocStruct</link>(2);
+<anchor xml:id="_clientes_8c_source_1l00020"/>00020 
+<anchor xml:id="_clientes_8c_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;{
+<anchor xml:id="_clientes_8c_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nNome&#32;Cliente:&#32;&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%s&quot;</emphasis>,&#32;<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>].nome);
+<anchor xml:id="_clientes_8c_source_1l00024"/>00024 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!<link linkend="_definitions_8h_1af22d234c9f1f40dea9b79ca8fb8c7288">checkString</link>(<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>].nome));
+<anchor xml:id="_clientes_8c_source_1l00025"/>00025 
+<anchor xml:id="_clientes_8c_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00027"/>00027 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nNIF&#32;(deverá&#32;conter&#32;9&#32;números):&#32;&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,&#32;&amp;<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>].nif);
+<anchor xml:id="_clientes_8c_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_clientes_8c_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a2da5c6326d98abeaf456372ceb077847">numberOfDigits</link>(<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>].nif)&#32;!=&#32;9)
+<anchor xml:id="_clientes_8c_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;NIF&#32;INVÁLIDO&#32;[!]\n&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;[!]&#32;Este&#32;deverá&#32;conter&#32;9&#32;números&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00036"/>00036 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(<link linkend="_definitions_8h_1a2da5c6326d98abeaf456372ceb077847">numberOfDigits</link>(<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>].nif)&#32;!=&#32;9);
+<anchor xml:id="_clientes_8c_source_1l00037"/>00037 
+<anchor xml:id="_clientes_8c_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;flag;
+<anchor xml:id="_clientes_8c_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;{
+<anchor xml:id="_clientes_8c_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;flag&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_clientes_8c_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nCódigo&#32;Cliente&#32;(deverá&#32;conter&#32;até&#32;4&#32;números):&#32;&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,&#32;&amp;<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>].codCliente);
+<anchor xml:id="_clientes_8c_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a2da5c6326d98abeaf456372ceb077847">numberOfDigits</link>(<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>].codCliente)&#32;!=&#32;4)
+<anchor xml:id="_clientes_8c_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Código&#32;Cliente&#32;INVÁLIDO&#32;[!]\n&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;[!]&#32;Este&#32;deverá&#32;até&#32;4&#32;números&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;flag&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_clientes_8c_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="_clientes_8c_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>;&#32;i++)
+<anchor xml:id="_clientes_8c_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[i].codCliente&#32;==&#32;<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>].codCliente)
+<anchor xml:id="_clientes_8c_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Código&#32;Cliente&#32;JÁ&#32;EXISTE&#32;[!]\n&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;[!]&#32;Este&#32;deverá&#32;ser&#32;único&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;flag&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_clientes_8c_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_clientes_8c_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00060"/>00060 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(flag);
+<anchor xml:id="_clientes_8c_source_1l00061"/>00061 
+<anchor xml:id="_clientes_8c_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00063"/>00063 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nPaís&#32;do&#32;cliente:&#32;&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;&#32;%24s&quot;</emphasis>,&#32;<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>].pais);
+<anchor xml:id="_clientes_8c_source_1l00066"/>00066 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!<link linkend="_definitions_8h_1af22d234c9f1f40dea9b79ca8fb8c7288">checkString</link>(<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>].pais));
+<anchor xml:id="_clientes_8c_source_1l00067"/>00067 
+<anchor xml:id="_clientes_8c_source_1l00068"/>00068 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>].<link linkend="_struct_clientes_1a72d010866bd83b41432d6286cb26adbd">estado</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_clientes_8c_source_1l00069"/>00069 
+<anchor xml:id="_clientes_8c_source_1l00070"/>00070 &#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a0df115437fbb77c0311e65300c65289e">green</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Cliente&#32;%s&#32;criado&#32;com&#32;sucesso&#32;[!]\n&quot;</emphasis>,&#32;<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>].nome);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00071"/>00071 &#32;&#32;&#32;&#32;sleep(1);&#32;<link linkend="_definitions_8h_1a9d7e8af417b6d543da691e9c0e2f6f9f">clearScreen</link>();
+<anchor xml:id="_clientes_8c_source_1l00072"/>00072 }
+<anchor xml:id="_clientes_8c_source_1l00073"/>00073 <emphasis role="preprocessor">#pragma&#32;endregion</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00074"/>00074 
+<anchor xml:id="_clientes_8c_source_1l00075"/>00075 <emphasis role="preprocessor">#pragma&#32;region&#32;updateClient</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00082"/><link linkend="_clientes_8c_1a384bbc94cc780349877dd70a46d111fd">00082</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_clientes_8c_1a384bbc94cc780349877dd70a46d111fd">updateClient</link>(<emphasis role="keywordtype">int</emphasis>&#32;clienteToChange,&#32;<emphasis role="keywordtype">int</emphasis>&#32;via)
+<anchor xml:id="_clientes_8c_source_1l00083"/>00083 {
+<anchor xml:id="_clientes_8c_source_1l00084"/>00084 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>&#32;==&#32;-1)
+<anchor xml:id="_clientes_8c_source_1l00085"/>00085 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Não&#32;existem&#32;clientes&#32;[!]&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe">pressEnter</link>(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_clientes_8c_source_1l00089"/>00089 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00090"/>00090 
+<anchor xml:id="_clientes_8c_source_1l00091"/>00091 &#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a52a6a14bd8e9463315ea114aceda1d92">cyan</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n_______&#32;Atualizar&#32;Cliente&#32;_______\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00092"/>00092 
+<anchor xml:id="_clientes_8c_source_1l00094"/>00094 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>&#32;!=&#32;0&#32;&amp;&amp;&#32;via&#32;==&#32;1)
+<anchor xml:id="_clientes_8c_source_1l00095"/>00095 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1ab0c10e6284be130a7973fa029a690ef7">yellow</link>();&#32;printf(<emphasis role="stringliteral">&quot;\nO&#32;cliente&#32;%s&#32;está&#32;autenticado\n&quot;</emphasis>,&#32;<link linkend="_clientes_8c_1a63ec96e80364598a0c5bfc3954f2dbbe">getClientName</link>(<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>));
+<anchor xml:id="_clientes_8c_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1ab0c10e6284be130a7973fa029a690ef7">yellow</link>();&#32;printf(<emphasis role="stringliteral">&quot;\nPor&#32;questões&#32;de&#32;segurança&#32;prove&#32;que&#32;é&#32;o&#32;utilizador&#32;correto&#32;introduzindo&#32;o&#32;seu&#32;código:&#32;&quot;</emphasis>);&#32;&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;antibruteforce&#32;=&#32;0;
+<anchor xml:id="_clientes_8c_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,&#32;&amp;clienteToChange);
+<anchor xml:id="_clientes_8c_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(clienteToChange&#32;!=&#32;<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>&#32;&amp;&amp;&#32;antibruteforce&#32;&lt;&#32;2)
+<anchor xml:id="_clientes_8c_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Código&#32;incorreto&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1ab0c10e6284be130a7973fa029a690ef7">yellow</link>();&#32;printf(<emphasis role="stringliteral">&quot;\nPor&#32;questões&#32;de&#32;segurança&#32;prove&#32;que&#32;é&#32;o&#32;utilizador&#32;correto&#32;introduzindo&#32;o&#32;seu&#32;código:&#32;&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,&#32;&amp;clienteToChange);
+<anchor xml:id="_clientes_8c_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;antibruteforce++;
+<anchor xml:id="_clientes_8c_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(antibruteforce&#32;==&#32;2)
+<anchor xml:id="_clientes_8c_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Número&#32;de&#32;tentativas&#32;excedidas&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe">pressEnter</link>(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_clientes_8c_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00113"/>00113 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00114"/>00114 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>&#32;==&#32;0&#32;&amp;&amp;&#32;via&#32;==&#32;1)
+<anchor xml:id="_clientes_8c_source_1l00115"/>00115 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Não&#32;existe&#32;cliente&#32;autenticado&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1ab0c10e6284be130a7973fa029a690ef7">yellow</link>();&#32;printf(<emphasis role="stringliteral">&quot;\nPor&#32;questões&#32;de&#32;segurança,&#32;o&#32;cliente&#32;a&#32;ser&#32;alterado&#32;deverá&#32;ser&#32;autenticado\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe">pressEnter</link>(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_clientes_8c_source_1l00120"/>00120 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00121"/>00121 
+<anchor xml:id="_clientes_8c_source_1l00123"/>00123 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(via&#32;==&#32;0)
+<anchor xml:id="_clientes_8c_source_1l00124"/>00124 &#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;
+<anchor xml:id="_clientes_8c_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nCliente&#32;(Código):&#32;&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,&#32;&amp;clienteToChange);
+<anchor xml:id="_clientes_8c_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!<link linkend="_clientes_8c_1a918dfa81ea4cf833c9cb370987ff7521">getEstadoCliente</link>(clienteToChange))
+<anchor xml:id="_clientes_8c_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Cliente&#32;não&#32;existe,&#32;indique&#32;um&#32;cliente&#32;válido&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!<link linkend="_clientes_8c_1a918dfa81ea4cf833c9cb370987ff7521">getEstadoCliente</link>(clienteToChange));
+<anchor xml:id="_clientes_8c_source_1l00134"/>00134 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00135"/>00135 
+<anchor xml:id="_clientes_8c_source_1l00136"/>00136 
+<anchor xml:id="_clientes_8c_source_1l00137"/>00137 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nInformação&#32;a&#32;alterar&#32;para&#32;o&#32;cliente&#32;%s:\n&quot;</emphasis>,&#32;<link linkend="_clientes_8c_1a63ec96e80364598a0c5bfc3954f2dbbe">getClientName</link>(clienteToChange));
+<anchor xml:id="_clientes_8c_source_1l00138"/>00138 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;&#32;&#32;[1]&#32;Nome\n&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00139"/>00139 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;&#32;&#32;[2]&#32;NIF\n&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00140"/>00140 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;&#32;&#32;[3]&#32;Código&#32;Cliente\n&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00141"/>00141 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;&#32;&#32;[4]&#32;País\n&gt;&#32;&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00142"/>00142 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;opcao;
+<anchor xml:id="_clientes_8c_source_1l00143"/>00143 &#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,&#32;&amp;opcao);
+<anchor xml:id="_clientes_8c_source_1l00144"/>00144 &#32;&#32;&#32;&#32;
+<anchor xml:id="_clientes_8c_source_1l00145"/>00145 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;clients&#32;=&#32;0;&#32;clients&#32;&lt;=&#32;<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>;&#32;clients++)
+<anchor xml:id="_clientes_8c_source_1l00146"/>00146 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[clients].codCliente&#32;==&#32;clienteToChange)
+<anchor xml:id="_clientes_8c_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;clienteToChange&#32;=&#32;clients;
+<anchor xml:id="_clientes_8c_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00151"/>00151 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00152"/>00152 
+<anchor xml:id="_clientes_8c_source_1l00153"/>00153 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(opcao)
+<anchor xml:id="_clientes_8c_source_1l00154"/>00154 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;newString[<link linkend="_definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357">SC</link>];&#32;<emphasis role="keywordtype">int</emphasis>&#32;newValue;
+<anchor xml:id="_clientes_8c_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;1:
+<anchor xml:id="_clientes_8c_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nNovo&#32;Nome:&#32;&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%24s&quot;</emphasis>,&#32;newString);
+<anchor xml:id="_clientes_8c_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!<link linkend="_definitions_8h_1af22d234c9f1f40dea9b79ca8fb8c7288">checkString</link>(newString));
+<anchor xml:id="_clientes_8c_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcpy(<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[clienteToChange].nome,&#32;newString);
+<anchor xml:id="_clientes_8c_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a0df115437fbb77c0311e65300c65289e">green</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Nome&#32;alterado&#32;com&#32;sucesso&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_clientes_8c_source_1l00165"/>00165 
+<anchor xml:id="_clientes_8c_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;2:
+<anchor xml:id="_clientes_8c_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nNovo&#32;NIF:&#32;&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,&#32;&amp;newValue);
+<anchor xml:id="_clientes_8c_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a2da5c6326d98abeaf456372ceb077847">numberOfDigits</link>(newValue)&#32;!=&#32;9)
+<anchor xml:id="_clientes_8c_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;NIF&#32;INVÁLIDO&#32;[!]\n&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;[!]&#32;Este&#32;deverá&#32;conter&#32;9&#32;números&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(<link linkend="_definitions_8h_1a2da5c6326d98abeaf456372ceb077847">numberOfDigits</link>(newValue)&#32;!=&#32;9);
+<anchor xml:id="_clientes_8c_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[clienteToChange].<link linkend="_struct_clientes_1ad68c6985dce5a3d709f854778dedee19">nif</link>&#32;=&#32;newValue;
+<anchor xml:id="_clientes_8c_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a0df115437fbb77c0311e65300c65289e">green</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;NIF&#32;alterado&#32;com&#32;sucesso&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_clientes_8c_source_1l00180"/>00180 
+<anchor xml:id="_clientes_8c_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;3:
+<anchor xml:id="_clientes_8c_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nNovo&#32;Código&#32;Cliente:&#32;&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;&#32;%d&quot;</emphasis>,&#32;&amp;newValue);
+<anchor xml:id="_clientes_8c_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(<link linkend="_definitions_8h_1a2da5c6326d98abeaf456372ceb077847">numberOfDigits</link>(newValue)&#32;!=&#32;4);
+<anchor xml:id="_clientes_8c_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[clienteToChange].<link linkend="_struct_clientes_1aa9b5911a87665c3e73ce79013736729b">codCliente</link>&#32;=&#32;newValue;
+<anchor xml:id="_clientes_8c_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a0df115437fbb77c0311e65300c65289e">green</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Código&#32;Cliente&#32;alterado&#32;com&#32;sucesso&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_clientes_8c_source_1l00190"/>00190 
+<anchor xml:id="_clientes_8c_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;4:
+<anchor xml:id="_clientes_8c_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nNovo&#32;País:&#32;&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;&#32;%24s&quot;</emphasis>,&#32;newString);
+<anchor xml:id="_clientes_8c_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!<link linkend="_definitions_8h_1af22d234c9f1f40dea9b79ca8fb8c7288">checkString</link>(newString));
+<anchor xml:id="_clientes_8c_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strcpy(<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[clienteToChange].pais,&#32;newString);
+<anchor xml:id="_clientes_8c_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a0df115437fbb77c0311e65300c65289e">green</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;País&#32;alterado&#32;com&#32;sucesso&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_clientes_8c_source_1l00200"/>00200 
+<anchor xml:id="_clientes_8c_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="_clientes_8c_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Opção&#32;Inválida&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sleep(1);&#32;<link linkend="_definitions_8h_1a9d7e8af417b6d543da691e9c0e2f6f9f">clearScreen</link>();
+<anchor xml:id="_clientes_8c_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_clientes_8c_1a384bbc94cc780349877dd70a46d111fd">updateClient</link>(clienteToChange,&#32;via);
+<anchor xml:id="_clientes_8c_source_1l00205"/>00205 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00206"/>00206 
+<anchor xml:id="_clientes_8c_source_1l00207"/>00207 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nPretende&#32;alterar&#32;outra&#32;informação?&#32;(s/N)\n&gt;&#32;&quot;</emphasis>);
+<anchor xml:id="_clientes_8c_source_1l00208"/>00208 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;opcao3;
+<anchor xml:id="_clientes_8c_source_1l00209"/>00209 &#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;&#32;%c&quot;</emphasis>,&#32;&amp;opcao3);
+<anchor xml:id="_clientes_8c_source_1l00210"/>00210 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(opcao3&#32;==&#32;<emphasis role="charliteral">&apos;s&apos;</emphasis>&#32;||&#32;opcao3&#32;==&#32;<emphasis role="charliteral">&apos;S&apos;</emphasis>)
+<anchor xml:id="_clientes_8c_source_1l00211"/>00211 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_clientes_8c_1a384bbc94cc780349877dd70a46d111fd">updateClient</link>(clienteToChange,&#32;via);
+<anchor xml:id="_clientes_8c_source_1l00213"/>00213 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00214"/>00214 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a9d7e8af417b6d543da691e9c0e2f6f9f">clearScreen</link>();
+<anchor xml:id="_clientes_8c_source_1l00215"/>00215 }
+<anchor xml:id="_clientes_8c_source_1l00216"/>00216 <emphasis role="preprocessor">#pragma&#32;endregion</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00217"/>00217 
+<anchor xml:id="_clientes_8c_source_1l00218"/>00218 <emphasis role="comment">/*&#32;===========================&#32;Cliente&#32;Specific&#32;Queries&#32;===========================&#32;*/</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00219"/>00219 
+<anchor xml:id="_clientes_8c_source_1l00220"/>00220 <emphasis role="preprocessor">#pragma&#32;region&#32;getEstadoCliente</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00227"/><link linkend="_clientes_8c_1a918dfa81ea4cf833c9cb370987ff7521">00227</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_clientes_8c_1a918dfa81ea4cf833c9cb370987ff7521">getEstadoCliente</link>(<emphasis role="keywordtype">int</emphasis>&#32;codCliente)
+<anchor xml:id="_clientes_8c_source_1l00228"/>00228 {
+<anchor xml:id="_clientes_8c_source_1l00229"/>00229 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;user&#32;=&#32;0;&#32;user&#32;&lt;=&#32;<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>;&#32;user++)
+<anchor xml:id="_clientes_8c_source_1l00230"/>00230 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[user].codCliente&#32;==&#32;codCliente)
+<anchor xml:id="_clientes_8c_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[user].estado)
+<anchor xml:id="_clientes_8c_source_1l00234"/>00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_clientes_8c_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Cliente&#32;não&#32;está&#32;disponível&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_clientes_8c_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_clientes_8c_source_1l00241"/>00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00242"/>00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00243"/>00243 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00244"/>00244 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_clientes_8c_source_1l00245"/>00245 }
+<anchor xml:id="_clientes_8c_source_1l00246"/>00246 <emphasis role="preprocessor">#pragma&#32;endregion</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00247"/>00247 
+<anchor xml:id="_clientes_8c_source_1l00248"/>00248 <emphasis role="preprocessor">#pragma&#32;region&#32;getClienteName</emphasis>
+<anchor xml:id="_clientes_8c_source_1l00254"/><link linkend="_clientes_8c_1a63ec96e80364598a0c5bfc3954f2dbbe">00254</link> <emphasis role="keywordtype">char</emphasis>*&#32;<link linkend="_clientes_8c_1a63ec96e80364598a0c5bfc3954f2dbbe">getClientName</link>(<emphasis role="keywordtype">int</emphasis>&#32;codCliente)
+<anchor xml:id="_clientes_8c_source_1l00255"/>00255 {
+<anchor xml:id="_clientes_8c_source_1l00256"/>00256 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;user&#32;=&#32;0;&#32;user&#32;&lt;=&#32;<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>;&#32;user++)
+<anchor xml:id="_clientes_8c_source_1l00257"/>00257 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[user].codCliente&#32;==&#32;codCliente)
+<anchor xml:id="_clientes_8c_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_clientes_8c_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[user].<link linkend="_struct_clientes_1a5570d34879c05708dd50c08f3c0d4069">nome</link>;
+<anchor xml:id="_clientes_8c_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00262"/>00262 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_clientes_8c_source_1l00263"/>00263 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;NULL;
+<anchor xml:id="_clientes_8c_source_1l00264"/>00264 }
+<anchor xml:id="_clientes_8c_source_1l00265"/>00265 <emphasis role="preprocessor">#pragma&#32;endregion</emphasis>
+</programlisting></section>

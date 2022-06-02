@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_definitions_8h_source" xml:lang="en-US">
+<title>definitions.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_definitions_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;FUNCTIONS_H</emphasis>
+<anchor xml:id="_definitions_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;FUNCTIONS_H</emphasis>
+<anchor xml:id="_definitions_8h_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>
+<anchor xml:id="_definitions_8h_source_1l00004"/>00004 
+<anchor xml:id="_definitions_8h_source_1l00005"/><link linkend="_definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357">00005</link> <emphasis role="preprocessor">#define&#32;SC&#32;25</emphasis>
+<anchor xml:id="_definitions_8h_source_1l00006"/>00006 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>;
+<anchor xml:id="_definitions_8h_source_1l00007"/>00007 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c">NA</link>;
+<anchor xml:id="_definitions_8h_source_1l00008"/>00008 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>;
+<anchor xml:id="_definitions_8h_source_1l00009"/>00009 
+<anchor xml:id="_definitions_8h_source_1l00010"/>00010 <emphasis role="preprocessor">#pragma&#32;region&#32;Structs</emphasis>
+<anchor xml:id="_definitions_8h_source_1l00011"/><link linkend="_struct_clientes">00011</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>
+<anchor xml:id="_definitions_8h_source_1l00012"/>00012 {
+<anchor xml:id="_definitions_8h_source_1l00013"/><link linkend="_struct_clientes_1aa9b5911a87665c3e73ce79013736729b">00013</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_clientes_1aa9b5911a87665c3e73ce79013736729b">codCliente</link>;
+<anchor xml:id="_definitions_8h_source_1l00014"/><link linkend="_struct_clientes_1a5570d34879c05708dd50c08f3c0d4069">00014</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;nome[<link linkend="_definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357">SC</link>];
+<anchor xml:id="_definitions_8h_source_1l00015"/><link linkend="_struct_clientes_1ad68c6985dce5a3d709f854778dedee19">00015</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_clientes_1ad68c6985dce5a3d709f854778dedee19">nif</link>;
+<anchor xml:id="_definitions_8h_source_1l00016"/><link linkend="_struct_clientes_1a77927c48074d089e96eefd305edd0d9f">00016</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;pais[<link linkend="_definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357">SC</link>];
+<anchor xml:id="_definitions_8h_source_1l00017"/><link linkend="_struct_clientes_1a72d010866bd83b41432d6286cb26adbd">00017</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct_clientes_1a72d010866bd83b41432d6286cb26adbd">estado</link>;
+<anchor xml:id="_definitions_8h_source_1l00018"/>00018 }&#32;<link linkend="_struct_clientes">Clientes</link>;
+<anchor xml:id="_definitions_8h_source_1l00019"/>00019 
+<anchor xml:id="_definitions_8h_source_1l00020"/><link linkend="_struct_artigos">00020</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>{
+<anchor xml:id="_definitions_8h_source_1l00021"/><link linkend="_struct_artigos_1a9b469e91df9bb9a07f1268125a065190">00021</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_artigos_1a9b469e91df9bb9a07f1268125a065190">codArtigo</link>;
+<anchor xml:id="_definitions_8h_source_1l00022"/><link linkend="_struct_artigos_1a7587325de6f79fb882ac16a69b4afb5c">00022</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd">artigo</link>[<link linkend="_definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357">SC</link>];
+<anchor xml:id="_definitions_8h_source_1l00023"/><link linkend="_struct_artigos_1a30e92cea0f8408b6a5be961048ca42c0">00023</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_struct_artigos_1a30e92cea0f8408b6a5be961048ca42c0">maoObra</link>;
+<anchor xml:id="_definitions_8h_source_1l00024"/><link linkend="_struct_artigos_1a708afd1d61a02beec2c6c56ce4a2921a">00024</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_struct_artigos_1a708afd1d61a02beec2c6c56ce4a2921a">custosFixos</link>;
+<anchor xml:id="_definitions_8h_source_1l00025"/><link linkend="_struct_artigos_1a95702009b40b5c752fdaad4cf2853427">00025</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_struct_artigos_1a95702009b40b5c752fdaad4cf2853427">margemLucro</link>;
+<anchor xml:id="_definitions_8h_source_1l00026"/><link linkend="_struct_artigos_1a663835fb75190f816a4c9a34da466774">00026</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;tamanhos[2];
+<anchor xml:id="_definitions_8h_source_1l00027"/><link linkend="_struct_artigos_1ae7713476462c0345a8316df83ffe461f">00027</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_struct_artigos_1ae7713476462c0345a8316df83ffe461f">defaultPreco</link>;
+<anchor xml:id="_definitions_8h_source_1l00028"/><link linkend="_struct_artigos_1abe64d024dc53ba1a4a9870bb3dfc5a9b">00028</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_struct_artigos_1abe64d024dc53ba1a4a9870bb3dfc5a9b">incrementoPreco</link>;
+<anchor xml:id="_definitions_8h_source_1l00029"/><link linkend="_struct_artigos_1a72d010866bd83b41432d6286cb26adbd">00029</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct_artigos_1a72d010866bd83b41432d6286cb26adbd">estado</link>;
+<anchor xml:id="_definitions_8h_source_1l00030"/><link linkend="_struct_artigos_1a40a8d7b99d7acdecf1c6a999d00e28a3">00030</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;tamanhoPreco[15][2];
+<anchor xml:id="_definitions_8h_source_1l00031"/>00031 }&#32;<link linkend="_struct_artigos">Artigos</link>;
+<anchor xml:id="_definitions_8h_source_1l00032"/>00032 
+<anchor xml:id="_definitions_8h_source_1l00033"/><link linkend="_struct_encomendas">00033</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>{
+<anchor xml:id="_definitions_8h_source_1l00034"/><link linkend="_struct_encomendas_1a5eb4a4f2f14cb6227076ee3aaa9cb24c">00034</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_encomendas_1a5eb4a4f2f14cb6227076ee3aaa9cb24c">codEncomenda</link>;
+<anchor xml:id="_definitions_8h_source_1l00035"/><link linkend="_struct_encomendas_1aa9b5911a87665c3e73ce79013736729b">00035</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_encomendas_1aa9b5911a87665c3e73ce79013736729b">codCliente</link>;
+<anchor xml:id="_definitions_8h_source_1l00036"/><link linkend="_struct_encomendas_1a9b469e91df9bb9a07f1268125a065190">00036</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_encomendas_1a9b469e91df9bb9a07f1268125a065190">codArtigo</link>;
+<anchor xml:id="_definitions_8h_source_1l00037"/><link linkend="_struct_encomendas_1a0a06f50c808099546e057b445cc90c14">00037</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_encomendas_1a0a06f50c808099546e057b445cc90c14">tamanho</link>;
+<anchor xml:id="_definitions_8h_source_1l00038"/><link linkend="_struct_encomendas_1accb6c827099dc6ae91546671edc4c9ce">00038</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_encomendas_1accb6c827099dc6ae91546671edc4c9ce">horaminuto</link>;
+<anchor xml:id="_definitions_8h_source_1l00039"/><link linkend="_struct_encomendas_1a3d1171ac670a8e8a672c481f22d1fa9f">00039</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_encomendas_1a3d1171ac670a8e8a672c481f22d1fa9f">dia</link>;
+<anchor xml:id="_definitions_8h_source_1l00040"/><link linkend="_struct_encomendas_1a9fc86758220eae0e735655f81fd9d9bc">00040</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_encomendas_1a9fc86758220eae0e735655f81fd9d9bc">mes</link>;
+<anchor xml:id="_definitions_8h_source_1l00041"/><link linkend="_struct_encomendas_1ac404d93cbf0169fd9e89edc17d0c5572">00041</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_encomendas_1ac404d93cbf0169fd9e89edc17d0c5572">ano</link>;
+<anchor xml:id="_definitions_8h_source_1l00042"/><link linkend="_struct_encomendas_1aab7e2f8a805bde3912f985c05be7d510">00042</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_encomendas_1aab7e2f8a805bde3912f985c05be7d510">quantidade</link>;
+<anchor xml:id="_definitions_8h_source_1l00043"/><link linkend="_struct_encomendas_1ab5af64ba12e40aefe7080187c140895a">00043</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_struct_encomendas_1ab5af64ba12e40aefe7080187c140895a">total</link>;
+<anchor xml:id="_definitions_8h_source_1l00044"/><link linkend="_struct_encomendas_1a72d010866bd83b41432d6286cb26adbd">00044</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_struct_encomendas_1a72d010866bd83b41432d6286cb26adbd">estado</link>;
+<anchor xml:id="_definitions_8h_source_1l00045"/>00045 }&#32;<link linkend="_struct_encomendas">Encomendas</link>;
+<anchor xml:id="_definitions_8h_source_1l00046"/>00046 
+<anchor xml:id="_definitions_8h_source_1l00047"/><link linkend="_struct_runtime">00047</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>{
+<anchor xml:id="_definitions_8h_source_1l00048"/><link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">00048</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>;
+<anchor xml:id="_definitions_8h_source_1l00049"/><link linkend="_struct_runtime_1ae004fa1151ab1583e3a9174cf07ac012">00049</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;stringDesconto[7];
+<anchor xml:id="_definitions_8h_source_1l00050"/><link linkend="_struct_runtime_1abcccdaf615845e2019116c5ce4b90b3a">00050</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_struct_runtime_1abcccdaf615845e2019116c5ce4b90b3a">percentageDesconto</link>;
+<anchor xml:id="_definitions_8h_source_1l00051"/>00051 }&#32;<link linkend="_struct_runtime">Runtime</link>;
+<anchor xml:id="_definitions_8h_source_1l00052"/>00052 
+<anchor xml:id="_definitions_8h_source_1l00053"/>00053 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_clientes">Clientes</link>&#32;*<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>;
+<anchor xml:id="_definitions_8h_source_1l00054"/>00054 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_artigos">Artigos</link>&#32;*<link linkend="_definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd">artigo</link>;
+<anchor xml:id="_definitions_8h_source_1l00055"/>00055 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_encomendas">Encomendas</link>&#32;*<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>;
+<anchor xml:id="_definitions_8h_source_1l00056"/>00056 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_struct_runtime">Runtime</link>&#32;*<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>;
+<anchor xml:id="_definitions_8h_source_1l00057"/>00057 
+<anchor xml:id="_definitions_8h_source_1l00058"/>00058 <emphasis role="preprocessor">#pragma&#32;endregion</emphasis>
+<anchor xml:id="_definitions_8h_source_1l00059"/>00059 
+<anchor xml:id="_definitions_8h_source_1l00060"/>00060 <emphasis role="preprocessor">#pragma&#32;region&#32;Functions</emphasis>
+<anchor xml:id="_definitions_8h_source_1l00062"/>00062 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_definitions_8h_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link>();
+<anchor xml:id="_definitions_8h_source_1l00063"/>00063 
+<anchor xml:id="_definitions_8h_source_1l00064"/>00064 
+<anchor xml:id="_definitions_8h_source_1l00066"/>00066 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_definitions_8h_1a2da5c6326d98abeaf456372ceb077847">numberOfDigits</link>(<emphasis role="keywordtype">int</emphasis>&#32;num);
+<anchor xml:id="_definitions_8h_source_1l00067"/>00067 
+<anchor xml:id="_definitions_8h_source_1l00068"/>00068 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a9d7e8af417b6d543da691e9c0e2f6f9f">clearScreen</link>();
+<anchor xml:id="_definitions_8h_source_1l00069"/>00069 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe">pressEnter</link>(<emphasis role="keywordtype">bool</emphasis>&#32;alsoClearScreen);
+<anchor xml:id="_definitions_8h_source_1l00070"/>00070 
+<anchor xml:id="_definitions_8h_source_1l00071"/>00071 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_definitions_8h_1ae403fe07e86bc33933303d3e266b579d">getDateInfo</link>(<emphasis role="keywordtype">int</emphasis>&#32;info);
+<anchor xml:id="_definitions_8h_source_1l00072"/>00072 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_definitions_8h_1af22d234c9f1f40dea9b79ca8fb8c7288">checkString</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;<emphasis role="keywordtype">string</emphasis>);
+<anchor xml:id="_definitions_8h_source_1l00073"/>00073 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_definitions_8h_1a41532c4603b615920ea1c1216d1445ad">checkNumber</link>(<emphasis role="keywordtype">double</emphasis>&#32;number);
+<anchor xml:id="_definitions_8h_source_1l00074"/>00074 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_definitions_8h_1ae81c93a074d4c3bdce4d8409997418f0">checkCodPromo</link>(<emphasis role="keywordtype">char</emphasis>*&#32;codPromo);
+<anchor xml:id="_definitions_8h_source_1l00075"/>00075 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_definitions_8h_1a52199f9c4b3c9c302cc8d4ab4a38bae5">availableForOperation</link>(<emphasis role="keywordtype">int</emphasis>&#32;op,&#32;<emphasis role="keywordtype">int</emphasis>&#32;codArtigo,&#32;<emphasis role="keywordtype">int</emphasis>&#32;parameter);
+<anchor xml:id="_definitions_8h_source_1l00076"/>00076 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_definitions_8h_1a46d4eccec6d2c6e65ef4784ab4db0c78">getArtigoIndex</link>(<emphasis role="keywordtype">int</emphasis>&#32;codArtigo);
+<anchor xml:id="_definitions_8h_source_1l00077"/>00077 
+<anchor xml:id="_definitions_8h_source_1l00078"/>00078 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_definitions_8h_1a9efdb5ab1d7b26e54799af4e7cb59fa2">loggedClient</link>();
+<anchor xml:id="_definitions_8h_source_1l00079"/>00079 
+<anchor xml:id="_definitions_8h_source_1l00080"/>00080 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a941fa13e3d505e5a9a3f9c082bfeff89">reallocStruct</link>(<emphasis role="keywordtype">int</emphasis>&#32;st);
+<anchor xml:id="_definitions_8h_source_1l00081"/>00081 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a5ec3ba219271cd3cd14bf58108226c7c">freeMemory</link>(<emphasis role="keywordtype">bool</emphasis>&#32;alsoStopTheProgram);
+<anchor xml:id="_definitions_8h_source_1l00082"/>00082 
+<anchor xml:id="_definitions_8h_source_1l00083"/>00083 
+<anchor xml:id="_definitions_8h_source_1l00084"/>00084 
+<anchor xml:id="_definitions_8h_source_1l00085"/>00085 <emphasis role="comment">//&#32;Ficheiro&#32;queries.c</emphasis>
+<anchor xml:id="_definitions_8h_source_1l00086"/>00086 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a87b028e2e18b0b33e3eb58cb99af5523">listEncomendas</link>(<emphasis role="keywordtype">int</emphasis>&#32;queryType);
+<anchor xml:id="_definitions_8h_source_1l00087"/>00087 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a8f37bef24fe15f40c71fca8327b44697">statisticsEncomendas</link>();
+<anchor xml:id="_definitions_8h_source_1l00088"/>00088 <emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_definitions_8h_1a2e948973437ab18cc4aa58f04f32b31d">getTotalEncomenda</link>();
+<anchor xml:id="_definitions_8h_source_1l00089"/>00089 
+<anchor xml:id="_definitions_8h_source_1l00090"/>00090 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a7f710faa12da0cf1c324f192cee73e96">listClientes</link>(<emphasis role="keywordtype">int</emphasis>&#32;queryType);
+<anchor xml:id="_definitions_8h_source_1l00091"/>00091 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1ab3cd5f6472e88b4f400d6f56aa6edd8c">listArtigos</link>(<emphasis role="keywordtype">int</emphasis>&#32;queryType);
+<anchor xml:id="_definitions_8h_source_1l00092"/>00092 
+<anchor xml:id="_definitions_8h_source_1l00093"/>00093 <emphasis role="keywordtype">char</emphasis>*&#32;<link linkend="_definitions_8h_1af4568fe8cae0d02992cc20eeaa4d309d">getArtigoName</link>(<emphasis role="keywordtype">int</emphasis>&#32;codArtigo);
+<anchor xml:id="_definitions_8h_source_1l00094"/>00094 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1adf88e57666bc1bdbe2b9a532b5d8ee19">printDataEncomenda</link>(<emphasis role="keywordtype">int</emphasis>&#32;enc);
+<anchor xml:id="_definitions_8h_source_1l00095"/>00095 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a2db28081aac0ef2215ab88524f9cf13e">printDataArtigo</link>(<emphasis role="keywordtype">int</emphasis>&#32;art,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;query);
+<anchor xml:id="_definitions_8h_source_1l00096"/>00096 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a5b0e889434448c1fda602fe8219c6df0">printDataCliente</link>(<emphasis role="keywordtype">int</emphasis>&#32;cli);
+<anchor xml:id="_definitions_8h_source_1l00097"/>00097 
+<anchor xml:id="_definitions_8h_source_1l00098"/>00098 
+<anchor xml:id="_definitions_8h_source_1l00099"/>00099 
+<anchor xml:id="_definitions_8h_source_1l00100"/>00100 <emphasis role="comment">//&#32;Ficheiro&#32;clientes.c</emphasis>
+<anchor xml:id="_definitions_8h_source_1l00101"/>00101 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a8b6e5471fc3162030e02624aa4e0a71c">addCliente</link>();
+<anchor xml:id="_definitions_8h_source_1l00102"/>00102 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_definitions_8h_1a918dfa81ea4cf833c9cb370987ff7521">getEstadoCliente</link>(<emphasis role="keywordtype">int</emphasis>&#32;codCliente);
+<anchor xml:id="_definitions_8h_source_1l00103"/>00103 <emphasis role="keywordtype">char</emphasis>*&#32;<link linkend="_definitions_8h_1a63ec96e80364598a0c5bfc3954f2dbbe">getClientName</link>(<emphasis role="keywordtype">int</emphasis>&#32;codCliente);
+<anchor xml:id="_definitions_8h_source_1l00104"/>00104 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a384bbc94cc780349877dd70a46d111fd">updateClient</link>(<emphasis role="keywordtype">int</emphasis>&#32;clienteToChange,&#32;<emphasis role="keywordtype">int</emphasis>&#32;via);
+<anchor xml:id="_definitions_8h_source_1l00105"/>00105 
+<anchor xml:id="_definitions_8h_source_1l00106"/>00106 
+<anchor xml:id="_definitions_8h_source_1l00107"/>00107 
+<anchor xml:id="_definitions_8h_source_1l00108"/>00108 <emphasis role="comment">//&#32;Ficheiro&#32;administrador.c</emphasis>
+<anchor xml:id="_definitions_8h_source_1l00109"/>00109 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1ab57c27349b4a343d5ec7736646cf4c7b">updateArtigo</link>();
+<anchor xml:id="_definitions_8h_source_1l00110"/>00110 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a7eadedef8af327c38812b981e440e9fd">addArtigo</link>();
+<anchor xml:id="_definitions_8h_source_1l00111"/>00111 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1af720c7469de6c812fcf7ef357c36f9da">updateDesconto</link>();
+<anchor xml:id="_definitions_8h_source_1l00112"/>00112 
+<anchor xml:id="_definitions_8h_source_1l00113"/>00113 
+<anchor xml:id="_definitions_8h_source_1l00114"/>00114 
+<anchor xml:id="_definitions_8h_source_1l00115"/>00115 <emphasis role="comment">//&#32;Ficheiro&#32;data.c</emphasis>
+<anchor xml:id="_definitions_8h_source_1l00116"/>00116 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a8c0b39e19764089f83e1a337c0369676">importData</link>();
+<anchor xml:id="_definitions_8h_source_1l00117"/>00117 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a845434be144bc6138804dd39b3760212">exportData</link>();
+<anchor xml:id="_definitions_8h_source_1l00118"/>00118 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1ace66f1e8600faf005e2f95c1f5e24ec4">importDefaultData</link>();
+<anchor xml:id="_definitions_8h_source_1l00119"/>00119 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a90b381b5624a976ecadeaabacfde025e">exportDefaultData</link>();
+<anchor xml:id="_definitions_8h_source_1l00120"/>00120 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a01374b232898f3d3c134623ffded84af">deleteData</link>();
+<anchor xml:id="_definitions_8h_source_1l00121"/>00121 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a5ca14d2c3fb1cd90e8dc483afaf1b3d8">exportEncomendas</link>();
+<anchor xml:id="_definitions_8h_source_1l00122"/>00122 
+<anchor xml:id="_definitions_8h_source_1l00123"/>00123 
+<anchor xml:id="_definitions_8h_source_1l00124"/>00124 <emphasis role="comment">//&#32;Ficheiro&#32;shopping.c</emphasis>
+<anchor xml:id="_definitions_8h_source_1l00125"/><link linkend="_definitions_8h_1a6f4f7a9a71ced3d5e9fb21198edb6ab2">00125</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a6f4f7a9a71ced3d5e9fb21198edb6ab2">loginClient</link>(),&#32;<link linkend="_definitions_8h_1a2163242f3dbe460739c88c56f06ec34f">logoutClient</link>();
+<anchor xml:id="_definitions_8h_source_1l00126"/>00126 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a10d6c88f1cbf1e60ed32e609f715a779">doShopping</link>();
+<anchor xml:id="_definitions_8h_source_1l00127"/>00127 <emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_definitions_8h_1ac3e41774a08731e62fe348b9c8401ccb">getEstadoEncomenda</link>(<emphasis role="keywordtype">int</emphasis>&#32;estado);
+<anchor xml:id="_definitions_8h_source_1l00128"/>00128 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1a91ff19fa6805e0491dd0bcf68a12d4da">cancelEncomenda</link>();
+<anchor xml:id="_definitions_8h_source_1l00129"/>00129 
+<anchor xml:id="_definitions_8h_source_1l00130"/>00130 
+<anchor xml:id="_definitions_8h_source_1l00131"/>00131 <emphasis role="comment">//&#32;Ficheiro&#32;colors.c</emphasis>
+<anchor xml:id="_definitions_8h_source_1l00132"/><link linkend="_definitions_8h_1a161aec8a96c389795d228ca0c3a949d5">00132</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_definitions_8h_1ac0fd834412eb7d5311f137d919db6788">white</link>(),&#32;<link linkend="_definitions_8h_1a39abd40f68d03c40857be1e74407efb9">red</link>(),&#32;<link linkend="_definitions_8h_1a0df115437fbb77c0311e65300c65289e">green</link>(),&#32;<link linkend="_definitions_8h_1a161aec8a96c389795d228ca0c3a949d5">blue</link>(),&#32;<link linkend="_definitions_8h_1ab0c10e6284be130a7973fa029a690ef7">yellow</link>(),&#32;<link linkend="_definitions_8h_1ab2b14535fac90d655eb767bff5647d88">purple</link>(),&#32;<link linkend="_definitions_8h_1a52a6a14bd8e9463315ea114aceda1d92">cyan</link>(),&#32;<link linkend="_definitions_8h_1a59d9c08d69e42981f0d6fb680f5e6e26">bold</link>(),&#32;<link linkend="_definitions_8h_1af7082af28af567c98aa48add7be13826">boldRed</link>();
+<anchor xml:id="_definitions_8h_source_1l00133"/>00133 <emphasis role="preprocessor">#pragma&#32;endregion</emphasis>
+<anchor xml:id="_definitions_8h_source_1l00134"/>00134 
+<anchor xml:id="_definitions_8h_source_1l00135"/>00135 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

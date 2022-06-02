@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="struct_artigos" kind="struct" language="C++" prot="public">
+    <compoundname>Artigos</compoundname>
+    <includes refid="definitions_8h" local="no">definitions.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_artigos_1a9b469e91df9bb9a07f1268125a065190" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int codArtigo</definition>
+        <argsstring></argsstring>
+        <name>codArtigo</name>
+        <qualifiedname>Artigos::codArtigo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="21" column="9" bodyfile="definitions.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_artigos_1a7587325de6f79fb882ac16a69b4afb5c" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char artigo[SC]</definition>
+        <argsstring>[SC]</argsstring>
+        <name>artigo</name>
+        <qualifiedname>Artigos::artigo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="22" column="10" bodyfile="definitions.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_artigos_1a30e92cea0f8408b6a5be961048ca42c0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double maoObra</definition>
+        <argsstring></argsstring>
+        <name>maoObra</name>
+        <qualifiedname>Artigos::maoObra</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="23" column="12" bodyfile="definitions.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_artigos_1a708afd1d61a02beec2c6c56ce4a2921a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double custosFixos</definition>
+        <argsstring></argsstring>
+        <name>custosFixos</name>
+        <qualifiedname>Artigos::custosFixos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="24" column="12" bodyfile="definitions.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_artigos_1a95702009b40b5c752fdaad4cf2853427" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double margemLucro</definition>
+        <argsstring></argsstring>
+        <name>margemLucro</name>
+        <qualifiedname>Artigos::margemLucro</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="25" column="12" bodyfile="definitions.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_artigos_1a663835fb75190f816a4c9a34da466774" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tamanhos[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>tamanhos</name>
+        <qualifiedname>Artigos::tamanhos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="26" column="9" bodyfile="definitions.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_artigos_1ae7713476462c0345a8316df83ffe461f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double defaultPreco</definition>
+        <argsstring></argsstring>
+        <name>defaultPreco</name>
+        <qualifiedname>Artigos::defaultPreco</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="27" column="12" bodyfile="definitions.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_artigos_1abe64d024dc53ba1a4a9870bb3dfc5a9b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double incrementoPreco</definition>
+        <argsstring></argsstring>
+        <name>incrementoPreco</name>
+        <qualifiedname>Artigos::incrementoPreco</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="28" column="12" bodyfile="definitions.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_artigos_1a72d010866bd83b41432d6286cb26adbd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool estado</definition>
+        <argsstring></argsstring>
+        <name>estado</name>
+        <qualifiedname>Artigos::estado</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="29" column="10" bodyfile="definitions.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_artigos_1a40a8d7b99d7acdecf1c6a999d00e28a3" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tamanhoPreco[15][2]</definition>
+        <argsstring>[15][2]</argsstring>
+        <name>tamanhoPreco</name>
+        <qualifiedname>Artigos::tamanhoPreco</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="30" column="12" bodyfile="definitions.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="definitions.h" line="20" column="1" bodyfile="definitions.h" bodystart="20" bodyend="31"/>
+    <listofallmembers>
+      <member refid="struct_artigos_1a7587325de6f79fb882ac16a69b4afb5c" prot="public" virt="non-virtual"><scope>Artigos</scope><name>artigo</name></member>
+      <member refid="struct_artigos_1a9b469e91df9bb9a07f1268125a065190" prot="public" virt="non-virtual"><scope>Artigos</scope><name>codArtigo</name></member>
+      <member refid="struct_artigos_1a708afd1d61a02beec2c6c56ce4a2921a" prot="public" virt="non-virtual"><scope>Artigos</scope><name>custosFixos</name></member>
+      <member refid="struct_artigos_1ae7713476462c0345a8316df83ffe461f" prot="public" virt="non-virtual"><scope>Artigos</scope><name>defaultPreco</name></member>
+      <member refid="struct_artigos_1a72d010866bd83b41432d6286cb26adbd" prot="public" virt="non-virtual"><scope>Artigos</scope><name>estado</name></member>
+      <member refid="struct_artigos_1abe64d024dc53ba1a4a9870bb3dfc5a9b" prot="public" virt="non-virtual"><scope>Artigos</scope><name>incrementoPreco</name></member>
+      <member refid="struct_artigos_1a30e92cea0f8408b6a5be961048ca42c0" prot="public" virt="non-virtual"><scope>Artigos</scope><name>maoObra</name></member>
+      <member refid="struct_artigos_1a95702009b40b5c752fdaad4cf2853427" prot="public" virt="non-virtual"><scope>Artigos</scope><name>margemLucro</name></member>
+      <member refid="struct_artigos_1a40a8d7b99d7acdecf1c6a999d00e28a3" prot="public" virt="non-virtual"><scope>Artigos</scope><name>tamanhoPreco</name></member>
+      <member refid="struct_artigos_1a663835fb75190f816a4c9a34da466774" prot="public" virt="non-virtual"><scope>Artigos</scope><name>tamanhos</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

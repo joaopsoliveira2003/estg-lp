@@ -1,0 +1,458 @@
+\hypertarget{queries_8c_source}{}\doxysection{queries.\+c}
+\mbox{\hyperlink{queries_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00001}00001 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00002}00002 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00003}00003 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00004}00004 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00005}00005 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00006}00006 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{definitions_8h}{definitions.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00010}00010 \textcolor{preprocessor}{\#pragma region GetArtigoIndex}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00015}\mbox{\hyperlink{definitions_8h_a46d4eccec6d2c6e65ef4784ab4db0c78}{00015}} \textcolor{keywordtype}{int} \mbox{\hyperlink{queries_8c_a46d4eccec6d2c6e65ef4784ab4db0c78}{getArtigoIndex}}(\textcolor{keywordtype}{int} codArtigo)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00016}00016 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00017}00017     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} art = 0; art <= \mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}}; art++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00018}00018     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00019}00019         \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].codArtigo == codArtigo)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00020}00020         \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00021}00021             \textcolor{keywordflow}{return} art;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00022}00022         \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00023}00023     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00024}00024     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00025}00025 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00026}00026 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00028}00028 \textcolor{preprocessor}{\#pragma region getArtigoName}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00033}\mbox{\hyperlink{definitions_8h_af4568fe8cae0d02992cc20eeaa4d309d}{00033}} \textcolor{keywordtype}{char}* \mbox{\hyperlink{queries_8c_ac099a7d27cd173fb4b83a364b7e4c735}{getArtigoName}}(\textcolor{keywordtype}{int} idx)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00034}00034 \{         }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00035}00035     \textcolor{keywordflow}{return} \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[idx].\mbox{\hyperlink{struct_artigos_a7587325de6f79fb882ac16a69b4afb5c}{artigo}};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00036}00036 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00037}00037 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00039}00039 \textcolor{preprocessor}{\#pragma region getTotalEncomenda}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00044}\mbox{\hyperlink{definitions_8h_a2e948973437ab18cc4aa58f04f32b31d}{00044}} \textcolor{keywordtype}{double} \mbox{\hyperlink{queries_8c_a2e948973437ab18cc4aa58f04f32b31d}{getTotalEncomenda}}()}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00045}00045 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00046}00046     \textcolor{keywordtype}{double} total = 0;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00047}00047     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} enc = 0; enc <= \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}+1; enc++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00048}00048     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00049}00049         \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].codCliente == \mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}})}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00050}00050         \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00051}00051             \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].estado)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00052}00052             \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00053}00053                 total += \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].\mbox{\hyperlink{struct_encomendas_ab5af64ba12e40aefe7080187c140895a}{total}};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00054}00054             \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00055}00055         \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00056}00056     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00057}00057     \textcolor{keywordflow}{return} total;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00058}00058 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00059}00059 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00061}00061 \textcolor{preprocessor}{\#pragma region GetDateInfo}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00065}\mbox{\hyperlink{definitions_8h_ae403fe07e86bc33933303d3e266b579d}{00065}} \textcolor{keywordtype}{int} \mbox{\hyperlink{queries_8c_ae403fe07e86bc33933303d3e266b579d}{getDateInfo}}(\textcolor{keywordtype}{int} info)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00066}00066 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00067}00067     time\_t t = time(NULL);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00068}00068     \textcolor{keyword}{struct }tm tm = *localtime(\&t);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00069}00069     \textcolor{keywordflow}{switch} (info)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00070}00070     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00071}00071     \textcolor{keyword}{enum} InfoQuery \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00072}00072         hourminute = 1,}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00073}00073         day = 2,}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00074}00074         month = 3,}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00075}00075         year = 4,}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00076}00076     \};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00077}00077         \textcolor{keywordflow}{case} hourminute:}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00078}00078             \textcolor{keywordflow}{return} tm.tm\_hour * 100 + tm.tm\_min;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00079}00079         \textcolor{keywordflow}{case} day:}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00080}00080             \textcolor{keywordflow}{return} tm.tm\_mday;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00081}00081         \textcolor{keywordflow}{case} month:}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00082}00082             \textcolor{keywordflow}{return} tm.tm\_mon + 1;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00083}00083         \textcolor{keywordflow}{case} year:}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00084}00084             \textcolor{keywordflow}{return} tm.tm\_year + 1900;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00085}00085     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00086}00086     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00087}00087 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00088}00088 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00090}00090 \textcolor{preprocessor}{\#pragma region listArtigos}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00095}\mbox{\hyperlink{definitions_8h_ab3cd5f6472e88b4f400d6f56aa6edd8c}{00095}} \textcolor{keywordtype}{void} \mbox{\hyperlink{queries_8c_ab3cd5f6472e88b4f400d6f56aa6edd8c}{listArtigos}}(\textcolor{keywordtype}{int} queryType)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00096}00096 \{   }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00097}00097     \textcolor{comment}{// queryType 10\&11 = listar todos os artigos disponiveis com valores REDUZIDOS}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00098}00098     \textcolor{comment}{// queryType 12 = listar todos os artigos disponiveis COM todos os valores}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00099}00099     \textcolor{comment}{// queryType 13 = listar um artigo especifico COM todos os valories}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00101}00101     \textcolor{keyword}{enum} queryType \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00102}00102         reduzidaCompras = 10,}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00103}00103         reduzidaAdmin = 11,}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00104}00104         completa = 12,}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00105}00105         especifica = 13}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00106}00106     \};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00108}00108     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}} == -\/1)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00109}00109     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00110}00110         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Não existem artigos registados [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00111}00111         \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00112}00112         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00113}00113     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00114}00114     \textcolor{keywordtype}{int} count;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00115}00115     \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Artigos -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00116}00116     \textcolor{keywordflow}{switch} (queryType)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00117}00117     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00118}00118         \textcolor{keywordflow}{case} reduzidaCompras:}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00119}00119             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} art = 0; art <= \mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}}; art++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00120}00120             \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00121}00121                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].estado)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00122}00122                 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00123}00123                     printf(\textcolor{stringliteral}{"{}\(\backslash\)nArtigo: \%s | Código: \%d"{}}, \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}, \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].codArtigo);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00124}00124                     printf(\textcolor{stringliteral}{"{}\(\backslash\)nPreço comum: \%.2f"{}}, \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].defaultPreco);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00125}00125                     printf(\textcolor{stringliteral}{"{}|\_ Tamanhos disponiveis: \%d -\/ \%d\(\backslash\)n\(\backslash\)n"{}}, \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].tamanhos[0], \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].tamanhos[1]);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00126}00126                 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00127}00127             \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00128}00128             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00130}00130         \textcolor{keywordflow}{case} reduzidaAdmin:}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00131}00131             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} art = 0; art <= \mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}}; art++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00132}00132             \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00133}00133                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].estado)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00134}00134                 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00135}00135                     \mbox{\hyperlink{queries_8c_a7126de96991342ed7ffb2fa43fd9d3a9}{printDataArtigo}}(art, \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00136}00136                 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00137}00137             \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00138}00138             printf(\textcolor{stringliteral}{"{}\(\backslash\)nTotal de Artigos -\/ \%d\(\backslash\)n"{}}, \mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}} + 1);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00139}00139             }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00140}00140             \textcolor{keywordflow}{if} (queryType == reduzidaAdmin)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00141}00141             \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00142}00142                 \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00143}00143             \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00144}00144             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00146}00146         \textcolor{keywordflow}{case} completa:}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00147}00147             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} art = 0; art <= \mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}}; art++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00148}00148             \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00149}00149                 \mbox{\hyperlink{queries_8c_a7126de96991342ed7ffb2fa43fd9d3a9}{printDataArtigo}}(art, \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00150}00150                 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00151}00151             \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00152}00152             printf(\textcolor{stringliteral}{"{}\(\backslash\)nTotal de Artigos -\/ \%d\(\backslash\)n"{}}, \mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}} + 1);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00153}00153             \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00154}00154             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00155}00155         }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00156}00156         \textcolor{keywordflow}{case} especifica:}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00157}00157             printf(\textcolor{stringliteral}{"{}\(\backslash\)nPesquisar Artigo por (N)ome ou (C)ódigo? "{}});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00158}00158             \textcolor{keywordtype}{char} internalQueryType[5];}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00159}00159             scanf(\textcolor{stringliteral}{"{} \%s"{}}, internalQueryType);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00160}00160             \textcolor{keywordflow}{if} (strcmp(internalQueryType, \textcolor{stringliteral}{"{}n"{}}) == 0 || strcmp(internalQueryType, \textcolor{stringliteral}{"{}N"{}}) == 0)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00161}00161             \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00162}00162                 printf(\textcolor{stringliteral}{"{}\(\backslash\)nPesquisar por Nome: "{}});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00163}00163                 \textcolor{keywordtype}{char} nomePesquisa[\mbox{\hyperlink{definitions_8h_a6bb7a09d1931dfbdd6d373cfe6e23357}{SC}}];}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00164}00164                 scanf(\textcolor{stringliteral}{"{} \%s"{}}, nomePesquisa);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00165}00165                 count = 0;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00166}00166                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} art = 0; art <= \mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}}; art++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00167}00167                 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00168}00168                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].estado \&\& (strcmp(\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}, nomePesquisa) == 0))}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00169}00169                     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00170}00170                         \mbox{\hyperlink{queries_8c_a7126de96991342ed7ffb2fa43fd9d3a9}{printDataArtigo}}(art, \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00171}00171                         count++;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00172}00172                     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00173}00173                 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00174}00174                 \textcolor{keywordflow}{if} (count == 0)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00175}00175                 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00176}00176                     \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Não existem artigos com esse nome [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00177}00177                     \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00178}00178                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00179}00179                 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00180}00180             \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00181}00181             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(internalQueryType, \textcolor{stringliteral}{"{}c"{}}) == 0 || strcmp(internalQueryType, \textcolor{stringliteral}{"{}C"{}}) == 0)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00182}00182             \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00183}00183                 printf(\textcolor{stringliteral}{"{}\(\backslash\)nPesquisar por Código: "{}});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00184}00184                 \textcolor{keywordtype}{int} codigoPesquisa;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00185}00185                 scanf(\textcolor{stringliteral}{"{}\%d"{}}, \&codigoPesquisa);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00186}00186                 count = 0;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00187}00187                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} art = 0; art <= \mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}}; art++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00188}00188                 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00189}00189                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].estado \&\& (\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].codArtigo == codigoPesquisa))}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00190}00190                     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00191}00191                         \mbox{\hyperlink{queries_8c_a7126de96991342ed7ffb2fa43fd9d3a9}{printDataArtigo}}(art, \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00192}00192                         count++;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00193}00193                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00194}00194                     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00195}00195                 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00196}00196                 \textcolor{keywordflow}{if} (count == 0)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00197}00197                 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00198}00198                     \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Não existem artigos com esse código [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00199}00199                     \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00200}00200                     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00201}00201                 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00202}00202             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00203}00203                 \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Opção Inválida [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00204}00204                 \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00205}00205                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00206}00206             \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00207}00207         printf(\textcolor{stringliteral}{"{}\(\backslash\)nTotal de Artigos -\/ \%d"{}}, \mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}} + 1);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00208}00208         \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00209}00209         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00210}00210     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00211}00211 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00212}00212 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00213}00213 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00214}00214 \textcolor{preprocessor}{\#pragma region listClientes}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00218}\mbox{\hyperlink{definitions_8h_a7f710faa12da0cf1c324f192cee73e96}{00218}} \textcolor{keywordtype}{void} \mbox{\hyperlink{queries_8c_a7f710faa12da0cf1c324f192cee73e96}{listClientes}}(\textcolor{keywordtype}{int} queryType)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00219}00219 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00220}00220     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_ab4cee453adc50fdf7fed706a78903134}{NC}} == -\/1)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00221}00221     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00222}00222         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Não existem clientes registados [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00223}00223         \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00224}00224         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00225}00225     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00226}00226     \textcolor{keyword}{enum} queryType \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00227}00227         todos = 51,}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00228}00228         especifico = 52,}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00229}00229         autoQuery = 53}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00230}00230     \};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00231}00231 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00232}00232     \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Clientes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00233}00233     \textcolor{keywordflow}{switch} (queryType)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00234}00234     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00235}00235         \textcolor{keywordflow}{case} todos:}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00236}00236             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} user = 0; user <= \mbox{\hyperlink{definitions_8h_ab4cee453adc50fdf7fed706a78903134}{NC}}; user++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00237}00237             \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00238}00238                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}}[user].estado)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00239}00239                 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00240}00240                     \mbox{\hyperlink{queries_8c_a5b0e889434448c1fda602fe8219c6df0}{printDataCliente}}(user);                   }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00241}00241                 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00242}00242             \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00243}00243             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00245}00245         \textcolor{keywordflow}{case} especifico:}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00246}00246             printf(\textcolor{stringliteral}{"{}Pesquisar Cliente por (N)ome ou (C)ódigo? "{}});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00247}00247             \textcolor{keywordtype}{char} internalQueryType[\mbox{\hyperlink{definitions_8h_a6bb7a09d1931dfbdd6d373cfe6e23357}{SC}}];}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00248}00248             scanf(\textcolor{stringliteral}{"{} \%s"{}}, internalQueryType);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00249}00249             \textcolor{keywordflow}{if} (strcmp(internalQueryType, \textcolor{stringliteral}{"{}N"{}}) == 0 || strcmp(internalQueryType, \textcolor{stringliteral}{"{}n"{}}) == 0)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00250}00250             \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00251}00251                 printf(\textcolor{stringliteral}{"{}\(\backslash\)nNome: "{}});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00252}00252                 \textcolor{keywordtype}{char} nome[50];}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00253}00253                 scanf(\textcolor{stringliteral}{"{} \%50s"{}}, nome);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00254}00254                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} user = 0; user <= \mbox{\hyperlink{definitions_8h_ab4cee453adc50fdf7fed706a78903134}{NC}}; user++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00255}00255                 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00256}00256                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}}[user].estado)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00257}00257                     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00258}00258                         \textcolor{keywordflow}{if} (strcmp(\mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}}[user].nome, nome) == 0)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00259}00259                         \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00260}00260                             \mbox{\hyperlink{queries_8c_a5b0e889434448c1fda602fe8219c6df0}{printDataCliente}}(user);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00261}00261                         \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00262}00262                     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00263}00263                 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00264}00264             \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00265}00265             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(internalQueryType, \textcolor{stringliteral}{"{}C"{}}) == 0 || strcmp(internalQueryType, \textcolor{stringliteral}{"{}c"{}}) == 0)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00266}00266             \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00267}00267                 printf(\textcolor{stringliteral}{"{}\(\backslash\)nCódigo Cliente: "{}});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00268}00268                 \textcolor{keywordtype}{int} codCliente;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00269}00269                 scanf(\textcolor{stringliteral}{"{}\%d"{}}, \&codCliente);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00270}00270                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} user = 0; user <= \mbox{\hyperlink{definitions_8h_ab4cee453adc50fdf7fed706a78903134}{NC}}; user++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00271}00271                 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00272}00272                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}}[user].estado \&\& \mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}}[user].codCliente == codCliente)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00273}00273                     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00274}00274                         \mbox{\hyperlink{queries_8c_a5b0e889434448c1fda602fe8219c6df0}{printDataCliente}}(user);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00275}00275                     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00276}00276                 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00277}00277             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00278}00278         \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00279}00279     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00280}00280     \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00281}00281 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00282}00282 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00283}00283 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00284}00284 \textcolor{preprocessor}{\#pragma region EstatisticasEncomendas}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00290}\mbox{\hyperlink{definitions_8h_a8f37bef24fe15f40c71fca8327b44697}{00290}} \textcolor{keywordtype}{void} \mbox{\hyperlink{queries_8c_a8f37bef24fe15f40c71fca8327b44697}{statisticsEncomendas}}()}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00291}00291 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00292}00292     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}} == -\/1) \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00293}00293         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Não existem encomendas! [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00294}00294         \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00295}00295         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00296}00296     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}} == 0) \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00297}00297         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Não existem encomendas sufientes para gerar estatisticas! [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00298}00298         \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00299}00299         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00300}00300     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00302}00302     \textcolor{keywordtype}{float} averagePrice = 0, averageQuantity = 0;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00303}00303     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} enc = 0; enc <= \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}; enc++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00304}00304     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00305}00305         \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].estado)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00306}00306         \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00307}00307             averagePrice += \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].\mbox{\hyperlink{struct_encomendas_ab5af64ba12e40aefe7080187c140895a}{total}};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00308}00308             averageQuantity += (float) \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].quantidade;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00309}00309         \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00310}00310     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00311}00311     averagePrice = averagePrice / (float) (\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}} + 1);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00312}00312     averageQuantity = averageQuantity / (float) (\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}} + 1);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00313}00313 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00314}00314     \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n  [ Média Encomendas ]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00315}00315     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | Preço: \%0.2f€"{}}, averagePrice);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00316}00316     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | Quantidade: \%d"{}}, (\textcolor{keywordtype}{int}) averageQuantity);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00317}00317     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | Total Encomendas: \%d\(\backslash\)n"{}}, \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}} + 1);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00318}00318 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00319}00319     \textcolor{comment}{// Best and Worst Seller}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00320}00320     \textcolor{keywordtype}{int} codArtigoHQ, higherQuantity, codArtigoLQ, lowerQuantity, codBestBuyer, bestBuyerQuantity = 0;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00321}00321     }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00323}00323     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} enc = 0; enc <= \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}; enc++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00324}00324     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00325}00325         \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].estado)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00326}00326         \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00327}00327             \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].quantidade > higherQuantity)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00328}00328             \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00329}00329                 higherQuantity = \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].\mbox{\hyperlink{struct_encomendas_aab7e2f8a805bde3912f985c05be7d510}{quantidade}};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00330}00330                 codArtigoHQ = \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].\mbox{\hyperlink{struct_encomendas_a9b469e91df9bb9a07f1268125a065190}{codArtigo}};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00331}00331             \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00332}00332         \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00333}00333     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00334}00334 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00336}00336     lowerQuantity = higherQuantity;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00337}00337     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} enc = 0; enc <= \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}; enc++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00338}00338     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00339}00339         \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].estado)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00340}00340         \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00341}00341             \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].quantidade < lowerQuantity)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00342}00342             \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00343}00343                 lowerQuantity = \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].\mbox{\hyperlink{struct_encomendas_aab7e2f8a805bde3912f985c05be7d510}{quantidade}};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00344}00344                 codArtigoLQ = \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].\mbox{\hyperlink{struct_encomendas_a9b469e91df9bb9a07f1268125a065190}{codArtigo}};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00345}00345             \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00346}00346         \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00347}00347     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00348}00348     }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00349}00349     codArtigoHQ = \mbox{\hyperlink{queries_8c_a46d4eccec6d2c6e65ef4784ab4db0c78}{getArtigoIndex}}(codArtigoHQ); codArtigoLQ = \mbox{\hyperlink{queries_8c_a46d4eccec6d2c6e65ef4784ab4db0c78}{getArtigoIndex}}(codArtigoLQ);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00350}00350     }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00351}00351     \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n  [ Produto Mais \& Menos Vendido ]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00352}00352     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | Artigo:"{}}); \mbox{\hyperlink{colors_8c_a0df115437fbb77c0311e65300c65289e}{green}}(); printf(\textcolor{stringliteral}{"{} \%s com \%d unidades vendidas"{}}, \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00353}00353     \mbox{\hyperlink{queries_8c_ac099a7d27cd173fb4b83a364b7e4c735}{getArtigoName}}(codArtigoHQ), higherQuantity); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00354}00354     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | Artigo:"{}}); \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{} \%s com \%d unidades vendidas\(\backslash\)n"{}}, \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00355}00355     \mbox{\hyperlink{queries_8c_ac099a7d27cd173fb4b83a364b7e4c735}{getArtigoName}}(codArtigoLQ), lowerQuantity); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00356}00356 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00357}00357 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00359}00359     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} enc = 0; enc <= \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}; enc++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00360}00360     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00361}00361         \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].estado)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00362}00362         \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00363}00363             \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].quantidade > bestBuyerQuantity)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00364}00364             \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00365}00365                 bestBuyerQuantity = \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].\mbox{\hyperlink{struct_encomendas_aab7e2f8a805bde3912f985c05be7d510}{quantidade}};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00366}00366                 codBestBuyer = \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].\mbox{\hyperlink{struct_encomendas_aa9b5911a87665c3e73ce79013736729b}{codCliente}};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00367}00367             \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00368}00368         \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00369}00369     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00370}00370 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00371}00371     \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n  [ Cliente que mais comprou ]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00372}00372     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | Cliente:"{}}); \mbox{\hyperlink{colors_8c_a0df115437fbb77c0311e65300c65289e}{green}}(); printf(\textcolor{stringliteral}{"{} \%s com \%d unidades compradas\(\backslash\)n"{}}, \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00373}00373     \mbox{\hyperlink{clientes_8c_a63ec96e80364598a0c5bfc3954f2dbbe}{getClientName}}(codBestBuyer), bestBuyerQuantity); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00374}00374     }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00375}00375 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00377}00377     \textcolor{keywordtype}{int} codArtigoMLH, codArtigoMLL;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00378}00378     \textcolor{keywordtype}{float} higherMargemLucro;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00379}00379     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} art = 0; art <= \mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}}; art++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00380}00380     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00381}00381         \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].estado)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00382}00382         \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00383}00383             \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].margemLucro > higherMargemLucro)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00384}00384             \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00385}00385                 higherMargemLucro = \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].\mbox{\hyperlink{struct_artigos_a95702009b40b5c752fdaad4cf2853427}{margemLucro}};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00386}00386                 codArtigoMLH = art;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00387}00387             \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00388}00388         \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00389}00389     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00390}00390 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00392}00392     \textcolor{keywordtype}{float} lowerMargemLucro = higherMargemLucro;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00393}00393     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} art = 0; art <= \mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}}; art++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00394}00394     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00395}00395         \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].estado)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00396}00396         \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00397}00397             \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].margemLucro < lowerMargemLucro)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00398}00398             \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00399}00399                 lowerMargemLucro = \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].\mbox{\hyperlink{struct_artigos_a95702009b40b5c752fdaad4cf2853427}{margemLucro}};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00400}00400                 codArtigoMLL = art;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00401}00401             \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00402}00402         \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00403}00403     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00404}00404 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00405}00405     \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n  [ Melhor \& Pior Margem de Lucro ]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00406}00406     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | Artigo:"{}}); \mbox{\hyperlink{colors_8c_a0df115437fbb77c0311e65300c65289e}{green}}(); printf(\textcolor{stringliteral}{"{} \%s com \%0.2f€ de margem de lucro"{}}, \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00407}00407     \mbox{\hyperlink{queries_8c_ac099a7d27cd173fb4b83a364b7e4c735}{getArtigoName}}(codArtigoMLH), higherMargemLucro); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00408}00408     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | Artigo:"{}}); \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{} \%s com \%0.2f€ de margem de lucro\(\backslash\)n"{}}, \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00409}00409     \mbox{\hyperlink{queries_8c_ac099a7d27cd173fb4b83a364b7e4c735}{getArtigoName}}(codArtigoMLL), lowerMargemLucro); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00410}00410 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00411}00411     }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00413}00413     \textcolor{keywordtype}{int} stateEncomendas[2] = \{0, 0\};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00414}00414     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} enc = 0; enc <= \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}; enc++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00415}00415     \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00416}00416         \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].estado)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00417}00417         \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00418}00418             stateEncomendas[0] += 1;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00419}00419         \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00420}00420         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00421}00421         \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00422}00422             stateEncomendas[1] += 1;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00423}00423         \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00424}00424     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00425}00425 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00426}00426     \textcolor{keywordtype}{double} percentagemEncomendas[2] = \{0, 0\};}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00427}00427     percentagemEncomendas[0] = (double) stateEncomendas[0] / (\textcolor{keywordtype}{double}) (\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}} + 1);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00428}00428     percentagemEncomendas[1] = (double) stateEncomendas[1] / (\textcolor{keywordtype}{double}) (\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}} + 1);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00429}00429 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00430}00430     \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n  [ Encomendas Ativas \& Canceladas ]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00431}00431     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | Ativas: \%d -\/"{}}, stateEncomendas[0]); \mbox{\hyperlink{colors_8c_a0df115437fbb77c0311e65300c65289e}{green}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00432}00432     printf(\textcolor{stringliteral}{"{} \%0.2f\%\% das encomendas"{}}, percentagemEncomendas[0] * 100); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00433}00433     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | Canceladas: \%d -\/"{}}, stateEncomendas[1]); \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00434}00434     printf(\textcolor{stringliteral}{"{} \%0.2f\%\% das encomendas"{}}, percentagemEncomendas[1] * 100); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00435}00435 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00436}00436     \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00437}00437 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00438}00438 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00439}00439 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00440}00440 \textcolor{preprocessor}{\#pragma region printDataEncomenda}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00445}\mbox{\hyperlink{definitions_8h_adf88e57666bc1bdbe2b9a532b5d8ee19}{00445}} \textcolor{keywordtype}{void} \mbox{\hyperlink{queries_8c_adf88e57666bc1bdbe2b9a532b5d8ee19}{printDataEncomenda}}(\textcolor{keywordtype}{int} enc)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00446}00446 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00447}00447     printf(\textcolor{stringliteral}{"{}\(\backslash\)n[Código Encomenda]: \%d "{}}, \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].codEncomenda);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00448}00448     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | Código Cliente: \%d (\%s)"{}}, \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].codCliente, \mbox{\hyperlink{clientes_8c_a63ec96e80364598a0c5bfc3954f2dbbe}{getClientName}}(\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].codCliente));}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00449}00449     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | \%d pare(s) de \%s"{}}, \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].quantidade, \mbox{\hyperlink{queries_8c_ac099a7d27cd173fb4b83a364b7e4c735}{getArtigoName}}(\mbox{\hyperlink{queries_8c_a46d4eccec6d2c6e65ef4784ab4db0c78}{getArtigoIndex}}(\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].codArtigo)));}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00450}00450     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | Preço Encomenda: \%0.2f€"{}}, \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].total);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00451}00451     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | Data: \%d \%d/\%d/\%d"{}}, \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].horaminuto, \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].dia, \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].mes, \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].ano);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00452}00452     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | [Estado]: \%s\(\backslash\)n"{}}, \mbox{\hyperlink{definitions_8h_ac3e41774a08731e62fe348b9c8401ccb}{getEstadoEncomenda}}(\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].estado));}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00453}00453 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00454}00454 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00455}00455 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00456}00456 \textcolor{preprocessor}{\#pragma region printDataArtigo}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00462}\mbox{\hyperlink{definitions_8h_a2db28081aac0ef2215ab88524f9cf13e}{00462}} \textcolor{keywordtype}{void} \mbox{\hyperlink{queries_8c_a7126de96991342ed7ffb2fa43fd9d3a9}{printDataArtigo}}(\textcolor{keywordtype}{int} art, \textcolor{keywordtype}{bool} printTamanhos)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00463}00463 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00464}00464     \textcolor{keywordtype}{int} looperTamanhos = 0;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00465}00465 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00466}00466     printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00467}00467     \textcolor{stringliteral}{"{}Artigo: \%s (Código: \%d)\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00468}00468     \textcolor{stringliteral}{"{}  | Mão Obra: \%0.2f€\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00469}00469     \textcolor{stringliteral}{"{}  | Custos Fixos: \%0.2f€\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00470}00470     \textcolor{stringliteral}{"{}  | Margem Lucro: \%0.2f€\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00471}00471     \textcolor{stringliteral}{"{}  | Preco por defeito: \%0.2f€\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00472}00472     \textcolor{stringliteral}{"{}  | Incremento (por tamanho): +\%0.2f€\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00473}00473     \textcolor{stringliteral}{"{}  [Estado] \%s"{}}, \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}, \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].codArtigo, \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].maoObra,  \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00474}00474     \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].custosFixos, \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].margemLucro, \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].defaultPreco, \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].incrementoPreco, \mbox{\hyperlink{definitions_8h_ac3e41774a08731e62fe348b9c8401ccb}{getEstadoEncomenda}}(\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].estado));}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00475}00475 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00476}00476     \textcolor{keywordflow}{if} (printTamanhos) \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00477}00477         printf(\textcolor{stringliteral}{"{}\(\backslash\)t| Tamanho(s) e Preço(s):\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00478}00478         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].tamanhos[0]; j <= \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].\mbox{\hyperlink{struct_artigos_a663835fb75190f816a4c9a34da466774}{tamanhos}}[1]; j++)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00479}00479         \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00480}00480             printf(\textcolor{stringliteral}{"{}\(\backslash\)t|\_ Tamanho: \%d | Preço: \%0.2f€\(\backslash\)n"{}}, \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00481}00481             (\textcolor{keywordtype}{int}) \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].tamanhoPreco[looperTamanhos][0], \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].tamanhoPreco[looperTamanhos][1]);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00482}00482             looperTamanhos++;}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00483}00483         \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00484}00484     \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00485}00485 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00486}00486 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00487}00487 }
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00488}00488 \textcolor{preprocessor}{\#pragma region printDataCliente}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00493}\mbox{\hyperlink{definitions_8h_a5b0e889434448c1fda602fe8219c6df0}{00493}} \textcolor{keywordtype}{void} \mbox{\hyperlink{queries_8c_a5b0e889434448c1fda602fe8219c6df0}{printDataCliente}}(\textcolor{keywordtype}{int} cli)}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00494}00494 \{}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00495}00495     printf(\textcolor{stringliteral}{"{}\(\backslash\)n[Código Cliente]: \%d"{}}, \mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}}[cli].codCliente);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00496}00496     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | Nome: \%s"{}}, \mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}}[cli].nome);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00497}00497     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | NIF: \%d"{}}, \mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}}[cli].nif);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00498}00498     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  | País: \%s\(\backslash\)n"{}}, \mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}}[cli].pais);}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00499}00499 \}}
+\DoxyCodeLine{\Hypertarget{queries_8c_source_l00500}00500 \textcolor{preprocessor}{\#pragma endregion}}
+
+\end{DoxyCode}

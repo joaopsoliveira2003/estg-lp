@@ -1,0 +1,211 @@
+.TH "util.c" 3 "Fri Jan 14 2022" "Version Grupo 2" "Laboratório de Programação" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+util.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include 'definitions\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBnumberOfDigits\fP (int num)"
+.br
+.RI "Conta o número de digitos de um inteiro\&. "
+.ti -1c
+.RI "void \fBclearScreen\fP ()"
+.br
+.RI "Permite limpar o ecrã de forma 'portátil' entre sistemas\&. "
+.ti -1c
+.RI "void \fBpressEnter\fP (bool alsoClearScreen)"
+.br
+.RI "Permite dar a opção do tipico 'Press Enter to continue'\&. "
+.ti -1c
+.RI "bool \fBcheckString\fP (const char *string)"
+.br
+.RI "Verifica se a string indicada é válida tendo em contas certas condições\&. "
+.ti -1c
+.RI "bool \fBcheckNumber\fP (double number)"
+.br
+.RI "Controlar o inteiro indicado pelo utilizador\&. "
+.ti -1c
+.RI "bool \fBcheckCodPromo\fP (char *codPromo)"
+.br
+.RI "Verifica se o código promocional introduzido pelo utilizador é valido\&. "
+.ti -1c
+.RI "bool \fBavailableForOperation\fP (int op, int codArtigo, int parameter)"
+.br
+.RI "Verifica se o artigo OU parâmetro indicado está disponível ou é valido para X operação\&. "
+.ti -1c
+.RI "bool \fBloggedClient\fP ()"
+.br
+.RI "Verifica se existe utilizador autenticado\&. "
+.ti -1c
+.RI "void \fBreallocStruct\fP (int st)"
+.br
+.ti -1c
+.RI "void \fBfreeMemory\fP (bool alsoStopTheProgram)"
+.br
+.RI "Liberta a memória antes de fechar o programa e/ou termina o programa\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "bool availableForOperation (int op, int codArtigo, int parameter)"
+
+.PP
+Verifica se o artigo OU parâmetro indicado está disponível ou é valido para X operação\&. *
+.PP
+\fBNote\fP
+.RS 4
+As operações estão indicadas na enumeração 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true se a operação/parâmetro é válido, false caso contrário 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+O valor do return é usado no respetivo 'loop do while' 
+.RE
+.PP
+
+.PP
+Definition at line \fB118\fP of file \fButil\&.c\fP\&.
+.SS "bool checkCodPromo (char * codPromo)"
+
+.PP
+Verifica se o código promocional introduzido pelo utilizador é valido\&. *
+.PP
+\fBReturns\fP
+.RS 4
+true se o código for válido, false caso contrário 
+.RE
+.PP
+
+.PP
+Definition at line \fB96\fP of file \fButil\&.c\fP\&.
+.SS "bool checkNumber (double number)"
+
+.PP
+Controlar o inteiro indicado pelo utilizador\&. *
+.PP
+\fBReturns\fP
+.RS 4
+true se o inteiro for válido, false caso contrário 
+.RE
+.PP
+
+.PP
+Definition at line \fB78\fP of file \fButil\&.c\fP\&.
+.SS "bool checkString (const char * string)"
+
+.PP
+Verifica se a string indicada é válida tendo em contas certas condições\&. 
+.PP
+\fBNote\fP
+.RS 4
+A string é válida se:
+.IP "\(bu" 2
+não estiver vazia e conter pelo menos 3 caracteres
+.IP "\(bu" 2
+não contém caracteres númericos 
+.PP
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true se a string for válida, false caso contrário 
+.RE
+.PP
+
+.PP
+Definition at line \fB57\fP of file \fButil\&.c\fP\&.
+.SS "void clearScreen ()"
+
+.PP
+Permite limpar o ecrã de forma 'portátil' entre sistemas\&. 
+.IP "\(bu" 2
+
+.PP
+
+.PP
+Definition at line \fB29\fP of file \fButil\&.c\fP\&.
+.SS "void freeMemory (bool alsoStopTheProgram)"
+
+.PP
+Liberta a memória antes de fechar o programa e/ou termina o programa\&. *
+.PP
+\fBParameters\fP
+.RS 4
+\fIalsoStopTheProgram\fP - Opção de saída do programa 
+.RE
+.PP
+
+.PP
+Definition at line \fB267\fP of file \fButil\&.c\fP\&.
+.SS "bool loggedClient ()"
+
+.PP
+Verifica se existe utilizador autenticado\&. *
+.PP
+\fBReturns\fP
+.RS 4
+true se existe utilizador autenticado, false caso contrário 
+.RE
+.PP
+Não existe cliente logado
+.PP
+Definition at line \fB217\fP of file \fButil\&.c\fP\&.
+.SS "int numberOfDigits (int num)"
+
+.PP
+Conta o número de digitos de um inteiro\&. Ficheiro \fButil\&.c\fP\&.
+.PP
+\fBNote\fP
+.RS 4
+Usado, por exemplo, para verificar o NIF do cliente 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+O número de digitos do inteiro para usar no respetivo 'loop do while' 
+.RE
+.PP
+
+.PP
+Definition at line \fB15\fP of file \fButil\&.c\fP\&.
+.SS "void pressEnter (bool alsoClearScreen)"
+
+.PP
+Permite dar a opção do tipico 'Press Enter to continue'\&. 
+.IP "\(bu" 2
+
+.PP
+
+.PP
+Definition at line \fB37\fP of file \fButil\&.c\fP\&.
+.SS "void reallocStruct (int st)"
+
+.PP
+Definition at line \fB229\fP of file \fButil\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Laboratório de Programação from the source code\&.

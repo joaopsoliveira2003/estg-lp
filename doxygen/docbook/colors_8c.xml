@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_colors_8c" xml:lang="en-US">
+<title>colors.c File Reference</title>
+<indexterm><primary>colors.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &quot;definitions.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link> ()</para>
+
+<para>Permite o uso de &quot;output&quot; colorido. </para>
+</listitem>
+            <listitem><para>void <link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_colors_8c_1a0df115437fbb77c0311e65300c65289e">green</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_colors_8c_1a161aec8a96c389795d228ca0c3a949d5">blue</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_colors_8c_1ab0c10e6284be130a7973fa029a690ef7">yellow</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_colors_8c_1ab2b14535fac90d655eb767bff5647d88">purple</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_colors_8c_1a59d9c08d69e42981f0d6fb680f5e6e26">bold</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_colors_8c_1af7082af28af567c98aa48add7be13826">boldRed</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_colors_8c_1a52a6a14bd8e9463315ea114aceda1d92">cyan</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_colors_8c_1a161aec8a96c389795d228ca0c3a949d5"/><section>
+    <title>blue()</title>
+<indexterm><primary>blue</primary><secondary>colors.c</secondary></indexterm>
+<indexterm><primary>colors.c</primary><secondary>blue</secondary></indexterm>
+<para><computeroutput>void blue ( )</computeroutput></para><para>
+Definition at line <link linkend="_colors_8c_source_1l00024">24</link> of file <link linkend="_colors_8c_source">colors.c</link>.</para>
+</section>
+<anchor xml:id="_colors_8c_1a59d9c08d69e42981f0d6fb680f5e6e26"/><section>
+    <title>bold()</title>
+<indexterm><primary>bold</primary><secondary>colors.c</secondary></indexterm>
+<indexterm><primary>colors.c</primary><secondary>bold</secondary></indexterm>
+<para><computeroutput>void bold ( )</computeroutput></para><para>
+Definition at line <link linkend="_colors_8c_source_1l00039">39</link> of file <link linkend="_colors_8c_source">colors.c</link>.</para>
+</section>
+<anchor xml:id="_colors_8c_1af7082af28af567c98aa48add7be13826"/><section>
+    <title>boldRed()</title>
+<indexterm><primary>boldRed</primary><secondary>colors.c</secondary></indexterm>
+<indexterm><primary>colors.c</primary><secondary>boldRed</secondary></indexterm>
+<para><computeroutput>void boldRed ( )</computeroutput></para><para>
+Definition at line <link linkend="_colors_8c_source_1l00044">44</link> of file <link linkend="_colors_8c_source">colors.c</link>.</para>
+</section>
+<anchor xml:id="_colors_8c_1a52a6a14bd8e9463315ea114aceda1d92"/><section>
+    <title>cyan()</title>
+<indexterm><primary>cyan</primary><secondary>colors.c</secondary></indexterm>
+<indexterm><primary>colors.c</primary><secondary>cyan</secondary></indexterm>
+<para><computeroutput>void cyan ( )</computeroutput></para><para>
+Definition at line <link linkend="_colors_8c_source_1l00049">49</link> of file <link linkend="_colors_8c_source">colors.c</link>.</para>
+</section>
+<anchor xml:id="_colors_8c_1a0df115437fbb77c0311e65300c65289e"/><section>
+    <title>green()</title>
+<indexterm><primary>green</primary><secondary>colors.c</secondary></indexterm>
+<indexterm><primary>colors.c</primary><secondary>green</secondary></indexterm>
+<para><computeroutput>void green ( )</computeroutput></para><para>
+Definition at line <link linkend="_colors_8c_source_1l00019">19</link> of file <link linkend="_colors_8c_source">colors.c</link>.</para>
+</section>
+<anchor xml:id="_colors_8c_1ab2b14535fac90d655eb767bff5647d88"/><section>
+    <title>purple()</title>
+<indexterm><primary>purple</primary><secondary>colors.c</secondary></indexterm>
+<indexterm><primary>colors.c</primary><secondary>purple</secondary></indexterm>
+<para><computeroutput>void purple ( )</computeroutput></para><para>
+Definition at line <link linkend="_colors_8c_source_1l00034">34</link> of file <link linkend="_colors_8c_source">colors.c</link>.</para>
+</section>
+<anchor xml:id="_colors_8c_1a39abd40f68d03c40857be1e74407efb9"/><section>
+    <title>red()</title>
+<indexterm><primary>red</primary><secondary>colors.c</secondary></indexterm>
+<indexterm><primary>colors.c</primary><secondary>red</secondary></indexterm>
+<para><computeroutput>void red ( )</computeroutput></para><para>
+Definition at line <link linkend="_colors_8c_source_1l00014">14</link> of file <link linkend="_colors_8c_source">colors.c</link>.</para>
+</section>
+<anchor xml:id="_colors_8c_1ac0fd834412eb7d5311f137d919db6788"/><section>
+    <title>white()</title>
+<indexterm><primary>white</primary><secondary>colors.c</secondary></indexterm>
+<indexterm><primary>colors.c</primary><secondary>white</secondary></indexterm>
+<para><computeroutput>void white ( )</computeroutput></para><para>
+
+<para>Permite o uso de &quot;output&quot; colorido. </para>
+</para>
+<para>
+Definition at line <link linkend="_colors_8c_source_1l00009">9</link> of file <link linkend="_colors_8c_source">colors.c</link>.</para>
+</section>
+<anchor xml:id="_colors_8c_1ab0c10e6284be130a7973fa029a690ef7"/><section>
+    <title>yellow()</title>
+<indexterm><primary>yellow</primary><secondary>colors.c</secondary></indexterm>
+<indexterm><primary>colors.c</primary><secondary>yellow</secondary></indexterm>
+<para><computeroutput>void yellow ( )</computeroutput></para><para>
+Definition at line <link linkend="_colors_8c_source_1l00029">29</link> of file <link linkend="_colors_8c_source">colors.c</link>.</para>
+</section>
+</section>
+</section>

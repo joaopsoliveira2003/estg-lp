@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="struct_runtime" kind="struct" language="C++" prot="public">
+    <compoundname>Runtime</compoundname>
+    <includes refid="definitions_8h" local="no">definitions.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int currentClient</definition>
+        <argsstring></argsstring>
+        <name>currentClient</name>
+        <qualifiedname>Runtime::currentClient</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="48" column="9" bodyfile="definitions.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_runtime_1ae004fa1151ab1583e3a9174cf07ac012" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char stringDesconto[7]</definition>
+        <argsstring>[7]</argsstring>
+        <name>stringDesconto</name>
+        <qualifiedname>Runtime::stringDesconto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="49" column="10" bodyfile="definitions.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_runtime_1abcccdaf615845e2019116c5ce4b90b3a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double percentageDesconto</definition>
+        <argsstring></argsstring>
+        <name>percentageDesconto</name>
+        <qualifiedname>Runtime::percentageDesconto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="50" column="12" bodyfile="definitions.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="definitions.h" line="47" column="1" bodyfile="definitions.h" bodystart="47" bodyend="51"/>
+    <listofallmembers>
+      <member refid="struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72" prot="public" virt="non-virtual"><scope>Runtime</scope><name>currentClient</name></member>
+      <member refid="struct_runtime_1abcccdaf615845e2019116c5ce4b90b3a" prot="public" virt="non-virtual"><scope>Runtime</scope><name>percentageDesconto</name></member>
+      <member refid="struct_runtime_1ae004fa1151ab1583e3a9174cf07ac012" prot="public" virt="non-virtual"><scope>Runtime</scope><name>stringDesconto</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

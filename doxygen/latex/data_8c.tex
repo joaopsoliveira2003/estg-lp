@@ -1,0 +1,123 @@
+\hypertarget{data_8c}{}\doxysection{data.\+c File Reference}
+\label{data_8c}\index{data.c@{data.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}definitions.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{data_8c_a8c0b39e19764089f83e1a337c0369676}{import\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Importa os dados dos ficheiros binários. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data_8c_a845434be144bc6138804dd39b3760212}{export\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Exporta os dados dos ficheiros binários. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data_8c_ace66f1e8600faf005e2f95c1f5e24ec4}{import\+Default\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Importa os dados padrão (default.\+bin) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data_8c_a90b381b5624a976ecadeaabacfde025e}{export\+Default\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Exporta os dados padrão do programa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data_8c_a5ca14d2c3fb1cd90e8dc483afaf1b3d8}{export\+Encomendas}} ()
+\begin{DoxyCompactList}\small\item\em Exporta as encomendas para um ficheiro CSV. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{data_8c_a01374b232898f3d3c134623ffded84af}{delete\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Apaga todos os dados em memória do programa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{data_8c_a01374b232898f3d3c134623ffded84af}\label{data_8c_a01374b232898f3d3c134623ffded84af}} 
+\index{data.c@{data.c}!deleteData@{deleteData}}
+\index{deleteData@{deleteData}!data.c@{data.c}}
+\doxysubsubsection{\texorpdfstring{deleteData()}{deleteData()}}
+{\footnotesize\ttfamily void delete\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Apaga todos os dados em memória do programa. 
+
+
+
+Definition at line \mbox{\hyperlink{data_8c_source_l00274}{274}} of file \mbox{\hyperlink{data_8c_source}{data.\+c}}.
+
+\mbox{\Hypertarget{data_8c_a845434be144bc6138804dd39b3760212}\label{data_8c_a845434be144bc6138804dd39b3760212}} 
+\index{data.c@{data.c}!exportData@{exportData}}
+\index{exportData@{exportData}!data.c@{data.c}}
+\doxysubsubsection{\texorpdfstring{exportData()}{exportData()}}
+{\footnotesize\ttfamily void export\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Exporta os dados dos ficheiros binários. 
+
+\begin{DoxyNote}{Note}
+Caso surja algum erro na escrita, o programa termina 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{data_8c_source_l00071}{71}} of file \mbox{\hyperlink{data_8c_source}{data.\+c}}.
+
+\mbox{\Hypertarget{data_8c_a90b381b5624a976ecadeaabacfde025e}\label{data_8c_a90b381b5624a976ecadeaabacfde025e}} 
+\index{data.c@{data.c}!exportDefaultData@{exportDefaultData}}
+\index{exportDefaultData@{exportDefaultData}!data.c@{data.c}}
+\doxysubsubsection{\texorpdfstring{exportDefaultData()}{exportDefaultData()}}
+{\footnotesize\ttfamily void export\+Default\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Exporta os dados padrão do programa. 
+
+\begin{DoxyNote}{Note}
+Coloca os dados padrão em memória e em seguida exporta para o ficheiro default.\+bin 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{data_8c_source_l00149}{149}} of file \mbox{\hyperlink{data_8c_source}{data.\+c}}.
+
+\mbox{\Hypertarget{data_8c_a5ca14d2c3fb1cd90e8dc483afaf1b3d8}\label{data_8c_a5ca14d2c3fb1cd90e8dc483afaf1b3d8}} 
+\index{data.c@{data.c}!exportEncomendas@{exportEncomendas}}
+\index{exportEncomendas@{exportEncomendas}!data.c@{data.c}}
+\doxysubsubsection{\texorpdfstring{exportEncomendas()}{exportEncomendas()}}
+{\footnotesize\ttfamily void export\+Encomendas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Exporta as encomendas para um ficheiro CSV. 
+
+
+
+Definition at line \mbox{\hyperlink{data_8c_source_l00239}{239}} of file \mbox{\hyperlink{data_8c_source}{data.\+c}}.
+
+\mbox{\Hypertarget{data_8c_a8c0b39e19764089f83e1a337c0369676}\label{data_8c_a8c0b39e19764089f83e1a337c0369676}} 
+\index{data.c@{data.c}!importData@{importData}}
+\index{importData@{importData}!data.c@{data.c}}
+\doxysubsubsection{\texorpdfstring{importData()}{importData()}}
+{\footnotesize\ttfamily void import\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Importa os dados dos ficheiros binários. 
+
+\begin{DoxyNote}{Note}
+Caso nao exista algum ficheiro ou caso surja erro na leitura, o programa termina 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{data_8c_source_l00015}{15}} of file \mbox{\hyperlink{data_8c_source}{data.\+c}}.
+
+\mbox{\Hypertarget{data_8c_ace66f1e8600faf005e2f95c1f5e24ec4}\label{data_8c_ace66f1e8600faf005e2f95c1f5e24ec4}} 
+\index{data.c@{data.c}!importDefaultData@{importDefaultData}}
+\index{importDefaultData@{importDefaultData}!data.c@{data.c}}
+\doxysubsubsection{\texorpdfstring{importDefaultData()}{importDefaultData()}}
+{\footnotesize\ttfamily void import\+Default\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Importa os dados padrão (default.\+bin) 
+
+\begin{DoxyNote}{Note}
+Caso o ficheiro não exista a função \mbox{\hyperlink{data_8c_a90b381b5624a976ecadeaabacfde025e}{export\+Default\+Data()}} é chamada para criar o ficheiro com os dados padrão 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{data_8c_source_l00115}{115}} of file \mbox{\hyperlink{data_8c_source}{data.\+c}}.
+

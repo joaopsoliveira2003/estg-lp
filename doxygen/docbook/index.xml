@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>Laboratório de Programação</title>
+    </info>
+<chapter>
+    <title>Laboratório de Programação</title>
+    <xi:include href="mainpage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Data Structure Documentation</title>
+    <xi:include href="struct_artigos.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_clientes.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_encomendas.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_runtime.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="administrador_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="administrador_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="clientes_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="clientes_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="colors_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="colors_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="data_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="data_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="definitions_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="definitions_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="main_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="main_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="queries_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="queries_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="shopping_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="shopping_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="util_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="util_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

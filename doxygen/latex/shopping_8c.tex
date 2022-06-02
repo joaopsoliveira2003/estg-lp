@@ -1,0 +1,163 @@
+\hypertarget{shopping_8c}{}\doxysection{shopping.\+c File Reference}
+\label{shopping_8c}\index{shopping.c@{shopping.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}definitions.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{shopping_8c_a975774baaa722d6932cb6cfd39020511}{IVA}}~1.\+23
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{shopping_8c_ac3e41774a08731e62fe348b9c8401ccb}{get\+Estado\+Encomenda}} (int estado)
+\begin{DoxyCompactList}\small\item\em Retornar o estado de certa encomenda. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{shopping_8c_a6f4f7a9a71ced3d5e9fb21198edb6ab2}{login\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Função que autentica certo utilizador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{shopping_8c_a2163242f3dbe460739c88c56f06ec34f}{logout\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Função que desautentica certo utilizador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{shopping_8c_a10d6c88f1cbf1e60ed32e609f715a779}{do\+Shopping}} ()
+\begin{DoxyCompactList}\small\item\em Função que adiciona uma encomenda, ou seja uma compra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{shopping_8c_a87b028e2e18b0b33e3eb58cb99af5523}{list\+Encomendas}} (int query\+Type)
+\begin{DoxyCompactList}\small\item\em Função que permite listar as encomendas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{shopping_8c_a91ff19fa6805e0491dd0bcf68a12d4da}{cancel\+Encomenda}} ()
+\begin{DoxyCompactList}\small\item\em Função que permite cancelar uma encomenda. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{shopping_8c_a975774baaa722d6932cb6cfd39020511}\label{shopping_8c_a975774baaa722d6932cb6cfd39020511}} 
+\index{shopping.c@{shopping.c}!IVA@{IVA}}
+\index{IVA@{IVA}!shopping.c@{shopping.c}}
+\doxysubsubsection{\texorpdfstring{IVA}{IVA}}
+{\footnotesize\ttfamily \#define IVA~1.\+23}
+
+
+
+Definition at line \mbox{\hyperlink{shopping_8c_source_l00009}{9}} of file \mbox{\hyperlink{shopping_8c_source}{shopping.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{shopping_8c_a91ff19fa6805e0491dd0bcf68a12d4da}\label{shopping_8c_a91ff19fa6805e0491dd0bcf68a12d4da}} 
+\index{shopping.c@{shopping.c}!cancelEncomenda@{cancelEncomenda}}
+\index{cancelEncomenda@{cancelEncomenda}!shopping.c@{shopping.c}}
+\doxysubsubsection{\texorpdfstring{cancelEncomenda()}{cancelEncomenda()}}
+{\footnotesize\ttfamily void cancel\+Encomenda (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que permite cancelar uma encomenda. 
+
+
+
+Definition at line \mbox{\hyperlink{shopping_8c_source_l00362}{362}} of file \mbox{\hyperlink{shopping_8c_source}{shopping.\+c}}.
+
+\mbox{\Hypertarget{shopping_8c_a10d6c88f1cbf1e60ed32e609f715a779}\label{shopping_8c_a10d6c88f1cbf1e60ed32e609f715a779}} 
+\index{shopping.c@{shopping.c}!doShopping@{doShopping}}
+\index{doShopping@{doShopping}!shopping.c@{shopping.c}}
+\doxysubsubsection{\texorpdfstring{doShopping()}{doShopping()}}
+{\footnotesize\ttfamily void do\+Shopping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que adiciona uma encomenda, ou seja uma compra. 
+
+\begin{DoxyNote}{Note}
+Verifica se já existe um utilizador autenticado, e se existem artigos disponíveis 
+\end{DoxyNote}
+Caso cliente não esteja autenticado, e pretenda fazer compras
+
+Cálculo do preço default\+Preco = (mao\+Obra + custos\+Fixos) $\ast$ margem\+Lucro
+
+Definition at line \mbox{\hyperlink{shopping_8c_source_l00118}{118}} of file \mbox{\hyperlink{shopping_8c_source}{shopping.\+c}}.
+
+\mbox{\Hypertarget{shopping_8c_ac3e41774a08731e62fe348b9c8401ccb}\label{shopping_8c_ac3e41774a08731e62fe348b9c8401ccb}} 
+\index{shopping.c@{shopping.c}!getEstadoEncomenda@{getEstadoEncomenda}}
+\index{getEstadoEncomenda@{getEstadoEncomenda}!shopping.c@{shopping.c}}
+\doxysubsubsection{\texorpdfstring{getEstadoEncomenda()}{getEstadoEncomenda()}}
+{\footnotesize\ttfamily char $\ast$ get\+Estado\+Encomenda (\begin{DoxyParamCaption}\item[{int}]{estado }\end{DoxyParamCaption})}
+
+
+
+Retornar o estado de certa encomenda. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em estado} & -\/ O estado de do artigo em int (ex\+: artigo\mbox{[}1\mbox{]}.estado) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Disponível ou Indisponível (string) 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{shopping_8c_source_l00017}{17}} of file \mbox{\hyperlink{shopping_8c_source}{shopping.\+c}}.
+
+\mbox{\Hypertarget{shopping_8c_a87b028e2e18b0b33e3eb58cb99af5523}\label{shopping_8c_a87b028e2e18b0b33e3eb58cb99af5523}} 
+\index{shopping.c@{shopping.c}!listEncomendas@{listEncomendas}}
+\index{listEncomendas@{listEncomendas}!shopping.c@{shopping.c}}
+\doxysubsubsection{\texorpdfstring{listEncomendas()}{listEncomendas()}}
+{\footnotesize\ttfamily void list\+Encomendas (\begin{DoxyParamCaption}\item[{int}]{query\+Type }\end{DoxyParamCaption})}
+
+
+
+Função que permite listar as encomendas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query\+Type} & -\/ Tipo de \char`\"{}query\char`\"{} a ser executada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+De acordo com o tipo de \char`\"{}query\char`\"{} definido na enumeração, a função lista as encomendas 
+
+Por exemplo, a \char`\"{}query\char`\"{} (61) lista todas as encomendas de todos os clientes 
+\end{DoxyNote}
+\begin{DoxyNote}{Note}
+Permite listar as encomendas de certo cliente, este que é indicado via Nome ou pelo seu Código
+
+Permite listar as encomendas de acordo com certa data
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{shopping_8c_source_l00208}{208}} of file \mbox{\hyperlink{shopping_8c_source}{shopping.\+c}}.
+
+\mbox{\Hypertarget{shopping_8c_a6f4f7a9a71ced3d5e9fb21198edb6ab2}\label{shopping_8c_a6f4f7a9a71ced3d5e9fb21198edb6ab2}} 
+\index{shopping.c@{shopping.c}!loginClient@{loginClient}}
+\index{loginClient@{loginClient}!shopping.c@{shopping.c}}
+\doxysubsubsection{\texorpdfstring{loginClient()}{loginClient()}}
+{\footnotesize\ttfamily void login\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que autentica certo utilizador. 
+
+\begin{DoxyNote}{Note}
+Verifica se já existe um utilizador autenticado, se sim dá a opção de sair ou de autenticar outro utilizador 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{shopping_8c_source_l00036}{36}} of file \mbox{\hyperlink{shopping_8c_source}{shopping.\+c}}.
+
+\mbox{\Hypertarget{shopping_8c_a2163242f3dbe460739c88c56f06ec34f}\label{shopping_8c_a2163242f3dbe460739c88c56f06ec34f}} 
+\index{shopping.c@{shopping.c}!logoutClient@{logoutClient}}
+\index{logoutClient@{logoutClient}!shopping.c@{shopping.c}}
+\doxysubsubsection{\texorpdfstring{logoutClient()}{logoutClient()}}
+{\footnotesize\ttfamily void logout\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que desautentica certo utilizador. 
+
+\begin{DoxyNote}{Note}
+Verifica se já existe um utilizador autenticado 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{shopping_8c_source_l00097}{97}} of file \mbox{\hyperlink{shopping_8c_source}{shopping.\+c}}.
+

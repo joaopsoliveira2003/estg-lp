@@ -1,0 +1,1312 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_definitions_8h" xml:lang="en-US">
+<title>definitions.h File Reference</title>
+<indexterm><primary>definitions.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdbool.h&gt;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_clientes">Clientes</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_artigos">Artigos</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_encomendas">Encomendas</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_runtime">Runtime</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357">SC</link>   25</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_definitions_8h_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> ()</para>
+
+<para>Ficheiro <link linkend="_main_8c">main.c</link>. </para>
+</listitem>
+            <listitem><para>int <link linkend="_definitions_8h_1a2da5c6326d98abeaf456372ceb077847">numberOfDigits</link> (int num)</para>
+
+<para>Ficheiro <link linkend="_util_8c">util.c</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a9d7e8af417b6d543da691e9c0e2f6f9f">clearScreen</link> ()</para>
+
+<para>Permite limpar o ecrã de forma &quot;portátil&quot; entre sistemas. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe">pressEnter</link> (bool alsoClearScreen)</para>
+
+<para>Permite dar a opção do tipico &quot;Press Enter to continue&quot;. </para>
+</listitem>
+            <listitem><para>int <link linkend="_definitions_8h_1ae403fe07e86bc33933303d3e266b579d">getDateInfo</link> (int info)</para>
+
+<para>Obter certo parâmetro de data tal como hora, dia, mês, ano. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_definitions_8h_1af22d234c9f1f40dea9b79ca8fb8c7288">checkString</link> (const char *string)</para>
+
+<para>Verifica se a string indicada é válida tendo em contas certas condições. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_definitions_8h_1a41532c4603b615920ea1c1216d1445ad">checkNumber</link> (double number)</para>
+
+<para>Controlar o inteiro indicado pelo utilizador. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_definitions_8h_1ae81c93a074d4c3bdce4d8409997418f0">checkCodPromo</link> (char *codPromo)</para>
+
+<para>Verifica se o código promocional introduzido pelo utilizador é valido. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_definitions_8h_1a52199f9c4b3c9c302cc8d4ab4a38bae5">availableForOperation</link> (int op, int codArtigo, int parameter)</para>
+
+<para>Verifica se o artigo OU parâmetro indicado está disponível ou é valido para X operação. </para>
+</listitem>
+            <listitem><para>int <link linkend="_definitions_8h_1a46d4eccec6d2c6e65ef4784ab4db0c78">getArtigoIndex</link> (int codArtigo)</para>
+
+<para>Função que permite obter o indíce de um artigo no array. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_definitions_8h_1a9efdb5ab1d7b26e54799af4e7cb59fa2">loggedClient</link> ()</para>
+
+<para>Verifica se existe utilizador autenticado. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a941fa13e3d505e5a9a3f9c082bfeff89">reallocStruct</link> (int st)</para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a5ec3ba219271cd3cd14bf58108226c7c">freeMemory</link> (bool alsoStopTheProgram)</para>
+
+<para>Liberta a memória antes de fechar o programa e/ou termina o programa. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a87b028e2e18b0b33e3eb58cb99af5523">listEncomendas</link> (int queryType)</para>
+
+<para>Função que permite listar as encomendas. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a8f37bef24fe15f40c71fca8327b44697">statisticsEncomendas</link> ()</para>
+
+<para>Estatisticas das encomendas. </para>
+</listitem>
+            <listitem><para>double <link linkend="_definitions_8h_1a2e948973437ab18cc4aa58f04f32b31d">getTotalEncomenda</link> ()</para>
+
+<para>Função que permite obter o total (preço) de encomendas. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a7f710faa12da0cf1c324f192cee73e96">listClientes</link> (int queryType)</para>
+
+<para>Função que permite listar o(s) cliente(s) </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1ab3cd5f6472e88b4f400d6f56aa6edd8c">listArtigos</link> (int queryType)</para>
+
+<para>Função que permite listar o(s) artigo(s) </para>
+</listitem>
+            <listitem><para>char * <link linkend="_definitions_8h_1af4568fe8cae0d02992cc20eeaa4d309d">getArtigoName</link> (int codArtigo)</para>
+
+<para>Função que permite obter o nome do artigo. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1adf88e57666bc1bdbe2b9a532b5d8ee19">printDataEncomenda</link> (int enc)</para>
+
+<para>Imprime os dados de uma encomenda. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a2db28081aac0ef2215ab88524f9cf13e">printDataArtigo</link> (int art, bool query)</para>
+
+<para>Imprime os dados de um artigo. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a5b0e889434448c1fda602fe8219c6df0">printDataCliente</link> (int cli)</para>
+
+<para>Imprime os dados de um cliente. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a8b6e5471fc3162030e02624aa4e0a71c">addCliente</link> ()</para>
+
+<para>Função que permite adicionar um cliente. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_definitions_8h_1a918dfa81ea4cf833c9cb370987ff7521">getEstadoCliente</link> (int codCliente)</para>
+
+<para>Função que verifica o estado do cliente indicado. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_definitions_8h_1a63ec96e80364598a0c5bfc3954f2dbbe">getClientName</link> (int codCliente)</para>
+
+<para>Função que obtêm o nome do cliente. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a384bbc94cc780349877dd70a46d111fd">updateClient</link> (int clienteToChange, int via)</para>
+
+<para>Função que permite atualizar um cliente. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1ab57c27349b4a343d5ec7736646cf4c7b">updateArtigo</link> ()</para>
+
+<para>Função de atualização de artigo e os seus valores. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a7eadedef8af327c38812b981e440e9fd">addArtigo</link> ()</para>
+
+<para>Função que permite adicionar um artigo. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1af720c7469de6c812fcf7ef357c36f9da">updateDesconto</link> ()</para>
+
+<para>Função de atualização do valor e código de desconto. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a8c0b39e19764089f83e1a337c0369676">importData</link> ()</para>
+
+<para>Importa os dados dos ficheiros binários. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a845434be144bc6138804dd39b3760212">exportData</link> ()</para>
+
+<para>Exporta os dados dos ficheiros binários. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1ace66f1e8600faf005e2f95c1f5e24ec4">importDefaultData</link> ()</para>
+
+<para>Importa os dados padrão (default.bin) </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a90b381b5624a976ecadeaabacfde025e">exportDefaultData</link> ()</para>
+
+<para>Exporta os dados padrão do programa. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a01374b232898f3d3c134623ffded84af">deleteData</link> ()</para>
+
+<para>Apaga todos os dados em memória do programa. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a5ca14d2c3fb1cd90e8dc483afaf1b3d8">exportEncomendas</link> ()</para>
+
+<para>Exporta as encomendas para um ficheiro CSV. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a6f4f7a9a71ced3d5e9fb21198edb6ab2">loginClient</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a2163242f3dbe460739c88c56f06ec34f">logoutClient</link> ()</para>
+
+<para>Função que desautentica certo utilizador. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a10d6c88f1cbf1e60ed32e609f715a779">doShopping</link> ()</para>
+
+<para>Função que adiciona uma encomenda, ou seja uma compra. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_definitions_8h_1ac3e41774a08731e62fe348b9c8401ccb">getEstadoEncomenda</link> (int estado)</para>
+
+<para>Retornar o estado de certa encomenda. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a91ff19fa6805e0491dd0bcf68a12d4da">cancelEncomenda</link> ()</para>
+
+<para>Função que permite cancelar uma encomenda. </para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1ac0fd834412eb7d5311f137d919db6788">white</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a39abd40f68d03c40857be1e74407efb9">red</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a0df115437fbb77c0311e65300c65289e">green</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a161aec8a96c389795d228ca0c3a949d5">blue</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1ab0c10e6284be130a7973fa029a690ef7">yellow</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1ab2b14535fac90d655eb767bff5647d88">purple</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a52a6a14bd8e9463315ea114aceda1d92">cyan</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1a59d9c08d69e42981f0d6fb680f5e6e26">bold</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_definitions_8h_1af7082af28af567c98aa48add7be13826">boldRed</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c">NA</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_clientes">Clientes</link> * <link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_artigos">Artigos</link> * <link linkend="_definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd">artigo</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_encomendas">Encomendas</link> * <link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_runtime">Runtime</link> * <link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357"/><section>
+    <title>SC</title>
+<indexterm><primary>SC</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>SC</secondary></indexterm>
+<para><computeroutput>#define SC   25</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00005">5</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_definitions_8h_1a7eadedef8af327c38812b981e440e9fd"/><section>
+    <title>addArtigo()</title>
+<indexterm><primary>addArtigo</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>addArtigo</secondary></indexterm>
+<para><computeroutput>void addArtigo ( )</computeroutput></para><para>
+
+<para>Função que permite adicionar um artigo. </para>
+</para>
+<para>
+Definition at line <link linkend="_administrador_8c_source_1l00012">12</link> of file <link linkend="_administrador_8c_source">administrador.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a8b6e5471fc3162030e02624aa4e0a71c"/><section>
+    <title>addCliente()</title>
+<indexterm><primary>addCliente</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>addCliente</secondary></indexterm>
+<para><computeroutput>void addCliente ( )</computeroutput></para><para>
+
+<para>Função que permite adicionar um cliente. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Os</entry><entry>
+<para>parametros necessarios para a adição do cliente </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_clientes_8c_source_1l00016">16</link> of file <link linkend="_clientes_8c_source">clientes.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a52199f9c4b3c9c302cc8d4ab4a38bae5"/><section>
+    <title>availableForOperation()</title>
+<indexterm><primary>availableForOperation</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>availableForOperation</secondary></indexterm>
+<para><computeroutput>bool availableForOperation (int op, int codArtigo, int parameter)</computeroutput></para><para>
+
+<para>Verifica se o artigo OU parâmetro indicado está disponível ou é valido para X operação. </para>
+</para>
+
+<para>*<note><title>Note</title>
+
+<para>As operações estão indicadas na enumeração </para>
+</note>
+<formalpara><title>Returns</title>
+
+<para>true se a operação/parâmetro é válido, false caso contrário </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>O valor do return é usado no respetivo &quot;loop do while&quot; </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00118">118</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a161aec8a96c389795d228ca0c3a949d5"/><section>
+    <title>blue()</title>
+<indexterm><primary>blue</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>blue</secondary></indexterm>
+<para><computeroutput>void blue ( )</computeroutput></para></section>
+<anchor xml:id="_definitions_8h_1a59d9c08d69e42981f0d6fb680f5e6e26"/><section>
+    <title>bold()</title>
+<indexterm><primary>bold</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>bold</secondary></indexterm>
+<para><computeroutput>void bold ( )</computeroutput></para></section>
+<anchor xml:id="_definitions_8h_1af7082af28af567c98aa48add7be13826"/><section>
+    <title>boldRed()</title>
+<indexterm><primary>boldRed</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>boldRed</secondary></indexterm>
+<para><computeroutput>void boldRed ( )</computeroutput></para><para>
+Definition at line <link linkend="_colors_8c_source_1l00044">44</link> of file <link linkend="_colors_8c_source">colors.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a91ff19fa6805e0491dd0bcf68a12d4da"/><section>
+    <title>cancelEncomenda()</title>
+<indexterm><primary>cancelEncomenda</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>cancelEncomenda</secondary></indexterm>
+<para><computeroutput>void cancelEncomenda ( )</computeroutput></para><para>
+
+<para>Função que permite cancelar uma encomenda. </para>
+</para>
+<para>
+Definition at line <link linkend="_shopping_8c_source_1l00362">362</link> of file <link linkend="_shopping_8c_source">shopping.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1ae81c93a074d4c3bdce4d8409997418f0"/><section>
+    <title>checkCodPromo()</title>
+<indexterm><primary>checkCodPromo</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>checkCodPromo</secondary></indexterm>
+<para><computeroutput>bool checkCodPromo (char * codPromo)</computeroutput></para><para>
+
+<para>Verifica se o código promocional introduzido pelo utilizador é valido. </para>
+</para>
+
+<para>*<formalpara><title>Returns</title>
+
+<para>true se o código for válido, false caso contrário </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00096">96</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a41532c4603b615920ea1c1216d1445ad"/><section>
+    <title>checkNumber()</title>
+<indexterm><primary>checkNumber</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>checkNumber</secondary></indexterm>
+<para><computeroutput>bool checkNumber (double number)</computeroutput></para><para>
+
+<para>Controlar o inteiro indicado pelo utilizador. </para>
+</para>
+
+<para>*<formalpara><title>Returns</title>
+
+<para>true se o inteiro for válido, false caso contrário </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00078">78</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1af22d234c9f1f40dea9b79ca8fb8c7288"/><section>
+    <title>checkString()</title>
+<indexterm><primary>checkString</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>checkString</secondary></indexterm>
+<para><computeroutput>bool checkString (const char * string)</computeroutput></para><para>
+
+<para>Verifica se a string indicada é válida tendo em contas certas condições. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>A string é válida se:<itemizedlist>
+<listitem>
+<para>não estiver vazia e conter pelo menos 3 caracteres</para>
+</listitem><listitem>
+<para>não contém caracteres númericos </para>
+</listitem></itemizedlist>
+</para>
+</note>
+<formalpara><title>Returns</title>
+
+<para>true se a string for válida, false caso contrário </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00057">57</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a9d7e8af417b6d543da691e9c0e2f6f9f"/><section>
+    <title>clearScreen()</title>
+<indexterm><primary>clearScreen</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>clearScreen</secondary></indexterm>
+<para><computeroutput>void clearScreen ( )</computeroutput></para><para>
+
+<para>Permite limpar o ecrã de forma &quot;portátil&quot; entre sistemas. </para>
+</para>
+
+<para><itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00029">29</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a52a6a14bd8e9463315ea114aceda1d92"/><section>
+    <title>cyan()</title>
+<indexterm><primary>cyan</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>cyan</secondary></indexterm>
+<para><computeroutput>void cyan ( )</computeroutput></para></section>
+<anchor xml:id="_definitions_8h_1a01374b232898f3d3c134623ffded84af"/><section>
+    <title>deleteData()</title>
+<indexterm><primary>deleteData</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>deleteData</secondary></indexterm>
+<para><computeroutput>void deleteData ( )</computeroutput></para><para>
+
+<para>Apaga todos os dados em memória do programa. </para>
+</para>
+<para>
+Definition at line <link linkend="_data_8c_source_1l00274">274</link> of file <link linkend="_data_8c_source">data.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a10d6c88f1cbf1e60ed32e609f715a779"/><section>
+    <title>doShopping()</title>
+<indexterm><primary>doShopping</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>doShopping</secondary></indexterm>
+<para><computeroutput>void doShopping ( )</computeroutput></para><para>
+
+<para>Função que adiciona uma encomenda, ou seja uma compra. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Verifica se já existe um utilizador autenticado, e se existem artigos disponíveis </para>
+</note>
+</para>
+
+<para>Caso cliente não esteja autenticado, e pretenda fazer compras</para>
+
+<para>Cálculo do preço defaultPreco = (maoObra + custosFixos) * margemLucro</para>
+<para>
+Definition at line <link linkend="_shopping_8c_source_1l00118">118</link> of file <link linkend="_shopping_8c_source">shopping.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a845434be144bc6138804dd39b3760212"/><section>
+    <title>exportData()</title>
+<indexterm><primary>exportData</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>exportData</secondary></indexterm>
+<para><computeroutput>void exportData ( )</computeroutput></para><para>
+
+<para>Exporta os dados dos ficheiros binários. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Caso surja algum erro na escrita, o programa termina </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_data_8c_source_1l00071">71</link> of file <link linkend="_data_8c_source">data.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a90b381b5624a976ecadeaabacfde025e"/><section>
+    <title>exportDefaultData()</title>
+<indexterm><primary>exportDefaultData</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>exportDefaultData</secondary></indexterm>
+<para><computeroutput>void exportDefaultData ( )</computeroutput></para><para>
+
+<para>Exporta os dados padrão do programa. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Coloca os dados padrão em memória e em seguida exporta para o ficheiro default.bin </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_data_8c_source_1l00149">149</link> of file <link linkend="_data_8c_source">data.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a5ca14d2c3fb1cd90e8dc483afaf1b3d8"/><section>
+    <title>exportEncomendas()</title>
+<indexterm><primary>exportEncomendas</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>exportEncomendas</secondary></indexterm>
+<para><computeroutput>void exportEncomendas ( )</computeroutput></para><para>
+
+<para>Exporta as encomendas para um ficheiro CSV. </para>
+</para>
+<para>
+Definition at line <link linkend="_data_8c_source_1l00239">239</link> of file <link linkend="_data_8c_source">data.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a5ec3ba219271cd3cd14bf58108226c7c"/><section>
+    <title>freeMemory()</title>
+<indexterm><primary>freeMemory</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>freeMemory</secondary></indexterm>
+<para><computeroutput>void freeMemory (bool alsoStopTheProgram)</computeroutput></para><para>
+
+<para>Liberta a memória antes de fechar o programa e/ou termina o programa. </para>
+</para>
+
+<para>*
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>alsoStopTheProgram</entry><entry>
+<para>- Opção de saída do programa </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00267">267</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a46d4eccec6d2c6e65ef4784ab4db0c78"/><section>
+    <title>getArtigoIndex()</title>
+<indexterm><primary>getArtigoIndex</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>getArtigoIndex</secondary></indexterm>
+<para><computeroutput>int getArtigoIndex (int codArtigo)</computeroutput></para><para>
+
+<para>Função que permite obter o indíce de um artigo no array. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>codArtigo</entry><entry>
+<para>- Código do artigo </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>art - Indíce do artigo </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00015">15</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1af4568fe8cae0d02992cc20eeaa4d309d"/><section>
+    <title>getArtigoName()</title>
+<indexterm><primary>getArtigoName</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>getArtigoName</secondary></indexterm>
+<para><computeroutput>char * getArtigoName (int idx)</computeroutput></para><para>
+
+<para>Função que permite obter o nome do artigo. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para>- Indice no array de artigos </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>artigo - O nome do artigo </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00033">33</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a63ec96e80364598a0c5bfc3954f2dbbe"/><section>
+    <title>getClientName()</title>
+<indexterm><primary>getClientName</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>getClientName</secondary></indexterm>
+<para><computeroutput>char * getClientName (int codCliente)</computeroutput></para><para>
+
+<para>Função que obtêm o nome do cliente. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ID</entry><entry>
+<para>do cliente </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Retorna o nome do cliente (string) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_clientes_8c_source_1l00254">254</link> of file <link linkend="_clientes_8c_source">clientes.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1ae403fe07e86bc33933303d3e266b579d"/><section>
+    <title>getDateInfo()</title>
+<indexterm><primary>getDateInfo</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>getDateInfo</secondary></indexterm>
+<para><computeroutput>int getDateInfo (int info)</computeroutput></para><para>
+
+<para>Obter certo parâmetro de data tal como hora, dia, mês, ano. </para>
+</para>
+
+<para>*<note><title>Note</title>
+
+<para>A enumeração é usada para indicar o parâmetro a obter </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00065">65</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a918dfa81ea4cf833c9cb370987ff7521"/><section>
+    <title>getEstadoCliente()</title>
+<indexterm><primary>getEstadoCliente</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>getEstadoCliente</secondary></indexterm>
+<para><computeroutput>bool getEstadoCliente (int codCliente)</computeroutput></para><para>
+
+<para>Função que verifica o estado do cliente indicado. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ID</entry><entry>
+<para>do cliente </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Retorna True - caso o cliente exista ou esteja disponivel False - caso o cliente não exista ou esteja indisponivel </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_clientes_8c_source_1l00227">227</link> of file <link linkend="_clientes_8c_source">clientes.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1ac3e41774a08731e62fe348b9c8401ccb"/><section>
+    <title>getEstadoEncomenda()</title>
+<indexterm><primary>getEstadoEncomenda</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>getEstadoEncomenda</secondary></indexterm>
+<para><computeroutput>char * getEstadoEncomenda (int estado)</computeroutput></para><para>
+
+<para>Retornar o estado de certa encomenda. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>estado</entry><entry>
+<para>- O estado de do artigo em int (ex: artigo[1].estado) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Disponível ou Indisponível (string) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_shopping_8c_source_1l00017">17</link> of file <link linkend="_shopping_8c_source">shopping.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a2e948973437ab18cc4aa58f04f32b31d"/><section>
+    <title>getTotalEncomenda()</title>
+<indexterm><primary>getTotalEncomenda</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>getTotalEncomenda</secondary></indexterm>
+<para><computeroutput>double getTotalEncomenda ( )</computeroutput></para><para>
+
+<para>Função que permite obter o total (preço) de encomendas. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int - total de encomendas </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00044">44</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a0df115437fbb77c0311e65300c65289e"/><section>
+    <title>green()</title>
+<indexterm><primary>green</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>green</secondary></indexterm>
+<para><computeroutput>void green ( )</computeroutput></para></section>
+<anchor xml:id="_definitions_8h_1a8c0b39e19764089f83e1a337c0369676"/><section>
+    <title>importData()</title>
+<indexterm><primary>importData</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>importData</secondary></indexterm>
+<para><computeroutput>void importData ( )</computeroutput></para><para>
+
+<para>Importa os dados dos ficheiros binários. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Caso nao exista algum ficheiro ou caso surja erro na leitura, o programa termina </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_data_8c_source_1l00015">15</link> of file <link linkend="_data_8c_source">data.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1ace66f1e8600faf005e2f95c1f5e24ec4"/><section>
+    <title>importDefaultData()</title>
+<indexterm><primary>importDefaultData</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>importDefaultData</secondary></indexterm>
+<para><computeroutput>void importDefaultData ( )</computeroutput></para><para>
+
+<para>Importa os dados padrão (default.bin) </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Caso o ficheiro não exista a função <link linkend="_data_8c_1a90b381b5624a976ecadeaabacfde025e">exportDefaultData()</link> é chamada para criar o ficheiro com os dados padrão </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_data_8c_source_1l00115">115</link> of file <link linkend="_data_8c_source">data.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1ab3cd5f6472e88b4f400d6f56aa6edd8c"/><section>
+    <title>listArtigos()</title>
+<indexterm><primary>listArtigos</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>listArtigos</secondary></indexterm>
+<para><computeroutput>void listArtigos (int queryType)</computeroutput></para><para>
+
+<para>Função que permite listar o(s) artigo(s) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>queryType</entry><entry>
+<para>- opção de listagem </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>- a opção (10) é quando o cliente autenticado pretende listar as encomendas da sessão </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00095">95</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a7f710faa12da0cf1c324f192cee73e96"/><section>
+    <title>listClientes()</title>
+<indexterm><primary>listClientes</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>listClientes</secondary></indexterm>
+<para><computeroutput>void listClientes (int queryType)</computeroutput></para><para>
+
+<para>Função que permite listar o(s) cliente(s) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>queryType</entry><entry>
+<para>- opção de listagem </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00218">218</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a87b028e2e18b0b33e3eb58cb99af5523"/><section>
+    <title>listEncomendas()</title>
+<indexterm><primary>listEncomendas</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>listEncomendas</secondary></indexterm>
+<para><computeroutput>void listEncomendas (int queryType)</computeroutput></para><para>
+
+<para>Função que permite listar as encomendas. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>queryType</entry><entry>
+<para>- Tipo de &quot;query&quot; a ser executada </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>De acordo com o tipo de &quot;query&quot; definido na enumeração, a função lista as encomendas </para>
+
+<para>Por exemplo, a &quot;query&quot; (61) lista todas as encomendas de todos os clientes </para>
+</note>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Permite listar as encomendas de certo cliente, este que é indicado via Nome ou pelo seu Código</para>
+
+<para>Permite listar as encomendas de acordo com certa data</para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_shopping_8c_source_1l00208">208</link> of file <link linkend="_shopping_8c_source">shopping.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a9efdb5ab1d7b26e54799af4e7cb59fa2"/><section>
+    <title>loggedClient()</title>
+<indexterm><primary>loggedClient</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>loggedClient</secondary></indexterm>
+<para><computeroutput>bool loggedClient ( )</computeroutput></para><para>
+
+<para>Verifica se existe utilizador autenticado. </para>
+</para>
+
+<para>*<formalpara><title>Returns</title>
+
+<para>true se existe utilizador autenticado, false caso contrário </para>
+</formalpara>
+</para>
+
+<para>Não existe cliente logado</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00217">217</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a6f4f7a9a71ced3d5e9fb21198edb6ab2"/><section>
+    <title>loginClient()</title>
+<indexterm><primary>loginClient</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>loginClient</secondary></indexterm>
+<para><computeroutput>void loginClient ( )</computeroutput></para></section>
+<anchor xml:id="_definitions_8h_1a2163242f3dbe460739c88c56f06ec34f"/><section>
+    <title>logoutClient()</title>
+<indexterm><primary>logoutClient</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>logoutClient</secondary></indexterm>
+<para><computeroutput>void logoutClient ( )</computeroutput></para><para>
+
+<para>Função que desautentica certo utilizador. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Verifica se já existe um utilizador autenticado </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_shopping_8c_source_1l00097">97</link> of file <link linkend="_shopping_8c_source">shopping.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1ae66f6b31b5ad750f1fe042a706a4e3d4"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main ( )</computeroutput></para><para>
+
+<para>Ficheiro <link linkend="_main_8c">main.c</link>. </para>
+</para>
+
+<para>Ficheiro <link linkend="_main_8c">main.c</link>.</para>
+
+<para><note><title>Note</title>
+
+<para>tipoUtilizador - valores possiveis: 1 - Cliente, 2 - Administrador ou 0 - Sair </para>
+
+<para>Esta é a primeira função a ser executada </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_main_8c_source_1l00029">29</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a2da5c6326d98abeaf456372ceb077847"/><section>
+    <title>numberOfDigits()</title>
+<indexterm><primary>numberOfDigits</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>numberOfDigits</secondary></indexterm>
+<para><computeroutput>int numberOfDigits (int num)</computeroutput></para><para>
+
+<para>Ficheiro <link linkend="_util_8c">util.c</link>. </para>
+</para>
+
+<para>Ficheiro <link linkend="_util_8c">util.c</link>.</para>
+
+<para><note><title>Note</title>
+
+<para>Usado, por exemplo, para verificar o NIF do cliente </para>
+</note>
+<formalpara><title>Returns</title>
+
+<para>O número de digitos do inteiro para usar no respetivo &quot;loop do while&quot; </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00015">15</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe"/><section>
+    <title>pressEnter()</title>
+<indexterm><primary>pressEnter</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>pressEnter</secondary></indexterm>
+<para><computeroutput>void pressEnter (bool alsoClearScreen)</computeroutput></para><para>
+
+<para>Permite dar a opção do tipico &quot;Press Enter to continue&quot;. </para>
+</para>
+
+<para><itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00037">37</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a2db28081aac0ef2215ab88524f9cf13e"/><section>
+    <title>printDataArtigo()</title>
+<indexterm><primary>printDataArtigo</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>printDataArtigo</secondary></indexterm>
+<para><computeroutput>void printDataArtigo (int art, bool printTamanhos)</computeroutput></para><para>
+
+<para>Imprime os dados de um artigo. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>art</entry><entry>
+<para>- Artigo a imprimir </para>
+</entry>
+                            </row>
+                            <row>
+<entry>printTamanhas</entry><entry>
+<para>- Define se os tamanhos e os respetivos preços devem ser imprimidos </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00462">462</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a5b0e889434448c1fda602fe8219c6df0"/><section>
+    <title>printDataCliente()</title>
+<indexterm><primary>printDataCliente</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>printDataCliente</secondary></indexterm>
+<para><computeroutput>void printDataCliente (int cli)</computeroutput></para><para>
+
+<para>Imprime os dados de um cliente. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cli</entry><entry>
+<para>- Cliente a imprimir </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00493">493</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1adf88e57666bc1bdbe2b9a532b5d8ee19"/><section>
+    <title>printDataEncomenda()</title>
+<indexterm><primary>printDataEncomenda</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>printDataEncomenda</secondary></indexterm>
+<para><computeroutput>void printDataEncomenda (int enc)</computeroutput></para><para>
+
+<para>Imprime os dados de uma encomenda. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>enc</entry><entry>
+<para>- Encomenda a imprimir </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00445">445</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1ab2b14535fac90d655eb767bff5647d88"/><section>
+    <title>purple()</title>
+<indexterm><primary>purple</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>purple</secondary></indexterm>
+<para><computeroutput>void purple ( )</computeroutput></para></section>
+<anchor xml:id="_definitions_8h_1a941fa13e3d505e5a9a3f9c082bfeff89"/><section>
+    <title>reallocStruct()</title>
+<indexterm><primary>reallocStruct</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>reallocStruct</secondary></indexterm>
+<para><computeroutput>void reallocStruct (int st)</computeroutput></para><para>
+Definition at line <link linkend="_util_8c_source_1l00229">229</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a39abd40f68d03c40857be1e74407efb9"/><section>
+    <title>red()</title>
+<indexterm><primary>red</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>red</secondary></indexterm>
+<para><computeroutput>void red ( )</computeroutput></para></section>
+<anchor xml:id="_definitions_8h_1a8f37bef24fe15f40c71fca8327b44697"/><section>
+    <title>statisticsEncomendas()</title>
+<indexterm><primary>statisticsEncomendas</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>statisticsEncomendas</secondary></indexterm>
+<para><computeroutput>void statisticsEncomendas ( )</computeroutput></para><para>
+
+<para>Estatisticas das encomendas. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Média do Preço e Quantidade </para>
+
+<para>Melhor e Pior produto (em termos de vendas) </para>
+</note>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Encontrar as médias (preço e quantidade) das encomendas</para>
+
+<para>Encontrar o produto mais vendido</para>
+
+<para>Encontrar o produto menos vendido</para>
+
+<para>Encontrar o cliente com mais unidades compradas</para>
+
+<para>Encontrar o artigo com maior margem de lucro</para>
+
+<para>Encontrar o artigo com menor margem de lucro</para>
+
+<para>Encontrar a quantidade de encomendas ativas/canceladas</para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00290">290</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1ab57c27349b4a343d5ec7736646cf4c7b"/><section>
+    <title>updateArtigo()</title>
+<indexterm><primary>updateArtigo</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>updateArtigo</secondary></indexterm>
+<para><computeroutput>void updateArtigo ( )</computeroutput></para><para>
+
+<para>Função de atualização de artigo e os seus valores. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>artigoToUpdate - Artigo a atualizar </para>
+
+<para>opcao - Campo a alterar </para>
+
+<para>novoXXX - Novo valor a ser atribuido </para>
+</note>
+</para>
+
+<para><note><title>Note</title>
+
+<para>&#8211; Recalcula o preço de todos os artigos de acordo com os novos valores</para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_administrador_8c_source_1l00101">101</link> of file <link linkend="_administrador_8c_source">administrador.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a384bbc94cc780349877dd70a46d111fd"/><section>
+    <title>updateClient()</title>
+<indexterm><primary>updateClient</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>updateClient</secondary></indexterm>
+<para><computeroutput>void updateClient (int clienteToChange, int via)</computeroutput></para><para>
+
+<para>Função que permite atualizar um cliente. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>clienteToChange</entry><entry>
+<para>- Cliente a ser atualizado </para>
+</entry>
+                            </row>
+                            <row>
+<entry>via</entry><entry>
+<para>- caso a função seja chamada via menu cliente, apenas permitir a alteração do cliente autenticado (e perguntando o seu código) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para><note><title>Note</title>
+
+<para>Via Menu Cliente, onde se realiza verificação de segurança</para>
+
+<para>Via Menu Administrador</para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_clientes_8c_source_1l00082">82</link> of file <link linkend="_clientes_8c_source">clientes.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1af720c7469de6c812fcf7ef357c36f9da"/><section>
+    <title>updateDesconto()</title>
+<indexterm><primary>updateDesconto</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>updateDesconto</secondary></indexterm>
+<para><computeroutput>void updateDesconto ( )</computeroutput></para><para>
+
+<para>Função de atualização do valor e código de desconto. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>runtime-&gt;percentageDesconto - Percentagem de desconto </para>
+
+<para>runtime-&gt;stringDesconto - Código de desconto </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_administrador_8c_source_1l00332">332</link> of file <link linkend="_administrador_8c_source">administrador.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1ac0fd834412eb7d5311f137d919db6788"/><section>
+    <title>white()</title>
+<indexterm><primary>white</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>white</secondary></indexterm>
+<para><computeroutput>void white ( )</computeroutput></para></section>
+<anchor xml:id="_definitions_8h_1ab0c10e6284be130a7973fa029a690ef7"/><section>
+    <title>yellow()</title>
+<indexterm><primary>yellow</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>yellow</secondary></indexterm>
+<para><computeroutput>void yellow ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd"/><section>
+    <title>artigo</title>
+<indexterm><primary>artigo</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>artigo</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_artigos">Artigos</link>* artigo<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_main_8c_source_1l00020">20</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c"/><section>
+    <title>cliente</title>
+<indexterm><primary>cliente</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>cliente</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_clientes">Clientes</link>* cliente<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_main_8c_source_1l00019">19</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc"/><section>
+    <title>encomenda</title>
+<indexterm><primary>encomenda</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>encomenda</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_encomendas">Encomendas</link>* encomenda<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_main_8c_source_1l00021">21</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c"/><section>
+    <title>NA</title>
+<indexterm><primary>NA</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>NA</secondary></indexterm>
+<para><computeroutput>int NA<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_main_8c_source_1l00016">16</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134"/><section>
+    <title>NC</title>
+<indexterm><primary>NC</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>NC</secondary></indexterm>
+<para><computeroutput>int NC<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_main_8c_source_1l00015">15</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b"/><section>
+    <title>NE</title>
+<indexterm><primary>NE</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>NE</secondary></indexterm>
+<para><computeroutput>int NE<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_main_8c_source_1l00017">17</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+<anchor xml:id="_definitions_8h_1a69460b78379a912c83e65ba131e368e9"/><section>
+    <title>runtime</title>
+<indexterm><primary>runtime</primary><secondary>definitions.h</secondary></indexterm>
+<indexterm><primary>definitions.h</primary><secondary>runtime</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_runtime">Runtime</link>* runtime<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_main_8c_source_1l00022">22</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+</section>
+</section>

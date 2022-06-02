@@ -1,0 +1,85 @@
+.TH "administrador.c" 3 "Fri Jan 14 2022" "Version Grupo 2" "Laboratório de Programação" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+administrador.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include 'definitions\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddArtigo\fP ()"
+.br
+.RI "Função que permite adicionar um artigo\&. "
+.ti -1c
+.RI "void \fBupdateArtigo\fP ()"
+.br
+.RI "Função de atualização de artigo e os seus valores\&. "
+.ti -1c
+.RI "void \fBupdateDesconto\fP ()"
+.br
+.RI "Função de atualização do valor e código de desconto\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void addArtigo ()"
+
+.PP
+Função que permite adicionar um artigo\&. 
+.PP
+Definition at line \fB12\fP of file \fBadministrador\&.c\fP\&.
+.SS "void updateArtigo ()"
+
+.PP
+Função de atualização de artigo e os seus valores\&. 
+.PP
+\fBNote\fP
+.RS 4
+artigoToUpdate - Artigo a atualizar 
+.PP
+opcao - Campo a alterar 
+.PP
+novoXXX - Novo valor a ser atribuido 
+.RE
+.PP
+
+.PP
+\fBNote\fP
+.RS 4
+-- Recalcula o preço de todos os artigos de acordo com os novos valores
+.RE
+.PP
+
+.PP
+Definition at line \fB101\fP of file \fBadministrador\&.c\fP\&.
+.SS "void updateDesconto ()"
+
+.PP
+Função de atualização do valor e código de desconto\&. 
+.PP
+\fBNote\fP
+.RS 4
+runtime->percentageDesconto - Percentagem de desconto 
+.PP
+runtime->stringDesconto - Código de desconto 
+.RE
+.PP
+
+.PP
+Definition at line \fB332\fP of file \fBadministrador\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Laboratório de Programação from the source code\&.

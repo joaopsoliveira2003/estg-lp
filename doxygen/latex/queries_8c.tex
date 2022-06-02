@@ -1,0 +1,247 @@
+\hypertarget{queries_8c}{}\doxysection{queries.\+c File Reference}
+\label{queries_8c}\index{queries.c@{queries.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}definitions.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{queries_8c_a46d4eccec6d2c6e65ef4784ab4db0c78}{get\+Artigo\+Index}} (int cod\+Artigo)
+\begin{DoxyCompactList}\small\item\em Função que permite obter o indíce de um artigo no array. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{queries_8c_ac099a7d27cd173fb4b83a364b7e4c735}{get\+Artigo\+Name}} (int idx)
+\begin{DoxyCompactList}\small\item\em Função que permite obter o nome do artigo. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{queries_8c_a2e948973437ab18cc4aa58f04f32b31d}{get\+Total\+Encomenda}} ()
+\begin{DoxyCompactList}\small\item\em Função que permite obter o total (preço) de encomendas. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{queries_8c_ae403fe07e86bc33933303d3e266b579d}{get\+Date\+Info}} (int info)
+\begin{DoxyCompactList}\small\item\em Obter certo parâmetro de data tal como hora, dia, mês, ano. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_ab3cd5f6472e88b4f400d6f56aa6edd8c}{list\+Artigos}} (int query\+Type)
+\begin{DoxyCompactList}\small\item\em Função que permite listar o(s) artigo(s) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_a7f710faa12da0cf1c324f192cee73e96}{list\+Clientes}} (int query\+Type)
+\begin{DoxyCompactList}\small\item\em Função que permite listar o(s) cliente(s) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_a8f37bef24fe15f40c71fca8327b44697}{statistics\+Encomendas}} ()
+\begin{DoxyCompactList}\small\item\em Estatisticas das encomendas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_adf88e57666bc1bdbe2b9a532b5d8ee19}{print\+Data\+Encomenda}} (int enc)
+\begin{DoxyCompactList}\small\item\em Imprime os dados de uma encomenda. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_a7126de96991342ed7ffb2fa43fd9d3a9}{print\+Data\+Artigo}} (int art, bool print\+Tamanhos)
+\begin{DoxyCompactList}\small\item\em Imprime os dados de um artigo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{queries_8c_a5b0e889434448c1fda602fe8219c6df0}{print\+Data\+Cliente}} (int cli)
+\begin{DoxyCompactList}\small\item\em Imprime os dados de um cliente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{queries_8c_a46d4eccec6d2c6e65ef4784ab4db0c78}\label{queries_8c_a46d4eccec6d2c6e65ef4784ab4db0c78}} 
+\index{queries.c@{queries.c}!getArtigoIndex@{getArtigoIndex}}
+\index{getArtigoIndex@{getArtigoIndex}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{getArtigoIndex()}{getArtigoIndex()}}
+{\footnotesize\ttfamily int get\+Artigo\+Index (\begin{DoxyParamCaption}\item[{int}]{cod\+Artigo }\end{DoxyParamCaption})}
+
+
+
+Função que permite obter o indíce de um artigo no array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cod\+Artigo} & -\/ Código do artigo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+art -\/ Indíce do artigo 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00015}{15}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{queries_8c_ac099a7d27cd173fb4b83a364b7e4c735}\label{queries_8c_ac099a7d27cd173fb4b83a364b7e4c735}} 
+\index{queries.c@{queries.c}!getArtigoName@{getArtigoName}}
+\index{getArtigoName@{getArtigoName}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{getArtigoName()}{getArtigoName()}}
+{\footnotesize\ttfamily char $\ast$ get\+Artigo\+Name (\begin{DoxyParamCaption}\item[{int}]{idx }\end{DoxyParamCaption})}
+
+
+
+Função que permite obter o nome do artigo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & -\/ Indice no array de artigos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+artigo -\/ O nome do artigo 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00033}{33}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{queries_8c_ae403fe07e86bc33933303d3e266b579d}\label{queries_8c_ae403fe07e86bc33933303d3e266b579d}} 
+\index{queries.c@{queries.c}!getDateInfo@{getDateInfo}}
+\index{getDateInfo@{getDateInfo}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{getDateInfo()}{getDateInfo()}}
+{\footnotesize\ttfamily int get\+Date\+Info (\begin{DoxyParamCaption}\item[{int}]{info }\end{DoxyParamCaption})}
+
+
+
+Obter certo parâmetro de data tal como hora, dia, mês, ano. 
+
+$\ast$\begin{DoxyNote}{Note}
+A enumeração é usada para indicar o parâmetro a obter 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00065}{65}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{queries_8c_a2e948973437ab18cc4aa58f04f32b31d}\label{queries_8c_a2e948973437ab18cc4aa58f04f32b31d}} 
+\index{queries.c@{queries.c}!getTotalEncomenda@{getTotalEncomenda}}
+\index{getTotalEncomenda@{getTotalEncomenda}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{getTotalEncomenda()}{getTotalEncomenda()}}
+{\footnotesize\ttfamily double get\+Total\+Encomenda (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que permite obter o total (preço) de encomendas. 
+
+\begin{DoxyReturn}{Returns}
+int -\/ total de encomendas 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00044}{44}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{queries_8c_ab3cd5f6472e88b4f400d6f56aa6edd8c}\label{queries_8c_ab3cd5f6472e88b4f400d6f56aa6edd8c}} 
+\index{queries.c@{queries.c}!listArtigos@{listArtigos}}
+\index{listArtigos@{listArtigos}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{listArtigos()}{listArtigos()}}
+{\footnotesize\ttfamily void list\+Artigos (\begin{DoxyParamCaption}\item[{int}]{query\+Type }\end{DoxyParamCaption})}
+
+
+
+Função que permite listar o(s) artigo(s) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query\+Type} & -\/ opção de listagem \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+-\/ a opção (10) é quando o cliente autenticado pretende listar as encomendas da sessão 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00095}{95}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{queries_8c_a7f710faa12da0cf1c324f192cee73e96}\label{queries_8c_a7f710faa12da0cf1c324f192cee73e96}} 
+\index{queries.c@{queries.c}!listClientes@{listClientes}}
+\index{listClientes@{listClientes}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{listClientes()}{listClientes()}}
+{\footnotesize\ttfamily void list\+Clientes (\begin{DoxyParamCaption}\item[{int}]{query\+Type }\end{DoxyParamCaption})}
+
+
+
+Função que permite listar o(s) cliente(s) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query\+Type} & -\/ opção de listagem \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00218}{218}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{queries_8c_a7126de96991342ed7ffb2fa43fd9d3a9}\label{queries_8c_a7126de96991342ed7ffb2fa43fd9d3a9}} 
+\index{queries.c@{queries.c}!printDataArtigo@{printDataArtigo}}
+\index{printDataArtigo@{printDataArtigo}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{printDataArtigo()}{printDataArtigo()}}
+{\footnotesize\ttfamily void print\+Data\+Artigo (\begin{DoxyParamCaption}\item[{int}]{art,  }\item[{bool}]{print\+Tamanhos }\end{DoxyParamCaption})}
+
+
+
+Imprime os dados de um artigo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em art} & -\/ Artigo a imprimir \\
+\hline
+{\em print\+Tamanhas} & -\/ Define se os tamanhos e os respetivos preços devem ser imprimidos \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00462}{462}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{queries_8c_a5b0e889434448c1fda602fe8219c6df0}\label{queries_8c_a5b0e889434448c1fda602fe8219c6df0}} 
+\index{queries.c@{queries.c}!printDataCliente@{printDataCliente}}
+\index{printDataCliente@{printDataCliente}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{printDataCliente()}{printDataCliente()}}
+{\footnotesize\ttfamily void print\+Data\+Cliente (\begin{DoxyParamCaption}\item[{int}]{cli }\end{DoxyParamCaption})}
+
+
+
+Imprime os dados de um cliente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cli} & -\/ Cliente a imprimir \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00493}{493}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{queries_8c_adf88e57666bc1bdbe2b9a532b5d8ee19}\label{queries_8c_adf88e57666bc1bdbe2b9a532b5d8ee19}} 
+\index{queries.c@{queries.c}!printDataEncomenda@{printDataEncomenda}}
+\index{printDataEncomenda@{printDataEncomenda}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{printDataEncomenda()}{printDataEncomenda()}}
+{\footnotesize\ttfamily void print\+Data\+Encomenda (\begin{DoxyParamCaption}\item[{int}]{enc }\end{DoxyParamCaption})}
+
+
+
+Imprime os dados de uma encomenda. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enc} & -\/ Encomenda a imprimir \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00445}{445}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{queries_8c_a8f37bef24fe15f40c71fca8327b44697}\label{queries_8c_a8f37bef24fe15f40c71fca8327b44697}} 
+\index{queries.c@{queries.c}!statisticsEncomendas@{statisticsEncomendas}}
+\index{statisticsEncomendas@{statisticsEncomendas}!queries.c@{queries.c}}
+\doxysubsubsection{\texorpdfstring{statisticsEncomendas()}{statisticsEncomendas()}}
+{\footnotesize\ttfamily void statistics\+Encomendas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Estatisticas das encomendas. 
+
+\begin{DoxyNote}{Note}
+Média do Preço e Quantidade 
+
+Melhor e Pior produto (em termos de vendas) 
+\end{DoxyNote}
+\begin{DoxyNote}{Note}
+Encontrar as médias (preço e quantidade) das encomendas
+
+Encontrar o produto mais vendido
+
+Encontrar o produto menos vendido
+
+Encontrar o cliente com mais unidades compradas
+
+Encontrar o artigo com maior margem de lucro
+
+Encontrar o artigo com menor margem de lucro
+
+Encontrar a quantidade de encomendas ativas/canceladas
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00290}{290}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+

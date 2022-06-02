@@ -1,0 +1,897 @@
+.TH "definitions.h" 3 "Fri Jan 14 2022" "Version Grupo 2" "Laboratório de Programação" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+definitions.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdbool\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBClientes\fP"
+.br
+.ti -1c
+.RI "struct \fBArtigos\fP"
+.br
+.ti -1c
+.RI "struct \fBEncomendas\fP"
+.br
+.ti -1c
+.RI "struct \fBRuntime\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSC\fP   25"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.RI "Ficheiro \fBmain\&.c\fP\&. "
+.ti -1c
+.RI "int \fBnumberOfDigits\fP (int num)"
+.br
+.RI "Ficheiro \fButil\&.c\fP\&. "
+.ti -1c
+.RI "void \fBclearScreen\fP ()"
+.br
+.RI "Permite limpar o ecrã de forma 'portátil' entre sistemas\&. "
+.ti -1c
+.RI "void \fBpressEnter\fP (bool alsoClearScreen)"
+.br
+.RI "Permite dar a opção do tipico 'Press Enter to continue'\&. "
+.ti -1c
+.RI "int \fBgetDateInfo\fP (int info)"
+.br
+.RI "Obter certo parâmetro de data tal como hora, dia, mês, ano\&. "
+.ti -1c
+.RI "bool \fBcheckString\fP (const char *string)"
+.br
+.RI "Verifica se a string indicada é válida tendo em contas certas condições\&. "
+.ti -1c
+.RI "bool \fBcheckNumber\fP (double number)"
+.br
+.RI "Controlar o inteiro indicado pelo utilizador\&. "
+.ti -1c
+.RI "bool \fBcheckCodPromo\fP (char *codPromo)"
+.br
+.RI "Verifica se o código promocional introduzido pelo utilizador é valido\&. "
+.ti -1c
+.RI "bool \fBavailableForOperation\fP (int op, int codArtigo, int parameter)"
+.br
+.RI "Verifica se o artigo OU parâmetro indicado está disponível ou é valido para X operação\&. "
+.ti -1c
+.RI "int \fBgetArtigoIndex\fP (int codArtigo)"
+.br
+.RI "Função que permite obter o indíce de um artigo no array\&. "
+.ti -1c
+.RI "bool \fBloggedClient\fP ()"
+.br
+.RI "Verifica se existe utilizador autenticado\&. "
+.ti -1c
+.RI "void \fBreallocStruct\fP (int st)"
+.br
+.ti -1c
+.RI "void \fBfreeMemory\fP (bool alsoStopTheProgram)"
+.br
+.RI "Liberta a memória antes de fechar o programa e/ou termina o programa\&. "
+.ti -1c
+.RI "void \fBlistEncomendas\fP (int queryType)"
+.br
+.RI "Função que permite listar as encomendas\&. "
+.ti -1c
+.RI "void \fBstatisticsEncomendas\fP ()"
+.br
+.RI "Estatisticas das encomendas\&. "
+.ti -1c
+.RI "double \fBgetTotalEncomenda\fP ()"
+.br
+.RI "Função que permite obter o total (preço) de encomendas\&. "
+.ti -1c
+.RI "void \fBlistClientes\fP (int queryType)"
+.br
+.RI "Função que permite listar o(s) cliente(s) "
+.ti -1c
+.RI "void \fBlistArtigos\fP (int queryType)"
+.br
+.RI "Função que permite listar o(s) artigo(s) "
+.ti -1c
+.RI "char * \fBgetArtigoName\fP (int codArtigo)"
+.br
+.RI "Função que permite obter o nome do artigo\&. "
+.ti -1c
+.RI "void \fBprintDataEncomenda\fP (int enc)"
+.br
+.RI "Imprime os dados de uma encomenda\&. "
+.ti -1c
+.RI "void \fBprintDataArtigo\fP (int art, bool query)"
+.br
+.RI "Imprime os dados de um artigo\&. "
+.ti -1c
+.RI "void \fBprintDataCliente\fP (int cli)"
+.br
+.RI "Imprime os dados de um cliente\&. "
+.ti -1c
+.RI "void \fBaddCliente\fP ()"
+.br
+.RI "Função que permite adicionar um cliente\&. "
+.ti -1c
+.RI "bool \fBgetEstadoCliente\fP (int codCliente)"
+.br
+.RI "Função que verifica o estado do cliente indicado\&. "
+.ti -1c
+.RI "char * \fBgetClientName\fP (int codCliente)"
+.br
+.RI "Função que obtêm o nome do cliente\&. "
+.ti -1c
+.RI "void \fBupdateClient\fP (int clienteToChange, int via)"
+.br
+.RI "Função que permite atualizar um cliente\&. "
+.ti -1c
+.RI "void \fBupdateArtigo\fP ()"
+.br
+.RI "Função de atualização de artigo e os seus valores\&. "
+.ti -1c
+.RI "void \fBaddArtigo\fP ()"
+.br
+.RI "Função que permite adicionar um artigo\&. "
+.ti -1c
+.RI "void \fBupdateDesconto\fP ()"
+.br
+.RI "Função de atualização do valor e código de desconto\&. "
+.ti -1c
+.RI "void \fBimportData\fP ()"
+.br
+.RI "Importa os dados dos ficheiros binários\&. "
+.ti -1c
+.RI "void \fBexportData\fP ()"
+.br
+.RI "Exporta os dados dos ficheiros binários\&. "
+.ti -1c
+.RI "void \fBimportDefaultData\fP ()"
+.br
+.RI "Importa os dados padrão (default\&.bin) "
+.ti -1c
+.RI "void \fBexportDefaultData\fP ()"
+.br
+.RI "Exporta os dados padrão do programa\&. "
+.ti -1c
+.RI "void \fBdeleteData\fP ()"
+.br
+.RI "Apaga todos os dados em memória do programa\&. "
+.ti -1c
+.RI "void \fBexportEncomendas\fP ()"
+.br
+.RI "Exporta as encomendas para um ficheiro CSV\&. "
+.ti -1c
+.RI "void \fBloginClient\fP ()"
+.br
+.ti -1c
+.RI "void \fBlogoutClient\fP ()"
+.br
+.RI "Função que desautentica certo utilizador\&. "
+.ti -1c
+.RI "void \fBdoShopping\fP ()"
+.br
+.RI "Função que adiciona uma encomenda, ou seja uma compra\&. "
+.ti -1c
+.RI "char * \fBgetEstadoEncomenda\fP (int estado)"
+.br
+.RI "Retornar o estado de certa encomenda\&. "
+.ti -1c
+.RI "void \fBcancelEncomenda\fP ()"
+.br
+.RI "Função que permite cancelar uma encomenda\&. "
+.ti -1c
+.RI "void \fBwhite\fP ()"
+.br
+.ti -1c
+.RI "void \fBred\fP ()"
+.br
+.ti -1c
+.RI "void \fBgreen\fP ()"
+.br
+.ti -1c
+.RI "void \fBblue\fP ()"
+.br
+.ti -1c
+.RI "void \fByellow\fP ()"
+.br
+.ti -1c
+.RI "void \fBpurple\fP ()"
+.br
+.ti -1c
+.RI "void \fBcyan\fP ()"
+.br
+.ti -1c
+.RI "void \fBbold\fP ()"
+.br
+.ti -1c
+.RI "void \fBboldRed\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBNC\fP"
+.br
+.ti -1c
+.RI "int \fBNA\fP"
+.br
+.ti -1c
+.RI "int \fBNE\fP"
+.br
+.ti -1c
+.RI "\fBClientes\fP * \fBcliente\fP"
+.br
+.ti -1c
+.RI "\fBArtigos\fP * \fBartigo\fP"
+.br
+.ti -1c
+.RI "\fBEncomendas\fP * \fBencomenda\fP"
+.br
+.ti -1c
+.RI "\fBRuntime\fP * \fBruntime\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define SC   25"
+
+.PP
+Definition at line \fB5\fP of file \fBdefinitions\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void addArtigo ()"
+
+.PP
+Função que permite adicionar um artigo\&. 
+.PP
+Definition at line \fB12\fP of file \fBadministrador\&.c\fP\&.
+.SS "void addCliente ()"
+
+.PP
+Função que permite adicionar um cliente\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIOs\fP parametros necessarios para a adição do cliente 
+.RE
+.PP
+
+.PP
+Definition at line \fB16\fP of file \fBclientes\&.c\fP\&.
+.SS "bool availableForOperation (int op, int codArtigo, int parameter)"
+
+.PP
+Verifica se o artigo OU parâmetro indicado está disponível ou é valido para X operação\&. *
+.PP
+\fBNote\fP
+.RS 4
+As operações estão indicadas na enumeração 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true se a operação/parâmetro é válido, false caso contrário 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+O valor do return é usado no respetivo 'loop do while' 
+.RE
+.PP
+
+.PP
+Definition at line \fB118\fP of file \fButil\&.c\fP\&.
+.SS "void blue ()"
+
+.SS "void bold ()"
+
+.SS "void boldRed ()"
+
+.PP
+Definition at line \fB44\fP of file \fBcolors\&.c\fP\&.
+.SS "void cancelEncomenda ()"
+
+.PP
+Função que permite cancelar uma encomenda\&. 
+.PP
+Definition at line \fB362\fP of file \fBshopping\&.c\fP\&.
+.SS "bool checkCodPromo (char * codPromo)"
+
+.PP
+Verifica se o código promocional introduzido pelo utilizador é valido\&. *
+.PP
+\fBReturns\fP
+.RS 4
+true se o código for válido, false caso contrário 
+.RE
+.PP
+
+.PP
+Definition at line \fB96\fP of file \fButil\&.c\fP\&.
+.SS "bool checkNumber (double number)"
+
+.PP
+Controlar o inteiro indicado pelo utilizador\&. *
+.PP
+\fBReturns\fP
+.RS 4
+true se o inteiro for válido, false caso contrário 
+.RE
+.PP
+
+.PP
+Definition at line \fB78\fP of file \fButil\&.c\fP\&.
+.SS "bool checkString (const char * string)"
+
+.PP
+Verifica se a string indicada é válida tendo em contas certas condições\&. 
+.PP
+\fBNote\fP
+.RS 4
+A string é válida se:
+.IP "\(bu" 2
+não estiver vazia e conter pelo menos 3 caracteres
+.IP "\(bu" 2
+não contém caracteres númericos 
+.PP
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true se a string for válida, false caso contrário 
+.RE
+.PP
+
+.PP
+Definition at line \fB57\fP of file \fButil\&.c\fP\&.
+.SS "void clearScreen ()"
+
+.PP
+Permite limpar o ecrã de forma 'portátil' entre sistemas\&. 
+.IP "\(bu" 2
+
+.PP
+
+.PP
+Definition at line \fB29\fP of file \fButil\&.c\fP\&.
+.SS "void cyan ()"
+
+.SS "void deleteData ()"
+
+.PP
+Apaga todos os dados em memória do programa\&. 
+.PP
+Definition at line \fB274\fP of file \fBdata\&.c\fP\&.
+.SS "void doShopping ()"
+
+.PP
+Função que adiciona uma encomenda, ou seja uma compra\&. 
+.PP
+\fBNote\fP
+.RS 4
+Verifica se já existe um utilizador autenticado, e se existem artigos disponíveis 
+.RE
+.PP
+Caso cliente não esteja autenticado, e pretenda fazer compras
+.PP
+Cálculo do preço defaultPreco = (maoObra + custosFixos) * margemLucro
+.PP
+Definition at line \fB118\fP of file \fBshopping\&.c\fP\&.
+.SS "void exportData ()"
+
+.PP
+Exporta os dados dos ficheiros binários\&. 
+.PP
+\fBNote\fP
+.RS 4
+Caso surja algum erro na escrita, o programa termina 
+.RE
+.PP
+
+.PP
+Definition at line \fB71\fP of file \fBdata\&.c\fP\&.
+.SS "void exportDefaultData ()"
+
+.PP
+Exporta os dados padrão do programa\&. 
+.PP
+\fBNote\fP
+.RS 4
+Coloca os dados padrão em memória e em seguida exporta para o ficheiro default\&.bin 
+.RE
+.PP
+
+.PP
+Definition at line \fB149\fP of file \fBdata\&.c\fP\&.
+.SS "void exportEncomendas ()"
+
+.PP
+Exporta as encomendas para um ficheiro CSV\&. 
+.PP
+Definition at line \fB239\fP of file \fBdata\&.c\fP\&.
+.SS "void freeMemory (bool alsoStopTheProgram)"
+
+.PP
+Liberta a memória antes de fechar o programa e/ou termina o programa\&. *
+.PP
+\fBParameters\fP
+.RS 4
+\fIalsoStopTheProgram\fP - Opção de saída do programa 
+.RE
+.PP
+
+.PP
+Definition at line \fB267\fP of file \fButil\&.c\fP\&.
+.SS "int getArtigoIndex (int codArtigo)"
+
+.PP
+Função que permite obter o indíce de um artigo no array\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcodArtigo\fP - Código do artigo 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+art - Indíce do artigo 
+.RE
+.PP
+
+.PP
+Definition at line \fB15\fP of file \fBqueries\&.c\fP\&.
+.SS "char * getArtigoName (int idx)"
+
+.PP
+Função que permite obter o nome do artigo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIidx\fP - Indice no array de artigos 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+artigo - O nome do artigo 
+.RE
+.PP
+
+.PP
+Definition at line \fB33\fP of file \fBqueries\&.c\fP\&.
+.SS "char * getClientName (int codCliente)"
+
+.PP
+Função que obtêm o nome do cliente\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIID\fP do cliente 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Retorna o nome do cliente (string) 
+.RE
+.PP
+
+.PP
+Definition at line \fB254\fP of file \fBclientes\&.c\fP\&.
+.SS "int getDateInfo (int info)"
+
+.PP
+Obter certo parâmetro de data tal como hora, dia, mês, ano\&. *
+.PP
+\fBNote\fP
+.RS 4
+A enumeração é usada para indicar o parâmetro a obter 
+.RE
+.PP
+
+.PP
+Definition at line \fB65\fP of file \fBqueries\&.c\fP\&.
+.SS "bool getEstadoCliente (int codCliente)"
+
+.PP
+Função que verifica o estado do cliente indicado\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIID\fP do cliente 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Retorna True - caso o cliente exista ou esteja disponivel False - caso o cliente não exista ou esteja indisponivel 
+.RE
+.PP
+
+.PP
+Definition at line \fB227\fP of file \fBclientes\&.c\fP\&.
+.SS "char * getEstadoEncomenda (int estado)"
+
+.PP
+Retornar o estado de certa encomenda\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIestado\fP - O estado de do artigo em int (ex: artigo[1]\&.estado) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Disponível ou Indisponível (string) 
+.RE
+.PP
+
+.PP
+Definition at line \fB17\fP of file \fBshopping\&.c\fP\&.
+.SS "double getTotalEncomenda ()"
+
+.PP
+Função que permite obter o total (preço) de encomendas\&. 
+.PP
+\fBReturns\fP
+.RS 4
+int - total de encomendas 
+.RE
+.PP
+
+.PP
+Definition at line \fB44\fP of file \fBqueries\&.c\fP\&.
+.SS "void green ()"
+
+.SS "void importData ()"
+
+.PP
+Importa os dados dos ficheiros binários\&. 
+.PP
+\fBNote\fP
+.RS 4
+Caso nao exista algum ficheiro ou caso surja erro na leitura, o programa termina 
+.RE
+.PP
+
+.PP
+Definition at line \fB15\fP of file \fBdata\&.c\fP\&.
+.SS "void importDefaultData ()"
+
+.PP
+Importa os dados padrão (default\&.bin) 
+.PP
+\fBNote\fP
+.RS 4
+Caso o ficheiro não exista a função \fBexportDefaultData()\fP é chamada para criar o ficheiro com os dados padrão 
+.RE
+.PP
+
+.PP
+Definition at line \fB115\fP of file \fBdata\&.c\fP\&.
+.SS "void listArtigos (int queryType)"
+
+.PP
+Função que permite listar o(s) artigo(s) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqueryType\fP - opção de listagem 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+- a opção (10) é quando o cliente autenticado pretende listar as encomendas da sessão 
+.RE
+.PP
+
+.PP
+Definition at line \fB95\fP of file \fBqueries\&.c\fP\&.
+.SS "void listClientes (int queryType)"
+
+.PP
+Função que permite listar o(s) cliente(s) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqueryType\fP - opção de listagem 
+.RE
+.PP
+
+.PP
+Definition at line \fB218\fP of file \fBqueries\&.c\fP\&.
+.SS "void listEncomendas (int queryType)"
+
+.PP
+Função que permite listar as encomendas\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqueryType\fP - Tipo de 'query' a ser executada 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+De acordo com o tipo de 'query' definido na enumeração, a função lista as encomendas 
+.PP
+Por exemplo, a 'query' (61) lista todas as encomendas de todos os clientes 
+.RE
+.PP
+
+.PP
+\fBNote\fP
+.RS 4
+Permite listar as encomendas de certo cliente, este que é indicado via Nome ou pelo seu Código
+.PP
+Permite listar as encomendas de acordo com certa data
+.RE
+.PP
+
+.PP
+Definition at line \fB208\fP of file \fBshopping\&.c\fP\&.
+.SS "bool loggedClient ()"
+
+.PP
+Verifica se existe utilizador autenticado\&. *
+.PP
+\fBReturns\fP
+.RS 4
+true se existe utilizador autenticado, false caso contrário 
+.RE
+.PP
+Não existe cliente logado
+.PP
+Definition at line \fB217\fP of file \fButil\&.c\fP\&.
+.SS "void loginClient ()"
+
+.SS "void logoutClient ()"
+
+.PP
+Função que desautentica certo utilizador\&. 
+.PP
+\fBNote\fP
+.RS 4
+Verifica se já existe um utilizador autenticado 
+.RE
+.PP
+
+.PP
+Definition at line \fB97\fP of file \fBshopping\&.c\fP\&.
+.SS "int main ()"
+
+.PP
+Ficheiro \fBmain\&.c\fP\&. Ficheiro \fBmain\&.c\fP\&.
+.PP
+\fBNote\fP
+.RS 4
+tipoUtilizador - valores possiveis: 1 - Cliente, 2 - Administrador ou 0 - Sair 
+.PP
+Esta é a primeira função a ser executada 
+.RE
+.PP
+
+.PP
+Definition at line \fB29\fP of file \fBmain\&.c\fP\&.
+.SS "int numberOfDigits (int num)"
+
+.PP
+Ficheiro \fButil\&.c\fP\&. Ficheiro \fButil\&.c\fP\&.
+.PP
+\fBNote\fP
+.RS 4
+Usado, por exemplo, para verificar o NIF do cliente 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+O número de digitos do inteiro para usar no respetivo 'loop do while' 
+.RE
+.PP
+
+.PP
+Definition at line \fB15\fP of file \fButil\&.c\fP\&.
+.SS "void pressEnter (bool alsoClearScreen)"
+
+.PP
+Permite dar a opção do tipico 'Press Enter to continue'\&. 
+.IP "\(bu" 2
+
+.PP
+
+.PP
+Definition at line \fB37\fP of file \fButil\&.c\fP\&.
+.SS "void printDataArtigo (int art, bool printTamanhos)"
+
+.PP
+Imprime os dados de um artigo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIart\fP - Artigo a imprimir 
+.br
+\fIprintTamanhas\fP - Define se os tamanhos e os respetivos preços devem ser imprimidos 
+.RE
+.PP
+
+.PP
+Definition at line \fB462\fP of file \fBqueries\&.c\fP\&.
+.SS "void printDataCliente (int cli)"
+
+.PP
+Imprime os dados de um cliente\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcli\fP - Cliente a imprimir 
+.RE
+.PP
+
+.PP
+Definition at line \fB493\fP of file \fBqueries\&.c\fP\&.
+.SS "void printDataEncomenda (int enc)"
+
+.PP
+Imprime os dados de uma encomenda\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIenc\fP - Encomenda a imprimir 
+.RE
+.PP
+
+.PP
+Definition at line \fB445\fP of file \fBqueries\&.c\fP\&.
+.SS "void purple ()"
+
+.SS "void reallocStruct (int st)"
+
+.PP
+Definition at line \fB229\fP of file \fButil\&.c\fP\&.
+.SS "void red ()"
+
+.SS "void statisticsEncomendas ()"
+
+.PP
+Estatisticas das encomendas\&. 
+.PP
+\fBNote\fP
+.RS 4
+Média do Preço e Quantidade 
+.PP
+Melhor e Pior produto (em termos de vendas) 
+.RE
+.PP
+
+.PP
+\fBNote\fP
+.RS 4
+Encontrar as médias (preço e quantidade) das encomendas
+.PP
+Encontrar o produto mais vendido
+.PP
+Encontrar o produto menos vendido
+.PP
+Encontrar o cliente com mais unidades compradas
+.PP
+Encontrar o artigo com maior margem de lucro
+.PP
+Encontrar o artigo com menor margem de lucro
+.PP
+Encontrar a quantidade de encomendas ativas/canceladas
+.RE
+.PP
+
+.PP
+Definition at line \fB290\fP of file \fBqueries\&.c\fP\&.
+.SS "void updateArtigo ()"
+
+.PP
+Função de atualização de artigo e os seus valores\&. 
+.PP
+\fBNote\fP
+.RS 4
+artigoToUpdate - Artigo a atualizar 
+.PP
+opcao - Campo a alterar 
+.PP
+novoXXX - Novo valor a ser atribuido 
+.RE
+.PP
+
+.PP
+\fBNote\fP
+.RS 4
+-- Recalcula o preço de todos os artigos de acordo com os novos valores
+.RE
+.PP
+
+.PP
+Definition at line \fB101\fP of file \fBadministrador\&.c\fP\&.
+.SS "void updateClient (int clienteToChange, int via)"
+
+.PP
+Função que permite atualizar um cliente\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIclienteToChange\fP - Cliente a ser atualizado 
+.br
+\fIvia\fP - caso a função seja chamada via menu cliente, apenas permitir a alteração do cliente autenticado (e perguntando o seu código) 
+.RE
+.PP
+
+.PP
+\fBNote\fP
+.RS 4
+Via Menu Cliente, onde se realiza verificação de segurança
+.PP
+Via Menu Administrador
+.RE
+.PP
+
+.PP
+Definition at line \fB82\fP of file \fBclientes\&.c\fP\&.
+.SS "void updateDesconto ()"
+
+.PP
+Função de atualização do valor e código de desconto\&. 
+.PP
+\fBNote\fP
+.RS 4
+runtime->percentageDesconto - Percentagem de desconto 
+.PP
+runtime->stringDesconto - Código de desconto 
+.RE
+.PP
+
+.PP
+Definition at line \fB332\fP of file \fBadministrador\&.c\fP\&.
+.SS "void white ()"
+
+.SS "void yellow ()"
+
+.SH "Variable Documentation"
+.PP 
+.SS "\fBArtigos\fP* artigo\fC [extern]\fP"
+
+.PP
+Definition at line \fB20\fP of file \fBmain\&.c\fP\&.
+.SS "\fBClientes\fP* cliente\fC [extern]\fP"
+
+.PP
+Definition at line \fB19\fP of file \fBmain\&.c\fP\&.
+.SS "\fBEncomendas\fP* encomenda\fC [extern]\fP"
+
+.PP
+Definition at line \fB21\fP of file \fBmain\&.c\fP\&.
+.SS "int NA\fC [extern]\fP"
+
+.PP
+Definition at line \fB16\fP of file \fBmain\&.c\fP\&.
+.SS "int NC\fC [extern]\fP"
+
+.PP
+Definition at line \fB15\fP of file \fBmain\&.c\fP\&.
+.SS "int NE\fC [extern]\fP"
+
+.PP
+Definition at line \fB17\fP of file \fBmain\&.c\fP\&.
+.SS "\fBRuntime\fP* runtime\fC [extern]\fP"
+
+.PP
+Definition at line \fB22\fP of file \fBmain\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Laboratório de Programação from the source code\&.

@@ -1,0 +1,111 @@
+\hypertarget{clientes_8c}{}\doxysection{clientes.\+c File Reference}
+\label{clientes_8c}\index{clientes.c@{clientes.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}definitions.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{clientes_8c_a8b6e5471fc3162030e02624aa4e0a71c}{add\+Cliente}} ()
+\begin{DoxyCompactList}\small\item\em Função que permite adicionar um cliente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{clientes_8c_a384bbc94cc780349877dd70a46d111fd}{update\+Client}} (int cliente\+To\+Change, int via)
+\begin{DoxyCompactList}\small\item\em Função que permite atualizar um cliente. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{clientes_8c_a918dfa81ea4cf833c9cb370987ff7521}{get\+Estado\+Cliente}} (int cod\+Cliente)
+\begin{DoxyCompactList}\small\item\em Função que verifica o estado do cliente indicado. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{clientes_8c_a63ec96e80364598a0c5bfc3954f2dbbe}{get\+Client\+Name}} (int cod\+Cliente)
+\begin{DoxyCompactList}\small\item\em Função que obtêm o nome do cliente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{clientes_8c_a8b6e5471fc3162030e02624aa4e0a71c}\label{clientes_8c_a8b6e5471fc3162030e02624aa4e0a71c}} 
+\index{clientes.c@{clientes.c}!addCliente@{addCliente}}
+\index{addCliente@{addCliente}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{addCliente()}{addCliente()}}
+{\footnotesize\ttfamily void add\+Cliente (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que permite adicionar um cliente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Os} & parametros necessarios para a adição do cliente \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{clientes_8c_source_l00016}{16}} of file \mbox{\hyperlink{clientes_8c_source}{clientes.\+c}}.
+
+\mbox{\Hypertarget{clientes_8c_a63ec96e80364598a0c5bfc3954f2dbbe}\label{clientes_8c_a63ec96e80364598a0c5bfc3954f2dbbe}} 
+\index{clientes.c@{clientes.c}!getClientName@{getClientName}}
+\index{getClientName@{getClientName}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{getClientName()}{getClientName()}}
+{\footnotesize\ttfamily char $\ast$ get\+Client\+Name (\begin{DoxyParamCaption}\item[{int}]{cod\+Cliente }\end{DoxyParamCaption})}
+
+
+
+Função que obtêm o nome do cliente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & do cliente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o nome do cliente (string) 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{clientes_8c_source_l00254}{254}} of file \mbox{\hyperlink{clientes_8c_source}{clientes.\+c}}.
+
+\mbox{\Hypertarget{clientes_8c_a918dfa81ea4cf833c9cb370987ff7521}\label{clientes_8c_a918dfa81ea4cf833c9cb370987ff7521}} 
+\index{clientes.c@{clientes.c}!getEstadoCliente@{getEstadoCliente}}
+\index{getEstadoCliente@{getEstadoCliente}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{getEstadoCliente()}{getEstadoCliente()}}
+{\footnotesize\ttfamily bool get\+Estado\+Cliente (\begin{DoxyParamCaption}\item[{int}]{cod\+Cliente }\end{DoxyParamCaption})}
+
+
+
+Função que verifica o estado do cliente indicado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & do cliente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna True -\/ caso o cliente exista ou esteja disponivel False -\/ caso o cliente não exista ou esteja indisponivel 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{clientes_8c_source_l00227}{227}} of file \mbox{\hyperlink{clientes_8c_source}{clientes.\+c}}.
+
+\mbox{\Hypertarget{clientes_8c_a384bbc94cc780349877dd70a46d111fd}\label{clientes_8c_a384bbc94cc780349877dd70a46d111fd}} 
+\index{clientes.c@{clientes.c}!updateClient@{updateClient}}
+\index{updateClient@{updateClient}!clientes.c@{clientes.c}}
+\doxysubsubsection{\texorpdfstring{updateClient()}{updateClient()}}
+{\footnotesize\ttfamily void update\+Client (\begin{DoxyParamCaption}\item[{int}]{cliente\+To\+Change,  }\item[{int}]{via }\end{DoxyParamCaption})}
+
+
+
+Função que permite atualizar um cliente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cliente\+To\+Change} & -\/ Cliente a ser atualizado \\
+\hline
+{\em via} & -\/ caso a função seja chamada via menu cliente, apenas permitir a alteração do cliente autenticado (e perguntando o seu código) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Via Menu Cliente, onde se realiza verificação de segurança
+
+Via Menu Administrador
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{clientes_8c_source_l00082}{82}} of file \mbox{\hyperlink{clientes_8c_source}{clientes.\+c}}.
+

@@ -1,0 +1,163 @@
+.TH "shopping.c" 3 "Fri Jan 14 2022" "Version Grupo 2" "Laboratório de Programação" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+shopping.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include 'definitions\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBIVA\fP   1\&.23"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "char * \fBgetEstadoEncomenda\fP (int estado)"
+.br
+.RI "Retornar o estado de certa encomenda\&. "
+.ti -1c
+.RI "void \fBloginClient\fP ()"
+.br
+.RI "Função que autentica certo utilizador\&. "
+.ti -1c
+.RI "void \fBlogoutClient\fP ()"
+.br
+.RI "Função que desautentica certo utilizador\&. "
+.ti -1c
+.RI "void \fBdoShopping\fP ()"
+.br
+.RI "Função que adiciona uma encomenda, ou seja uma compra\&. "
+.ti -1c
+.RI "void \fBlistEncomendas\fP (int queryType)"
+.br
+.RI "Função que permite listar as encomendas\&. "
+.ti -1c
+.RI "void \fBcancelEncomenda\fP ()"
+.br
+.RI "Função que permite cancelar uma encomenda\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define IVA   1\&.23"
+
+.PP
+Definition at line \fB9\fP of file \fBshopping\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void cancelEncomenda ()"
+
+.PP
+Função que permite cancelar uma encomenda\&. 
+.PP
+Definition at line \fB362\fP of file \fBshopping\&.c\fP\&.
+.SS "void doShopping ()"
+
+.PP
+Função que adiciona uma encomenda, ou seja uma compra\&. 
+.PP
+\fBNote\fP
+.RS 4
+Verifica se já existe um utilizador autenticado, e se existem artigos disponíveis 
+.RE
+.PP
+Caso cliente não esteja autenticado, e pretenda fazer compras
+.PP
+Cálculo do preço defaultPreco = (maoObra + custosFixos) * margemLucro
+.PP
+Definition at line \fB118\fP of file \fBshopping\&.c\fP\&.
+.SS "char * getEstadoEncomenda (int estado)"
+
+.PP
+Retornar o estado de certa encomenda\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIestado\fP - O estado de do artigo em int (ex: artigo[1]\&.estado) 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Disponível ou Indisponível (string) 
+.RE
+.PP
+
+.PP
+Definition at line \fB17\fP of file \fBshopping\&.c\fP\&.
+.SS "void listEncomendas (int queryType)"
+
+.PP
+Função que permite listar as encomendas\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqueryType\fP - Tipo de 'query' a ser executada 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+De acordo com o tipo de 'query' definido na enumeração, a função lista as encomendas 
+.PP
+Por exemplo, a 'query' (61) lista todas as encomendas de todos os clientes 
+.RE
+.PP
+
+.PP
+\fBNote\fP
+.RS 4
+Permite listar as encomendas de certo cliente, este que é indicado via Nome ou pelo seu Código
+.PP
+Permite listar as encomendas de acordo com certa data
+.RE
+.PP
+
+.PP
+Definition at line \fB208\fP of file \fBshopping\&.c\fP\&.
+.SS "void loginClient ()"
+
+.PP
+Função que autentica certo utilizador\&. 
+.PP
+\fBNote\fP
+.RS 4
+Verifica se já existe um utilizador autenticado, se sim dá a opção de sair ou de autenticar outro utilizador 
+.RE
+.PP
+
+.PP
+Definition at line \fB36\fP of file \fBshopping\&.c\fP\&.
+.SS "void logoutClient ()"
+
+.PP
+Função que desautentica certo utilizador\&. 
+.PP
+\fBNote\fP
+.RS 4
+Verifica se já existe um utilizador autenticado 
+.RE
+.PP
+
+.PP
+Definition at line \fB97\fP of file \fBshopping\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Laboratório de Programação from the source code\&.

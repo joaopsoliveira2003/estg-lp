@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="struct_encomendas" kind="struct" language="C++" prot="public">
+    <compoundname>Encomendas</compoundname>
+    <includes refid="definitions_8h" local="no">definitions.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_encomendas_1a5eb4a4f2f14cb6227076ee3aaa9cb24c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int codEncomenda</definition>
+        <argsstring></argsstring>
+        <name>codEncomenda</name>
+        <qualifiedname>Encomendas::codEncomenda</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="34" column="9" bodyfile="definitions.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_encomendas_1aa9b5911a87665c3e73ce79013736729b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int codCliente</definition>
+        <argsstring></argsstring>
+        <name>codCliente</name>
+        <qualifiedname>Encomendas::codCliente</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="35" column="9" bodyfile="definitions.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_encomendas_1a9b469e91df9bb9a07f1268125a065190" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int codArtigo</definition>
+        <argsstring></argsstring>
+        <name>codArtigo</name>
+        <qualifiedname>Encomendas::codArtigo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="36" column="9" bodyfile="definitions.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_encomendas_1a0a06f50c808099546e057b445cc90c14" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tamanho</definition>
+        <argsstring></argsstring>
+        <name>tamanho</name>
+        <qualifiedname>Encomendas::tamanho</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="37" column="9" bodyfile="definitions.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_encomendas_1accb6c827099dc6ae91546671edc4c9ce" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int horaminuto</definition>
+        <argsstring></argsstring>
+        <name>horaminuto</name>
+        <qualifiedname>Encomendas::horaminuto</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="38" column="9" bodyfile="definitions.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_encomendas_1a3d1171ac670a8e8a672c481f22d1fa9f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dia</definition>
+        <argsstring></argsstring>
+        <name>dia</name>
+        <qualifiedname>Encomendas::dia</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="39" column="9" bodyfile="definitions.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_encomendas_1a9fc86758220eae0e735655f81fd9d9bc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mes</definition>
+        <argsstring></argsstring>
+        <name>mes</name>
+        <qualifiedname>Encomendas::mes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="40" column="9" bodyfile="definitions.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_encomendas_1ac404d93cbf0169fd9e89edc17d0c5572" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ano</definition>
+        <argsstring></argsstring>
+        <name>ano</name>
+        <qualifiedname>Encomendas::ano</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="41" column="9" bodyfile="definitions.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_encomendas_1aab7e2f8a805bde3912f985c05be7d510" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int quantidade</definition>
+        <argsstring></argsstring>
+        <name>quantidade</name>
+        <qualifiedname>Encomendas::quantidade</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="42" column="9" bodyfile="definitions.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_encomendas_1ab5af64ba12e40aefe7080187c140895a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double total</definition>
+        <argsstring></argsstring>
+        <name>total</name>
+        <qualifiedname>Encomendas::total</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="43" column="12" bodyfile="definitions.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_encomendas_1a72d010866bd83b41432d6286cb26adbd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool estado</definition>
+        <argsstring></argsstring>
+        <name>estado</name>
+        <qualifiedname>Encomendas::estado</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="44" column="10" bodyfile="definitions.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="definitions.h" line="33" column="1" bodyfile="definitions.h" bodystart="33" bodyend="45"/>
+    <listofallmembers>
+      <member refid="struct_encomendas_1ac404d93cbf0169fd9e89edc17d0c5572" prot="public" virt="non-virtual"><scope>Encomendas</scope><name>ano</name></member>
+      <member refid="struct_encomendas_1a9b469e91df9bb9a07f1268125a065190" prot="public" virt="non-virtual"><scope>Encomendas</scope><name>codArtigo</name></member>
+      <member refid="struct_encomendas_1aa9b5911a87665c3e73ce79013736729b" prot="public" virt="non-virtual"><scope>Encomendas</scope><name>codCliente</name></member>
+      <member refid="struct_encomendas_1a5eb4a4f2f14cb6227076ee3aaa9cb24c" prot="public" virt="non-virtual"><scope>Encomendas</scope><name>codEncomenda</name></member>
+      <member refid="struct_encomendas_1a3d1171ac670a8e8a672c481f22d1fa9f" prot="public" virt="non-virtual"><scope>Encomendas</scope><name>dia</name></member>
+      <member refid="struct_encomendas_1a72d010866bd83b41432d6286cb26adbd" prot="public" virt="non-virtual"><scope>Encomendas</scope><name>estado</name></member>
+      <member refid="struct_encomendas_1accb6c827099dc6ae91546671edc4c9ce" prot="public" virt="non-virtual"><scope>Encomendas</scope><name>horaminuto</name></member>
+      <member refid="struct_encomendas_1a9fc86758220eae0e735655f81fd9d9bc" prot="public" virt="non-virtual"><scope>Encomendas</scope><name>mes</name></member>
+      <member refid="struct_encomendas_1aab7e2f8a805bde3912f985c05be7d510" prot="public" virt="non-virtual"><scope>Encomendas</scope><name>quantidade</name></member>
+      <member refid="struct_encomendas_1a0a06f50c808099546e057b445cc90c14" prot="public" virt="non-virtual"><scope>Encomendas</scope><name>tamanho</name></member>
+      <member refid="struct_encomendas_1ab5af64ba12e40aefe7080187c140895a" prot="public" virt="non-virtual"><scope>Encomendas</scope><name>total</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,433 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="data_8c" kind="file" language="C++">
+    <compoundname>data.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">time.h</includes>
+    <includes refid="definitions_8h" local="yes">definitions.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>data.c</label>
+        <link refid="data_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>definitions.h</label>
+        <link refid="definitions_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>string.h</label>
+      </node>
+      <node id="7">
+        <label>time.h</label>
+      </node>
+      <node id="6">
+        <label>unistd.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="data_8c_1a8c0b39e19764089f83e1a337c0369676" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void importData</definition>
+        <argsstring>()</argsstring>
+        <name>importData</name>
+        <briefdescription>
+<para>Importa os dados dos ficheiros binários. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Caso nao exista algum ficheiro ou caso surja erro na leitura, o programa termina </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data.c" line="15" column="6" bodyfile="data.c" bodystart="15" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8c_1a845434be144bc6138804dd39b3760212" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void exportData</definition>
+        <argsstring>()</argsstring>
+        <name>exportData</name>
+        <briefdescription>
+<para>Exporta os dados dos ficheiros binários. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Caso surja algum erro na escrita, o programa termina </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data.c" line="71" column="6" bodyfile="data.c" bodystart="71" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8c_1ace66f1e8600faf005e2f95c1f5e24ec4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void importDefaultData</definition>
+        <argsstring>()</argsstring>
+        <name>importDefaultData</name>
+        <briefdescription>
+<para>Importa os dados padrão (default.bin) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Caso o ficheiro não exista a função <ref refid="data_8c_1a90b381b5624a976ecadeaabacfde025e" kindref="member">exportDefaultData()</ref> é chamada para criar o ficheiro com os dados padrão </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data.c" line="115" column="6" bodyfile="data.c" bodystart="115" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8c_1a90b381b5624a976ecadeaabacfde025e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void exportDefaultData</definition>
+        <argsstring>()</argsstring>
+        <name>exportDefaultData</name>
+        <briefdescription>
+<para>Exporta os dados padrão do programa. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Coloca os dados padrão em memória e em seguida exporta para o ficheiro default.bin </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data.c" line="149" column="6" bodyfile="data.c" bodystart="149" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8c_1a5ca14d2c3fb1cd90e8dc483afaf1b3d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void exportEncomendas</definition>
+        <argsstring>()</argsstring>
+        <name>exportEncomendas</name>
+        <briefdescription>
+<para>Exporta as encomendas para um ficheiro CSV. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data.c" line="239" column="6" bodyfile="data.c" bodystart="239" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="data_8c_1a01374b232898f3d3c134623ffded84af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void deleteData</definition>
+        <argsstring>()</argsstring>
+        <name>deleteData</name>
+        <briefdescription>
+<para>Apaga todos os dados em memória do programa. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="data.c" line="274" column="6" bodyfile="data.c" bodystart="274" bodyend="292"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="definitions_8h" kindref="compound">definitions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>region<sp/>ImportData</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="data_8c_1a8c0b39e19764089f83e1a337c0369676" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="data_8c_1a8c0b39e19764089f83e1a337c0369676" kindref="member">importData</ref>()</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fcliente<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;clientes.bin&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;rb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fartigo<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;artigos.bin&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;rb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fencomenda<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;encomendas.bin&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;rb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fcliente<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Erro<sp/>ao<sp/>abrir<sp/>o<sp/>ficheiro<sp/>clientes.bin\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a5ec3ba219271cd3cd14bf58108226c7c" kindref="member">freeMemory</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fartigo<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Erro<sp/>ao<sp/>abrir<sp/>o<sp/>ficheiro<sp/>artigos.bin\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a5ec3ba219271cd3cd14bf58108226c7c" kindref="member">freeMemory</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fencomenda<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Erro<sp/>ao<sp/>abrir<sp/>o<sp/>ficheiro<sp/>encomendas.bin\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a5ec3ba219271cd3cd14bf58108226c7c" kindref="member">freeMemory</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a5ec3ba219271cd3cd14bf58108226c7c" kindref="member">freeMemory</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>fread(&amp;<ref refid="definitions_8h_1ab4cee453adc50fdf7fed706a78903134" kindref="member">NC</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/>1,<sp/>fcliente);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>fread(&amp;<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/>1,<sp/>fartigo);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>fread(&amp;<ref refid="definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b" kindref="member">NE</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/>1,<sp/>fencomenda);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c" kindref="member">cliente</ref><sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_clientes" kindref="compound">Clientes</ref>)<sp/>*<sp/>(<ref refid="definitions_8h_1ab4cee453adc50fdf7fed706a78903134" kindref="member">NC</ref><sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref><sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_artigos" kindref="compound">Artigos</ref>)<sp/>*<sp/>(<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref><sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref><sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_encomendas" kindref="compound">Encomendas</ref>)<sp/>*<sp/>(<ref refid="definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b" kindref="member">NE</ref><sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/><ref refid="definitions_8h_1ab4cee453adc50fdf7fed706a78903134" kindref="member">NC</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fread(&amp;<ref refid="definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c" kindref="member">cliente</ref>[i],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_clientes" kindref="compound">Clientes</ref>),<sp/>1,<sp/>fcliente);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/><ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fread(&amp;<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[i],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_artigos" kindref="compound">Artigos</ref>),<sp/>1,<sp/>fartigo);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/><ref refid="definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b" kindref="member">NE</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fread(&amp;<ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>[i],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_encomendas" kindref="compound">Encomendas</ref>),<sp/>1,<sp/>fencomenda);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(fcliente);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(fartigo);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(fencomenda);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="colors_8c_1a0df115437fbb77c0311e65300c65289e" kindref="member">green</ref>();<sp/>printf(</highlight><highlight class="stringliteral">&quot;\nDados<sp/>importados<sp/>com<sp/>sucesso!\n&quot;</highlight><highlight class="normal">);<sp/><ref refid="colors_8c_1ac0fd834412eb7d5311f137d919db6788" kindref="member">white</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>sleep(1);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>region<sp/>ExportData</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="data_8c_1a845434be144bc6138804dd39b3760212" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="data_8c_1a845434be144bc6138804dd39b3760212" kindref="member">exportData</ref>()</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fcliente<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;clientes.bin&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;wb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fartigo<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;artigos.bin&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;wb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fencomenda<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;encomendas.bin&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;wb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fcliente<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Erro<sp/>ao<sp/>escreve<sp/>o<sp/>ficheiro<sp/>clientes.bin\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a5ec3ba219271cd3cd14bf58108226c7c" kindref="member">freeMemory</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fartigo<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Erro<sp/>ao<sp/>escrever<sp/>no<sp/>ficheiro<sp/>artigos.bin\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a5ec3ba219271cd3cd14bf58108226c7c" kindref="member">freeMemory</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fencomenda<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Erro<sp/>ao<sp/>escrever<sp/>no<sp/>ficheiro<sp/>encomendas.bin\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a5ec3ba219271cd3cd14bf58108226c7c" kindref="member">freeMemory</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>fwrite(&amp;<ref refid="definitions_8h_1ab4cee453adc50fdf7fed706a78903134" kindref="member">NC</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/>1,<sp/>fcliente);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>fwrite(&amp;<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/>1,<sp/>fartigo);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>fwrite(&amp;<ref refid="definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b" kindref="member">NE</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/>1,<sp/>fencomenda);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>fwrite(<ref refid="definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c" kindref="member">cliente</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_clientes" kindref="compound">Clientes</ref>)<sp/>*<sp/>(<ref refid="definitions_8h_1ab4cee453adc50fdf7fed706a78903134" kindref="member">NC</ref><sp/>+<sp/>1),<sp/><ref refid="definitions_8h_1ab4cee453adc50fdf7fed706a78903134" kindref="member">NC</ref><sp/>+<sp/>1,<sp/>fcliente);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>fwrite(<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_artigos" kindref="compound">Artigos</ref>)<sp/>*<sp/>(<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref><sp/>+<sp/>1),<sp/><ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref><sp/>+<sp/>1,<sp/>fartigo);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>fwrite(<ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_encomendas" kindref="compound">Encomendas</ref>)<sp/>*<sp/>(<ref refid="definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b" kindref="member">NE</ref><sp/>+<sp/>1),<sp/><ref refid="definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b" kindref="member">NE</ref><sp/>+<sp/>1,<sp/>fencomenda);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(fcliente);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(fartigo);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(fencomenda);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="colors_8c_1a0df115437fbb77c0311e65300c65289e" kindref="member">green</ref>();<sp/>printf(</highlight><highlight class="stringliteral">&quot;\n[!]<sp/>Dados<sp/>exportados<sp/>com<sp/>sucesso!<sp/>[!]\n&quot;</highlight><highlight class="normal">);<sp/><ref refid="colors_8c_1ac0fd834412eb7d5311f137d919db6788" kindref="member">white</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>sleep(1);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>region<sp/>importDefaultData</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="data_8c_1ace66f1e8600faf005e2f95c1f5e24ec4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="data_8c_1ace66f1e8600faf005e2f95c1f5e24ec4" kindref="member">importDefaultData</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fdefault<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;default.bin&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;rb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fdefault<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="colors_8c_1a39abd40f68d03c40857be1e74407efb9" kindref="member">red</ref>();<sp/>printf(</highlight><highlight class="stringliteral">&quot;\n[!]<sp/>O<sp/>Ficheiro<sp/>default.bin<sp/>não<sp/>existe!<sp/>A<sp/>criar...<sp/>[!]\n&quot;</highlight><highlight class="normal">);<sp/><ref refid="colors_8c_1ac0fd834412eb7d5311f137d919db6788" kindref="member">white</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="data_8c_1a90b381b5624a976ecadeaabacfde025e" kindref="member">exportDefaultData</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>fread(&amp;<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/>1,<sp/>fdefault);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref><sp/>=<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_artigos" kindref="compound">Artigos</ref>)<sp/>*<sp/>(<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref><sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref><sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="colors_8c_1a39abd40f68d03c40857be1e74407efb9" kindref="member">red</ref>();<sp/>printf(</highlight><highlight class="stringliteral">&quot;[!]<sp/>Erro<sp/>ao<sp/>alocar<sp/>memória<sp/>[!]\n&quot;</highlight><highlight class="normal">);<sp/><ref refid="colors_8c_1ac0fd834412eb7d5311f137d919db6788" kindref="member">white</ref>();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a5ec3ba219271cd3cd14bf58108226c7c" kindref="member">freeMemory</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/><ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fread(&amp;<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[i],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_artigos" kindref="compound">Artigos</ref>),<sp/>1,<sp/>fdefault);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(<ref refid="definitions_8h_1a69460b78379a912c83e65ba131e368e9" kindref="member">runtime</ref>-&gt;<ref refid="struct_runtime_1ae004fa1151ab1583e3a9174cf07ac012" kindref="member">stringDesconto</ref>,<sp/></highlight><highlight class="stringliteral">&quot;5off&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a69460b78379a912c83e65ba131e368e9" kindref="member">runtime</ref>-&gt;<ref refid="struct_runtime_1abcccdaf615845e2019116c5ce4b90b3a" kindref="member">percentageDesconto</ref><sp/>=<sp/>0.05;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(fdefault);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>region<sp/>exportDefaultData</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="data_8c_1a90b381b5624a976ecadeaabacfde025e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="data_8c_1a90b381b5624a976ecadeaabacfde025e" kindref="member">exportDefaultData</ref>()</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>---<sp/>Sapatos<sp/>---<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a941fa13e3d505e5a9a3f9c082bfeff89" kindref="member">reallocStruct</ref>(1);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Sapato&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a9b469e91df9bb9a07f1268125a065190" kindref="member">codArtigo</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a30e92cea0f8408b6a5be961048ca42c0" kindref="member">maoObra</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a708afd1d61a02beec2c6c56ce4a2921a" kindref="member">custosFixos</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a95702009b40b5c752fdaad4cf2853427" kindref="member">margemLucro</ref><sp/>=<sp/>0.3;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a663835fb75190f816a4c9a34da466774" kindref="member">tamanhos</ref>[0]<sp/>=<sp/>34;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a663835fb75190f816a4c9a34da466774" kindref="member">tamanhos</ref>[1]<sp/>=<sp/>48;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1ae7713476462c0345a8316df83ffe461f" kindref="member">defaultPreco</ref><sp/>=<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a30e92cea0f8408b6a5be961048ca42c0" kindref="member">maoObra</ref><sp/>+<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a708afd1d61a02beec2c6c56ce4a2921a" kindref="member">custosFixos</ref><sp/>+<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a95702009b40b5c752fdaad4cf2853427" kindref="member">margemLucro</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1abe64d024dc53ba1a4a9870bb3dfc5a9b" kindref="member">incrementoPreco</ref><sp/>=<sp/>0.05;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tam<sp/>=<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].tamanhos[0];<sp/>tam<sp/>&lt;=<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a663835fb75190f816a4c9a34da466774" kindref="member">tamanhos</ref>[1];<sp/>tam++)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a40a8d7b99d7acdecf1c6a999d00e28a3" kindref="member">tamanhoPreco</ref>[i][0]<sp/>=<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a663835fb75190f816a4c9a34da466774" kindref="member">tamanhos</ref>[0]<sp/>+<sp/>i;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a40a8d7b99d7acdecf1c6a999d00e28a3" kindref="member">tamanhoPreco</ref>[i][1]<sp/>=<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1ae7713476462c0345a8316df83ffe461f" kindref="member">defaultPreco</ref><sp/>+<sp/>(<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1abe64d024dc53ba1a4a9870bb3dfc5a9b" kindref="member">incrementoPreco</ref><sp/>*<sp/>(i<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i++;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a72d010866bd83b41432d6286cb26adbd" kindref="member">estado</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>---<sp/>Sandálias<sp/>---<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a941fa13e3d505e5a9a3f9c082bfeff89" kindref="member">reallocStruct</ref>(1);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Sandalias&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a9b469e91df9bb9a07f1268125a065190" kindref="member">codArtigo</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a30e92cea0f8408b6a5be961048ca42c0" kindref="member">maoObra</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a95702009b40b5c752fdaad4cf2853427" kindref="member">margemLucro</ref><sp/>=<sp/>0.2;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a708afd1d61a02beec2c6c56ce4a2921a" kindref="member">custosFixos</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a663835fb75190f816a4c9a34da466774" kindref="member">tamanhos</ref>[0]<sp/>=<sp/>34;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a663835fb75190f816a4c9a34da466774" kindref="member">tamanhos</ref>[1]<sp/>=<sp/>48;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1ae7713476462c0345a8316df83ffe461f" kindref="member">defaultPreco</ref><sp/>=<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a30e92cea0f8408b6a5be961048ca42c0" kindref="member">maoObra</ref><sp/>+<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a708afd1d61a02beec2c6c56ce4a2921a" kindref="member">custosFixos</ref><sp/>+<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a95702009b40b5c752fdaad4cf2853427" kindref="member">margemLucro</ref>;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1abe64d024dc53ba1a4a9870bb3dfc5a9b" kindref="member">incrementoPreco</ref><sp/>=<sp/>0.25;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tam<sp/>=<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].tamanhos[0];<sp/>tam<sp/>&lt;=<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a663835fb75190f816a4c9a34da466774" kindref="member">tamanhos</ref>[1];<sp/>tam++)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a40a8d7b99d7acdecf1c6a999d00e28a3" kindref="member">tamanhoPreco</ref>[i][0]<sp/>=<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a663835fb75190f816a4c9a34da466774" kindref="member">tamanhos</ref>[0]<sp/>+<sp/>i;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a40a8d7b99d7acdecf1c6a999d00e28a3" kindref="member">tamanhoPreco</ref>[i][1]<sp/>=<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1ae7713476462c0345a8316df83ffe461f" kindref="member">defaultPreco</ref><sp/>+<sp/>(<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1abe64d024dc53ba1a4a9870bb3dfc5a9b" kindref="member">incrementoPreco</ref><sp/>*<sp/>(i<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i++;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a72d010866bd83b41432d6286cb26adbd" kindref="member">estado</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>---<sp/>Botas<sp/>---<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a941fa13e3d505e5a9a3f9c082bfeff89" kindref="member">reallocStruct</ref>(1);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Botas&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a9b469e91df9bb9a07f1268125a065190" kindref="member">codArtigo</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a30e92cea0f8408b6a5be961048ca42c0" kindref="member">maoObra</ref><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a708afd1d61a02beec2c6c56ce4a2921a" kindref="member">custosFixos</ref><sp/>=<sp/>3;<sp/><sp/></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a95702009b40b5c752fdaad4cf2853427" kindref="member">margemLucro</ref><sp/>=<sp/>0.4;<sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a663835fb75190f816a4c9a34da466774" kindref="member">tamanhos</ref>[0]<sp/>=<sp/>34;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a663835fb75190f816a4c9a34da466774" kindref="member">tamanhos</ref>[1]<sp/>=<sp/>48;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1ae7713476462c0345a8316df83ffe461f" kindref="member">defaultPreco</ref><sp/>=<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a30e92cea0f8408b6a5be961048ca42c0" kindref="member">maoObra</ref><sp/>+<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a708afd1d61a02beec2c6c56ce4a2921a" kindref="member">custosFixos</ref><sp/>+<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a95702009b40b5c752fdaad4cf2853427" kindref="member">margemLucro</ref>;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1abe64d024dc53ba1a4a9870bb3dfc5a9b" kindref="member">incrementoPreco</ref><sp/>=<sp/>0.75;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tam<sp/>=<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].tamanhos[0];<sp/>tam<sp/>&lt;=<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a663835fb75190f816a4c9a34da466774" kindref="member">tamanhos</ref>[1];<sp/>tam++)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a40a8d7b99d7acdecf1c6a999d00e28a3" kindref="member">tamanhoPreco</ref>[i][0]<sp/>=<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a663835fb75190f816a4c9a34da466774" kindref="member">tamanhos</ref>[0]<sp/>+<sp/>i;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a40a8d7b99d7acdecf1c6a999d00e28a3" kindref="member">tamanhoPreco</ref>[i][1]<sp/>=<sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1ae7713476462c0345a8316df83ffe461f" kindref="member">defaultPreco</ref><sp/>+<sp/>(<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1abe64d024dc53ba1a4a9870bb3dfc5a9b" kindref="member">incrementoPreco</ref><sp/>*<sp/>(i<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i++;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>].<ref refid="struct_artigos_1a72d010866bd83b41432d6286cb26adbd" kindref="member">estado</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>strcpy(<ref refid="definitions_8h_1a69460b78379a912c83e65ba131e368e9" kindref="member">runtime</ref>-&gt;<ref refid="struct_runtime_1ae004fa1151ab1583e3a9174cf07ac012" kindref="member">stringDesconto</ref>,<sp/></highlight><highlight class="stringliteral">&quot;5off&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a69460b78379a912c83e65ba131e368e9" kindref="member">runtime</ref>-&gt;<ref refid="struct_runtime_1abcccdaf615845e2019116c5ce4b90b3a" kindref="member">percentageDesconto</ref><sp/>=<sp/>0.05;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>---<sp/>Exportação<sp/>dos<sp/>dados<sp/>padrão<sp/>---<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*fdefault<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;default.bin&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;wb&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fdefault<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="colors_8c_1af7082af28af567c98aa48add7be13826" kindref="member">boldRed</ref>();<sp/>printf(</highlight><highlight class="stringliteral">&quot;[!]<sp/>Erro<sp/>ao<sp/>escrever<sp/>no<sp/>ficheiro<sp/>default.bin<sp/>[!]\n&quot;</highlight><highlight class="normal">);<sp/><ref refid="colors_8c_1ac0fd834412eb7d5311f137d919db6788" kindref="member">white</ref>();</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a5ec3ba219271cd3cd14bf58108226c7c" kindref="member">freeMemory</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>fwrite(&amp;<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">),<sp/>1,<sp/>fdefault);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>fwrite(<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_artigos" kindref="compound">Artigos</ref>)<sp/>*<sp/>(<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref><sp/>+<sp/>1),<sp/><ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref><sp/>+<sp/>1,<sp/>fdefault);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(fdefault);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="colors_8c_1a0df115437fbb77c0311e65300c65289e" kindref="member">green</ref>();<sp/>printf(</highlight><highlight class="stringliteral">&quot;\n[!]<sp/>Dados<sp/>padrão<sp/>exportados<sp/>com<sp/>sucesso!<sp/>[!]\n&quot;</highlight><highlight class="normal">);<sp/><ref refid="colors_8c_1ac0fd834412eb7d5311f137d919db6788" kindref="member">white</ref>();</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>region<sp/>ExportEncomendas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239" refid="data_8c_1a5ca14d2c3fb1cd90e8dc483afaf1b3d8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="data_8c_1a5ca14d2c3fb1cd90e8dc483afaf1b3d8" kindref="member">exportEncomendas</ref>()</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b" kindref="member">NE</ref><sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="colors_8c_1a39abd40f68d03c40857be1e74407efb9" kindref="member">red</ref>();<sp/>printf(</highlight><highlight class="stringliteral">&quot;\n[!]<sp/>Não<sp/>existem<sp/>encomendas<sp/>para<sp/>exportar<sp/>[!]&quot;</highlight><highlight class="normal">);<sp/><ref refid="colors_8c_1ac0fd834412eb7d5311f137d919db6788" kindref="member">white</ref>();</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe" kindref="member">pressEnter</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>FILE<sp/>*f<sp/>=<sp/>fopen(</highlight><highlight class="stringliteral">&quot;encomendas.csv&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(f<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Erro<sp/>ao<sp/>abrir<sp/>o<sp/>ficheiro<sp/>encomendas.csv\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;CodEncomenda,CodArtigo,CodCliente,Artigo,NomeCliente,Tamanho,Quantidade,Preco,Data,Estado\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/><ref refid="definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b" kindref="member">NE</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(f,<sp/></highlight><highlight class="stringliteral">&quot;%d,%d,%d,%s,%s,%d,%d,%0.2f,%d/%d/%d,%s\n&quot;</highlight><highlight class="normal">,<sp/>\</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>[i].codEncomenda,<sp/><ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>[i].codArtigo,<sp/><ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>[i].codCliente,<sp/>\</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1af4568fe8cae0d02992cc20eeaa4d309d" kindref="member">getArtigoName</ref>(<ref refid="definitions_8h_1a46d4eccec6d2c6e65ef4784ab4db0c78" kindref="member">getArtigoIndex</ref>(<ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>[i].codArtigo)),<sp/><ref refid="clientes_8c_1a63ec96e80364598a0c5bfc3954f2dbbe" kindref="member">getClientName</ref>(<ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>[i].codCliente),<sp/>\</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>[i].tamanho,<sp/><ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>[i].quantidade,<sp/><ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>[i].total,<sp/>\</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>[i].dia,<sp/><ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>[i].mes,<sp/><ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>[i].ano,<sp/><ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>[i].estado<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;Ativa&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;Cancelada&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>fclose(f);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="colors_8c_1a0df115437fbb77c0311e65300c65289e" kindref="member">green</ref>();<sp/>printf(</highlight><highlight class="stringliteral">&quot;\nFicheiro<sp/>encomendas.csv<sp/>exportado<sp/>com<sp/>sucesso!&quot;</highlight><highlight class="normal">);<sp/><ref refid="colors_8c_1ac0fd834412eb7d5311f137d919db6788" kindref="member">white</ref>();</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe" kindref="member">pressEnter</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>region<sp/>DeleteData</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274" refid="data_8c_1a01374b232898f3d3c134623ffded84af" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="data_8c_1a01374b232898f3d3c134623ffded84af" kindref="member">deleteData</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="colors_8c_1a39abd40f68d03c40857be1e74407efb9" kindref="member">red</ref>();<sp/>printf(</highlight><highlight class="stringliteral">&quot;\n[!]<sp/>Tem<sp/>a<sp/>certeza<sp/>que<sp/>pretende<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="colors_8c_1af7082af28af567c98aa48add7be13826" kindref="member">boldRed</ref>();<sp/>printf(</highlight><highlight class="stringliteral">&quot;ELIMINAR&quot;</highlight><highlight class="normal">);<sp/><ref refid="colors_8c_1a39abd40f68d03c40857be1e74407efb9" kindref="member">red</ref>();<sp/>printf(</highlight><highlight class="stringliteral">&quot;<sp/>todos<sp/>os<sp/>dados?<sp/>[!]\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="colors_8c_1ac0fd834412eb7d5311f137d919db6788" kindref="member">white</ref>();<sp/>printf(</highlight><highlight class="stringliteral">&quot;[!]<sp/>Esta<sp/>acção<sp/>não<sp/>pode<sp/>ser<sp/>revertida!<sp/>(s/N):<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>choice;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>scanf(</highlight><highlight class="stringliteral">&quot;<sp/>%c&quot;</highlight><highlight class="normal">,<sp/>&amp;choice);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(choice<sp/>==<sp/></highlight><highlight class="charliteral">&apos;s&apos;</highlight><highlight class="normal"><sp/>||<sp/>choice<sp/>==<sp/></highlight><highlight class="charliteral">&apos;S&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ab4cee453adc50fdf7fed706a78903134" kindref="member">NC</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b" kindref="member">NE</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref><sp/>=<sp/>realloc(<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_artigos" kindref="compound">Artigos</ref>)<sp/>*<sp/>(<ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref><sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c" kindref="member">cliente</ref><sp/>=<sp/>realloc(<ref refid="definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c" kindref="member">cliente</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_clientes" kindref="compound">Clientes</ref>)<sp/>*<sp/>(<ref refid="definitions_8h_1ab4cee453adc50fdf7fed706a78903134" kindref="member">NC</ref><sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref><sp/>=<sp/>realloc(<ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_encomendas" kindref="compound">Encomendas</ref>)<sp/>*<sp/>(<ref refid="definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b" kindref="member">NE</ref><sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="colors_8c_1a0df115437fbb77c0311e65300c65289e" kindref="member">green</ref>();<sp/>printf(</highlight><highlight class="stringliteral">&quot;\n[!]<sp/>Dados<sp/>eliminados<sp/>com<sp/>sucesso!<sp/>[!]&quot;</highlight><highlight class="normal">);<sp/><ref refid="colors_8c_1ac0fd834412eb7d5311f137d919db6788" kindref="member">white</ref>();</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="colors_8c_1a59d9c08d69e42981f0d6fb680f5e6e26" kindref="member">bold</ref>();<sp/>printf(</highlight><highlight class="stringliteral">&quot;\n[!]<sp/>Ação<sp/>cancelada!&quot;</highlight><highlight class="normal">);<sp/><ref refid="colors_8c_1ac0fd834412eb7d5311f137d919db6788" kindref="member">white</ref>();</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe" kindref="member">pressEnter</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight></codeline>
+    </programlisting>
+    <location file="data.c"/>
+  </compounddef>
+</doxygen>

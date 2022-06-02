@@ -1,0 +1,76 @@
+\hypertarget{administrador_8c}{}\doxysection{administrador.\+c File Reference}
+\label{administrador_8c}\index{administrador.c@{administrador.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}definitions.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{administrador_8c_a7eadedef8af327c38812b981e440e9fd}{add\+Artigo}} ()
+\begin{DoxyCompactList}\small\item\em Função que permite adicionar um artigo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{administrador_8c_ab57c27349b4a343d5ec7736646cf4c7b}{update\+Artigo}} ()
+\begin{DoxyCompactList}\small\item\em Função de atualização de artigo e os seus valores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{administrador_8c_af720c7469de6c812fcf7ef357c36f9da}{update\+Desconto}} ()
+\begin{DoxyCompactList}\small\item\em Função de atualização do valor e código de desconto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{administrador_8c_a7eadedef8af327c38812b981e440e9fd}\label{administrador_8c_a7eadedef8af327c38812b981e440e9fd}} 
+\index{administrador.c@{administrador.c}!addArtigo@{addArtigo}}
+\index{addArtigo@{addArtigo}!administrador.c@{administrador.c}}
+\doxysubsubsection{\texorpdfstring{addArtigo()}{addArtigo()}}
+{\footnotesize\ttfamily void add\+Artigo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que permite adicionar um artigo. 
+
+
+
+Definition at line \mbox{\hyperlink{administrador_8c_source_l00012}{12}} of file \mbox{\hyperlink{administrador_8c_source}{administrador.\+c}}.
+
+\mbox{\Hypertarget{administrador_8c_ab57c27349b4a343d5ec7736646cf4c7b}\label{administrador_8c_ab57c27349b4a343d5ec7736646cf4c7b}} 
+\index{administrador.c@{administrador.c}!updateArtigo@{updateArtigo}}
+\index{updateArtigo@{updateArtigo}!administrador.c@{administrador.c}}
+\doxysubsubsection{\texorpdfstring{updateArtigo()}{updateArtigo()}}
+{\footnotesize\ttfamily void update\+Artigo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função de atualização de artigo e os seus valores. 
+
+\begin{DoxyNote}{Note}
+artigo\+To\+Update -\/ Artigo a atualizar 
+
+opcao -\/ Campo a alterar 
+
+novo\+XXX -\/ Novo valor a ser atribuido 
+\end{DoxyNote}
+\begin{DoxyNote}{Note}
+-- Recalcula o preço de todos os artigos de acordo com os novos valores
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{administrador_8c_source_l00101}{101}} of file \mbox{\hyperlink{administrador_8c_source}{administrador.\+c}}.
+
+\mbox{\Hypertarget{administrador_8c_af720c7469de6c812fcf7ef357c36f9da}\label{administrador_8c_af720c7469de6c812fcf7ef357c36f9da}} 
+\index{administrador.c@{administrador.c}!updateDesconto@{updateDesconto}}
+\index{updateDesconto@{updateDesconto}!administrador.c@{administrador.c}}
+\doxysubsubsection{\texorpdfstring{updateDesconto()}{updateDesconto()}}
+{\footnotesize\ttfamily void update\+Desconto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função de atualização do valor e código de desconto. 
+
+\begin{DoxyNote}{Note}
+runtime-\/\texorpdfstring{$>$}{>}percentage\+Desconto -\/ Percentagem de desconto 
+
+runtime-\/\texorpdfstring{$>$}{>}string\+Desconto -\/ Código de desconto 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{administrador_8c_source_l00332}{332}} of file \mbox{\hyperlink{administrador_8c_source}{administrador.\+c}}.
+

@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_encomendas" xml:lang="en-US">
+<title>Encomendas Struct Reference</title>
+<indexterm><primary>Encomendas</primary></indexterm>
+<para>
+<computeroutput>#include &lt;definitions.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_encomendas_1a5eb4a4f2f14cb6227076ee3aaa9cb24c">codEncomenda</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_encomendas_1aa9b5911a87665c3e73ce79013736729b">codCliente</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_encomendas_1a9b469e91df9bb9a07f1268125a065190">codArtigo</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_encomendas_1a0a06f50c808099546e057b445cc90c14">tamanho</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_encomendas_1accb6c827099dc6ae91546671edc4c9ce">horaminuto</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_encomendas_1a3d1171ac670a8e8a672c481f22d1fa9f">dia</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_encomendas_1a9fc86758220eae0e735655f81fd9d9bc">mes</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_encomendas_1ac404d93cbf0169fd9e89edc17d0c5572">ano</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_encomendas_1aab7e2f8a805bde3912f985c05be7d510">quantidade</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_struct_encomendas_1ab5af64ba12e40aefe7080187c140895a">total</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_encomendas_1a72d010866bd83b41432d6286cb26adbd">estado</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_definitions_8h_source_1l00033">33</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_encomendas_1ac404d93cbf0169fd9e89edc17d0c5572"/><section>
+    <title>ano</title>
+<indexterm><primary>ano</primary><secondary>Encomendas</secondary></indexterm>
+<indexterm><primary>Encomendas</primary><secondary>ano</secondary></indexterm>
+<para><computeroutput>int ano</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00041">41</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<anchor xml:id="_struct_encomendas_1a9b469e91df9bb9a07f1268125a065190"/><section>
+    <title>codArtigo</title>
+<indexterm><primary>codArtigo</primary><secondary>Encomendas</secondary></indexterm>
+<indexterm><primary>Encomendas</primary><secondary>codArtigo</secondary></indexterm>
+<para><computeroutput>int codArtigo</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00036">36</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<anchor xml:id="_struct_encomendas_1aa9b5911a87665c3e73ce79013736729b"/><section>
+    <title>codCliente</title>
+<indexterm><primary>codCliente</primary><secondary>Encomendas</secondary></indexterm>
+<indexterm><primary>Encomendas</primary><secondary>codCliente</secondary></indexterm>
+<para><computeroutput>int codCliente</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00035">35</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<anchor xml:id="_struct_encomendas_1a5eb4a4f2f14cb6227076ee3aaa9cb24c"/><section>
+    <title>codEncomenda</title>
+<indexterm><primary>codEncomenda</primary><secondary>Encomendas</secondary></indexterm>
+<indexterm><primary>Encomendas</primary><secondary>codEncomenda</secondary></indexterm>
+<para><computeroutput>int codEncomenda</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00034">34</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<anchor xml:id="_struct_encomendas_1a3d1171ac670a8e8a672c481f22d1fa9f"/><section>
+    <title>dia</title>
+<indexterm><primary>dia</primary><secondary>Encomendas</secondary></indexterm>
+<indexterm><primary>Encomendas</primary><secondary>dia</secondary></indexterm>
+<para><computeroutput>int dia</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00039">39</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<anchor xml:id="_struct_encomendas_1a72d010866bd83b41432d6286cb26adbd"/><section>
+    <title>estado</title>
+<indexterm><primary>estado</primary><secondary>Encomendas</secondary></indexterm>
+<indexterm><primary>Encomendas</primary><secondary>estado</secondary></indexterm>
+<para><computeroutput>bool estado</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00044">44</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<anchor xml:id="_struct_encomendas_1accb6c827099dc6ae91546671edc4c9ce"/><section>
+    <title>horaminuto</title>
+<indexterm><primary>horaminuto</primary><secondary>Encomendas</secondary></indexterm>
+<indexterm><primary>Encomendas</primary><secondary>horaminuto</secondary></indexterm>
+<para><computeroutput>int horaminuto</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00038">38</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<anchor xml:id="_struct_encomendas_1a9fc86758220eae0e735655f81fd9d9bc"/><section>
+    <title>mes</title>
+<indexterm><primary>mes</primary><secondary>Encomendas</secondary></indexterm>
+<indexterm><primary>Encomendas</primary><secondary>mes</secondary></indexterm>
+<para><computeroutput>int mes</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00040">40</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<anchor xml:id="_struct_encomendas_1aab7e2f8a805bde3912f985c05be7d510"/><section>
+    <title>quantidade</title>
+<indexterm><primary>quantidade</primary><secondary>Encomendas</secondary></indexterm>
+<indexterm><primary>Encomendas</primary><secondary>quantidade</secondary></indexterm>
+<para><computeroutput>int quantidade</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00042">42</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<anchor xml:id="_struct_encomendas_1a0a06f50c808099546e057b445cc90c14"/><section>
+    <title>tamanho</title>
+<indexterm><primary>tamanho</primary><secondary>Encomendas</secondary></indexterm>
+<indexterm><primary>Encomendas</primary><secondary>tamanho</secondary></indexterm>
+<para><computeroutput>int tamanho</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00037">37</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<anchor xml:id="_struct_encomendas_1ab5af64ba12e40aefe7080187c140895a"/><section>
+    <title>total</title>
+<indexterm><primary>total</primary><secondary>Encomendas</secondary></indexterm>
+<indexterm><primary>Encomendas</primary><secondary>total</secondary></indexterm>
+<para><computeroutput>double total</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00043">43</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+<link linkend="_definitions_8h">definitions.h</link></section>
+</section>

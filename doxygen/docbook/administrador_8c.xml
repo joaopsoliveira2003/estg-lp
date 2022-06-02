@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_administrador_8c" xml:lang="en-US">
+<title>administrador.c File Reference</title>
+<indexterm><primary>administrador.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdbool.h&gt;
+#include &lt;unistd.h&gt;
+#include &quot;definitions.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_administrador_8c_1a7eadedef8af327c38812b981e440e9fd">addArtigo</link> ()</para>
+
+<para>Função que permite adicionar um artigo. </para>
+</listitem>
+            <listitem><para>void <link linkend="_administrador_8c_1ab57c27349b4a343d5ec7736646cf4c7b">updateArtigo</link> ()</para>
+
+<para>Função de atualização de artigo e os seus valores. </para>
+</listitem>
+            <listitem><para>void <link linkend="_administrador_8c_1af720c7469de6c812fcf7ef357c36f9da">updateDesconto</link> ()</para>
+
+<para>Função de atualização do valor e código de desconto. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_administrador_8c_1a7eadedef8af327c38812b981e440e9fd"/><section>
+    <title>addArtigo()</title>
+<indexterm><primary>addArtigo</primary><secondary>administrador.c</secondary></indexterm>
+<indexterm><primary>administrador.c</primary><secondary>addArtigo</secondary></indexterm>
+<para><computeroutput>void addArtigo ( )</computeroutput></para><para>
+
+<para>Função que permite adicionar um artigo. </para>
+</para>
+<para>
+Definition at line <link linkend="_administrador_8c_source_1l00012">12</link> of file <link linkend="_administrador_8c_source">administrador.c</link>.</para>
+</section>
+<anchor xml:id="_administrador_8c_1ab57c27349b4a343d5ec7736646cf4c7b"/><section>
+    <title>updateArtigo()</title>
+<indexterm><primary>updateArtigo</primary><secondary>administrador.c</secondary></indexterm>
+<indexterm><primary>administrador.c</primary><secondary>updateArtigo</secondary></indexterm>
+<para><computeroutput>void updateArtigo ( )</computeroutput></para><para>
+
+<para>Função de atualização de artigo e os seus valores. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>artigoToUpdate - Artigo a atualizar </para>
+
+<para>opcao - Campo a alterar </para>
+
+<para>novoXXX - Novo valor a ser atribuido </para>
+</note>
+</para>
+
+<para><note><title>Note</title>
+
+<para>&#8211; Recalcula o preço de todos os artigos de acordo com os novos valores</para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_administrador_8c_source_1l00101">101</link> of file <link linkend="_administrador_8c_source">administrador.c</link>.</para>
+</section>
+<anchor xml:id="_administrador_8c_1af720c7469de6c812fcf7ef357c36f9da"/><section>
+    <title>updateDesconto()</title>
+<indexterm><primary>updateDesconto</primary><secondary>administrador.c</secondary></indexterm>
+<indexterm><primary>administrador.c</primary><secondary>updateDesconto</secondary></indexterm>
+<para><computeroutput>void updateDesconto ( )</computeroutput></para><para>
+
+<para>Função de atualização do valor e código de desconto. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>runtime-&gt;percentageDesconto - Percentagem de desconto </para>
+
+<para>runtime-&gt;stringDesconto - Código de desconto </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_administrador_8c_source_1l00332">332</link> of file <link linkend="_administrador_8c_source">administrador.c</link>.</para>
+</section>
+</section>
+</section>

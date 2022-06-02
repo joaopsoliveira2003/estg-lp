@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_colors_8c_source" xml:lang="en-US">
+<title>colors.c</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_colors_8c_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+<anchor xml:id="_colors_8c_source_1l00002"/>00002 
+<anchor xml:id="_colors_8c_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_definitions_8h">definitions.h</link>&quot;</emphasis>
+<anchor xml:id="_colors_8c_source_1l00004"/>00004 
+<anchor xml:id="_colors_8c_source_1l00005"/>00005 <emphasis role="preprocessor">#pragma&#32;region&#32;Colors</emphasis>
+<anchor xml:id="_colors_8c_source_1l00009"/><link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">00009</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>()
+<anchor xml:id="_colors_8c_source_1l00010"/>00010 {
+<anchor xml:id="_colors_8c_source_1l00011"/>00011 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\033[0m&quot;</emphasis>);
+<anchor xml:id="_colors_8c_source_1l00012"/>00012 }
+<anchor xml:id="_colors_8c_source_1l00013"/>00013 
+<anchor xml:id="_colors_8c_source_1l00014"/><link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">00014</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>()
+<anchor xml:id="_colors_8c_source_1l00015"/>00015 {
+<anchor xml:id="_colors_8c_source_1l00016"/>00016 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\033[0;31m&quot;</emphasis>);
+<anchor xml:id="_colors_8c_source_1l00017"/>00017 }
+<anchor xml:id="_colors_8c_source_1l00018"/>00018 
+<anchor xml:id="_colors_8c_source_1l00019"/><link linkend="_colors_8c_1a0df115437fbb77c0311e65300c65289e">00019</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_colors_8c_1a0df115437fbb77c0311e65300c65289e">green</link>()
+<anchor xml:id="_colors_8c_source_1l00020"/>00020 {
+<anchor xml:id="_colors_8c_source_1l00021"/>00021 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\033[0;32m&quot;</emphasis>);
+<anchor xml:id="_colors_8c_source_1l00022"/>00022 }
+<anchor xml:id="_colors_8c_source_1l00023"/>00023 
+<anchor xml:id="_colors_8c_source_1l00024"/><link linkend="_colors_8c_1a161aec8a96c389795d228ca0c3a949d5">00024</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_colors_8c_1a161aec8a96c389795d228ca0c3a949d5">blue</link>()
+<anchor xml:id="_colors_8c_source_1l00025"/>00025 {
+<anchor xml:id="_colors_8c_source_1l00026"/>00026 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\033[1;34m&quot;</emphasis>);
+<anchor xml:id="_colors_8c_source_1l00027"/>00027 }
+<anchor xml:id="_colors_8c_source_1l00028"/>00028 
+<anchor xml:id="_colors_8c_source_1l00029"/><link linkend="_colors_8c_1ab0c10e6284be130a7973fa029a690ef7">00029</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_colors_8c_1ab0c10e6284be130a7973fa029a690ef7">yellow</link>()
+<anchor xml:id="_colors_8c_source_1l00030"/>00030 {
+<anchor xml:id="_colors_8c_source_1l00031"/>00031 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\033[0;33m&quot;</emphasis>);
+<anchor xml:id="_colors_8c_source_1l00032"/>00032 }
+<anchor xml:id="_colors_8c_source_1l00033"/>00033 
+<anchor xml:id="_colors_8c_source_1l00034"/><link linkend="_colors_8c_1ab2b14535fac90d655eb767bff5647d88">00034</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_colors_8c_1ab2b14535fac90d655eb767bff5647d88">purple</link>()
+<anchor xml:id="_colors_8c_source_1l00035"/>00035 {
+<anchor xml:id="_colors_8c_source_1l00036"/>00036 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\033[0;35m&quot;</emphasis>);
+<anchor xml:id="_colors_8c_source_1l00037"/>00037 }
+<anchor xml:id="_colors_8c_source_1l00038"/>00038 
+<anchor xml:id="_colors_8c_source_1l00039"/><link linkend="_colors_8c_1a59d9c08d69e42981f0d6fb680f5e6e26">00039</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_colors_8c_1a59d9c08d69e42981f0d6fb680f5e6e26">bold</link>()
+<anchor xml:id="_colors_8c_source_1l00040"/>00040 {
+<anchor xml:id="_colors_8c_source_1l00041"/>00041 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\033[1m&quot;</emphasis>);
+<anchor xml:id="_colors_8c_source_1l00042"/>00042 }
+<anchor xml:id="_colors_8c_source_1l00043"/>00043 
+<anchor xml:id="_colors_8c_source_1l00044"/><link linkend="_colors_8c_1af7082af28af567c98aa48add7be13826">00044</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_colors_8c_1af7082af28af567c98aa48add7be13826">boldRed</link>()
+<anchor xml:id="_colors_8c_source_1l00045"/>00045 {
+<anchor xml:id="_colors_8c_source_1l00046"/>00046 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\033[1;31m&quot;</emphasis>);
+<anchor xml:id="_colors_8c_source_1l00047"/>00047 }
+<anchor xml:id="_colors_8c_source_1l00048"/>00048 
+<anchor xml:id="_colors_8c_source_1l00049"/><link linkend="_colors_8c_1a52a6a14bd8e9463315ea114aceda1d92">00049</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_colors_8c_1a52a6a14bd8e9463315ea114aceda1d92">cyan</link>()
+<anchor xml:id="_colors_8c_source_1l00050"/>00050 {
+<anchor xml:id="_colors_8c_source_1l00051"/>00051 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\033[0;36m&quot;</emphasis>);
+<anchor xml:id="_colors_8c_source_1l00052"/>00052 }
+<anchor xml:id="_colors_8c_source_1l00053"/>00053 <emphasis role="preprocessor">#pragma&#32;endregion</emphasis>
+</programlisting></section>

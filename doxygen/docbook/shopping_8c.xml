@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_shopping_8c" xml:lang="en-US">
+<title>shopping.c File Reference</title>
+<indexterm><primary>shopping.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdbool.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;time.h&gt;
+#include &quot;definitions.h&quot;
+</programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_shopping_8c_1a975774baaa722d6932cb6cfd39020511">IVA</link>   1.23</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_shopping_8c_1ac3e41774a08731e62fe348b9c8401ccb">getEstadoEncomenda</link> (int estado)</para>
+
+<para>Retornar o estado de certa encomenda. </para>
+</listitem>
+            <listitem><para>void <link linkend="_shopping_8c_1a6f4f7a9a71ced3d5e9fb21198edb6ab2">loginClient</link> ()</para>
+
+<para>Função que autentica certo utilizador. </para>
+</listitem>
+            <listitem><para>void <link linkend="_shopping_8c_1a2163242f3dbe460739c88c56f06ec34f">logoutClient</link> ()</para>
+
+<para>Função que desautentica certo utilizador. </para>
+</listitem>
+            <listitem><para>void <link linkend="_shopping_8c_1a10d6c88f1cbf1e60ed32e609f715a779">doShopping</link> ()</para>
+
+<para>Função que adiciona uma encomenda, ou seja uma compra. </para>
+</listitem>
+            <listitem><para>void <link linkend="_shopping_8c_1a87b028e2e18b0b33e3eb58cb99af5523">listEncomendas</link> (int queryType)</para>
+
+<para>Função que permite listar as encomendas. </para>
+</listitem>
+            <listitem><para>void <link linkend="_shopping_8c_1a91ff19fa6805e0491dd0bcf68a12d4da">cancelEncomenda</link> ()</para>
+
+<para>Função que permite cancelar uma encomenda. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_shopping_8c_1a975774baaa722d6932cb6cfd39020511"/><section>
+    <title>IVA</title>
+<indexterm><primary>IVA</primary><secondary>shopping.c</secondary></indexterm>
+<indexterm><primary>shopping.c</primary><secondary>IVA</secondary></indexterm>
+<para><computeroutput>#define IVA   1.23</computeroutput></para><para>
+Definition at line <link linkend="_shopping_8c_source_1l00009">9</link> of file <link linkend="_shopping_8c_source">shopping.c</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_shopping_8c_1a91ff19fa6805e0491dd0bcf68a12d4da"/><section>
+    <title>cancelEncomenda()</title>
+<indexterm><primary>cancelEncomenda</primary><secondary>shopping.c</secondary></indexterm>
+<indexterm><primary>shopping.c</primary><secondary>cancelEncomenda</secondary></indexterm>
+<para><computeroutput>void cancelEncomenda ( )</computeroutput></para><para>
+
+<para>Função que permite cancelar uma encomenda. </para>
+</para>
+<para>
+Definition at line <link linkend="_shopping_8c_source_1l00362">362</link> of file <link linkend="_shopping_8c_source">shopping.c</link>.</para>
+</section>
+<anchor xml:id="_shopping_8c_1a10d6c88f1cbf1e60ed32e609f715a779"/><section>
+    <title>doShopping()</title>
+<indexterm><primary>doShopping</primary><secondary>shopping.c</secondary></indexterm>
+<indexterm><primary>shopping.c</primary><secondary>doShopping</secondary></indexterm>
+<para><computeroutput>void doShopping ( )</computeroutput></para><para>
+
+<para>Função que adiciona uma encomenda, ou seja uma compra. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Verifica se já existe um utilizador autenticado, e se existem artigos disponíveis </para>
+</note>
+</para>
+
+<para>Caso cliente não esteja autenticado, e pretenda fazer compras</para>
+
+<para>Cálculo do preço defaultPreco = (maoObra + custosFixos) * margemLucro</para>
+<para>
+Definition at line <link linkend="_shopping_8c_source_1l00118">118</link> of file <link linkend="_shopping_8c_source">shopping.c</link>.</para>
+</section>
+<anchor xml:id="_shopping_8c_1ac3e41774a08731e62fe348b9c8401ccb"/><section>
+    <title>getEstadoEncomenda()</title>
+<indexterm><primary>getEstadoEncomenda</primary><secondary>shopping.c</secondary></indexterm>
+<indexterm><primary>shopping.c</primary><secondary>getEstadoEncomenda</secondary></indexterm>
+<para><computeroutput>char * getEstadoEncomenda (int estado)</computeroutput></para><para>
+
+<para>Retornar o estado de certa encomenda. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>estado</entry><entry>
+<para>- O estado de do artigo em int (ex: artigo[1].estado) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Disponível ou Indisponível (string) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_shopping_8c_source_1l00017">17</link> of file <link linkend="_shopping_8c_source">shopping.c</link>.</para>
+</section>
+<anchor xml:id="_shopping_8c_1a87b028e2e18b0b33e3eb58cb99af5523"/><section>
+    <title>listEncomendas()</title>
+<indexterm><primary>listEncomendas</primary><secondary>shopping.c</secondary></indexterm>
+<indexterm><primary>shopping.c</primary><secondary>listEncomendas</secondary></indexterm>
+<para><computeroutput>void listEncomendas (int queryType)</computeroutput></para><para>
+
+<para>Função que permite listar as encomendas. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>queryType</entry><entry>
+<para>- Tipo de &quot;query&quot; a ser executada </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>De acordo com o tipo de &quot;query&quot; definido na enumeração, a função lista as encomendas </para>
+
+<para>Por exemplo, a &quot;query&quot; (61) lista todas as encomendas de todos os clientes </para>
+</note>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Permite listar as encomendas de certo cliente, este que é indicado via Nome ou pelo seu Código</para>
+
+<para>Permite listar as encomendas de acordo com certa data</para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_shopping_8c_source_1l00208">208</link> of file <link linkend="_shopping_8c_source">shopping.c</link>.</para>
+</section>
+<anchor xml:id="_shopping_8c_1a6f4f7a9a71ced3d5e9fb21198edb6ab2"/><section>
+    <title>loginClient()</title>
+<indexterm><primary>loginClient</primary><secondary>shopping.c</secondary></indexterm>
+<indexterm><primary>shopping.c</primary><secondary>loginClient</secondary></indexterm>
+<para><computeroutput>void loginClient ( )</computeroutput></para><para>
+
+<para>Função que autentica certo utilizador. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Verifica se já existe um utilizador autenticado, se sim dá a opção de sair ou de autenticar outro utilizador </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_shopping_8c_source_1l00036">36</link> of file <link linkend="_shopping_8c_source">shopping.c</link>.</para>
+</section>
+<anchor xml:id="_shopping_8c_1a2163242f3dbe460739c88c56f06ec34f"/><section>
+    <title>logoutClient()</title>
+<indexterm><primary>logoutClient</primary><secondary>shopping.c</secondary></indexterm>
+<indexterm><primary>shopping.c</primary><secondary>logoutClient</secondary></indexterm>
+<para><computeroutput>void logoutClient ( )</computeroutput></para><para>
+
+<para>Função que desautentica certo utilizador. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Verifica se já existe um utilizador autenticado </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_shopping_8c_source_1l00097">97</link> of file <link linkend="_shopping_8c_source">shopping.c</link>.</para>
+</section>
+</section>
+</section>

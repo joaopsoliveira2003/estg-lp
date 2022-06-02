@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__r_e_a_d_m_e" xml:lang="en-US">
+<section xml:id="_md__r_e_a_d_m_e_1autotoc_md1">
+<title>compile and run the project</title>
+</section>
+<section xml:id="_md__r_e_a_d_m_e_1autotoc_md2">
+<title>gcc .\main.c .\administrador.c .\shopping.c .\colors.c .\queries.c .\clientes.c .\util.c -o main &amp;&amp; .\main</title>
+</section>
+</section>

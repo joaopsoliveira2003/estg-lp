@@ -1,0 +1,1049 @@
+\hypertarget{definitions_8h}{}\doxysection{definitions.\+h File Reference}
+\label{definitions_8h}\index{definitions.h@{definitions.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_clientes}{Clientes}}
+\item 
+struct \mbox{\hyperlink{struct_artigos}{Artigos}}
+\item 
+struct \mbox{\hyperlink{struct_encomendas}{Encomendas}}
+\item 
+struct \mbox{\hyperlink{struct_runtime}{Runtime}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{definitions_8h_a6bb7a09d1931dfbdd6d373cfe6e23357}{SC}}~25
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{definitions_8h_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Ficheiro \mbox{\hyperlink{main_8c}{main.\+c}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{definitions_8h_a2da5c6326d98abeaf456372ceb077847}{number\+Of\+Digits}} (int num)
+\begin{DoxyCompactList}\small\item\em Ficheiro \mbox{\hyperlink{util_8c}{util.\+c}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clear\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Permite limpar o ecrã de forma \char`\"{}portátil\char`\"{} entre sistemas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{press\+Enter}} (bool also\+Clear\+Screen)
+\begin{DoxyCompactList}\small\item\em Permite dar a opção do tipico \char`\"{}\+Press Enter to continue\char`\"{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{definitions_8h_ae403fe07e86bc33933303d3e266b579d}{get\+Date\+Info}} (int info)
+\begin{DoxyCompactList}\small\item\em Obter certo parâmetro de data tal como hora, dia, mês, ano. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{definitions_8h_af22d234c9f1f40dea9b79ca8fb8c7288}{check\+String}} (const char $\ast$string)
+\begin{DoxyCompactList}\small\item\em Verifica se a string indicada é válida tendo em contas certas condições. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{definitions_8h_a41532c4603b615920ea1c1216d1445ad}{check\+Number}} (double number)
+\begin{DoxyCompactList}\small\item\em Controlar o inteiro indicado pelo utilizador. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{definitions_8h_ae81c93a074d4c3bdce4d8409997418f0}{check\+Cod\+Promo}} (char $\ast$cod\+Promo)
+\begin{DoxyCompactList}\small\item\em Verifica se o código promocional introduzido pelo utilizador é valido. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{definitions_8h_a52199f9c4b3c9c302cc8d4ab4a38bae5}{available\+For\+Operation}} (int op, int cod\+Artigo, int parameter)
+\begin{DoxyCompactList}\small\item\em Verifica se o artigo OU parâmetro indicado está disponível ou é valido para X operação. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{definitions_8h_a46d4eccec6d2c6e65ef4784ab4db0c78}{get\+Artigo\+Index}} (int cod\+Artigo)
+\begin{DoxyCompactList}\small\item\em Função que permite obter o indíce de um artigo no array. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{definitions_8h_a9efdb5ab1d7b26e54799af4e7cb59fa2}{logged\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Verifica se existe utilizador autenticado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a941fa13e3d505e5a9a3f9c082bfeff89}{realloc\+Struct}} (int st)
+\item 
+void \mbox{\hyperlink{definitions_8h_a5ec3ba219271cd3cd14bf58108226c7c}{free\+Memory}} (bool also\+Stop\+The\+Program)
+\begin{DoxyCompactList}\small\item\em Liberta a memória antes de fechar o programa e/ou termina o programa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a87b028e2e18b0b33e3eb58cb99af5523}{list\+Encomendas}} (int query\+Type)
+\begin{DoxyCompactList}\small\item\em Função que permite listar as encomendas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a8f37bef24fe15f40c71fca8327b44697}{statistics\+Encomendas}} ()
+\begin{DoxyCompactList}\small\item\em Estatisticas das encomendas. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{definitions_8h_a2e948973437ab18cc4aa58f04f32b31d}{get\+Total\+Encomenda}} ()
+\begin{DoxyCompactList}\small\item\em Função que permite obter o total (preço) de encomendas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a7f710faa12da0cf1c324f192cee73e96}{list\+Clientes}} (int query\+Type)
+\begin{DoxyCompactList}\small\item\em Função que permite listar o(s) cliente(s) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_ab3cd5f6472e88b4f400d6f56aa6edd8c}{list\+Artigos}} (int query\+Type)
+\begin{DoxyCompactList}\small\item\em Função que permite listar o(s) artigo(s) \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{definitions_8h_af4568fe8cae0d02992cc20eeaa4d309d}{get\+Artigo\+Name}} (int cod\+Artigo)
+\begin{DoxyCompactList}\small\item\em Função que permite obter o nome do artigo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_adf88e57666bc1bdbe2b9a532b5d8ee19}{print\+Data\+Encomenda}} (int enc)
+\begin{DoxyCompactList}\small\item\em Imprime os dados de uma encomenda. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a2db28081aac0ef2215ab88524f9cf13e}{print\+Data\+Artigo}} (int art, bool query)
+\begin{DoxyCompactList}\small\item\em Imprime os dados de um artigo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a5b0e889434448c1fda602fe8219c6df0}{print\+Data\+Cliente}} (int cli)
+\begin{DoxyCompactList}\small\item\em Imprime os dados de um cliente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a8b6e5471fc3162030e02624aa4e0a71c}{add\+Cliente}} ()
+\begin{DoxyCompactList}\small\item\em Função que permite adicionar um cliente. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{definitions_8h_a918dfa81ea4cf833c9cb370987ff7521}{get\+Estado\+Cliente}} (int cod\+Cliente)
+\begin{DoxyCompactList}\small\item\em Função que verifica o estado do cliente indicado. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{definitions_8h_a63ec96e80364598a0c5bfc3954f2dbbe}{get\+Client\+Name}} (int cod\+Cliente)
+\begin{DoxyCompactList}\small\item\em Função que obtêm o nome do cliente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a384bbc94cc780349877dd70a46d111fd}{update\+Client}} (int cliente\+To\+Change, int via)
+\begin{DoxyCompactList}\small\item\em Função que permite atualizar um cliente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_ab57c27349b4a343d5ec7736646cf4c7b}{update\+Artigo}} ()
+\begin{DoxyCompactList}\small\item\em Função de atualização de artigo e os seus valores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a7eadedef8af327c38812b981e440e9fd}{add\+Artigo}} ()
+\begin{DoxyCompactList}\small\item\em Função que permite adicionar um artigo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_af720c7469de6c812fcf7ef357c36f9da}{update\+Desconto}} ()
+\begin{DoxyCompactList}\small\item\em Função de atualização do valor e código de desconto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a8c0b39e19764089f83e1a337c0369676}{import\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Importa os dados dos ficheiros binários. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a845434be144bc6138804dd39b3760212}{export\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Exporta os dados dos ficheiros binários. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_ace66f1e8600faf005e2f95c1f5e24ec4}{import\+Default\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Importa os dados padrão (default.\+bin) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a90b381b5624a976ecadeaabacfde025e}{export\+Default\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Exporta os dados padrão do programa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a01374b232898f3d3c134623ffded84af}{delete\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Apaga todos os dados em memória do programa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a5ca14d2c3fb1cd90e8dc483afaf1b3d8}{export\+Encomendas}} ()
+\begin{DoxyCompactList}\small\item\em Exporta as encomendas para um ficheiro CSV. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a6f4f7a9a71ced3d5e9fb21198edb6ab2}{login\+Client}} ()
+\item 
+void \mbox{\hyperlink{definitions_8h_a2163242f3dbe460739c88c56f06ec34f}{logout\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Função que desautentica certo utilizador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a10d6c88f1cbf1e60ed32e609f715a779}{do\+Shopping}} ()
+\begin{DoxyCompactList}\small\item\em Função que adiciona uma encomenda, ou seja uma compra. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{definitions_8h_ac3e41774a08731e62fe348b9c8401ccb}{get\+Estado\+Encomenda}} (int estado)
+\begin{DoxyCompactList}\small\item\em Retornar o estado de certa encomenda. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_a91ff19fa6805e0491dd0bcf68a12d4da}{cancel\+Encomenda}} ()
+\begin{DoxyCompactList}\small\item\em Função que permite cancelar uma encomenda. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{definitions_8h_ac0fd834412eb7d5311f137d919db6788}{white}} ()
+\item 
+void \mbox{\hyperlink{definitions_8h_a39abd40f68d03c40857be1e74407efb9}{red}} ()
+\item 
+void \mbox{\hyperlink{definitions_8h_a0df115437fbb77c0311e65300c65289e}{green}} ()
+\item 
+void \mbox{\hyperlink{definitions_8h_a161aec8a96c389795d228ca0c3a949d5}{blue}} ()
+\item 
+void \mbox{\hyperlink{definitions_8h_ab0c10e6284be130a7973fa029a690ef7}{yellow}} ()
+\item 
+void \mbox{\hyperlink{definitions_8h_ab2b14535fac90d655eb767bff5647d88}{purple}} ()
+\item 
+void \mbox{\hyperlink{definitions_8h_a52a6a14bd8e9463315ea114aceda1d92}{cyan}} ()
+\item 
+void \mbox{\hyperlink{definitions_8h_a59d9c08d69e42981f0d6fb680f5e6e26}{bold}} ()
+\item 
+void \mbox{\hyperlink{definitions_8h_af7082af28af567c98aa48add7be13826}{bold\+Red}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{definitions_8h_ab4cee453adc50fdf7fed706a78903134}{NC}}
+\item 
+int \mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}}
+\item 
+int \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}
+\item 
+\mbox{\hyperlink{struct_clientes}{Clientes}} $\ast$ \mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}}
+\item 
+\mbox{\hyperlink{struct_artigos}{Artigos}} $\ast$ \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}
+\item 
+\mbox{\hyperlink{struct_encomendas}{Encomendas}} $\ast$ \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}
+\item 
+\mbox{\hyperlink{struct_runtime}{Runtime}} $\ast$ \mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{definitions_8h_a6bb7a09d1931dfbdd6d373cfe6e23357}\label{definitions_8h_a6bb7a09d1931dfbdd6d373cfe6e23357}} 
+\index{definitions.h@{definitions.h}!SC@{SC}}
+\index{SC@{SC}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{SC}{SC}}
+{\footnotesize\ttfamily \#define SC~25}
+
+
+
+Definition at line \mbox{\hyperlink{definitions_8h_source_l00005}{5}} of file \mbox{\hyperlink{definitions_8h_source}{definitions.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{definitions_8h_a7eadedef8af327c38812b981e440e9fd}\label{definitions_8h_a7eadedef8af327c38812b981e440e9fd}} 
+\index{definitions.h@{definitions.h}!addArtigo@{addArtigo}}
+\index{addArtigo@{addArtigo}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{addArtigo()}{addArtigo()}}
+{\footnotesize\ttfamily void add\+Artigo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que permite adicionar um artigo. 
+
+
+
+Definition at line \mbox{\hyperlink{administrador_8c_source_l00012}{12}} of file \mbox{\hyperlink{administrador_8c_source}{administrador.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a8b6e5471fc3162030e02624aa4e0a71c}\label{definitions_8h_a8b6e5471fc3162030e02624aa4e0a71c}} 
+\index{definitions.h@{definitions.h}!addCliente@{addCliente}}
+\index{addCliente@{addCliente}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{addCliente()}{addCliente()}}
+{\footnotesize\ttfamily void add\+Cliente (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que permite adicionar um cliente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Os} & parametros necessarios para a adição do cliente \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{clientes_8c_source_l00016}{16}} of file \mbox{\hyperlink{clientes_8c_source}{clientes.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a52199f9c4b3c9c302cc8d4ab4a38bae5}\label{definitions_8h_a52199f9c4b3c9c302cc8d4ab4a38bae5}} 
+\index{definitions.h@{definitions.h}!availableForOperation@{availableForOperation}}
+\index{availableForOperation@{availableForOperation}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{availableForOperation()}{availableForOperation()}}
+{\footnotesize\ttfamily bool available\+For\+Operation (\begin{DoxyParamCaption}\item[{int}]{op,  }\item[{int}]{cod\+Artigo,  }\item[{int}]{parameter }\end{DoxyParamCaption})}
+
+
+
+Verifica se o artigo OU parâmetro indicado está disponível ou é valido para X operação. 
+
+$\ast$\begin{DoxyNote}{Note}
+As operações estão indicadas na enumeração 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+true se a operação/parâmetro é válido, false caso contrário 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+O valor do return é usado no respetivo \char`\"{}loop do while\char`\"{} 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{util_8c_source_l00118}{118}} of file \mbox{\hyperlink{util_8c_source}{util.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a161aec8a96c389795d228ca0c3a949d5}\label{definitions_8h_a161aec8a96c389795d228ca0c3a949d5}} 
+\index{definitions.h@{definitions.h}!blue@{blue}}
+\index{blue@{blue}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{blue()}{blue()}}
+{\footnotesize\ttfamily void blue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{definitions_8h_a59d9c08d69e42981f0d6fb680f5e6e26}\label{definitions_8h_a59d9c08d69e42981f0d6fb680f5e6e26}} 
+\index{definitions.h@{definitions.h}!bold@{bold}}
+\index{bold@{bold}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{bold()}{bold()}}
+{\footnotesize\ttfamily void bold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{definitions_8h_af7082af28af567c98aa48add7be13826}\label{definitions_8h_af7082af28af567c98aa48add7be13826}} 
+\index{definitions.h@{definitions.h}!boldRed@{boldRed}}
+\index{boldRed@{boldRed}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{boldRed()}{boldRed()}}
+{\footnotesize\ttfamily void bold\+Red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{colors_8c_source_l00044}{44}} of file \mbox{\hyperlink{colors_8c_source}{colors.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a91ff19fa6805e0491dd0bcf68a12d4da}\label{definitions_8h_a91ff19fa6805e0491dd0bcf68a12d4da}} 
+\index{definitions.h@{definitions.h}!cancelEncomenda@{cancelEncomenda}}
+\index{cancelEncomenda@{cancelEncomenda}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{cancelEncomenda()}{cancelEncomenda()}}
+{\footnotesize\ttfamily void cancel\+Encomenda (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que permite cancelar uma encomenda. 
+
+
+
+Definition at line \mbox{\hyperlink{shopping_8c_source_l00362}{362}} of file \mbox{\hyperlink{shopping_8c_source}{shopping.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_ae81c93a074d4c3bdce4d8409997418f0}\label{definitions_8h_ae81c93a074d4c3bdce4d8409997418f0}} 
+\index{definitions.h@{definitions.h}!checkCodPromo@{checkCodPromo}}
+\index{checkCodPromo@{checkCodPromo}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{checkCodPromo()}{checkCodPromo()}}
+{\footnotesize\ttfamily bool check\+Cod\+Promo (\begin{DoxyParamCaption}\item[{char $\ast$}]{cod\+Promo }\end{DoxyParamCaption})}
+
+
+
+Verifica se o código promocional introduzido pelo utilizador é valido. 
+
+$\ast$\begin{DoxyReturn}{Returns}
+true se o código for válido, false caso contrário 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{util_8c_source_l00096}{96}} of file \mbox{\hyperlink{util_8c_source}{util.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a41532c4603b615920ea1c1216d1445ad}\label{definitions_8h_a41532c4603b615920ea1c1216d1445ad}} 
+\index{definitions.h@{definitions.h}!checkNumber@{checkNumber}}
+\index{checkNumber@{checkNumber}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{checkNumber()}{checkNumber()}}
+{\footnotesize\ttfamily bool check\+Number (\begin{DoxyParamCaption}\item[{double}]{number }\end{DoxyParamCaption})}
+
+
+
+Controlar o inteiro indicado pelo utilizador. 
+
+$\ast$\begin{DoxyReturn}{Returns}
+true se o inteiro for válido, false caso contrário 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{util_8c_source_l00078}{78}} of file \mbox{\hyperlink{util_8c_source}{util.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_af22d234c9f1f40dea9b79ca8fb8c7288}\label{definitions_8h_af22d234c9f1f40dea9b79ca8fb8c7288}} 
+\index{definitions.h@{definitions.h}!checkString@{checkString}}
+\index{checkString@{checkString}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{checkString()}{checkString()}}
+{\footnotesize\ttfamily bool check\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{string }\end{DoxyParamCaption})}
+
+
+
+Verifica se a string indicada é válida tendo em contas certas condições. 
+
+\begin{DoxyNote}{Note}
+A string é válida se\+:
+\begin{DoxyItemize}
+\item não estiver vazia e conter pelo menos 3 caracteres
+\item não contém caracteres númericos 
+\end{DoxyItemize}
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+true se a string for válida, false caso contrário 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{util_8c_source_l00057}{57}} of file \mbox{\hyperlink{util_8c_source}{util.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}\label{definitions_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}} 
+\index{definitions.h@{definitions.h}!clearScreen@{clearScreen}}
+\index{clearScreen@{clearScreen}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{clearScreen()}{clearScreen()}}
+{\footnotesize\ttfamily void clear\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permite limpar o ecrã de forma \char`\"{}portátil\char`\"{} entre sistemas. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{util_8c_source_l00029}{29}} of file \mbox{\hyperlink{util_8c_source}{util.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a52a6a14bd8e9463315ea114aceda1d92}\label{definitions_8h_a52a6a14bd8e9463315ea114aceda1d92}} 
+\index{definitions.h@{definitions.h}!cyan@{cyan}}
+\index{cyan@{cyan}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{cyan()}{cyan()}}
+{\footnotesize\ttfamily void cyan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{definitions_8h_a01374b232898f3d3c134623ffded84af}\label{definitions_8h_a01374b232898f3d3c134623ffded84af}} 
+\index{definitions.h@{definitions.h}!deleteData@{deleteData}}
+\index{deleteData@{deleteData}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{deleteData()}{deleteData()}}
+{\footnotesize\ttfamily void delete\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Apaga todos os dados em memória do programa. 
+
+
+
+Definition at line \mbox{\hyperlink{data_8c_source_l00274}{274}} of file \mbox{\hyperlink{data_8c_source}{data.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a10d6c88f1cbf1e60ed32e609f715a779}\label{definitions_8h_a10d6c88f1cbf1e60ed32e609f715a779}} 
+\index{definitions.h@{definitions.h}!doShopping@{doShopping}}
+\index{doShopping@{doShopping}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{doShopping()}{doShopping()}}
+{\footnotesize\ttfamily void do\+Shopping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que adiciona uma encomenda, ou seja uma compra. 
+
+\begin{DoxyNote}{Note}
+Verifica se já existe um utilizador autenticado, e se existem artigos disponíveis 
+\end{DoxyNote}
+Caso cliente não esteja autenticado, e pretenda fazer compras
+
+Cálculo do preço default\+Preco = (mao\+Obra + custos\+Fixos) $\ast$ margem\+Lucro
+
+Definition at line \mbox{\hyperlink{shopping_8c_source_l00118}{118}} of file \mbox{\hyperlink{shopping_8c_source}{shopping.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a845434be144bc6138804dd39b3760212}\label{definitions_8h_a845434be144bc6138804dd39b3760212}} 
+\index{definitions.h@{definitions.h}!exportData@{exportData}}
+\index{exportData@{exportData}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{exportData()}{exportData()}}
+{\footnotesize\ttfamily void export\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Exporta os dados dos ficheiros binários. 
+
+\begin{DoxyNote}{Note}
+Caso surja algum erro na escrita, o programa termina 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{data_8c_source_l00071}{71}} of file \mbox{\hyperlink{data_8c_source}{data.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a90b381b5624a976ecadeaabacfde025e}\label{definitions_8h_a90b381b5624a976ecadeaabacfde025e}} 
+\index{definitions.h@{definitions.h}!exportDefaultData@{exportDefaultData}}
+\index{exportDefaultData@{exportDefaultData}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{exportDefaultData()}{exportDefaultData()}}
+{\footnotesize\ttfamily void export\+Default\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Exporta os dados padrão do programa. 
+
+\begin{DoxyNote}{Note}
+Coloca os dados padrão em memória e em seguida exporta para o ficheiro default.\+bin 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{data_8c_source_l00149}{149}} of file \mbox{\hyperlink{data_8c_source}{data.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a5ca14d2c3fb1cd90e8dc483afaf1b3d8}\label{definitions_8h_a5ca14d2c3fb1cd90e8dc483afaf1b3d8}} 
+\index{definitions.h@{definitions.h}!exportEncomendas@{exportEncomendas}}
+\index{exportEncomendas@{exportEncomendas}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{exportEncomendas()}{exportEncomendas()}}
+{\footnotesize\ttfamily void export\+Encomendas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Exporta as encomendas para um ficheiro CSV. 
+
+
+
+Definition at line \mbox{\hyperlink{data_8c_source_l00239}{239}} of file \mbox{\hyperlink{data_8c_source}{data.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a5ec3ba219271cd3cd14bf58108226c7c}\label{definitions_8h_a5ec3ba219271cd3cd14bf58108226c7c}} 
+\index{definitions.h@{definitions.h}!freeMemory@{freeMemory}}
+\index{freeMemory@{freeMemory}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{freeMemory()}{freeMemory()}}
+{\footnotesize\ttfamily void free\+Memory (\begin{DoxyParamCaption}\item[{bool}]{also\+Stop\+The\+Program }\end{DoxyParamCaption})}
+
+
+
+Liberta a memória antes de fechar o programa e/ou termina o programa. 
+
+$\ast$
+\begin{DoxyParams}{Parameters}
+{\em also\+Stop\+The\+Program} & -\/ Opção de saída do programa \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{util_8c_source_l00267}{267}} of file \mbox{\hyperlink{util_8c_source}{util.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a46d4eccec6d2c6e65ef4784ab4db0c78}\label{definitions_8h_a46d4eccec6d2c6e65ef4784ab4db0c78}} 
+\index{definitions.h@{definitions.h}!getArtigoIndex@{getArtigoIndex}}
+\index{getArtigoIndex@{getArtigoIndex}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{getArtigoIndex()}{getArtigoIndex()}}
+{\footnotesize\ttfamily int get\+Artigo\+Index (\begin{DoxyParamCaption}\item[{int}]{cod\+Artigo }\end{DoxyParamCaption})}
+
+
+
+Função que permite obter o indíce de um artigo no array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cod\+Artigo} & -\/ Código do artigo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+art -\/ Indíce do artigo 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00015}{15}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_af4568fe8cae0d02992cc20eeaa4d309d}\label{definitions_8h_af4568fe8cae0d02992cc20eeaa4d309d}} 
+\index{definitions.h@{definitions.h}!getArtigoName@{getArtigoName}}
+\index{getArtigoName@{getArtigoName}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{getArtigoName()}{getArtigoName()}}
+{\footnotesize\ttfamily char $\ast$ get\+Artigo\+Name (\begin{DoxyParamCaption}\item[{int}]{idx }\end{DoxyParamCaption})}
+
+
+
+Função que permite obter o nome do artigo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & -\/ Indice no array de artigos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+artigo -\/ O nome do artigo 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00033}{33}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a63ec96e80364598a0c5bfc3954f2dbbe}\label{definitions_8h_a63ec96e80364598a0c5bfc3954f2dbbe}} 
+\index{definitions.h@{definitions.h}!getClientName@{getClientName}}
+\index{getClientName@{getClientName}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{getClientName()}{getClientName()}}
+{\footnotesize\ttfamily char $\ast$ get\+Client\+Name (\begin{DoxyParamCaption}\item[{int}]{cod\+Cliente }\end{DoxyParamCaption})}
+
+
+
+Função que obtêm o nome do cliente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & do cliente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o nome do cliente (string) 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{clientes_8c_source_l00254}{254}} of file \mbox{\hyperlink{clientes_8c_source}{clientes.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_ae403fe07e86bc33933303d3e266b579d}\label{definitions_8h_ae403fe07e86bc33933303d3e266b579d}} 
+\index{definitions.h@{definitions.h}!getDateInfo@{getDateInfo}}
+\index{getDateInfo@{getDateInfo}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{getDateInfo()}{getDateInfo()}}
+{\footnotesize\ttfamily int get\+Date\+Info (\begin{DoxyParamCaption}\item[{int}]{info }\end{DoxyParamCaption})}
+
+
+
+Obter certo parâmetro de data tal como hora, dia, mês, ano. 
+
+$\ast$\begin{DoxyNote}{Note}
+A enumeração é usada para indicar o parâmetro a obter 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00065}{65}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a918dfa81ea4cf833c9cb370987ff7521}\label{definitions_8h_a918dfa81ea4cf833c9cb370987ff7521}} 
+\index{definitions.h@{definitions.h}!getEstadoCliente@{getEstadoCliente}}
+\index{getEstadoCliente@{getEstadoCliente}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{getEstadoCliente()}{getEstadoCliente()}}
+{\footnotesize\ttfamily bool get\+Estado\+Cliente (\begin{DoxyParamCaption}\item[{int}]{cod\+Cliente }\end{DoxyParamCaption})}
+
+
+
+Função que verifica o estado do cliente indicado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & do cliente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna True -\/ caso o cliente exista ou esteja disponivel False -\/ caso o cliente não exista ou esteja indisponivel 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{clientes_8c_source_l00227}{227}} of file \mbox{\hyperlink{clientes_8c_source}{clientes.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_ac3e41774a08731e62fe348b9c8401ccb}\label{definitions_8h_ac3e41774a08731e62fe348b9c8401ccb}} 
+\index{definitions.h@{definitions.h}!getEstadoEncomenda@{getEstadoEncomenda}}
+\index{getEstadoEncomenda@{getEstadoEncomenda}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{getEstadoEncomenda()}{getEstadoEncomenda()}}
+{\footnotesize\ttfamily char $\ast$ get\+Estado\+Encomenda (\begin{DoxyParamCaption}\item[{int}]{estado }\end{DoxyParamCaption})}
+
+
+
+Retornar o estado de certa encomenda. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em estado} & -\/ O estado de do artigo em int (ex\+: artigo\mbox{[}1\mbox{]}.estado) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Disponível ou Indisponível (string) 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{shopping_8c_source_l00017}{17}} of file \mbox{\hyperlink{shopping_8c_source}{shopping.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a2e948973437ab18cc4aa58f04f32b31d}\label{definitions_8h_a2e948973437ab18cc4aa58f04f32b31d}} 
+\index{definitions.h@{definitions.h}!getTotalEncomenda@{getTotalEncomenda}}
+\index{getTotalEncomenda@{getTotalEncomenda}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{getTotalEncomenda()}{getTotalEncomenda()}}
+{\footnotesize\ttfamily double get\+Total\+Encomenda (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que permite obter o total (preço) de encomendas. 
+
+\begin{DoxyReturn}{Returns}
+int -\/ total de encomendas 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00044}{44}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a0df115437fbb77c0311e65300c65289e}\label{definitions_8h_a0df115437fbb77c0311e65300c65289e}} 
+\index{definitions.h@{definitions.h}!green@{green}}
+\index{green@{green}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{green()}{green()}}
+{\footnotesize\ttfamily void green (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{definitions_8h_a8c0b39e19764089f83e1a337c0369676}\label{definitions_8h_a8c0b39e19764089f83e1a337c0369676}} 
+\index{definitions.h@{definitions.h}!importData@{importData}}
+\index{importData@{importData}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{importData()}{importData()}}
+{\footnotesize\ttfamily void import\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Importa os dados dos ficheiros binários. 
+
+\begin{DoxyNote}{Note}
+Caso nao exista algum ficheiro ou caso surja erro na leitura, o programa termina 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{data_8c_source_l00015}{15}} of file \mbox{\hyperlink{data_8c_source}{data.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_ace66f1e8600faf005e2f95c1f5e24ec4}\label{definitions_8h_ace66f1e8600faf005e2f95c1f5e24ec4}} 
+\index{definitions.h@{definitions.h}!importDefaultData@{importDefaultData}}
+\index{importDefaultData@{importDefaultData}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{importDefaultData()}{importDefaultData()}}
+{\footnotesize\ttfamily void import\+Default\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Importa os dados padrão (default.\+bin) 
+
+\begin{DoxyNote}{Note}
+Caso o ficheiro não exista a função \mbox{\hyperlink{data_8c_a90b381b5624a976ecadeaabacfde025e}{export\+Default\+Data()}} é chamada para criar o ficheiro com os dados padrão 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{data_8c_source_l00115}{115}} of file \mbox{\hyperlink{data_8c_source}{data.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_ab3cd5f6472e88b4f400d6f56aa6edd8c}\label{definitions_8h_ab3cd5f6472e88b4f400d6f56aa6edd8c}} 
+\index{definitions.h@{definitions.h}!listArtigos@{listArtigos}}
+\index{listArtigos@{listArtigos}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{listArtigos()}{listArtigos()}}
+{\footnotesize\ttfamily void list\+Artigos (\begin{DoxyParamCaption}\item[{int}]{query\+Type }\end{DoxyParamCaption})}
+
+
+
+Função que permite listar o(s) artigo(s) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query\+Type} & -\/ opção de listagem \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+-\/ a opção (10) é quando o cliente autenticado pretende listar as encomendas da sessão 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00095}{95}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a7f710faa12da0cf1c324f192cee73e96}\label{definitions_8h_a7f710faa12da0cf1c324f192cee73e96}} 
+\index{definitions.h@{definitions.h}!listClientes@{listClientes}}
+\index{listClientes@{listClientes}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{listClientes()}{listClientes()}}
+{\footnotesize\ttfamily void list\+Clientes (\begin{DoxyParamCaption}\item[{int}]{query\+Type }\end{DoxyParamCaption})}
+
+
+
+Função que permite listar o(s) cliente(s) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query\+Type} & -\/ opção de listagem \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00218}{218}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a87b028e2e18b0b33e3eb58cb99af5523}\label{definitions_8h_a87b028e2e18b0b33e3eb58cb99af5523}} 
+\index{definitions.h@{definitions.h}!listEncomendas@{listEncomendas}}
+\index{listEncomendas@{listEncomendas}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{listEncomendas()}{listEncomendas()}}
+{\footnotesize\ttfamily void list\+Encomendas (\begin{DoxyParamCaption}\item[{int}]{query\+Type }\end{DoxyParamCaption})}
+
+
+
+Função que permite listar as encomendas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em query\+Type} & -\/ Tipo de \char`\"{}query\char`\"{} a ser executada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+De acordo com o tipo de \char`\"{}query\char`\"{} definido na enumeração, a função lista as encomendas 
+
+Por exemplo, a \char`\"{}query\char`\"{} (61) lista todas as encomendas de todos os clientes 
+\end{DoxyNote}
+\begin{DoxyNote}{Note}
+Permite listar as encomendas de certo cliente, este que é indicado via Nome ou pelo seu Código
+
+Permite listar as encomendas de acordo com certa data
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{shopping_8c_source_l00208}{208}} of file \mbox{\hyperlink{shopping_8c_source}{shopping.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a9efdb5ab1d7b26e54799af4e7cb59fa2}\label{definitions_8h_a9efdb5ab1d7b26e54799af4e7cb59fa2}} 
+\index{definitions.h@{definitions.h}!loggedClient@{loggedClient}}
+\index{loggedClient@{loggedClient}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{loggedClient()}{loggedClient()}}
+{\footnotesize\ttfamily bool logged\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verifica se existe utilizador autenticado. 
+
+$\ast$\begin{DoxyReturn}{Returns}
+true se existe utilizador autenticado, false caso contrário 
+\end{DoxyReturn}
+Não existe cliente logado
+
+Definition at line \mbox{\hyperlink{util_8c_source_l00217}{217}} of file \mbox{\hyperlink{util_8c_source}{util.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a6f4f7a9a71ced3d5e9fb21198edb6ab2}\label{definitions_8h_a6f4f7a9a71ced3d5e9fb21198edb6ab2}} 
+\index{definitions.h@{definitions.h}!loginClient@{loginClient}}
+\index{loginClient@{loginClient}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{loginClient()}{loginClient()}}
+{\footnotesize\ttfamily void login\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{definitions_8h_a2163242f3dbe460739c88c56f06ec34f}\label{definitions_8h_a2163242f3dbe460739c88c56f06ec34f}} 
+\index{definitions.h@{definitions.h}!logoutClient@{logoutClient}}
+\index{logoutClient@{logoutClient}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{logoutClient()}{logoutClient()}}
+{\footnotesize\ttfamily void logout\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que desautentica certo utilizador. 
+
+\begin{DoxyNote}{Note}
+Verifica se já existe um utilizador autenticado 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{shopping_8c_source_l00097}{97}} of file \mbox{\hyperlink{shopping_8c_source}{shopping.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{definitions_8h_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{definitions.h@{definitions.h}!main@{main}}
+\index{main@{main}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ficheiro \mbox{\hyperlink{main_8c}{main.\+c}}. 
+
+Ficheiro \mbox{\hyperlink{main_8c}{main.\+c}}.
+
+\begin{DoxyNote}{Note}
+tipo\+Utilizador -\/ valores possiveis\+: 1 -\/ Cliente, 2 -\/ Administrador ou 0 -\/ Sair 
+
+Esta é a primeira função a ser executada 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00029}{29}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a2da5c6326d98abeaf456372ceb077847}\label{definitions_8h_a2da5c6326d98abeaf456372ceb077847}} 
+\index{definitions.h@{definitions.h}!numberOfDigits@{numberOfDigits}}
+\index{numberOfDigits@{numberOfDigits}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{numberOfDigits()}{numberOfDigits()}}
+{\footnotesize\ttfamily int number\+Of\+Digits (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Ficheiro \mbox{\hyperlink{util_8c}{util.\+c}}. 
+
+Ficheiro \mbox{\hyperlink{util_8c}{util.\+c}}.
+
+\begin{DoxyNote}{Note}
+Usado, por exemplo, para verificar o NIF do cliente 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+O número de digitos do inteiro para usar no respetivo \char`\"{}loop do while\char`\"{} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{util_8c_source_l00015}{15}} of file \mbox{\hyperlink{util_8c_source}{util.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}\label{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}} 
+\index{definitions.h@{definitions.h}!pressEnter@{pressEnter}}
+\index{pressEnter@{pressEnter}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{pressEnter()}{pressEnter()}}
+{\footnotesize\ttfamily void press\+Enter (\begin{DoxyParamCaption}\item[{bool}]{also\+Clear\+Screen }\end{DoxyParamCaption})}
+
+
+
+Permite dar a opção do tipico \char`\"{}\+Press Enter to continue\char`\"{}. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{util_8c_source_l00037}{37}} of file \mbox{\hyperlink{util_8c_source}{util.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a2db28081aac0ef2215ab88524f9cf13e}\label{definitions_8h_a2db28081aac0ef2215ab88524f9cf13e}} 
+\index{definitions.h@{definitions.h}!printDataArtigo@{printDataArtigo}}
+\index{printDataArtigo@{printDataArtigo}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{printDataArtigo()}{printDataArtigo()}}
+{\footnotesize\ttfamily void print\+Data\+Artigo (\begin{DoxyParamCaption}\item[{int}]{art,  }\item[{bool}]{print\+Tamanhos }\end{DoxyParamCaption})}
+
+
+
+Imprime os dados de um artigo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em art} & -\/ Artigo a imprimir \\
+\hline
+{\em print\+Tamanhas} & -\/ Define se os tamanhos e os respetivos preços devem ser imprimidos \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00462}{462}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a5b0e889434448c1fda602fe8219c6df0}\label{definitions_8h_a5b0e889434448c1fda602fe8219c6df0}} 
+\index{definitions.h@{definitions.h}!printDataCliente@{printDataCliente}}
+\index{printDataCliente@{printDataCliente}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{printDataCliente()}{printDataCliente()}}
+{\footnotesize\ttfamily void print\+Data\+Cliente (\begin{DoxyParamCaption}\item[{int}]{cli }\end{DoxyParamCaption})}
+
+
+
+Imprime os dados de um cliente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cli} & -\/ Cliente a imprimir \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00493}{493}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_adf88e57666bc1bdbe2b9a532b5d8ee19}\label{definitions_8h_adf88e57666bc1bdbe2b9a532b5d8ee19}} 
+\index{definitions.h@{definitions.h}!printDataEncomenda@{printDataEncomenda}}
+\index{printDataEncomenda@{printDataEncomenda}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{printDataEncomenda()}{printDataEncomenda()}}
+{\footnotesize\ttfamily void print\+Data\+Encomenda (\begin{DoxyParamCaption}\item[{int}]{enc }\end{DoxyParamCaption})}
+
+
+
+Imprime os dados de uma encomenda. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enc} & -\/ Encomenda a imprimir \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00445}{445}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_ab2b14535fac90d655eb767bff5647d88}\label{definitions_8h_ab2b14535fac90d655eb767bff5647d88}} 
+\index{definitions.h@{definitions.h}!purple@{purple}}
+\index{purple@{purple}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{purple()}{purple()}}
+{\footnotesize\ttfamily void purple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{definitions_8h_a941fa13e3d505e5a9a3f9c082bfeff89}\label{definitions_8h_a941fa13e3d505e5a9a3f9c082bfeff89}} 
+\index{definitions.h@{definitions.h}!reallocStruct@{reallocStruct}}
+\index{reallocStruct@{reallocStruct}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{reallocStruct()}{reallocStruct()}}
+{\footnotesize\ttfamily void realloc\+Struct (\begin{DoxyParamCaption}\item[{int}]{st }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{util_8c_source_l00229}{229}} of file \mbox{\hyperlink{util_8c_source}{util.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a39abd40f68d03c40857be1e74407efb9}\label{definitions_8h_a39abd40f68d03c40857be1e74407efb9}} 
+\index{definitions.h@{definitions.h}!red@{red}}
+\index{red@{red}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{red()}{red()}}
+{\footnotesize\ttfamily void red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{definitions_8h_a8f37bef24fe15f40c71fca8327b44697}\label{definitions_8h_a8f37bef24fe15f40c71fca8327b44697}} 
+\index{definitions.h@{definitions.h}!statisticsEncomendas@{statisticsEncomendas}}
+\index{statisticsEncomendas@{statisticsEncomendas}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{statisticsEncomendas()}{statisticsEncomendas()}}
+{\footnotesize\ttfamily void statistics\+Encomendas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Estatisticas das encomendas. 
+
+\begin{DoxyNote}{Note}
+Média do Preço e Quantidade 
+
+Melhor e Pior produto (em termos de vendas) 
+\end{DoxyNote}
+\begin{DoxyNote}{Note}
+Encontrar as médias (preço e quantidade) das encomendas
+
+Encontrar o produto mais vendido
+
+Encontrar o produto menos vendido
+
+Encontrar o cliente com mais unidades compradas
+
+Encontrar o artigo com maior margem de lucro
+
+Encontrar o artigo com menor margem de lucro
+
+Encontrar a quantidade de encomendas ativas/canceladas
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{queries_8c_source_l00290}{290}} of file \mbox{\hyperlink{queries_8c_source}{queries.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_ab57c27349b4a343d5ec7736646cf4c7b}\label{definitions_8h_ab57c27349b4a343d5ec7736646cf4c7b}} 
+\index{definitions.h@{definitions.h}!updateArtigo@{updateArtigo}}
+\index{updateArtigo@{updateArtigo}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{updateArtigo()}{updateArtigo()}}
+{\footnotesize\ttfamily void update\+Artigo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função de atualização de artigo e os seus valores. 
+
+\begin{DoxyNote}{Note}
+artigo\+To\+Update -\/ Artigo a atualizar 
+
+opcao -\/ Campo a alterar 
+
+novo\+XXX -\/ Novo valor a ser atribuido 
+\end{DoxyNote}
+\begin{DoxyNote}{Note}
+-- Recalcula o preço de todos os artigos de acordo com os novos valores
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{administrador_8c_source_l00101}{101}} of file \mbox{\hyperlink{administrador_8c_source}{administrador.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a384bbc94cc780349877dd70a46d111fd}\label{definitions_8h_a384bbc94cc780349877dd70a46d111fd}} 
+\index{definitions.h@{definitions.h}!updateClient@{updateClient}}
+\index{updateClient@{updateClient}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{updateClient()}{updateClient()}}
+{\footnotesize\ttfamily void update\+Client (\begin{DoxyParamCaption}\item[{int}]{cliente\+To\+Change,  }\item[{int}]{via }\end{DoxyParamCaption})}
+
+
+
+Função que permite atualizar um cliente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cliente\+To\+Change} & -\/ Cliente a ser atualizado \\
+\hline
+{\em via} & -\/ caso a função seja chamada via menu cliente, apenas permitir a alteração do cliente autenticado (e perguntando o seu código) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Via Menu Cliente, onde se realiza verificação de segurança
+
+Via Menu Administrador
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{clientes_8c_source_l00082}{82}} of file \mbox{\hyperlink{clientes_8c_source}{clientes.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_af720c7469de6c812fcf7ef357c36f9da}\label{definitions_8h_af720c7469de6c812fcf7ef357c36f9da}} 
+\index{definitions.h@{definitions.h}!updateDesconto@{updateDesconto}}
+\index{updateDesconto@{updateDesconto}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{updateDesconto()}{updateDesconto()}}
+{\footnotesize\ttfamily void update\+Desconto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função de atualização do valor e código de desconto. 
+
+\begin{DoxyNote}{Note}
+runtime-\/\texorpdfstring{$>$}{>}percentage\+Desconto -\/ Percentagem de desconto 
+
+runtime-\/\texorpdfstring{$>$}{>}string\+Desconto -\/ Código de desconto 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{administrador_8c_source_l00332}{332}} of file \mbox{\hyperlink{administrador_8c_source}{administrador.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_ac0fd834412eb7d5311f137d919db6788}\label{definitions_8h_ac0fd834412eb7d5311f137d919db6788}} 
+\index{definitions.h@{definitions.h}!white@{white}}
+\index{white@{white}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{white()}{white()}}
+{\footnotesize\ttfamily void white (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{definitions_8h_ab0c10e6284be130a7973fa029a690ef7}\label{definitions_8h_ab0c10e6284be130a7973fa029a690ef7}} 
+\index{definitions.h@{definitions.h}!yellow@{yellow}}
+\index{yellow@{yellow}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{yellow()}{yellow()}}
+{\footnotesize\ttfamily void yellow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}\label{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}} 
+\index{definitions.h@{definitions.h}!artigo@{artigo}}
+\index{artigo@{artigo}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{artigo}{artigo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_artigos}{Artigos}}$\ast$ artigo\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00020}{20}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}\label{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}} 
+\index{definitions.h@{definitions.h}!cliente@{cliente}}
+\index{cliente@{cliente}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{cliente}{cliente}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_clientes}{Clientes}}$\ast$ cliente\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00019}{19}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}\label{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}} 
+\index{definitions.h@{definitions.h}!encomenda@{encomenda}}
+\index{encomenda@{encomenda}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{encomenda}{encomenda}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_encomendas}{Encomendas}}$\ast$ encomenda\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00021}{21}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}\label{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}} 
+\index{definitions.h@{definitions.h}!NA@{NA}}
+\index{NA@{NA}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{NA}{NA}}
+{\footnotesize\ttfamily int NA\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00016}{16}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_ab4cee453adc50fdf7fed706a78903134}\label{definitions_8h_ab4cee453adc50fdf7fed706a78903134}} 
+\index{definitions.h@{definitions.h}!NC@{NC}}
+\index{NC@{NC}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{NC}{NC}}
+{\footnotesize\ttfamily int NC\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00015}{15}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}\label{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}} 
+\index{definitions.h@{definitions.h}!NE@{NE}}
+\index{NE@{NE}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{NE}{NE}}
+{\footnotesize\ttfamily int NE\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00017}{17}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{definitions_8h_a69460b78379a912c83e65ba131e368e9}\label{definitions_8h_a69460b78379a912c83e65ba131e368e9}} 
+\index{definitions.h@{definitions.h}!runtime@{runtime}}
+\index{runtime@{runtime}!definitions.h@{definitions.h}}
+\doxysubsubsection{\texorpdfstring{runtime}{runtime}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_runtime}{Runtime}}$\ast$ runtime\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00022}{22}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+

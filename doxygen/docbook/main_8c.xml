@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8c" xml:lang="en-US">
+<title>main.c File Reference</title>
+<indexterm><primary>main.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdbool.h&gt;
+#include &quot;definitions.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> ()</para>
+
+<para>Função Main do programa. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_main_8c_1ab4cee453adc50fdf7fed706a78903134">NC</link> = -1</para>
+</listitem>
+            <listitem><para>int <link linkend="_main_8c_1a6a2cf8faa74cf961cf0f42b4601b364c">NA</link> = -1</para>
+</listitem>
+            <listitem><para>int <link linkend="_main_8c_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link> = -1</para>
+</listitem>
+            <listitem><para><link linkend="_struct_clientes">Clientes</link> * <link linkend="_main_8c_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_artigos">Artigos</link> * <link linkend="_main_8c_1a90f21d9eb37bd18237e25667fe1985bd">artigo</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_encomendas">Encomendas</link> * <link linkend="_main_8c_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_runtime">Runtime</link> * <link linkend="_main_8c_1a69460b78379a912c83e65ba131e368e9">runtime</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_main_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main ( )</computeroutput></para><para>
+
+<para>Função Main do programa. </para>
+</para>
+
+<para>Ficheiro <link linkend="_main_8c">main.c</link>.</para>
+
+<para><note><title>Note</title>
+
+<para>tipoUtilizador - valores possiveis: 1 - Cliente, 2 - Administrador ou 0 - Sair </para>
+
+<para>Esta é a primeira função a ser executada </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_main_8c_source_1l00029">29</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_main_8c_1a90f21d9eb37bd18237e25667fe1985bd"/><section>
+    <title>artigo</title>
+<indexterm><primary>artigo</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>artigo</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_artigos">Artigos</link>* artigo</computeroutput></para><para>
+Definition at line <link linkend="_main_8c_source_1l00020">20</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+<anchor xml:id="_main_8c_1aaac738b47d017c7cb9d3cd1d4c27888c"/><section>
+    <title>cliente</title>
+<indexterm><primary>cliente</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>cliente</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_clientes">Clientes</link>* cliente</computeroutput></para><para>
+Definition at line <link linkend="_main_8c_source_1l00019">19</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+<anchor xml:id="_main_8c_1a3c137582b2f5c552bde184eb2d023fbc"/><section>
+    <title>encomenda</title>
+<indexterm><primary>encomenda</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>encomenda</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_encomendas">Encomendas</link>* encomenda</computeroutput></para><para>
+Definition at line <link linkend="_main_8c_source_1l00021">21</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+<anchor xml:id="_main_8c_1a6a2cf8faa74cf961cf0f42b4601b364c"/><section>
+    <title>NA</title>
+<indexterm><primary>NA</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>NA</secondary></indexterm>
+<para><computeroutput>int NA = -1</computeroutput></para><para>
+Definition at line <link linkend="_main_8c_source_1l00016">16</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+<anchor xml:id="_main_8c_1ab4cee453adc50fdf7fed706a78903134"/><section>
+    <title>NC</title>
+<indexterm><primary>NC</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>NC</secondary></indexterm>
+<para><computeroutput>int NC = -1</computeroutput></para><para>
+Definition at line <link linkend="_main_8c_source_1l00015">15</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+<anchor xml:id="_main_8c_1ac83a8e317aabc0369638a0e4c4d3406b"/><section>
+    <title>NE</title>
+<indexterm><primary>NE</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>NE</secondary></indexterm>
+<para><computeroutput>int NE = -1</computeroutput></para><para>
+Definition at line <link linkend="_main_8c_source_1l00017">17</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+<anchor xml:id="_main_8c_1a69460b78379a912c83e65ba131e368e9"/><section>
+    <title>runtime</title>
+<indexterm><primary>runtime</primary><secondary>main.c</secondary></indexterm>
+<indexterm><primary>main.c</primary><secondary>runtime</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_runtime">Runtime</link>* runtime</computeroutput></para><para>
+Definition at line <link linkend="_main_8c_source_1l00022">22</link> of file <link linkend="_main_8c_source">main.c</link>.</para>
+</section>
+</section>
+</section>

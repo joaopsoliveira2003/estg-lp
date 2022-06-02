@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage" xml:lang="en-US">
+
+<para>Compilar e Executar o Programa: gcc .\main.c .\administrador.c .\shopping.c .\colors.c .\queries.c .\clientes.c .\util.c -o main &amp;&amp; .\main </para>
+</chapter>

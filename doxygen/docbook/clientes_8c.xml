@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_clientes_8c" xml:lang="en-US">
+<title>clientes.c File Reference</title>
+<indexterm><primary>clientes.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdbool.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;time.h&gt;
+#include &quot;definitions.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_clientes_8c_1a8b6e5471fc3162030e02624aa4e0a71c">addCliente</link> ()</para>
+
+<para>Função que permite adicionar um cliente. </para>
+</listitem>
+            <listitem><para>void <link linkend="_clientes_8c_1a384bbc94cc780349877dd70a46d111fd">updateClient</link> (int clienteToChange, int via)</para>
+
+<para>Função que permite atualizar um cliente. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_clientes_8c_1a918dfa81ea4cf833c9cb370987ff7521">getEstadoCliente</link> (int codCliente)</para>
+
+<para>Função que verifica o estado do cliente indicado. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_clientes_8c_1a63ec96e80364598a0c5bfc3954f2dbbe">getClientName</link> (int codCliente)</para>
+
+<para>Função que obtêm o nome do cliente. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_clientes_8c_1a8b6e5471fc3162030e02624aa4e0a71c"/><section>
+    <title>addCliente()</title>
+<indexterm><primary>addCliente</primary><secondary>clientes.c</secondary></indexterm>
+<indexterm><primary>clientes.c</primary><secondary>addCliente</secondary></indexterm>
+<para><computeroutput>void addCliente ( )</computeroutput></para><para>
+
+<para>Função que permite adicionar um cliente. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Os</entry><entry>
+<para>parametros necessarios para a adição do cliente </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_clientes_8c_source_1l00016">16</link> of file <link linkend="_clientes_8c_source">clientes.c</link>.</para>
+</section>
+<anchor xml:id="_clientes_8c_1a63ec96e80364598a0c5bfc3954f2dbbe"/><section>
+    <title>getClientName()</title>
+<indexterm><primary>getClientName</primary><secondary>clientes.c</secondary></indexterm>
+<indexterm><primary>clientes.c</primary><secondary>getClientName</secondary></indexterm>
+<para><computeroutput>char * getClientName (int codCliente)</computeroutput></para><para>
+
+<para>Função que obtêm o nome do cliente. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ID</entry><entry>
+<para>do cliente </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Retorna o nome do cliente (string) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_clientes_8c_source_1l00254">254</link> of file <link linkend="_clientes_8c_source">clientes.c</link>.</para>
+</section>
+<anchor xml:id="_clientes_8c_1a918dfa81ea4cf833c9cb370987ff7521"/><section>
+    <title>getEstadoCliente()</title>
+<indexterm><primary>getEstadoCliente</primary><secondary>clientes.c</secondary></indexterm>
+<indexterm><primary>clientes.c</primary><secondary>getEstadoCliente</secondary></indexterm>
+<para><computeroutput>bool getEstadoCliente (int codCliente)</computeroutput></para><para>
+
+<para>Função que verifica o estado do cliente indicado. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ID</entry><entry>
+<para>do cliente </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Retorna True - caso o cliente exista ou esteja disponivel False - caso o cliente não exista ou esteja indisponivel </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_clientes_8c_source_1l00227">227</link> of file <link linkend="_clientes_8c_source">clientes.c</link>.</para>
+</section>
+<anchor xml:id="_clientes_8c_1a384bbc94cc780349877dd70a46d111fd"/><section>
+    <title>updateClient()</title>
+<indexterm><primary>updateClient</primary><secondary>clientes.c</secondary></indexterm>
+<indexterm><primary>clientes.c</primary><secondary>updateClient</secondary></indexterm>
+<para><computeroutput>void updateClient (int clienteToChange, int via)</computeroutput></para><para>
+
+<para>Função que permite atualizar um cliente. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>clienteToChange</entry><entry>
+<para>- Cliente a ser atualizado </para>
+</entry>
+                            </row>
+                            <row>
+<entry>via</entry><entry>
+<para>- caso a função seja chamada via menu cliente, apenas permitir a alteração do cliente autenticado (e perguntando o seu código) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para><note><title>Note</title>
+
+<para>Via Menu Cliente, onde se realiza verificação de segurança</para>
+
+<para>Via Menu Administrador</para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_clientes_8c_source_1l00082">82</link> of file <link linkend="_clientes_8c_source">clientes.c</link>.</para>
+</section>
+</section>
+</section>

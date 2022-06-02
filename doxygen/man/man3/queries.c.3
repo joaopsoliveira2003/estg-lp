@@ -1,0 +1,240 @@
+.TH "queries.c" 3 "Fri Jan 14 2022" "Version Grupo 2" "Laboratório de Programação" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+queries.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include 'definitions\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBgetArtigoIndex\fP (int codArtigo)"
+.br
+.RI "Função que permite obter o indíce de um artigo no array\&. "
+.ti -1c
+.RI "char * \fBgetArtigoName\fP (int idx)"
+.br
+.RI "Função que permite obter o nome do artigo\&. "
+.ti -1c
+.RI "double \fBgetTotalEncomenda\fP ()"
+.br
+.RI "Função que permite obter o total (preço) de encomendas\&. "
+.ti -1c
+.RI "int \fBgetDateInfo\fP (int info)"
+.br
+.RI "Obter certo parâmetro de data tal como hora, dia, mês, ano\&. "
+.ti -1c
+.RI "void \fBlistArtigos\fP (int queryType)"
+.br
+.RI "Função que permite listar o(s) artigo(s) "
+.ti -1c
+.RI "void \fBlistClientes\fP (int queryType)"
+.br
+.RI "Função que permite listar o(s) cliente(s) "
+.ti -1c
+.RI "void \fBstatisticsEncomendas\fP ()"
+.br
+.RI "Estatisticas das encomendas\&. "
+.ti -1c
+.RI "void \fBprintDataEncomenda\fP (int enc)"
+.br
+.RI "Imprime os dados de uma encomenda\&. "
+.ti -1c
+.RI "void \fBprintDataArtigo\fP (int art, bool printTamanhos)"
+.br
+.RI "Imprime os dados de um artigo\&. "
+.ti -1c
+.RI "void \fBprintDataCliente\fP (int cli)"
+.br
+.RI "Imprime os dados de um cliente\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int getArtigoIndex (int codArtigo)"
+
+.PP
+Função que permite obter o indíce de um artigo no array\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcodArtigo\fP - Código do artigo 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+art - Indíce do artigo 
+.RE
+.PP
+
+.PP
+Definition at line \fB15\fP of file \fBqueries\&.c\fP\&.
+.SS "char * getArtigoName (int idx)"
+
+.PP
+Função que permite obter o nome do artigo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIidx\fP - Indice no array de artigos 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+artigo - O nome do artigo 
+.RE
+.PP
+
+.PP
+Definition at line \fB33\fP of file \fBqueries\&.c\fP\&.
+.SS "int getDateInfo (int info)"
+
+.PP
+Obter certo parâmetro de data tal como hora, dia, mês, ano\&. *
+.PP
+\fBNote\fP
+.RS 4
+A enumeração é usada para indicar o parâmetro a obter 
+.RE
+.PP
+
+.PP
+Definition at line \fB65\fP of file \fBqueries\&.c\fP\&.
+.SS "double getTotalEncomenda ()"
+
+.PP
+Função que permite obter o total (preço) de encomendas\&. 
+.PP
+\fBReturns\fP
+.RS 4
+int - total de encomendas 
+.RE
+.PP
+
+.PP
+Definition at line \fB44\fP of file \fBqueries\&.c\fP\&.
+.SS "void listArtigos (int queryType)"
+
+.PP
+Função que permite listar o(s) artigo(s) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqueryType\fP - opção de listagem 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+- a opção (10) é quando o cliente autenticado pretende listar as encomendas da sessão 
+.RE
+.PP
+
+.PP
+Definition at line \fB95\fP of file \fBqueries\&.c\fP\&.
+.SS "void listClientes (int queryType)"
+
+.PP
+Função que permite listar o(s) cliente(s) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIqueryType\fP - opção de listagem 
+.RE
+.PP
+
+.PP
+Definition at line \fB218\fP of file \fBqueries\&.c\fP\&.
+.SS "void printDataArtigo (int art, bool printTamanhos)"
+
+.PP
+Imprime os dados de um artigo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIart\fP - Artigo a imprimir 
+.br
+\fIprintTamanhas\fP - Define se os tamanhos e os respetivos preços devem ser imprimidos 
+.RE
+.PP
+
+.PP
+Definition at line \fB462\fP of file \fBqueries\&.c\fP\&.
+.SS "void printDataCliente (int cli)"
+
+.PP
+Imprime os dados de um cliente\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcli\fP - Cliente a imprimir 
+.RE
+.PP
+
+.PP
+Definition at line \fB493\fP of file \fBqueries\&.c\fP\&.
+.SS "void printDataEncomenda (int enc)"
+
+.PP
+Imprime os dados de uma encomenda\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIenc\fP - Encomenda a imprimir 
+.RE
+.PP
+
+.PP
+Definition at line \fB445\fP of file \fBqueries\&.c\fP\&.
+.SS "void statisticsEncomendas ()"
+
+.PP
+Estatisticas das encomendas\&. 
+.PP
+\fBNote\fP
+.RS 4
+Média do Preço e Quantidade 
+.PP
+Melhor e Pior produto (em termos de vendas) 
+.RE
+.PP
+
+.PP
+\fBNote\fP
+.RS 4
+Encontrar as médias (preço e quantidade) das encomendas
+.PP
+Encontrar o produto mais vendido
+.PP
+Encontrar o produto menos vendido
+.PP
+Encontrar o cliente com mais unidades compradas
+.PP
+Encontrar o artigo com maior margem de lucro
+.PP
+Encontrar o artigo com menor margem de lucro
+.PP
+Encontrar a quantidade de encomendas ativas/canceladas
+.RE
+.PP
+
+.PP
+Definition at line \fB290\fP of file \fBqueries\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Laboratório de Programação from the source code\&.

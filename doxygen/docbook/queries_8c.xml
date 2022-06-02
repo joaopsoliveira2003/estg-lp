@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_queries_8c" xml:lang="en-US">
+<title>queries.c File Reference</title>
+<indexterm><primary>queries.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdbool.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;time.h&gt;
+#include &quot;definitions.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_queries_8c_1a46d4eccec6d2c6e65ef4784ab4db0c78">getArtigoIndex</link> (int codArtigo)</para>
+
+<para>Função que permite obter o indíce de um artigo no array. </para>
+</listitem>
+            <listitem><para>char * <link linkend="_queries_8c_1ac099a7d27cd173fb4b83a364b7e4c735">getArtigoName</link> (int idx)</para>
+
+<para>Função que permite obter o nome do artigo. </para>
+</listitem>
+            <listitem><para>double <link linkend="_queries_8c_1a2e948973437ab18cc4aa58f04f32b31d">getTotalEncomenda</link> ()</para>
+
+<para>Função que permite obter o total (preço) de encomendas. </para>
+</listitem>
+            <listitem><para>int <link linkend="_queries_8c_1ae403fe07e86bc33933303d3e266b579d">getDateInfo</link> (int info)</para>
+
+<para>Obter certo parâmetro de data tal como hora, dia, mês, ano. </para>
+</listitem>
+            <listitem><para>void <link linkend="_queries_8c_1ab3cd5f6472e88b4f400d6f56aa6edd8c">listArtigos</link> (int queryType)</para>
+
+<para>Função que permite listar o(s) artigo(s) </para>
+</listitem>
+            <listitem><para>void <link linkend="_queries_8c_1a7f710faa12da0cf1c324f192cee73e96">listClientes</link> (int queryType)</para>
+
+<para>Função que permite listar o(s) cliente(s) </para>
+</listitem>
+            <listitem><para>void <link linkend="_queries_8c_1a8f37bef24fe15f40c71fca8327b44697">statisticsEncomendas</link> ()</para>
+
+<para>Estatisticas das encomendas. </para>
+</listitem>
+            <listitem><para>void <link linkend="_queries_8c_1adf88e57666bc1bdbe2b9a532b5d8ee19">printDataEncomenda</link> (int enc)</para>
+
+<para>Imprime os dados de uma encomenda. </para>
+</listitem>
+            <listitem><para>void <link linkend="_queries_8c_1a7126de96991342ed7ffb2fa43fd9d3a9">printDataArtigo</link> (int art, bool printTamanhos)</para>
+
+<para>Imprime os dados de um artigo. </para>
+</listitem>
+            <listitem><para>void <link linkend="_queries_8c_1a5b0e889434448c1fda602fe8219c6df0">printDataCliente</link> (int cli)</para>
+
+<para>Imprime os dados de um cliente. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_queries_8c_1a46d4eccec6d2c6e65ef4784ab4db0c78"/><section>
+    <title>getArtigoIndex()</title>
+<indexterm><primary>getArtigoIndex</primary><secondary>queries.c</secondary></indexterm>
+<indexterm><primary>queries.c</primary><secondary>getArtigoIndex</secondary></indexterm>
+<para><computeroutput>int getArtigoIndex (int codArtigo)</computeroutput></para><para>
+
+<para>Função que permite obter o indíce de um artigo no array. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>codArtigo</entry><entry>
+<para>- Código do artigo </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>art - Indíce do artigo </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00015">15</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_queries_8c_1ac099a7d27cd173fb4b83a364b7e4c735"/><section>
+    <title>getArtigoName()</title>
+<indexterm><primary>getArtigoName</primary><secondary>queries.c</secondary></indexterm>
+<indexterm><primary>queries.c</primary><secondary>getArtigoName</secondary></indexterm>
+<para><computeroutput>char * getArtigoName (int idx)</computeroutput></para><para>
+
+<para>Função que permite obter o nome do artigo. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>idx</entry><entry>
+<para>- Indice no array de artigos </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>artigo - O nome do artigo </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00033">33</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_queries_8c_1ae403fe07e86bc33933303d3e266b579d"/><section>
+    <title>getDateInfo()</title>
+<indexterm><primary>getDateInfo</primary><secondary>queries.c</secondary></indexterm>
+<indexterm><primary>queries.c</primary><secondary>getDateInfo</secondary></indexterm>
+<para><computeroutput>int getDateInfo (int info)</computeroutput></para><para>
+
+<para>Obter certo parâmetro de data tal como hora, dia, mês, ano. </para>
+</para>
+
+<para>*<note><title>Note</title>
+
+<para>A enumeração é usada para indicar o parâmetro a obter </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00065">65</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_queries_8c_1a2e948973437ab18cc4aa58f04f32b31d"/><section>
+    <title>getTotalEncomenda()</title>
+<indexterm><primary>getTotalEncomenda</primary><secondary>queries.c</secondary></indexterm>
+<indexterm><primary>queries.c</primary><secondary>getTotalEncomenda</secondary></indexterm>
+<para><computeroutput>double getTotalEncomenda ( )</computeroutput></para><para>
+
+<para>Função que permite obter o total (preço) de encomendas. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int - total de encomendas </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00044">44</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_queries_8c_1ab3cd5f6472e88b4f400d6f56aa6edd8c"/><section>
+    <title>listArtigos()</title>
+<indexterm><primary>listArtigos</primary><secondary>queries.c</secondary></indexterm>
+<indexterm><primary>queries.c</primary><secondary>listArtigos</secondary></indexterm>
+<para><computeroutput>void listArtigos (int queryType)</computeroutput></para><para>
+
+<para>Função que permite listar o(s) artigo(s) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>queryType</entry><entry>
+<para>- opção de listagem </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>- a opção (10) é quando o cliente autenticado pretende listar as encomendas da sessão </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00095">95</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_queries_8c_1a7f710faa12da0cf1c324f192cee73e96"/><section>
+    <title>listClientes()</title>
+<indexterm><primary>listClientes</primary><secondary>queries.c</secondary></indexterm>
+<indexterm><primary>queries.c</primary><secondary>listClientes</secondary></indexterm>
+<para><computeroutput>void listClientes (int queryType)</computeroutput></para><para>
+
+<para>Função que permite listar o(s) cliente(s) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>queryType</entry><entry>
+<para>- opção de listagem </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00218">218</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_queries_8c_1a7126de96991342ed7ffb2fa43fd9d3a9"/><section>
+    <title>printDataArtigo()</title>
+<indexterm><primary>printDataArtigo</primary><secondary>queries.c</secondary></indexterm>
+<indexterm><primary>queries.c</primary><secondary>printDataArtigo</secondary></indexterm>
+<para><computeroutput>void printDataArtigo (int art, bool printTamanhos)</computeroutput></para><para>
+
+<para>Imprime os dados de um artigo. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>art</entry><entry>
+<para>- Artigo a imprimir </para>
+</entry>
+                            </row>
+                            <row>
+<entry>printTamanhas</entry><entry>
+<para>- Define se os tamanhos e os respetivos preços devem ser imprimidos </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00462">462</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_queries_8c_1a5b0e889434448c1fda602fe8219c6df0"/><section>
+    <title>printDataCliente()</title>
+<indexterm><primary>printDataCliente</primary><secondary>queries.c</secondary></indexterm>
+<indexterm><primary>queries.c</primary><secondary>printDataCliente</secondary></indexterm>
+<para><computeroutput>void printDataCliente (int cli)</computeroutput></para><para>
+
+<para>Imprime os dados de um cliente. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>cli</entry><entry>
+<para>- Cliente a imprimir </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00493">493</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_queries_8c_1adf88e57666bc1bdbe2b9a532b5d8ee19"/><section>
+    <title>printDataEncomenda()</title>
+<indexterm><primary>printDataEncomenda</primary><secondary>queries.c</secondary></indexterm>
+<indexterm><primary>queries.c</primary><secondary>printDataEncomenda</secondary></indexterm>
+<para><computeroutput>void printDataEncomenda (int enc)</computeroutput></para><para>
+
+<para>Imprime os dados de uma encomenda. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>enc</entry><entry>
+<para>- Encomenda a imprimir </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00445">445</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+<anchor xml:id="_queries_8c_1a8f37bef24fe15f40c71fca8327b44697"/><section>
+    <title>statisticsEncomendas()</title>
+<indexterm><primary>statisticsEncomendas</primary><secondary>queries.c</secondary></indexterm>
+<indexterm><primary>queries.c</primary><secondary>statisticsEncomendas</secondary></indexterm>
+<para><computeroutput>void statisticsEncomendas ( )</computeroutput></para><para>
+
+<para>Estatisticas das encomendas. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Média do Preço e Quantidade </para>
+
+<para>Melhor e Pior produto (em termos de vendas) </para>
+</note>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Encontrar as médias (preço e quantidade) das encomendas</para>
+
+<para>Encontrar o produto mais vendido</para>
+
+<para>Encontrar o produto menos vendido</para>
+
+<para>Encontrar o cliente com mais unidades compradas</para>
+
+<para>Encontrar o artigo com maior margem de lucro</para>
+
+<para>Encontrar o artigo com menor margem de lucro</para>
+
+<para>Encontrar a quantidade de encomendas ativas/canceladas</para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_queries_8c_source_1l00290">290</link> of file <link linkend="_queries_8c_source">queries.c</link>.</para>
+</section>
+</section>
+</section>

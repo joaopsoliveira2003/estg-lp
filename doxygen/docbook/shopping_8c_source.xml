@@ -1,0 +1,369 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_shopping_8c_source" xml:lang="en-US">
+<title>shopping.c</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_shopping_8c_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;string.h&gt;</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&lt;unistd.h&gt;</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&lt;time.h&gt;</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00007"/>00007 
+<anchor xml:id="_shopping_8c_source_1l00008"/>00008 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_definitions_8h">definitions.h</link>&quot;</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00009"/><link linkend="_shopping_8c_1a975774baaa722d6932cb6cfd39020511">00009</link> <emphasis role="preprocessor">#define&#32;IVA&#32;1.23</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00010"/>00010 
+<anchor xml:id="_shopping_8c_source_1l00011"/>00011 <emphasis role="preprocessor">#pragma&#32;region&#32;GetEstadoEncomenda</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00017"/><link linkend="_definitions_8h_1ac3e41774a08731e62fe348b9c8401ccb">00017</link> <emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_shopping_8c_1ac3e41774a08731e62fe348b9c8401ccb">getEstadoEncomenda</link>(<emphasis role="keywordtype">int</emphasis>&#32;estado)
+<anchor xml:id="_shopping_8c_source_1l00018"/>00018 {
+<anchor xml:id="_shopping_8c_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(estado&#32;==&#32;1)
+<anchor xml:id="_shopping_8c_source_1l00020"/>00020 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;Disponível\n&quot;</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00022"/>00022 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00024"/>00024 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;Indisponível\n&quot;</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00026"/>00026 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00027"/>00027 }
+<anchor xml:id="_shopping_8c_source_1l00028"/>00028 <emphasis role="preprocessor">#pragma&#32;endregion</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00029"/>00029 
+<anchor xml:id="_shopping_8c_source_1l00030"/>00030 <emphasis role="preprocessor">#pragma&#32;region&#32;LoginClient</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00036"/><link linkend="_shopping_8c_1a6f4f7a9a71ced3d5e9fb21198edb6ab2">00036</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_shopping_8c_1a6f4f7a9a71ced3d5e9fb21198edb6ab2">loginClient</link>()
+<anchor xml:id="_shopping_8c_source_1l00037"/>00037 {
+<anchor xml:id="_shopping_8c_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1ab4cee453adc50fdf7fed706a78903134">NC</link>&#32;==&#32;-1)
+<anchor xml:id="_shopping_8c_source_1l00039"/>00039 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Não&#32;existem&#32;clientes&#32;registados&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_clientes_8c_1a8b6e5471fc3162030e02624aa4e0a71c">addCliente</link>();
+<anchor xml:id="_shopping_8c_source_1l00042"/>00042 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00043"/>00043 
+<anchor xml:id="_shopping_8c_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>&#32;!=&#32;0)
+<anchor xml:id="_shopping_8c_source_1l00045"/>00045 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1ab0c10e6284be130a7973fa029a690ef7">yellow</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Já&#32;existe&#32;um&#32;cliente&#32;logado&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\n[1]&#32;Pretende&#32;voltar&#32;ao&#32;menu&#32;com&#32;o&#32;cliente&#32;%s\n&quot;</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;[2]&#32;Ou&#32;iniciar&#32;sessão&#32;com&#32;outro&#32;utilizador?\n&gt;&#32;&quot;</emphasis>,&#32;<link linkend="_clientes_8c_1a63ec96e80364598a0c5bfc3954f2dbbe">getClientName</link>(<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>));
+<anchor xml:id="_shopping_8c_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_shopping_8c_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;opcao;
+<anchor xml:id="_shopping_8c_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,&#32;&amp;opcao);
+<anchor xml:id="_shopping_8c_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(opcao)
+<anchor xml:id="_shopping_8c_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;1:
+<anchor xml:id="_shopping_8c_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_shopping_8c_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;2:
+<anchor xml:id="_shopping_8c_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_shopping_8c_1a2163242f3dbe460739c88c56f06ec34f">logoutClient</link>();
+<anchor xml:id="_shopping_8c_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_shopping_8c_1a6f4f7a9a71ced3d5e9fb21198edb6ab2">loginClient</link>();
+<anchor xml:id="_shopping_8c_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00061"/>00061 
+<anchor xml:id="_shopping_8c_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="_shopping_8c_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;[!]&#32;Opção&#32;inválida&#32;[!]&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe">pressEnter</link>(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_shopping_8c_1a6f4f7a9a71ced3d5e9fb21198edb6ab2">loginClient</link>();
+<anchor xml:id="_shopping_8c_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00068"/>00068 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00069"/>00069 
+<anchor xml:id="_shopping_8c_source_1l00070"/>00070 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>&#32;==&#32;0)
+<anchor xml:id="_shopping_8c_source_1l00071"/>00071 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a52a6a14bd8e9463315ea114aceda1d92">cyan</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n_______&#32;Login&#32;_______\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nCódigo&#32;de&#32;Cliente:&#32;&quot;</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;&#32;%d&quot;</emphasis>,&#32;&amp;<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>);
+<anchor xml:id="_shopping_8c_source_1l00075"/>00075 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00076"/>00076 
+<anchor xml:id="_shopping_8c_source_1l00077"/>00077 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_clientes_8c_1a918dfa81ea4cf833c9cb370987ff7521">getEstadoCliente</link>(<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>))
+<anchor xml:id="_shopping_8c_source_1l00078"/>00078 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a0df115437fbb77c0311e65300c65289e">green</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n***&#32;Bem&#32;Vindo,&#32;%s&#32;***\n&quot;</emphasis>,&#32;<link linkend="_clientes_8c_1a63ec96e80364598a0c5bfc3954f2dbbe">getClientName</link>(<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>));&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sleep(1);
+<anchor xml:id="_shopping_8c_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a9d7e8af417b6d543da691e9c0e2f6f9f">clearScreen</link>();
+<anchor xml:id="_shopping_8c_source_1l00082"/>00082 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00083"/>00083 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00084"/>00084 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Cliente&#32;não&#32;existe,&#32;indique&#32;um&#32;cliente&#32;válido&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>&#32;=&#32;0;
+<anchor xml:id="_shopping_8c_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_shopping_8c_1a6f4f7a9a71ced3d5e9fb21198edb6ab2">loginClient</link>();
+<anchor xml:id="_shopping_8c_source_1l00088"/>00088 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00089"/>00089 }
+<anchor xml:id="_shopping_8c_source_1l00090"/>00090 <emphasis role="preprocessor">#pragma&#32;endregion</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00091"/>00091 
+<anchor xml:id="_shopping_8c_source_1l00092"/>00092 <emphasis role="preprocessor">#pragma&#32;region&#32;Logout</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00097"/><link linkend="_definitions_8h_1a2163242f3dbe460739c88c56f06ec34f">00097</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_shopping_8c_1a2163242f3dbe460739c88c56f06ec34f">logoutClient</link>()
+<anchor xml:id="_shopping_8c_source_1l00098"/>00098 {
+<anchor xml:id="_shopping_8c_source_1l00099"/>00099 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>&#32;==&#32;0)
+<anchor xml:id="_shopping_8c_source_1l00100"/>00100 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1ab0c10e6284be130a7973fa029a690ef7">yellow</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Não&#32;existe&#32;cliente&#32;logado&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sleep(2);
+<anchor xml:id="_shopping_8c_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a9d7e8af417b6d543da691e9c0e2f6f9f">clearScreen</link>();
+<anchor xml:id="_shopping_8c_source_1l00104"/>00104 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00105"/>00105 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00106"/>00106 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1ab0c10e6284be130a7973fa029a690ef7">yellow</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Logout&#32;Cliente&#32;%s&#32;[!]\n&quot;</emphasis>,&#32;<link linkend="_clientes_8c_1a63ec96e80364598a0c5bfc3954f2dbbe">getClientName</link>(<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>));&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>&#32;=&#32;0;
+<anchor xml:id="_shopping_8c_source_1l00109"/>00109 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00110"/>00110 }
+<anchor xml:id="_shopping_8c_source_1l00111"/>00111 <emphasis role="preprocessor">#pragma&#32;endregion</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00112"/>00112 
+<anchor xml:id="_shopping_8c_source_1l00113"/>00113 <emphasis role="preprocessor">#pragma&#32;region&#32;Shopping</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00118"/><link linkend="_definitions_8h_1a10d6c88f1cbf1e60ed32e609f715a779">00118</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_shopping_8c_1a10d6c88f1cbf1e60ed32e609f715a779">doShopping</link>()
+<anchor xml:id="_shopping_8c_source_1l00119"/>00119 {
+<anchor xml:id="_shopping_8c_source_1l00121"/>00121 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!<link linkend="_definitions_8h_1a9efdb5ab1d7b26e54799af4e7cb59fa2">loggedClient</link>())
+<anchor xml:id="_shopping_8c_source_1l00122"/>00122 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1ab0c10e6284be130a7973fa029a690ef7">yellow</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Por&#32;favor&#32;inicie&#32;sessão&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_shopping_8c_1a6f4f7a9a71ced3d5e9fb21198edb6ab2">loginClient</link>();
+<anchor xml:id="_shopping_8c_source_1l00125"/>00125 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00126"/>00126 
+<anchor xml:id="_shopping_8c_source_1l00127"/>00127 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c">NA</link>&#32;==&#32;-1)&#32;{
+<anchor xml:id="_shopping_8c_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Não&#32;existem&#32;artigos&#32;disponíveis&#32;[!]&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe">pressEnter</link>(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00131"/>00131 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00132"/>00132 
+<anchor xml:id="_shopping_8c_source_1l00133"/>00133 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;artigoComprar,&#32;quantidadeComprar,&#32;tamanhoComprar;
+<anchor xml:id="_shopping_8c_source_1l00134"/>00134 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;codPromo[8];
+<anchor xml:id="_shopping_8c_source_1l00135"/>00135 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a941fa13e3d505e5a9a3f9c082bfeff89">reallocStruct</link>(3);
+<anchor xml:id="_shopping_8c_source_1l00136"/>00136 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>].<link linkend="_struct_encomendas_1aa9b5911a87665c3e73ce79013736729b">codCliente</link>&#32;=&#32;<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>;
+<anchor xml:id="_shopping_8c_source_1l00137"/>00137 
+<anchor xml:id="_shopping_8c_source_1l00138"/>00138 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00139"/>00139 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1ab3cd5f6472e88b4f400d6f56aa6edd8c">listArtigos</link>(10);
+<anchor xml:id="_shopping_8c_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nSelecionar&#32;o&#32;artigo&#32;a&#32;comprar&#32;(Código):&#32;&quot;</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,&#32;&amp;artigoComprar);
+<anchor xml:id="_shopping_8c_source_1l00143"/>00143 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!<link linkend="_definitions_8h_1a52199f9c4b3c9c302cc8d4ab4a38bae5">availableForOperation</link>(3,&#32;artigoComprar,&#32;0));
+<anchor xml:id="_shopping_8c_source_1l00144"/>00144 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>].<link linkend="_struct_encomendas_1a9b469e91df9bb9a07f1268125a065190">codArtigo</link>&#32;=&#32;artigoComprar;
+<anchor xml:id="_shopping_8c_source_1l00145"/>00145 
+<anchor xml:id="_shopping_8c_source_1l00146"/>00146 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00147"/>00147 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nQuantidade&#32;de&#32;pares&#32;de&#32;%s&#32;pretendidos:&#32;&quot;</emphasis>,&#32;<link linkend="_definitions_8h_1af4568fe8cae0d02992cc20eeaa4d309d">getArtigoName</link>(<link linkend="_definitions_8h_1a46d4eccec6d2c6e65ef4784ab4db0c78">getArtigoIndex</link>(artigoComprar)));
+<anchor xml:id="_shopping_8c_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,&#32;&amp;quantidadeComprar);
+<anchor xml:id="_shopping_8c_source_1l00150"/>00150 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!<link linkend="_definitions_8h_1a41532c4603b615920ea1c1216d1445ad">checkNumber</link>(quantidadeComprar));
+<anchor xml:id="_shopping_8c_source_1l00151"/>00151 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>].<link linkend="_struct_encomendas_1aab7e2f8a805bde3912f985c05be7d510">quantidade</link>&#32;=&#32;quantidadeComprar;
+<anchor xml:id="_shopping_8c_source_1l00152"/>00152 &#32;&#32;&#32;&#32;
+<anchor xml:id="_shopping_8c_source_1l00153"/>00153 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00154"/>00154 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nTamanho&#32;pretendido:&#32;&quot;</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,&#32;&amp;tamanhoComprar);
+<anchor xml:id="_shopping_8c_source_1l00157"/>00157 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!<link linkend="_definitions_8h_1a52199f9c4b3c9c302cc8d4ab4a38bae5">availableForOperation</link>(5,&#32;artigoComprar,&#32;tamanhoComprar));
+<anchor xml:id="_shopping_8c_source_1l00158"/>00158 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>].<link linkend="_struct_encomendas_1a0a06f50c808099546e057b445cc90c14">tamanho</link>&#32;=&#32;tamanhoComprar;
+<anchor xml:id="_shopping_8c_source_1l00159"/>00159 
+<anchor xml:id="_shopping_8c_source_1l00160"/>00160 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\n&#32;&#32;Desconto&#32;Promocional\n[Press&#32;ENTER&#32;caso&#32;não&#32;tenha]:&#32;&quot;</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00161"/>00161 &#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%c&quot;</emphasis>,&#32;&amp;codPromo);
+<anchor xml:id="_shopping_8c_source_1l00162"/>00162 &#32;&#32;&#32;&#32;fgets(codPromo,5,stdin);
+<anchor xml:id="_shopping_8c_source_1l00163"/>00163 
+<anchor xml:id="_shopping_8c_source_1l00166"/>00166 &#32;&#32;&#32;&#32;artigoComprar&#32;=&#32;<link linkend="_definitions_8h_1a46d4eccec6d2c6e65ef4784ab4db0c78">getArtigoIndex</link>(artigoComprar);
+<anchor xml:id="_shopping_8c_source_1l00167"/>00167 
+<anchor xml:id="_shopping_8c_source_1l00168"/>00168 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;subtotal&#32;=&#32;<link linkend="_definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd">artigo</link>[artigoComprar].<link linkend="_struct_artigos_1ae7713476462c0345a8316df83ffe461f">defaultPreco</link>&#32;*&#32;(double)&#32;(quantidadeComprar);
+<anchor xml:id="_shopping_8c_source_1l00169"/>00169 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1ae81c93a074d4c3bdce4d8409997418f0">checkCodPromo</link>(codPromo))
+<anchor xml:id="_shopping_8c_source_1l00170"/>00170 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;subtotal&#32;-=&#32;<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1abcccdaf615845e2019116c5ce4b90b3a">percentageDesconto</link>;
+<anchor xml:id="_shopping_8c_source_1l00172"/>00172 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00173"/>00173 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;totalIva&#32;=&#32;(double)&#32;(subtotal&#32;*&#32;<link linkend="_shopping_8c_1a975774baaa722d6932cb6cfd39020511">IVA</link>);
+<anchor xml:id="_shopping_8c_source_1l00174"/>00174 
+<anchor xml:id="_shopping_8c_source_1l00175"/>00175 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\n&#32;Subtotal:&#32;%.2lf€&quot;</emphasis>,&#32;subtotal);&#32;<link linkend="_colors_8c_1a59d9c08d69e42981f0d6fb680f5e6e26">bold</link>();
+<anchor xml:id="_shopping_8c_source_1l00176"/>00176 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\n&#32;Total&#32;a&#32;pagar&#32;(c/IVA):&#32;%.2lf€\n&quot;</emphasis>,&#32;totalIva);&#32;&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00177"/>00177 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>].<link linkend="_struct_encomendas_1ab5af64ba12e40aefe7080187c140895a">total</link>&#32;=&#32;totalIva;
+<anchor xml:id="_shopping_8c_source_1l00178"/>00178 
+<anchor xml:id="_shopping_8c_source_1l00179"/>00179 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>].<link linkend="_struct_encomendas_1a5eb4a4f2f14cb6227076ee3aaa9cb24c">codEncomenda</link>&#32;=&#32;<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>&#32;+&#32;1;
+<anchor xml:id="_shopping_8c_source_1l00180"/>00180 
+<anchor xml:id="_shopping_8c_source_1l00181"/>00181 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>].<link linkend="_struct_encomendas_1accb6c827099dc6ae91546671edc4c9ce">horaminuto</link>&#32;=&#32;<link linkend="_definitions_8h_1ae403fe07e86bc33933303d3e266b579d">getDateInfo</link>(1);
+<anchor xml:id="_shopping_8c_source_1l00182"/>00182 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>].<link linkend="_struct_encomendas_1a3d1171ac670a8e8a672c481f22d1fa9f">dia</link>&#32;=&#32;<link linkend="_definitions_8h_1ae403fe07e86bc33933303d3e266b579d">getDateInfo</link>(2);
+<anchor xml:id="_shopping_8c_source_1l00183"/>00183 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>].<link linkend="_struct_encomendas_1a9fc86758220eae0e735655f81fd9d9bc">mes</link>&#32;=&#32;<link linkend="_definitions_8h_1ae403fe07e86bc33933303d3e266b579d">getDateInfo</link>(3);
+<anchor xml:id="_shopping_8c_source_1l00184"/>00184 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>].<link linkend="_struct_encomendas_1ac404d93cbf0169fd9e89edc17d0c5572">ano</link>&#32;=&#32;<link linkend="_definitions_8h_1ae403fe07e86bc33933303d3e266b579d">getDateInfo</link>(4);
+<anchor xml:id="_shopping_8c_source_1l00185"/>00185 
+<anchor xml:id="_shopping_8c_source_1l00186"/>00186 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>].<link linkend="_struct_encomendas_1a72d010866bd83b41432d6286cb26adbd">estado</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00187"/>00187 
+<anchor xml:id="_shopping_8c_source_1l00188"/>00188 &#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a0df115437fbb77c0311e65300c65289e">green</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;A&#32;encomenda&#32;foi&#32;registada&#32;com&#32;sucesso&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00189"/>00189 
+<anchor xml:id="_shopping_8c_source_1l00190"/>00190 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nDeseja&#32;adicionar&#32;mais&#32;algum&#32;artigo?&#32;(s/N):&#32;&quot;</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00191"/>00191 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;opcao;
+<anchor xml:id="_shopping_8c_source_1l00192"/>00192 &#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;&#32;%c&quot;</emphasis>,&#32;&amp;opcao);
+<anchor xml:id="_shopping_8c_source_1l00193"/>00193 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(opcao&#32;==&#32;<emphasis role="charliteral">&apos;s&apos;</emphasis>&#32;||&#32;opcao&#32;==&#32;<emphasis role="charliteral">&apos;S&apos;</emphasis>)
+<anchor xml:id="_shopping_8c_source_1l00194"/>00194 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_shopping_8c_1a10d6c88f1cbf1e60ed32e609f715a779">doShopping</link>();
+<anchor xml:id="_shopping_8c_source_1l00196"/>00196 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00197"/>00197 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a9d7e8af417b6d543da691e9c0e2f6f9f">clearScreen</link>();
+<anchor xml:id="_shopping_8c_source_1l00198"/>00198 }
+<anchor xml:id="_shopping_8c_source_1l00199"/>00199 <emphasis role="preprocessor">#pragma&#32;endregion</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00200"/>00200 
+<anchor xml:id="_shopping_8c_source_1l00201"/>00201 <emphasis role="preprocessor">#pragma&#32;region&#32;ListEncomendas</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00208"/><link linkend="_definitions_8h_1a87b028e2e18b0b33e3eb58cb99af5523">00208</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_shopping_8c_1a87b028e2e18b0b33e3eb58cb99af5523">listEncomendas</link>(<emphasis role="keywordtype">int</emphasis>&#32;queryType)
+<anchor xml:id="_shopping_8c_source_1l00209"/>00209 {
+<anchor xml:id="_shopping_8c_source_1l00210"/>00210 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>&#32;==&#32;-1)&#32;{
+<anchor xml:id="_shopping_8c_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Não&#32;existem&#32;encomendas!&#32;[!]&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe">pressEnter</link>(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00214"/>00214 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00215"/>00215 
+<anchor xml:id="_shopping_8c_source_1l00216"/>00216 &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;queryType&#32;{
+<anchor xml:id="_shopping_8c_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;currentClient&#32;=&#32;60,
+<anchor xml:id="_shopping_8c_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;todas&#32;=&#32;61,
+<anchor xml:id="_shopping_8c_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;especifica&#32;=&#32;62,
+<anchor xml:id="_shopping_8c_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dataEspecifica&#32;=&#32;63,
+<anchor xml:id="_shopping_8c_source_1l00221"/>00221 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_shopping_8c_source_1l00222"/>00222 
+<anchor xml:id="_shopping_8c_source_1l00223"/>00223 &#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a52a6a14bd8e9463315ea114aceda1d92">cyan</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n------------------------&#32;Encomenda(s)&#32;------------------------\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00224"/>00224 
+<anchor xml:id="_shopping_8c_source_1l00225"/>00225 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;count&#32;=&#32;0,&#32;semanaExportar,&#32;loopDias,&#32;looper&#32;=&#32;1,&#32;mes;
+<anchor xml:id="_shopping_8c_source_1l00226"/>00226 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(queryType)
+<anchor xml:id="_shopping_8c_source_1l00227"/>00227 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00228"/>00228 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;currentClient:
+<anchor xml:id="_shopping_8c_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>&#32;==&#32;0)
+<anchor xml:id="_shopping_8c_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;O&#32;utilizador&#32;em&#32;questão&#32;não&#32;se&#32;encontra&#32;com&#32;sessão&#32;iniciada!&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_shopping_8c_1a6f4f7a9a71ced3d5e9fb21198edb6ab2">loginClient</link>();
+<anchor xml:id="_shopping_8c_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00234"/>00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;enc&#32;=&#32;0;&#32;enc&#32;&lt;=&#32;<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>;&#32;enc++)
+<anchor xml:id="_shopping_8c_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[enc].estado&#32;&amp;&amp;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[enc].codCliente&#32;==&#32;<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>)
+<anchor xml:id="_shopping_8c_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1adf88e57666bc1bdbe2b9a532b5d8ee19">printDataEncomenda</link>(enc);
+<anchor xml:id="_shopping_8c_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;count++;
+<anchor xml:id="_shopping_8c_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00241"/>00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00242"/>00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(count&#32;==&#32;0)
+<anchor xml:id="_shopping_8c_source_1l00243"/>00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00244"/>00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Não&#32;existem&#32;encomendas&#32;para&#32;o&#32;cliente&#32;atual&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00245"/>00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00246"/>00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00247"/>00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a59d9c08d69e42981f0d6fb680f5e6e26">bold</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n&#32;&#32;[Total]:&#32;%0.2f€\n&quot;</emphasis>,&#32;<link linkend="_definitions_8h_1a2e948973437ab18cc4aa58f04f32b31d">getTotalEncomenda</link>());&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;count&#32;=&#32;0;
+<anchor xml:id="_shopping_8c_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00250"/>00250 
+<anchor xml:id="_shopping_8c_source_1l00251"/>00251 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;todas:
+<anchor xml:id="_shopping_8c_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;enc&#32;=&#32;0;&#32;enc&#32;&lt;=&#32;<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>;&#32;enc++)
+<anchor xml:id="_shopping_8c_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1adf88e57666bc1bdbe2b9a532b5d8ee19">printDataEncomenda</link>(enc);
+<anchor xml:id="_shopping_8c_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>&#32;==&#32;-1)
+<anchor xml:id="_shopping_8c_source_1l00257"/>00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Não&#32;existem&#32;encomendas&#32;registadas&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe">pressEnter</link>(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00262"/>00262 &#32;&#32;&#32;&#32;
+<anchor xml:id="_shopping_8c_source_1l00263"/>00263 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;especifica:
+<anchor xml:id="_shopping_8c_source_1l00266"/>00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nPesquisar&#32;Cliente&#32;por&#32;(N)ome&#32;ou&#32;(C)ódigo?&#32;&quot;</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;internalQueryType[10];
+<anchor xml:id="_shopping_8c_source_1l00268"/>00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;&#32;%s&quot;</emphasis>,&#32;internalQueryType);
+<anchor xml:id="_shopping_8c_source_1l00269"/>00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(internalQueryType,&#32;<emphasis role="stringliteral">&quot;N&quot;</emphasis>)&#32;==&#32;0&#32;||&#32;strcmp(internalQueryType,&#32;<emphasis role="stringliteral">&quot;n&quot;</emphasis>)&#32;==&#32;0)
+<anchor xml:id="_shopping_8c_source_1l00270"/>00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00271"/>00271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nNome&#32;do&#32;Cliente:&#32;&quot;</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00272"/>00272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;nomeCliente[<link linkend="_definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357">SC</link>];
+<anchor xml:id="_shopping_8c_source_1l00273"/>00273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;&#32;%24s&quot;</emphasis>,&#32;nomeCliente);
+<anchor xml:id="_shopping_8c_source_1l00274"/>00274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;enc&#32;=&#32;0;&#32;enc&#32;&lt;=&#32;<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>;&#32;enc++)
+<anchor xml:id="_shopping_8c_source_1l00275"/>00275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[enc].estado&#32;&amp;&amp;&#32;strcmp(<link linkend="_definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c">cliente</link>[<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[enc].codCliente].nome,&#32;nomeCliente)&#32;==&#32;0)
+<anchor xml:id="_shopping_8c_source_1l00277"/>00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00278"/>00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1adf88e57666bc1bdbe2b9a532b5d8ee19">printDataEncomenda</link>(enc);
+<anchor xml:id="_shopping_8c_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;count++;
+<anchor xml:id="_shopping_8c_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00282"/>00282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00283"/>00283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(strcmp(internalQueryType,&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>)&#32;==&#32;0&#32;||&#32;strcmp(internalQueryType,&#32;<emphasis role="stringliteral">&quot;c&quot;</emphasis>)&#32;==&#32;0)
+<anchor xml:id="_shopping_8c_source_1l00284"/>00284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00285"/>00285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nCódigo&#32;do&#32;Cliente:&#32;&quot;</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00286"/>00286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;codCliente;
+<anchor xml:id="_shopping_8c_source_1l00287"/>00287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,&#32;&amp;codCliente);
+<anchor xml:id="_shopping_8c_source_1l00288"/>00288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;enc&#32;=&#32;0;&#32;enc&#32;&lt;=&#32;<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>;&#32;enc++)
+<anchor xml:id="_shopping_8c_source_1l00289"/>00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00290"/>00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[enc].estado&#32;&amp;&amp;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[enc].codCliente&#32;==&#32;codCliente)
+<anchor xml:id="_shopping_8c_source_1l00291"/>00291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00292"/>00292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1adf88e57666bc1bdbe2b9a532b5d8ee19">printDataEncomenda</link>(enc);
+<anchor xml:id="_shopping_8c_source_1l00293"/>00293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;count++;
+<anchor xml:id="_shopping_8c_source_1l00294"/>00294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00295"/>00295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00296"/>00296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00297"/>00297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(count&#32;==&#32;0)
+<anchor xml:id="_shopping_8c_source_1l00298"/>00298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00299"/>00299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Não&#32;existem&#32;encomendas&#32;para&#32;o&#32;cliente&#32;indicado&#32;[!]&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00300"/>00300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00301"/>00301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00302"/>00302 &#32;&#32;&#32;&#32;
+<anchor xml:id="_shopping_8c_source_1l00303"/>00303 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;dataEspecifica:
+<anchor xml:id="_shopping_8c_source_1l00306"/>00306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Indique&#32;a&#32;semana&#32;a&#32;exportar:&quot;</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00307"/>00307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;\n\n[1]&#32;Semana&#32;Atual&quot;</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00308"/>00308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;\n[2]&#32;Semana&#32;Anterior\n&gt;&#32;&quot;</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00309"/>00309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,&#32;&amp;semanaExportar);
+<anchor xml:id="_shopping_8c_source_1l00310"/>00310 
+<anchor xml:id="_shopping_8c_source_1l00311"/>00311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(semanaExportar)
+<anchor xml:id="_shopping_8c_source_1l00312"/>00312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00313"/>00313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;1:
+<anchor xml:id="_shopping_8c_source_1l00314"/>00314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;loopDias&#32;=&#32;<link linkend="_definitions_8h_1ae403fe07e86bc33933303d3e266b579d">getDateInfo</link>(2)&#32;+&#32;6;
+<anchor xml:id="_shopping_8c_source_1l00315"/>00315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mes&#32;=&#32;<link linkend="_definitions_8h_1ae403fe07e86bc33933303d3e266b579d">getDateInfo</link>(3);
+<anchor xml:id="_shopping_8c_source_1l00316"/>00316 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a52a6a14bd8e9463315ea114aceda1d92">cyan</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[Encomendas&#32;da&#32;Semana]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00317"/>00317 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(looper&#32;&lt;=&#32;loopDias)
+<anchor xml:id="_shopping_8c_source_1l00318"/>00318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00319"/>00319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;enc&#32;=&#32;0;&#32;enc&#32;&lt;=&#32;<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>;&#32;enc++)
+<anchor xml:id="_shopping_8c_source_1l00320"/>00320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00321"/>00321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[enc].estado&#32;&amp;&amp;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[enc].dia&#32;==&#32;looper&#32;&amp;&amp;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[enc].mes&#32;==&#32;mes)
+<anchor xml:id="_shopping_8c_source_1l00322"/>00322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00323"/>00323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1adf88e57666bc1bdbe2b9a532b5d8ee19">printDataEncomenda</link>(enc);
+<anchor xml:id="_shopping_8c_source_1l00324"/>00324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;count++;
+<anchor xml:id="_shopping_8c_source_1l00325"/>00325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00326"/>00326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00327"/>00327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;looper++;
+<anchor xml:id="_shopping_8c_source_1l00328"/>00328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00329"/>00329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00330"/>00330 
+<anchor xml:id="_shopping_8c_source_1l00331"/>00331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;2:
+<anchor xml:id="_shopping_8c_source_1l00332"/>00332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;loopDias&#32;=&#32;<link linkend="_definitions_8h_1ae403fe07e86bc33933303d3e266b579d">getDateInfo</link>(2)&#32;-&#32;6;
+<anchor xml:id="_shopping_8c_source_1l00333"/>00333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a52a6a14bd8e9463315ea114aceda1d92">cyan</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[Encomendas&#32;da&#32;Semana&#32;Anterior]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00334"/>00334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(looper&#32;&lt;=&#32;loopDias)
+<anchor xml:id="_shopping_8c_source_1l00335"/>00335 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00336"/>00336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;enc&#32;=&#32;0;&#32;enc&#32;&lt;=&#32;<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>;&#32;enc++)
+<anchor xml:id="_shopping_8c_source_1l00337"/>00337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00338"/>00338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[enc].estado&#32;&amp;&amp;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[enc].dia&#32;==&#32;looper)
+<anchor xml:id="_shopping_8c_source_1l00339"/>00339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00340"/>00340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1adf88e57666bc1bdbe2b9a532b5d8ee19">printDataEncomenda</link>(enc);
+<anchor xml:id="_shopping_8c_source_1l00341"/>00341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;count++;
+<anchor xml:id="_shopping_8c_source_1l00342"/>00342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00343"/>00343 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00344"/>00344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;looper++;
+<anchor xml:id="_shopping_8c_source_1l00345"/>00345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00346"/>00346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00347"/>00347 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00348"/>00348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_shopping_8c_source_1l00349"/>00349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(count&#32;==&#32;0)
+<anchor xml:id="_shopping_8c_source_1l00350"/>00350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00351"/>00351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Não&#32;existem&#32;encomendas&#32;para&#32;a&#32;semana&#32;indicada&#32;[!]&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00352"/>00352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00353"/>00353 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00354"/>00354 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe">pressEnter</link>(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00355"/>00355 }
+<anchor xml:id="_shopping_8c_source_1l00356"/>00356 <emphasis role="preprocessor">#pragma&#32;endregion</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00357"/>00357 
+<anchor xml:id="_shopping_8c_source_1l00358"/>00358 <emphasis role="preprocessor">#pragma&#32;region&#32;CancelEncomenda</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00362"/><link linkend="_definitions_8h_1a91ff19fa6805e0491dd0bcf68a12d4da">00362</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_shopping_8c_1a91ff19fa6805e0491dd0bcf68a12d4da">cancelEncomenda</link>()
+<anchor xml:id="_shopping_8c_source_1l00363"/>00363 {
+<anchor xml:id="_shopping_8c_source_1l00364"/>00364 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>&#32;==&#32;-1)&#32;{
+<anchor xml:id="_shopping_8c_source_1l00365"/>00365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Não&#32;existem&#32;encomendas!&#32;[!]&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00366"/>00366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe">pressEnter</link>(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00367"/>00367 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00368"/>00368 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00369"/>00369 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!<link linkend="_definitions_8h_1a9efdb5ab1d7b26e54799af4e7cb59fa2">loggedClient</link>())
+<anchor xml:id="_shopping_8c_source_1l00370"/>00370 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00371"/>00371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1ab0c10e6284be130a7973fa029a690ef7">yellow</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Por&#32;favor&#32;inicie&#32;sessão&#32;[!]\n&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00372"/>00372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_shopping_8c_1a6f4f7a9a71ced3d5e9fb21198edb6ab2">loginClient</link>();
+<anchor xml:id="_shopping_8c_source_1l00373"/>00373 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00374"/>00374 &#32;&#32;&#32;&#32;
+<anchor xml:id="_shopping_8c_source_1l00375"/>00375 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;enc&#32;=&#32;0;&#32;enc&#32;&lt;=&#32;<link linkend="_definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b">NE</link>;&#32;enc++)
+<anchor xml:id="_shopping_8c_source_1l00376"/>00376 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00377"/>00377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[enc].estado&#32;&amp;&amp;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[enc].codCliente&#32;==&#32;<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>)
+<anchor xml:id="_shopping_8c_source_1l00378"/>00378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00379"/>00379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1adf88e57666bc1bdbe2b9a532b5d8ee19">printDataEncomenda</link>(enc);
+<anchor xml:id="_shopping_8c_source_1l00380"/>00380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00381"/>00381 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00382"/>00382 
+<anchor xml:id="_shopping_8c_source_1l00383"/>00383 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;encomendaToCancel;
+<anchor xml:id="_shopping_8c_source_1l00384"/>00384 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\nIndique&#32;o&#32;número&#32;da&#32;encomenda&#32;a&#32;cancelar:&#32;&quot;</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00385"/>00385 &#32;&#32;&#32;&#32;scanf(<emphasis role="stringliteral">&quot;%d&quot;</emphasis>,&#32;&amp;encomendaToCancel);
+<anchor xml:id="_shopping_8c_source_1l00386"/>00386 &#32;&#32;&#32;&#32;encomendaToCancel--;
+<anchor xml:id="_shopping_8c_source_1l00387"/>00387 
+<anchor xml:id="_shopping_8c_source_1l00388"/>00388 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[encomendaToCancel].estado&#32;&amp;&amp;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[encomendaToCancel].codCliente&#32;==&#32;<link linkend="_definitions_8h_1a69460b78379a912c83e65ba131e368e9">runtime</link>-&gt;<link linkend="_struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72">currentClient</link>)
+<anchor xml:id="_shopping_8c_source_1l00389"/>00389 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00390"/>00390 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc">encomenda</link>[encomendaToCancel].<link linkend="_struct_encomendas_1a72d010866bd83b41432d6286cb26adbd">estado</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_shopping_8c_source_1l00391"/>00391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Encomenda&#32;cancelada&#32;com&#32;sucesso!&#32;[!]&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00392"/>00392 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00393"/>00393 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_shopping_8c_source_1l00394"/>00394 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_shopping_8c_source_1l00395"/>00395 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_colors_8c_1a39abd40f68d03c40857be1e74407efb9">red</link>();&#32;printf(<emphasis role="stringliteral">&quot;\n[!]&#32;Encomenda&#32;não&#32;encontrada!&#32;[!]&quot;</emphasis>);&#32;<link linkend="_colors_8c_1ac0fd834412eb7d5311f137d919db6788">white</link>();
+<anchor xml:id="_shopping_8c_source_1l00396"/>00396 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_shopping_8c_source_1l00397"/>00397 &#32;&#32;&#32;&#32;<link linkend="_definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe">pressEnter</link>(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_shopping_8c_source_1l00398"/>00398 }
+<anchor xml:id="_shopping_8c_source_1l00399"/>00399 <emphasis role="preprocessor">#pragma&#32;endregion</emphasis>
+</programlisting></section>

@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_util_8c" xml:lang="en-US">
+<title>util.c File Reference</title>
+<indexterm><primary>util.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdbool.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;time.h&gt;
+#include &quot;definitions.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_util_8c_1a2da5c6326d98abeaf456372ceb077847">numberOfDigits</link> (int num)</para>
+
+<para>Conta o número de digitos de um inteiro. </para>
+</listitem>
+            <listitem><para>void <link linkend="_util_8c_1a9d7e8af417b6d543da691e9c0e2f6f9f">clearScreen</link> ()</para>
+
+<para>Permite limpar o ecrã de forma &quot;portátil&quot; entre sistemas. </para>
+</listitem>
+            <listitem><para>void <link linkend="_util_8c_1a370ac4305d613dc116739f8b5a05e6fe">pressEnter</link> (bool alsoClearScreen)</para>
+
+<para>Permite dar a opção do tipico &quot;Press Enter to continue&quot;. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_util_8c_1af22d234c9f1f40dea9b79ca8fb8c7288">checkString</link> (const char *string)</para>
+
+<para>Verifica se a string indicada é válida tendo em contas certas condições. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_util_8c_1a41532c4603b615920ea1c1216d1445ad">checkNumber</link> (double number)</para>
+
+<para>Controlar o inteiro indicado pelo utilizador. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_util_8c_1ae81c93a074d4c3bdce4d8409997418f0">checkCodPromo</link> (char *codPromo)</para>
+
+<para>Verifica se o código promocional introduzido pelo utilizador é valido. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_util_8c_1a52199f9c4b3c9c302cc8d4ab4a38bae5">availableForOperation</link> (int op, int codArtigo, int parameter)</para>
+
+<para>Verifica se o artigo OU parâmetro indicado está disponível ou é valido para X operação. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_util_8c_1a9efdb5ab1d7b26e54799af4e7cb59fa2">loggedClient</link> ()</para>
+
+<para>Verifica se existe utilizador autenticado. </para>
+</listitem>
+            <listitem><para>void <link linkend="_util_8c_1a941fa13e3d505e5a9a3f9c082bfeff89">reallocStruct</link> (int st)</para>
+</listitem>
+            <listitem><para>void <link linkend="_util_8c_1a5ec3ba219271cd3cd14bf58108226c7c">freeMemory</link> (bool alsoStopTheProgram)</para>
+
+<para>Liberta a memória antes de fechar o programa e/ou termina o programa. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_util_8c_1a52199f9c4b3c9c302cc8d4ab4a38bae5"/><section>
+    <title>availableForOperation()</title>
+<indexterm><primary>availableForOperation</primary><secondary>util.c</secondary></indexterm>
+<indexterm><primary>util.c</primary><secondary>availableForOperation</secondary></indexterm>
+<para><computeroutput>bool availableForOperation (int op, int codArtigo, int parameter)</computeroutput></para><para>
+
+<para>Verifica se o artigo OU parâmetro indicado está disponível ou é valido para X operação. </para>
+</para>
+
+<para>*<note><title>Note</title>
+
+<para>As operações estão indicadas na enumeração </para>
+</note>
+<formalpara><title>Returns</title>
+
+<para>true se a operação/parâmetro é válido, false caso contrário </para>
+</formalpara>
+<note><title>Note</title>
+
+<para>O valor do return é usado no respetivo &quot;loop do while&quot; </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00118">118</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_util_8c_1ae81c93a074d4c3bdce4d8409997418f0"/><section>
+    <title>checkCodPromo()</title>
+<indexterm><primary>checkCodPromo</primary><secondary>util.c</secondary></indexterm>
+<indexterm><primary>util.c</primary><secondary>checkCodPromo</secondary></indexterm>
+<para><computeroutput>bool checkCodPromo (char * codPromo)</computeroutput></para><para>
+
+<para>Verifica se o código promocional introduzido pelo utilizador é valido. </para>
+</para>
+
+<para>*<formalpara><title>Returns</title>
+
+<para>true se o código for válido, false caso contrário </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00096">96</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_util_8c_1a41532c4603b615920ea1c1216d1445ad"/><section>
+    <title>checkNumber()</title>
+<indexterm><primary>checkNumber</primary><secondary>util.c</secondary></indexterm>
+<indexterm><primary>util.c</primary><secondary>checkNumber</secondary></indexterm>
+<para><computeroutput>bool checkNumber (double number)</computeroutput></para><para>
+
+<para>Controlar o inteiro indicado pelo utilizador. </para>
+</para>
+
+<para>*<formalpara><title>Returns</title>
+
+<para>true se o inteiro for válido, false caso contrário </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00078">78</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_util_8c_1af22d234c9f1f40dea9b79ca8fb8c7288"/><section>
+    <title>checkString()</title>
+<indexterm><primary>checkString</primary><secondary>util.c</secondary></indexterm>
+<indexterm><primary>util.c</primary><secondary>checkString</secondary></indexterm>
+<para><computeroutput>bool checkString (const char * string)</computeroutput></para><para>
+
+<para>Verifica se a string indicada é válida tendo em contas certas condições. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>A string é válida se:<itemizedlist>
+<listitem>
+<para>não estiver vazia e conter pelo menos 3 caracteres</para>
+</listitem><listitem>
+<para>não contém caracteres númericos </para>
+</listitem></itemizedlist>
+</para>
+</note>
+<formalpara><title>Returns</title>
+
+<para>true se a string for válida, false caso contrário </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00057">57</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_util_8c_1a9d7e8af417b6d543da691e9c0e2f6f9f"/><section>
+    <title>clearScreen()</title>
+<indexterm><primary>clearScreen</primary><secondary>util.c</secondary></indexterm>
+<indexterm><primary>util.c</primary><secondary>clearScreen</secondary></indexterm>
+<para><computeroutput>void clearScreen ( )</computeroutput></para><para>
+
+<para>Permite limpar o ecrã de forma &quot;portátil&quot; entre sistemas. </para>
+</para>
+
+<para><itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00029">29</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_util_8c_1a5ec3ba219271cd3cd14bf58108226c7c"/><section>
+    <title>freeMemory()</title>
+<indexterm><primary>freeMemory</primary><secondary>util.c</secondary></indexterm>
+<indexterm><primary>util.c</primary><secondary>freeMemory</secondary></indexterm>
+<para><computeroutput>void freeMemory (bool alsoStopTheProgram)</computeroutput></para><para>
+
+<para>Liberta a memória antes de fechar o programa e/ou termina o programa. </para>
+</para>
+
+<para>*
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>alsoStopTheProgram</entry><entry>
+<para>- Opção de saída do programa </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00267">267</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_util_8c_1a9efdb5ab1d7b26e54799af4e7cb59fa2"/><section>
+    <title>loggedClient()</title>
+<indexterm><primary>loggedClient</primary><secondary>util.c</secondary></indexterm>
+<indexterm><primary>util.c</primary><secondary>loggedClient</secondary></indexterm>
+<para><computeroutput>bool loggedClient ( )</computeroutput></para><para>
+
+<para>Verifica se existe utilizador autenticado. </para>
+</para>
+
+<para>*<formalpara><title>Returns</title>
+
+<para>true se existe utilizador autenticado, false caso contrário </para>
+</formalpara>
+</para>
+
+<para>Não existe cliente logado</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00217">217</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_util_8c_1a2da5c6326d98abeaf456372ceb077847"/><section>
+    <title>numberOfDigits()</title>
+<indexterm><primary>numberOfDigits</primary><secondary>util.c</secondary></indexterm>
+<indexterm><primary>util.c</primary><secondary>numberOfDigits</secondary></indexterm>
+<para><computeroutput>int numberOfDigits (int num)</computeroutput></para><para>
+
+<para>Conta o número de digitos de um inteiro. </para>
+</para>
+
+<para>Ficheiro <link linkend="_util_8c">util.c</link>.</para>
+
+<para><note><title>Note</title>
+
+<para>Usado, por exemplo, para verificar o NIF do cliente </para>
+</note>
+<formalpara><title>Returns</title>
+
+<para>O número de digitos do inteiro para usar no respetivo &quot;loop do while&quot; </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00015">15</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_util_8c_1a370ac4305d613dc116739f8b5a05e6fe"/><section>
+    <title>pressEnter()</title>
+<indexterm><primary>pressEnter</primary><secondary>util.c</secondary></indexterm>
+<indexterm><primary>util.c</primary><secondary>pressEnter</secondary></indexterm>
+<para><computeroutput>void pressEnter (bool alsoClearScreen)</computeroutput></para><para>
+
+<para>Permite dar a opção do tipico &quot;Press Enter to continue&quot;. </para>
+</para>
+
+<para><itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_util_8c_source_1l00037">37</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+<anchor xml:id="_util_8c_1a941fa13e3d505e5a9a3f9c082bfeff89"/><section>
+    <title>reallocStruct()</title>
+<indexterm><primary>reallocStruct</primary><secondary>util.c</secondary></indexterm>
+<indexterm><primary>util.c</primary><secondary>reallocStruct</secondary></indexterm>
+<para><computeroutput>void reallocStruct (int st)</computeroutput></para><para>
+Definition at line <link linkend="_util_8c_source_1l00229">229</link> of file <link linkend="_util_8c_source">util.c</link>.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,1396 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="definitions_8h" kind="file" language="C++">
+    <compoundname>definitions.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includedby refid="administrador_8c" local="yes">administrador.c</includedby>
+    <includedby refid="clientes_8c" local="yes">clientes.c</includedby>
+    <includedby refid="colors_8c" local="yes">colors.c</includedby>
+    <includedby refid="data_8c" local="yes">data.c</includedby>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
+    <includedby refid="queries_8c" local="yes">queries.c</includedby>
+    <includedby refid="shopping_8c" local="yes">shopping.c</includedby>
+    <includedby refid="util_8c" local="yes">util.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>definitions.h</label>
+        <link refid="definitions_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>administrador.c</label>
+        <link refid="administrador_8c"/>
+      </node>
+      <node id="3">
+        <label>clientes.c</label>
+        <link refid="clientes_8c"/>
+      </node>
+      <node id="4">
+        <label>colors.c</label>
+        <link refid="colors_8c"/>
+      </node>
+      <node id="5">
+        <label>data.c</label>
+        <link refid="data_8c"/>
+      </node>
+      <node id="1">
+        <label>definitions.h</label>
+        <link refid="definitions_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="7">
+        <label>queries.c</label>
+        <link refid="queries_8c"/>
+      </node>
+      <node id="8">
+        <label>shopping.c</label>
+        <link refid="shopping_8c"/>
+      </node>
+      <node id="9">
+        <label>util.c</label>
+        <link refid="util_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_clientes" prot="public">Clientes</innerclass>
+    <innerclass refid="struct_artigos" prot="public">Artigos</innerclass>
+    <innerclass refid="struct_encomendas" prot="public">Encomendas</innerclass>
+    <innerclass refid="struct_runtime" prot="public">Runtime</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357" prot="public" static="no">
+        <name>SC</name>
+        <initializer>25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="5" column="9" bodyfile="definitions.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="definitions_8h_1ab4cee453adc50fdf7fed706a78903134" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int NC</definition>
+        <argsstring></argsstring>
+        <name>NC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="6" column="12" bodyfile="main.c" bodystart="15" bodyend="-1" declfile="definitions.h" declline="6" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int NA</definition>
+        <argsstring></argsstring>
+        <name>NA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="7" column="12" bodyfile="main.c" bodystart="16" bodyend="-1" declfile="definitions.h" declline="7" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int NE</definition>
+        <argsstring></argsstring>
+        <name>NE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="8" column="12" bodyfile="main.c" bodystart="17" bodyend="-1" declfile="definitions.h" declline="8" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_clientes" kindref="compound">Clientes</ref> *</type>
+        <definition>Clientes* cliente</definition>
+        <argsstring></argsstring>
+        <name>cliente</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="53" column="17" bodyfile="main.c" bodystart="19" bodyend="-1" declfile="definitions.h" declline="53" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_artigos" kindref="compound">Artigos</ref> *</type>
+        <definition>Artigos* artigo</definition>
+        <argsstring></argsstring>
+        <name>artigo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="54" column="16" bodyfile="main.c" bodystart="20" bodyend="-1" declfile="definitions.h" declline="54" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="variable" id="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_encomendas" kindref="compound">Encomendas</ref> *</type>
+        <definition>Encomendas* encomenda</definition>
+        <argsstring></argsstring>
+        <name>encomenda</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="55" column="19" bodyfile="main.c" bodystart="21" bodyend="-1" declfile="definitions.h" declline="55" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="variable" id="definitions_8h_1a69460b78379a912c83e65ba131e368e9" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_runtime" kindref="compound">Runtime</ref> *</type>
+        <definition>Runtime* runtime</definition>
+        <argsstring></argsstring>
+        <name>runtime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="56" column="16" bodyfile="main.c" bodystart="22" bodyend="-1" declfile="definitions.h" declline="56" declcolumn="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="definitions_8h_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+<para>Ficheiro <ref refid="main_8c" kindref="compound">main.c</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Ficheiro <ref refid="main_8c" kindref="compound">main.c</ref>.</para>
+<para><simplesect kind="note"><para>tipoUtilizador - valores possiveis: 1 - Cliente, 2 - Administrador ou 0 - Sair </para>
+</simplesect>
+<simplesect kind="note"><para>Esta é a primeira função a ser executada </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="62" column="5" bodyfile="main.c" bodystart="29" bodyend="227" declfile="definitions.h" declline="62" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a2da5c6326d98abeaf456372ceb077847" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int numberOfDigits</definition>
+        <argsstring>(int num)</argsstring>
+        <name>numberOfDigits</name>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+<para>Ficheiro <ref refid="util_8c" kindref="compound">util.c</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Ficheiro <ref refid="util_8c" kindref="compound">util.c</ref>.</para>
+<para><simplesect kind="note"><para>Usado, por exemplo, para verificar o NIF do cliente </para>
+</simplesect>
+<simplesect kind="return"><para>O número de digitos do inteiro para usar no respetivo &quot;loop do while&quot; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="66" column="5" bodyfile="util.c" bodystart="15" bodyend="24" declfile="definitions.h" declline="66" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a9d7e8af417b6d543da691e9c0e2f6f9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void clearScreen</definition>
+        <argsstring>()</argsstring>
+        <name>clearScreen</name>
+        <briefdescription>
+<para>Permite limpar o ecrã de forma &quot;portátil&quot; entre sistemas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="68" column="6" bodyfile="util.c" bodystart="29" bodyend="32" declfile="definitions.h" declline="68" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pressEnter</definition>
+        <argsstring>(bool alsoClearScreen)</argsstring>
+        <name>pressEnter</name>
+        <param>
+          <type>bool</type>
+          <declname>alsoClearScreen</declname>
+        </param>
+        <briefdescription>
+<para>Permite dar a opção do tipico &quot;Press Enter to continue&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem></listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="69" column="6" bodyfile="util.c" bodystart="37" bodyend="47" declfile="definitions.h" declline="69" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1ae403fe07e86bc33933303d3e266b579d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getDateInfo</definition>
+        <argsstring>(int info)</argsstring>
+        <name>getDateInfo</name>
+        <param>
+          <type>int</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+<para>Obter certo parâmetro de data tal como hora, dia, mês, ano. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>*<simplesect kind="note"><para>A enumeração é usada para indicar o parâmetro a obter </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="71" column="5" bodyfile="queries.c" bodystart="65" bodyend="87" declfile="definitions.h" declline="71" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1af22d234c9f1f40dea9b79ca8fb8c7288" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool checkString</definition>
+        <argsstring>(const char *string)</argsstring>
+        <name>checkString</name>
+        <param>
+          <type>const char *</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+<para>Verifica se a string indicada é válida tendo em contas certas condições. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>A string é válida se:<itemizedlist>
+<listitem><para>não estiver vazia e conter pelo menos 3 caracteres</para>
+</listitem><listitem><para>não contém caracteres númericos </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<simplesect kind="return"><para>true se a string for válida, false caso contrário </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="72" column="6" bodyfile="util.c" bodystart="57" bodyend="71" declfile="definitions.h" declline="72" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a41532c4603b615920ea1c1216d1445ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool checkNumber</definition>
+        <argsstring>(double number)</argsstring>
+        <name>checkNumber</name>
+        <param>
+          <type>double</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+<para>Controlar o inteiro indicado pelo utilizador. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>*<simplesect kind="return"><para>true se o inteiro for válido, false caso contrário </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="73" column="6" bodyfile="util.c" bodystart="78" bodyend="89" declfile="definitions.h" declline="73" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1ae81c93a074d4c3bdce4d8409997418f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool checkCodPromo</definition>
+        <argsstring>(char *codPromo)</argsstring>
+        <name>checkCodPromo</name>
+        <param>
+          <type>char *</type>
+          <declname>codPromo</declname>
+        </param>
+        <briefdescription>
+<para>Verifica se o código promocional introduzido pelo utilizador é valido. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>*<simplesect kind="return"><para>true se o código for válido, false caso contrário </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="74" column="6" bodyfile="util.c" bodystart="96" bodyend="109" declfile="definitions.h" declline="74" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a52199f9c4b3c9c302cc8d4ab4a38bae5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool availableForOperation</definition>
+        <argsstring>(int op, int codArtigo, int parameter)</argsstring>
+        <name>availableForOperation</name>
+        <param>
+          <type>int</type>
+          <declname>op</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>codArtigo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>parameter</declname>
+        </param>
+        <briefdescription>
+<para>Verifica se o artigo OU parâmetro indicado está disponível ou é valido para X operação. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>*<simplesect kind="note"><para>As operações estão indicadas na enumeração </para>
+</simplesect>
+<simplesect kind="return"><para>true se a operação/parâmetro é válido, false caso contrário </para>
+</simplesect>
+<simplesect kind="note"><para>O valor do return é usado no respetivo &quot;loop do while&quot; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="75" column="6" bodyfile="util.c" bodystart="118" bodyend="210" declfile="definitions.h" declline="75" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a46d4eccec6d2c6e65ef4784ab4db0c78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int getArtigoIndex</definition>
+        <argsstring>(int codArtigo)</argsstring>
+        <name>getArtigoIndex</name>
+        <param>
+          <type>int</type>
+          <declname>codArtigo</declname>
+        </param>
+        <briefdescription>
+<para>Função que permite obter o indíce de um artigo no array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>codArtigo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Código do artigo </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>art - Indíce do artigo </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="76" column="5" bodyfile="queries.c" bodystart="15" bodyend="25" declfile="definitions.h" declline="76" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a9efdb5ab1d7b26e54799af4e7cb59fa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool loggedClient</definition>
+        <argsstring>()</argsstring>
+        <name>loggedClient</name>
+        <briefdescription>
+<para>Verifica se existe utilizador autenticado. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>*<simplesect kind="return"><para>true se existe utilizador autenticado, false caso contrário </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Não existe cliente logado</para>
+        </inbodydescription>
+        <location file="definitions.h" line="78" column="6" bodyfile="util.c" bodystart="217" bodyend="225" declfile="definitions.h" declline="78" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a941fa13e3d505e5a9a3f9c082bfeff89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reallocStruct</definition>
+        <argsstring>(int st)</argsstring>
+        <name>reallocStruct</name>
+        <param>
+          <type>int</type>
+          <declname>st</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="80" column="6" bodyfile="util.c" bodystart="229" bodyend="260" declfile="definitions.h" declline="80" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a5ec3ba219271cd3cd14bf58108226c7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void freeMemory</definition>
+        <argsstring>(bool alsoStopTheProgram)</argsstring>
+        <name>freeMemory</name>
+        <param>
+          <type>bool</type>
+          <declname>alsoStopTheProgram</declname>
+        </param>
+        <briefdescription>
+<para>Liberta a memória antes de fechar o programa e/ou termina o programa. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>*<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>alsoStopTheProgram</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Opção de saída do programa </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="81" column="6" bodyfile="util.c" bodystart="267" bodyend="276" declfile="definitions.h" declline="81" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a87b028e2e18b0b33e3eb58cb99af5523" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void listEncomendas</definition>
+        <argsstring>(int queryType)</argsstring>
+        <name>listEncomendas</name>
+        <param>
+          <type>int</type>
+          <declname>queryType</declname>
+        </param>
+        <briefdescription>
+<para>Função que permite listar as encomendas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queryType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Tipo de &quot;query&quot; a ser executada </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>De acordo com o tipo de &quot;query&quot; definido na enumeração, a função lista as encomendas </para>
+</simplesect>
+<simplesect kind="note"><para>Por exemplo, a &quot;query&quot; (61) lista todas as encomendas de todos os clientes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para><simplesect kind="note"><para>Permite listar as encomendas de certo cliente, este que é indicado via Nome ou pelo seu Código</para>
+</simplesect>
+<simplesect kind="note"><para>Permite listar as encomendas de acordo com certa data</para>
+</simplesect>
+</para>
+        </inbodydescription>
+        <location file="definitions.h" line="86" column="6" bodyfile="shopping.c" bodystart="208" bodyend="355" declfile="definitions.h" declline="86" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a8f37bef24fe15f40c71fca8327b44697" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void statisticsEncomendas</definition>
+        <argsstring>()</argsstring>
+        <name>statisticsEncomendas</name>
+        <briefdescription>
+<para>Estatisticas das encomendas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Média do Preço e Quantidade </para>
+</simplesect>
+<simplesect kind="note"><para>Melhor e Pior produto (em termos de vendas) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para><simplesect kind="note"><para>Encontrar as médias (preço e quantidade) das encomendas</para>
+</simplesect>
+<simplesect kind="note"><para>Encontrar o produto mais vendido</para>
+</simplesect>
+<simplesect kind="note"><para>Encontrar o produto menos vendido</para>
+</simplesect>
+<simplesect kind="note"><para>Encontrar o cliente com mais unidades compradas</para>
+</simplesect>
+<simplesect kind="note"><para>Encontrar o artigo com maior margem de lucro</para>
+</simplesect>
+<simplesect kind="note"><para>Encontrar o artigo com menor margem de lucro</para>
+</simplesect>
+<simplesect kind="note"><para>Encontrar a quantidade de encomendas ativas/canceladas</para>
+</simplesect>
+</para>
+        </inbodydescription>
+        <location file="definitions.h" line="87" column="6" bodyfile="queries.c" bodystart="290" bodyend="437" declfile="definitions.h" declline="87" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a2e948973437ab18cc4aa58f04f32b31d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double getTotalEncomenda</definition>
+        <argsstring>()</argsstring>
+        <name>getTotalEncomenda</name>
+        <briefdescription>
+<para>Função que permite obter o total (preço) de encomendas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int - total de encomendas </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="88" column="8" bodyfile="queries.c" bodystart="44" bodyend="58" declfile="definitions.h" declline="88" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a7f710faa12da0cf1c324f192cee73e96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void listClientes</definition>
+        <argsstring>(int queryType)</argsstring>
+        <name>listClientes</name>
+        <param>
+          <type>int</type>
+          <declname>queryType</declname>
+        </param>
+        <briefdescription>
+<para>Função que permite listar o(s) cliente(s) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queryType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- opção de listagem </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="90" column="6" bodyfile="queries.c" bodystart="218" bodyend="281" declfile="definitions.h" declline="90" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1ab3cd5f6472e88b4f400d6f56aa6edd8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void listArtigos</definition>
+        <argsstring>(int queryType)</argsstring>
+        <name>listArtigos</name>
+        <param>
+          <type>int</type>
+          <declname>queryType</declname>
+        </param>
+        <briefdescription>
+<para>Função que permite listar o(s) artigo(s) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>queryType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- opção de listagem </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>- a opção (10) é quando o cliente autenticado pretende listar as encomendas da sessão </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="91" column="6" bodyfile="queries.c" bodystart="95" bodyend="211" declfile="definitions.h" declline="91" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1af4568fe8cae0d02992cc20eeaa4d309d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * getArtigoName</definition>
+        <argsstring>(int codArtigo)</argsstring>
+        <name>getArtigoName</name>
+        <param>
+          <type>int</type>
+          <declname>codArtigo</declname>
+          <defname>idx</defname>
+        </param>
+        <briefdescription>
+<para>Função que permite obter o nome do artigo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Indice no array de artigos </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>artigo - O nome do artigo </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="93" column="6" bodyfile="queries.c" bodystart="33" bodyend="36" declfile="definitions.h" declline="93" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1adf88e57666bc1bdbe2b9a532b5d8ee19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printDataEncomenda</definition>
+        <argsstring>(int enc)</argsstring>
+        <name>printDataEncomenda</name>
+        <param>
+          <type>int</type>
+          <declname>enc</declname>
+        </param>
+        <briefdescription>
+<para>Imprime os dados de uma encomenda. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Encomenda a imprimir </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="94" column="6" bodyfile="queries.c" bodystart="445" bodyend="453" declfile="definitions.h" declline="94" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a2db28081aac0ef2215ab88524f9cf13e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printDataArtigo</definition>
+        <argsstring>(int art, bool query)</argsstring>
+        <name>printDataArtigo</name>
+        <param>
+          <type>int</type>
+          <declname>art</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>query</declname>
+          <defname>printTamanhos</defname>
+        </param>
+        <briefdescription>
+<para>Imprime os dados de um artigo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>art</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Artigo a imprimir </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>printTamanhas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Define se os tamanhos e os respetivos preços devem ser imprimidos </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="95" column="6" bodyfile="queries.c" bodystart="462" bodyend="485" declfile="definitions.h" declline="95" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a5b0e889434448c1fda602fe8219c6df0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printDataCliente</definition>
+        <argsstring>(int cli)</argsstring>
+        <name>printDataCliente</name>
+        <param>
+          <type>int</type>
+          <declname>cli</declname>
+        </param>
+        <briefdescription>
+<para>Imprime os dados de um cliente. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cli</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Cliente a imprimir </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="96" column="6" bodyfile="queries.c" bodystart="493" bodyend="499" declfile="definitions.h" declline="96" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a8b6e5471fc3162030e02624aa4e0a71c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addCliente</definition>
+        <argsstring>()</argsstring>
+        <name>addCliente</name>
+        <briefdescription>
+<para>Função que permite adicionar um cliente. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parametros necessarios para a adição do cliente </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="101" column="6" bodyfile="clientes.c" bodystart="16" bodyend="72" declfile="definitions.h" declline="101" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a918dfa81ea4cf833c9cb370987ff7521" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool getEstadoCliente</definition>
+        <argsstring>(int codCliente)</argsstring>
+        <name>getEstadoCliente</name>
+        <param>
+          <type>int</type>
+          <declname>codCliente</declname>
+        </param>
+        <briefdescription>
+<para>Função que verifica o estado do cliente indicado. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>do cliente </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Retorna True - caso o cliente exista ou esteja disponivel False - caso o cliente não exista ou esteja indisponivel </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="102" column="6" bodyfile="clientes.c" bodystart="227" bodyend="245" declfile="definitions.h" declline="102" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a63ec96e80364598a0c5bfc3954f2dbbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * getClientName</definition>
+        <argsstring>(int codCliente)</argsstring>
+        <name>getClientName</name>
+        <param>
+          <type>int</type>
+          <declname>codCliente</declname>
+        </param>
+        <briefdescription>
+<para>Função que obtêm o nome do cliente. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>do cliente </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Retorna o nome do cliente (string) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="103" column="6" bodyfile="clientes.c" bodystart="254" bodyend="264" declfile="definitions.h" declline="103" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a384bbc94cc780349877dd70a46d111fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateClient</definition>
+        <argsstring>(int clienteToChange, int via)</argsstring>
+        <name>updateClient</name>
+        <param>
+          <type>int</type>
+          <declname>clienteToChange</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>via</declname>
+        </param>
+        <briefdescription>
+<para>Função que permite atualizar um cliente. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clienteToChange</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Cliente a ser atualizado </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>via</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- caso a função seja chamada via menu cliente, apenas permitir a alteração do cliente autenticado (e perguntando o seu código) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para><simplesect kind="note"><para>Via Menu Cliente, onde se realiza verificação de segurança</para>
+</simplesect>
+<simplesect kind="note"><para>Via Menu Administrador</para>
+</simplesect>
+</para>
+        </inbodydescription>
+        <location file="definitions.h" line="104" column="6" bodyfile="clientes.c" bodystart="82" bodyend="215" declfile="definitions.h" declline="104" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1ab57c27349b4a343d5ec7736646cf4c7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateArtigo</definition>
+        <argsstring>()</argsstring>
+        <name>updateArtigo</name>
+        <briefdescription>
+<para>Função de atualização de artigo e os seus valores. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>artigoToUpdate - Artigo a atualizar </para>
+</simplesect>
+<simplesect kind="note"><para>opcao - Campo a alterar </para>
+</simplesect>
+<simplesect kind="note"><para>novoXXX - Novo valor a ser atribuido </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para><simplesect kind="note"><para><ndash/> Recalcula o preço de todos os artigos de acordo com os novos valores</para>
+</simplesect>
+</para>
+        </inbodydescription>
+        <location file="definitions.h" line="109" column="6" bodyfile="administrador.c" bodystart="101" bodyend="323" declfile="definitions.h" declline="109" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a7eadedef8af327c38812b981e440e9fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void addArtigo</definition>
+        <argsstring>()</argsstring>
+        <name>addArtigo</name>
+        <briefdescription>
+<para>Função que permite adicionar um artigo. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="110" column="6" bodyfile="administrador.c" bodystart="12" bodyend="91" declfile="definitions.h" declline="110" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1af720c7469de6c812fcf7ef357c36f9da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateDesconto</definition>
+        <argsstring>()</argsstring>
+        <name>updateDesconto</name>
+        <briefdescription>
+<para>Função de atualização do valor e código de desconto. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>runtime-&gt;percentageDesconto - Percentagem de desconto </para>
+</simplesect>
+<simplesect kind="note"><para>runtime-&gt;stringDesconto - Código de desconto </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="111" column="6" bodyfile="administrador.c" bodystart="332" bodyend="375" declfile="definitions.h" declline="111" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a8c0b39e19764089f83e1a337c0369676" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void importData</definition>
+        <argsstring>()</argsstring>
+        <name>importData</name>
+        <briefdescription>
+<para>Importa os dados dos ficheiros binários. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Caso nao exista algum ficheiro ou caso surja erro na leitura, o programa termina </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="116" column="6" bodyfile="data.c" bodystart="15" bodyend="63" declfile="definitions.h" declline="116" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a845434be144bc6138804dd39b3760212" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void exportData</definition>
+        <argsstring>()</argsstring>
+        <name>exportData</name>
+        <briefdescription>
+<para>Exporta os dados dos ficheiros binários. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Caso surja algum erro na escrita, o programa termina </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="117" column="6" bodyfile="data.c" bodystart="71" bodyend="107" declfile="definitions.h" declline="117" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1ace66f1e8600faf005e2f95c1f5e24ec4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void importDefaultData</definition>
+        <argsstring>()</argsstring>
+        <name>importDefaultData</name>
+        <briefdescription>
+<para>Importa os dados padrão (default.bin) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Caso o ficheiro não exista a função <ref refid="data_8c_1a90b381b5624a976ecadeaabacfde025e" kindref="member">exportDefaultData()</ref> é chamada para criar o ficheiro com os dados padrão </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="118" column="6" bodyfile="data.c" bodystart="115" bodyend="141" declfile="definitions.h" declline="118" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a90b381b5624a976ecadeaabacfde025e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void exportDefaultData</definition>
+        <argsstring>()</argsstring>
+        <name>exportDefaultData</name>
+        <briefdescription>
+<para>Exporta os dados padrão do programa. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Coloca os dados padrão em memória e em seguida exporta para o ficheiro default.bin </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="119" column="6" bodyfile="data.c" bodystart="149" bodyend="232" declfile="definitions.h" declline="119" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a01374b232898f3d3c134623ffded84af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void deleteData</definition>
+        <argsstring>()</argsstring>
+        <name>deleteData</name>
+        <briefdescription>
+<para>Apaga todos os dados em memória do programa. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="120" column="6" bodyfile="data.c" bodystart="274" bodyend="292" declfile="definitions.h" declline="120" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a5ca14d2c3fb1cd90e8dc483afaf1b3d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void exportEncomendas</definition>
+        <argsstring>()</argsstring>
+        <name>exportEncomendas</name>
+        <briefdescription>
+<para>Exporta as encomendas para um ficheiro CSV. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="121" column="6" bodyfile="data.c" bodystart="239" bodyend="267" declfile="definitions.h" declline="121" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a6f4f7a9a71ced3d5e9fb21198edb6ab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loginClient</definition>
+        <argsstring>()</argsstring>
+        <name>loginClient</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="125" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a2163242f3dbe460739c88c56f06ec34f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void logoutClient</definition>
+        <argsstring>()</argsstring>
+        <name>logoutClient</name>
+        <briefdescription>
+<para>Função que desautentica certo utilizador. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Verifica se já existe um utilizador autenticado </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="125" column="18" bodyfile="shopping.c" bodystart="97" bodyend="110" declfile="definitions.h" declline="125" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a10d6c88f1cbf1e60ed32e609f715a779" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void doShopping</definition>
+        <argsstring>()</argsstring>
+        <name>doShopping</name>
+        <briefdescription>
+<para>Função que adiciona uma encomenda, ou seja uma compra. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Verifica se já existe um utilizador autenticado, e se existem artigos disponíveis </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Caso cliente não esteja autenticado, e pretenda fazer compras</para>
+<para>Cálculo do preço defaultPreco = (maoObra + custosFixos) * margemLucro</para>
+        </inbodydescription>
+        <location file="definitions.h" line="126" column="6" bodyfile="shopping.c" bodystart="118" bodyend="198" declfile="definitions.h" declline="126" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1ac3e41774a08731e62fe348b9c8401ccb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * getEstadoEncomenda</definition>
+        <argsstring>(int estado)</argsstring>
+        <name>getEstadoEncomenda</name>
+        <param>
+          <type>int</type>
+          <declname>estado</declname>
+        </param>
+        <briefdescription>
+<para>Retornar o estado de certa encomenda. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>estado</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- O estado de do artigo em int (ex: artigo[1].estado) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Disponível ou Indisponível (string) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="127" column="6" bodyfile="shopping.c" bodystart="17" bodyend="27" declfile="definitions.h" declline="127" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a91ff19fa6805e0491dd0bcf68a12d4da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cancelEncomenda</definition>
+        <argsstring>()</argsstring>
+        <name>cancelEncomenda</name>
+        <briefdescription>
+<para>Função que permite cancelar uma encomenda. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="128" column="6" bodyfile="shopping.c" bodystart="362" bodyend="398" declfile="definitions.h" declline="128" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1ac0fd834412eb7d5311f137d919db6788" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void white</definition>
+        <argsstring>()</argsstring>
+        <name>white</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="132" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a39abd40f68d03c40857be1e74407efb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void red</definition>
+        <argsstring>()</argsstring>
+        <name>red</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="132" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a0df115437fbb77c0311e65300c65289e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void green</definition>
+        <argsstring>()</argsstring>
+        <name>green</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="132" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a161aec8a96c389795d228ca0c3a949d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void blue</definition>
+        <argsstring>()</argsstring>
+        <name>blue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="132" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1ab0c10e6284be130a7973fa029a690ef7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void yellow</definition>
+        <argsstring>()</argsstring>
+        <name>yellow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="132" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1ab2b14535fac90d655eb767bff5647d88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void purple</definition>
+        <argsstring>()</argsstring>
+        <name>purple</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="132" column="34"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a52a6a14bd8e9463315ea114aceda1d92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cyan</definition>
+        <argsstring>()</argsstring>
+        <name>cyan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="132" column="41"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1a59d9c08d69e42981f0d6fb680f5e6e26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bold</definition>
+        <argsstring>()</argsstring>
+        <name>bold</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="132" column="46"/>
+      </memberdef>
+      <memberdef kind="function" id="definitions_8h_1af7082af28af567c98aa48add7be13826" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void boldRed</definition>
+        <argsstring>()</argsstring>
+        <name>boldRed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="132" column="51" bodyfile="colors.c" bodystart="44" bodyend="47" declfile="definitions.h" declline="132" declcolumn="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>FUNCTIONS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FUNCTIONS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SC<sp/>25</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1ab4cee453adc50fdf7fed706a78903134" kindref="member">NC</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a6a2cf8faa74cf961cf0f42b4601b364c" kindref="member">NA</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1ac83a8e317aabc0369638a0e4c4d3406b" kindref="member">NE</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>region<sp/>Structs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="struct_clientes" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13" refid="struct_clientes_1aa9b5911a87665c3e73ce79013736729b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_clientes_1aa9b5911a87665c3e73ce79013736729b" kindref="member">codCliente</ref>;</highlight></codeline>
+<codeline lineno="14" refid="struct_clientes_1a5570d34879c05708dd50c08f3c0d4069" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>nome[<ref refid="definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357" kindref="member">SC</ref>];</highlight></codeline>
+<codeline lineno="15" refid="struct_clientes_1ad68c6985dce5a3d709f854778dedee19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_clientes_1ad68c6985dce5a3d709f854778dedee19" kindref="member">nif</ref>;</highlight></codeline>
+<codeline lineno="16" refid="struct_clientes_1a77927c48074d089e96eefd305edd0d9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>pais[<ref refid="definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357" kindref="member">SC</ref>];</highlight></codeline>
+<codeline lineno="17" refid="struct_clientes_1a72d010866bd83b41432d6286cb26adbd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_clientes_1a72d010866bd83b41432d6286cb26adbd" kindref="member">estado</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}<sp/><ref refid="struct_clientes" kindref="compound">Clientes</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="struct_artigos" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21" refid="struct_artigos_1a9b469e91df9bb9a07f1268125a065190" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_artigos_1a9b469e91df9bb9a07f1268125a065190" kindref="member">codArtigo</ref>;</highlight></codeline>
+<codeline lineno="22" refid="struct_artigos_1a7587325de6f79fb882ac16a69b4afb5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>[<ref refid="definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357" kindref="member">SC</ref>];</highlight></codeline>
+<codeline lineno="23" refid="struct_artigos_1a30e92cea0f8408b6a5be961048ca42c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_artigos_1a30e92cea0f8408b6a5be961048ca42c0" kindref="member">maoObra</ref>;</highlight></codeline>
+<codeline lineno="24" refid="struct_artigos_1a708afd1d61a02beec2c6c56ce4a2921a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_artigos_1a708afd1d61a02beec2c6c56ce4a2921a" kindref="member">custosFixos</ref>;</highlight></codeline>
+<codeline lineno="25" refid="struct_artigos_1a95702009b40b5c752fdaad4cf2853427" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_artigos_1a95702009b40b5c752fdaad4cf2853427" kindref="member">margemLucro</ref>;</highlight></codeline>
+<codeline lineno="26" refid="struct_artigos_1a663835fb75190f816a4c9a34da466774" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tamanhos[2];</highlight></codeline>
+<codeline lineno="27" refid="struct_artigos_1ae7713476462c0345a8316df83ffe461f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_artigos_1ae7713476462c0345a8316df83ffe461f" kindref="member">defaultPreco</ref>;</highlight></codeline>
+<codeline lineno="28" refid="struct_artigos_1abe64d024dc53ba1a4a9870bb3dfc5a9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_artigos_1abe64d024dc53ba1a4a9870bb3dfc5a9b" kindref="member">incrementoPreco</ref>;</highlight></codeline>
+<codeline lineno="29" refid="struct_artigos_1a72d010866bd83b41432d6286cb26adbd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_artigos_1a72d010866bd83b41432d6286cb26adbd" kindref="member">estado</ref>;</highlight></codeline>
+<codeline lineno="30" refid="struct_artigos_1a40a8d7b99d7acdecf1c6a999d00e28a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tamanhoPreco[15][2];</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}<sp/><ref refid="struct_artigos" kindref="compound">Artigos</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="struct_encomendas" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34" refid="struct_encomendas_1a5eb4a4f2f14cb6227076ee3aaa9cb24c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_encomendas_1a5eb4a4f2f14cb6227076ee3aaa9cb24c" kindref="member">codEncomenda</ref>;</highlight></codeline>
+<codeline lineno="35" refid="struct_encomendas_1aa9b5911a87665c3e73ce79013736729b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_encomendas_1aa9b5911a87665c3e73ce79013736729b" kindref="member">codCliente</ref>;</highlight></codeline>
+<codeline lineno="36" refid="struct_encomendas_1a9b469e91df9bb9a07f1268125a065190" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_encomendas_1a9b469e91df9bb9a07f1268125a065190" kindref="member">codArtigo</ref>;</highlight></codeline>
+<codeline lineno="37" refid="struct_encomendas_1a0a06f50c808099546e057b445cc90c14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_encomendas_1a0a06f50c808099546e057b445cc90c14" kindref="member">tamanho</ref>;</highlight></codeline>
+<codeline lineno="38" refid="struct_encomendas_1accb6c827099dc6ae91546671edc4c9ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_encomendas_1accb6c827099dc6ae91546671edc4c9ce" kindref="member">horaminuto</ref>;</highlight></codeline>
+<codeline lineno="39" refid="struct_encomendas_1a3d1171ac670a8e8a672c481f22d1fa9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_encomendas_1a3d1171ac670a8e8a672c481f22d1fa9f" kindref="member">dia</ref>;</highlight></codeline>
+<codeline lineno="40" refid="struct_encomendas_1a9fc86758220eae0e735655f81fd9d9bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_encomendas_1a9fc86758220eae0e735655f81fd9d9bc" kindref="member">mes</ref>;</highlight></codeline>
+<codeline lineno="41" refid="struct_encomendas_1ac404d93cbf0169fd9e89edc17d0c5572" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_encomendas_1ac404d93cbf0169fd9e89edc17d0c5572" kindref="member">ano</ref>;</highlight></codeline>
+<codeline lineno="42" refid="struct_encomendas_1aab7e2f8a805bde3912f985c05be7d510" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_encomendas_1aab7e2f8a805bde3912f985c05be7d510" kindref="member">quantidade</ref>;</highlight></codeline>
+<codeline lineno="43" refid="struct_encomendas_1ab5af64ba12e40aefe7080187c140895a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_encomendas_1ab5af64ba12e40aefe7080187c140895a" kindref="member">total</ref>;</highlight></codeline>
+<codeline lineno="44" refid="struct_encomendas_1a72d010866bd83b41432d6286cb26adbd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_encomendas_1a72d010866bd83b41432d6286cb26adbd" kindref="member">estado</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}<sp/><ref refid="struct_encomendas" kindref="compound">Encomendas</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="struct_runtime" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48" refid="struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_runtime_1a709195f9f9c987b9b2a5a950f7331c72" kindref="member">currentClient</ref>;</highlight></codeline>
+<codeline lineno="49" refid="struct_runtime_1ae004fa1151ab1583e3a9174cf07ac012" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>stringDesconto[7];</highlight></codeline>
+<codeline lineno="50" refid="struct_runtime_1abcccdaf615845e2019116c5ce4b90b3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="struct_runtime_1abcccdaf615845e2019116c5ce4b90b3a" kindref="member">percentageDesconto</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}<sp/><ref refid="struct_runtime" kindref="compound">Runtime</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct_clientes" kindref="compound">Clientes</ref><sp/>*<ref refid="definitions_8h_1aaac738b47d017c7cb9d3cd1d4c27888c" kindref="member">cliente</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct_artigos" kindref="compound">Artigos</ref><sp/>*<ref refid="definitions_8h_1a90f21d9eb37bd18237e25667fe1985bd" kindref="member">artigo</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct_encomendas" kindref="compound">Encomendas</ref><sp/>*<ref refid="definitions_8h_1a3c137582b2f5c552bde184eb2d023fbc" kindref="member">encomenda</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct_runtime" kindref="compound">Runtime</ref><sp/>*<ref refid="definitions_8h_1a69460b78379a912c83e65ba131e368e9" kindref="member">runtime</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>region<sp/>Functions</highlight></codeline>
+<codeline lineno="62"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a2da5c6326d98abeaf456372ceb077847" kindref="member">numberOfDigits</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a9d7e8af417b6d543da691e9c0e2f6f9f" kindref="member">clearScreen</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a370ac4305d613dc116739f8b5a05e6fe" kindref="member">pressEnter</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>alsoClearScreen);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1ae403fe07e86bc33933303d3e266b579d" kindref="member">getDateInfo</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>info);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1af22d234c9f1f40dea9b79ca8fb8c7288" kindref="member">checkString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a41532c4603b615920ea1c1216d1445ad" kindref="member">checkNumber</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>number);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1ae81c93a074d4c3bdce4d8409997418f0" kindref="member">checkCodPromo</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>codPromo);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a52199f9c4b3c9c302cc8d4ab4a38bae5" kindref="member">availableForOperation</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>op,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>codArtigo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>parameter);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a46d4eccec6d2c6e65ef4784ab4db0c78" kindref="member">getArtigoIndex</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>codArtigo);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a9efdb5ab1d7b26e54799af4e7cb59fa2" kindref="member">loggedClient</ref>();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a941fa13e3d505e5a9a3f9c082bfeff89" kindref="member">reallocStruct</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>st);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a5ec3ba219271cd3cd14bf58108226c7c" kindref="member">freeMemory</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>alsoStopTheProgram);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Ficheiro<sp/>queries.c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a87b028e2e18b0b33e3eb58cb99af5523" kindref="member">listEncomendas</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>queryType);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a8f37bef24fe15f40c71fca8327b44697" kindref="member">statisticsEncomendas</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a2e948973437ab18cc4aa58f04f32b31d" kindref="member">getTotalEncomenda</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a7f710faa12da0cf1c324f192cee73e96" kindref="member">listClientes</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>queryType);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1ab3cd5f6472e88b4f400d6f56aa6edd8c" kindref="member">listArtigos</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>queryType);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="definitions_8h_1af4568fe8cae0d02992cc20eeaa4d309d" kindref="member">getArtigoName</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>codArtigo);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1adf88e57666bc1bdbe2b9a532b5d8ee19" kindref="member">printDataEncomenda</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>enc);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a2db28081aac0ef2215ab88524f9cf13e" kindref="member">printDataArtigo</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>art,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>query);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a5b0e889434448c1fda602fe8219c6df0" kindref="member">printDataCliente</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cli);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Ficheiro<sp/>clientes.c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a8b6e5471fc3162030e02624aa4e0a71c" kindref="member">addCliente</ref>();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a918dfa81ea4cf833c9cb370987ff7521" kindref="member">getEstadoCliente</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>codCliente);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="definitions_8h_1a63ec96e80364598a0c5bfc3954f2dbbe" kindref="member">getClientName</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>codCliente);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a384bbc94cc780349877dd70a46d111fd" kindref="member">updateClient</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>clienteToChange,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>via);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Ficheiro<sp/>administrador.c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1ab57c27349b4a343d5ec7736646cf4c7b" kindref="member">updateArtigo</ref>();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a7eadedef8af327c38812b981e440e9fd" kindref="member">addArtigo</ref>();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1af720c7469de6c812fcf7ef357c36f9da" kindref="member">updateDesconto</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Ficheiro<sp/>data.c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a8c0b39e19764089f83e1a337c0369676" kindref="member">importData</ref>();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a845434be144bc6138804dd39b3760212" kindref="member">exportData</ref>();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1ace66f1e8600faf005e2f95c1f5e24ec4" kindref="member">importDefaultData</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a90b381b5624a976ecadeaabacfde025e" kindref="member">exportDefaultData</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a01374b232898f3d3c134623ffded84af" kindref="member">deleteData</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a5ca14d2c3fb1cd90e8dc483afaf1b3d8" kindref="member">exportEncomendas</ref>();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Ficheiro<sp/>shopping.c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="definitions_8h_1a6f4f7a9a71ced3d5e9fb21198edb6ab2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a6f4f7a9a71ced3d5e9fb21198edb6ab2" kindref="member">loginClient</ref>(),<sp/><ref refid="definitions_8h_1a2163242f3dbe460739c88c56f06ec34f" kindref="member">logoutClient</ref>();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a10d6c88f1cbf1e60ed32e609f715a779" kindref="member">doShopping</ref>();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="definitions_8h_1ac3e41774a08731e62fe348b9c8401ccb" kindref="member">getEstadoEncomenda</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>estado);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1a91ff19fa6805e0491dd0bcf68a12d4da" kindref="member">cancelEncomenda</ref>();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Ficheiro<sp/>colors.c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="definitions_8h_1a161aec8a96c389795d228ca0c3a949d5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="definitions_8h_1ac0fd834412eb7d5311f137d919db6788" kindref="member">white</ref>(),<sp/><ref refid="definitions_8h_1a39abd40f68d03c40857be1e74407efb9" kindref="member">red</ref>(),<sp/><ref refid="definitions_8h_1a0df115437fbb77c0311e65300c65289e" kindref="member">green</ref>(),<sp/><ref refid="definitions_8h_1a161aec8a96c389795d228ca0c3a949d5" kindref="member">blue</ref>(),<sp/><ref refid="definitions_8h_1ab0c10e6284be130a7973fa029a690ef7" kindref="member">yellow</ref>(),<sp/><ref refid="definitions_8h_1ab2b14535fac90d655eb767bff5647d88" kindref="member">purple</ref>(),<sp/><ref refid="definitions_8h_1a52a6a14bd8e9463315ea114aceda1d92" kindref="member">cyan</ref>(),<sp/><ref refid="definitions_8h_1a59d9c08d69e42981f0d6fb680f5e6e26" kindref="member">bold</ref>(),<sp/><ref refid="definitions_8h_1af7082af28af567c98aa48add7be13826" kindref="member">boldRed</ref>();</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="definitions.h"/>
+  </compounddef>
+</doxygen>

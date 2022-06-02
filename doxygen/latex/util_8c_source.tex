@@ -1,0 +1,252 @@
+\hypertarget{util_8c_source}{}\doxysection{util.\+c}
+\mbox{\hyperlink{util_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00001}00001 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00002}00002 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00003}00003 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00004}00004 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00005}00005 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00006}00006 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{definitions_8h}{definitions.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00010}00010 \textcolor{preprocessor}{\#pragma region numberOfDigits}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00015}\mbox{\hyperlink{definitions_8h_a2da5c6326d98abeaf456372ceb077847}{00015}} \textcolor{keywordtype}{int} \mbox{\hyperlink{util_8c_a2da5c6326d98abeaf456372ceb077847}{numberOfDigits}}(\textcolor{keywordtype}{int} num)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00016}00016 \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00017}00017     \textcolor{keywordtype}{int} digits = 0;}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00018}00018     \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00019}00019     \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00020}00020         digits++;}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00021}00021         num /= 10;}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00022}00022     \} \textcolor{keywordflow}{while}(num != 0);}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00023}00023     \textcolor{keywordflow}{return} digits;}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00024}00024 \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00025}00025 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00027}00027 \textcolor{preprocessor}{\#pragma region ClearScreen}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00029}\mbox{\hyperlink{definitions_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{00029}} \textcolor{keywordtype}{void} \mbox{\hyperlink{util_8c_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}()}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00030}00030 \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00031}00031     printf(\textcolor{stringliteral}{"{}\(\backslash\)033c"{}});}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00032}00032 \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00033}00033 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00035}00035 \textcolor{preprocessor}{\#pragma region PressEnter}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00037}\mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{00037}} \textcolor{keywordtype}{void} \mbox{\hyperlink{util_8c_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keywordtype}{bool} alsoClearScreen)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00038}00038 \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00039}00039     \textcolor{keywordtype}{char} stopper[5];}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00040}00040     printf(\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)nPressione [ENTER] para voltar..."{}});}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00041}00041     scanf(\textcolor{stringliteral}{"{}\%c"{}}, stopper);}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00042}00042     fgets(stopper,5,stdin);}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00043}00043     \textcolor{keywordflow}{if} (alsoClearScreen)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00044}00044     \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00045}00045         \mbox{\hyperlink{util_8c_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00046}00046     \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00047}00047 \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00048}00048 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00050}00050 \textcolor{preprocessor}{\#pragma region CheckString}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00057}\mbox{\hyperlink{definitions_8h_af22d234c9f1f40dea9b79ca8fb8c7288}{00057}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{util_8c_af22d234c9f1f40dea9b79ca8fb8c7288}{checkString}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \textcolor{keywordtype}{string})}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00058}00058 \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00059}00059     \textcolor{keywordflow}{if} ( (\textcolor{keywordtype}{string}[0] >= \textcolor{charliteral}{'A'} \&\& \textcolor{keywordtype}{string}[0] <= \textcolor{charliteral}{'Z'}) \&\& \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00060}00060         (\textcolor{keywordtype}{string}[2] >= \textcolor{charliteral}{'a'} \&\& \textcolor{keywordtype}{string}[2] <= \textcolor{charliteral}{'z'}) ) }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00061}00061     \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00062}00062         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00063}00063     \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00064}00064     \textcolor{keywordflow}{else} }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00065}00065     \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00066}00066         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}  \(\backslash\)n[!] A palavra indicada devera seguir as seguintes regras [!]\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00067}00067                       \textcolor{stringliteral}{"{}-\/ Comecar por uma letra maiúscula\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00068}00068                       \textcolor{stringliteral}{"{}-\/ Ter pelo menos 3 caracteres\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00069}00069         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00070}00070     \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00071}00071 \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00072}00072 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00074}00074 \textcolor{preprocessor}{\#pragma region CheckNumber}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00078}\mbox{\hyperlink{definitions_8h_a41532c4603b615920ea1c1216d1445ad}{00078}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{util_8c_a41532c4603b615920ea1c1216d1445ad}{checkNumber}}(\textcolor{keywordtype}{double} number)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00079}00079 \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00080}00080     \textcolor{keywordflow}{if} (number <= 0)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00081}00081     \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00082}00082         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}  \(\backslash\)n[!] O valor introduzido deverá ser maior que 0 [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00083}00083         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00084}00084     \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00085}00085     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00086}00086     \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00087}00087         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00088}00088     \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00089}00089 \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00090}00090 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00092}00092 \textcolor{preprocessor}{\#pragma region CheckCodigoPromocional}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00096}\mbox{\hyperlink{definitions_8h_ae81c93a074d4c3bdce4d8409997418f0}{00096}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{util_8c_ae81c93a074d4c3bdce4d8409997418f0}{checkCodPromo}}(\textcolor{keywordtype}{char}* codPromo)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00097}00097 \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00098}00098     \textcolor{keywordflow}{if} (strcmp(codPromo, \mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_ae004fa1151ab1583e3a9174cf07ac012}{stringDesconto}}) == 0)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00099}00099     \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00100}00100         \mbox{\hyperlink{colors_8c_a0df115437fbb77c0311e65300c65289e}{green}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Aplicado Desconto de \%d\%\% [!]\(\backslash\)n"{}}, \(\backslash\)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00101}00101         (\textcolor{keywordtype}{int}) (\mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_abcccdaf615845e2019116c5ce4b90b3a}{percentageDesconto}} * 100)); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}(); }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00102}00102         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00103}00103     \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00104}00104     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00105}00105     \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00106}00106         \mbox{\hyperlink{colors_8c_ab0c10e6284be130a7973fa029a690ef7}{yellow}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Desconto Não Aplicado [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}(); }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00107}00107         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00108}00108     \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00109}00109 \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00110}00110 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00112}00112 \textcolor{preprocessor}{\#pragma region availableForOperation}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00118}\mbox{\hyperlink{definitions_8h_a52199f9c4b3c9c302cc8d4ab4a38bae5}{00118}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{util_8c_a52199f9c4b3c9c302cc8d4ab4a38bae5}{availableForOperation}}(\textcolor{keywordtype}{int} op, \textcolor{keywordtype}{int} codArtigo, \textcolor{keywordtype}{int} parameter)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00119}00119 \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00120}00120     \textcolor{keyword}{enum} Operation \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00121}00121         \textcolor{keyword}{delete} = 1,}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00122}00122         update = 2,}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00123}00123         buy = 3,}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00124}00124         add = 4,}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00125}00125         checkSize = 5}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00126}00126     \};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00128}00128     \textcolor{keywordflow}{switch} (op)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00129}00129     \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00130}00130     \textcolor{keywordflow}{case} \textcolor{keyword}{delete}: \textcolor{comment}{// delete}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00131}00131         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} e = 0; e <= \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}; e++)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00132}00132         \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00133}00133             \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[e].codArtigo == codArtigo)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00134}00134             \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00135}00135                 \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}  \(\backslash\)n[!] O Artigo NÃO pode ser removido [!]\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00136}00136                 printf(\textcolor{stringliteral}{"{}  [!] Existem encomendas com esse artigo [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00137}00137                 sleep(1);}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00138}00138                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00139}00139             \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00140}00140         \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00141}00141         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00143}00143     \textcolor{keywordflow}{case} update: \textcolor{comment}{// update}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00144}00144         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} art = 0; art <= \mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}}; art++)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00145}00145         \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00146}00146             \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].codArtigo == codArtigo)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00147}00147             \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00148}00148                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00149}00149             \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00150}00150         \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00151}00151         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Artigo Não existe [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00152}00152         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00153}00153 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00154}00154     \textcolor{keywordflow}{case} buy: \textcolor{comment}{//comprar}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00155}00155         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} art = 0; art < \mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}}+1; art++)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00156}00156         \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00157}00157             \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].codArtigo == codArtigo)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00158}00158             \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00159}00159                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00160}00160             \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00161}00161         \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00162}00162         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[codArtigo].estado)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00163}00163         \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00164}00164             \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}  \(\backslash\)n[!] Artigo Não Disponivel [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00165}00165             sleep(1);}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00166}00166             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00167}00167         \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00168}00168         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}  \(\backslash\)n[!] Artigo Não existe [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00169}00169         sleep(1);}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00170}00170         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00171}00171 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00172}00172     \textcolor{keywordflow}{case} add: \textcolor{comment}{// add}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00173}00173         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{util_8c_a41532c4603b615920ea1c1216d1445ad}{checkNumber}}((\textcolor{keywordtype}{float}) codArtigo)) \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00174}00174             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00175}00175         \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00176}00176         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} art = 0; art < \mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}}; art++)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00177}00177         \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00178}00178             \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[art].codArtigo == codArtigo)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00179}00179             \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00180}00180                 \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Artigo já existe [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00181}00181                 sleep(1);}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00182}00182                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00183}00183             \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00184}00184         \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00185}00185         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00186}00186 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00187}00187     \textcolor{keywordflow}{case} checkSize:}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00188}00188         codArtigo = \mbox{\hyperlink{definitions_8h_a46d4eccec6d2c6e65ef4784ab4db0c78}{getArtigoIndex}}(codArtigo);}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00189}00189         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} tam = \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[codArtigo].tamanhos[0]; tam <= \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[codArtigo].\mbox{\hyperlink{struct_artigos_a663835fb75190f816a4c9a34da466774}{tamanhos}}[1]; tam++)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00190}00190         \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00191}00191             \textcolor{keywordflow}{if} (tam == parameter)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00192}00192             \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00193}00193                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00194}00194             \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00195}00195         \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00196}00196 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00197}00197         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} tam = \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[codArtigo].tamanhos[0]; tam <= \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[codArtigo].\mbox{\hyperlink{struct_artigos_a663835fb75190f816a4c9a34da466774}{tamanhos}}[1]; tam++)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00198}00198         \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00199}00199             \textcolor{keywordflow}{if} (tam == parameter)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00200}00200             \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00201}00201                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00202}00202             \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00203}00203         \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00204}00204         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}  \(\backslash\)n[!] Tamanho não existe [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00205}00205         sleep(1);}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00206}00206 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00207}00207     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00208}00208         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00209}00209     \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00210}00210 \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00211}00211 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00212}00212 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00213}00213 \textcolor{preprocessor}{\#pragma region loggedClient}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00217}\mbox{\hyperlink{definitions_8h_a9efdb5ab1d7b26e54799af4e7cb59fa2}{00217}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{util_8c_a9efdb5ab1d7b26e54799af4e7cb59fa2}{loggedClient}}()}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00218}00218 \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00220}00220     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}} != \textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00221}00221     \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00222}00222         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00223}00223     \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00224}00224     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00225}00225 \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00226}00226 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00227}00227 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00228}00228 \textcolor{preprocessor}{\#pragma region ReallocStruct}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00229}\mbox{\hyperlink{definitions_8h_a941fa13e3d505e5a9a3f9c082bfeff89}{00229}} \textcolor{keywordtype}{void} \mbox{\hyperlink{util_8c_a941fa13e3d505e5a9a3f9c082bfeff89}{reallocStruct}}(\textcolor{keywordtype}{int} st)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00230}00230 \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00231}00231     \textcolor{keywordflow}{switch} (st)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00232}00232     \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00233}00233     \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00234}00234         \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}} = realloc(\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_artigos}{Artigos}}) * (++\mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}} + 1));}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00235}00235         \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}} == NULL)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00236}00236         \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00237}00237             \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}  \(\backslash\)n[!] Erro ao alocar memória [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00238}00238             exit(1);}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00239}00239         \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00240}00240         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00241}00241 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00242}00242     \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00243}00243         \mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}} = realloc(\mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}}, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_clientes}{Clientes}}) * (++\mbox{\hyperlink{definitions_8h_ab4cee453adc50fdf7fed706a78903134}{NC}} + 1));}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00244}00244         \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}} == NULL)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00245}00245         \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00246}00246             \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}  \(\backslash\)n[!] Erro ao alocar memória [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00247}00247             exit(1);}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00248}00248         \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00249}00249         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00250}00250 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00251}00251     \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00252}00252         \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}} = realloc(\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_encomendas}{Encomendas}}) * (++\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}} + 1));}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00253}00253         \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}} == NULL)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00254}00254         \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00255}00255             \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}  \(\backslash\)n[!] Erro ao alocar memória [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00256}00256             exit(1);}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00257}00257         \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00258}00258         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00259}00259     \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00260}00260 \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00261}00261 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00262}00262 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00263}00263 \textcolor{preprocessor}{\#pragma region FreeMemory}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00267}\mbox{\hyperlink{definitions_8h_a5ec3ba219271cd3cd14bf58108226c7c}{00267}} \textcolor{keywordtype}{void} \mbox{\hyperlink{util_8c_a5ec3ba219271cd3cd14bf58108226c7c}{freeMemory}}(\textcolor{keywordtype}{bool} alsoStopTheProgram) \{  }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00268}00268 }
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00269}00269     free(\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}});}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00270}00270     free(\mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}});}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00271}00271     free(\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}});}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00272}00272     \textcolor{keywordflow}{if} (alsoStopTheProgram)}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00273}00273     \{}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00274}00274         exit(0);}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00275}00275     \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00276}00276 \}}
+\DoxyCodeLine{\Hypertarget{util_8c_source_l00277}00277 \textcolor{preprocessor}{\#pragma endregion}}
+
+\end{DoxyCode}

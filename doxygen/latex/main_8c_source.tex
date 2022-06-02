@@ -1,0 +1,222 @@
+\hypertarget{main_8c_source}{}\doxysection{main.\+c}
+\mbox{\hyperlink{main_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00002}00002 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00003}00003 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00004}00004 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00005}00005 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00013}00013 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{definitions_8h}{definitions.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00015}\mbox{\hyperlink{definitions_8h_ab4cee453adc50fdf7fed706a78903134}{00015}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_ab4cee453adc50fdf7fed706a78903134}{NC}} = -\/1;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00016}\mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{00016}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}} = -\/1;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00017}\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{00017}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_ac83a8e317aabc0369638a0e4c4d3406b}{NE}} = -\/1;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00019}\mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{00019}} \mbox{\hyperlink{struct_clientes}{Clientes}} *\mbox{\hyperlink{main_8c_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00020}\mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{00020}} \mbox{\hyperlink{struct_artigos}{Artigos}} *\mbox{\hyperlink{main_8c_a90f21d9eb37bd18237e25667fe1985bd}{artigo}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00021}\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{00021}} \mbox{\hyperlink{struct_encomendas}{Encomendas}} *\mbox{\hyperlink{main_8c_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00022}\mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{00022}} \mbox{\hyperlink{struct_runtime}{Runtime}} *\mbox{\hyperlink{main_8c_a69460b78379a912c83e65ba131e368e9}{runtime}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00024}00024 \textcolor{comment}{/* =========================== MAIN =========================== */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00029}\mbox{\hyperlink{definitions_8h_ae66f6b31b5ad750f1fe042a706a4e3d4}{00029}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}() }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00030}00030 \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00031}00031     \textcolor{keywordtype}{int} op, opcao;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00033}00033     \textcolor{comment}{// Ignorar [CTRL + C]}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00034}00034     \textcolor{comment}{// signal(SIGINT, SIG\_IGN);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00036}00036     \textcolor{comment}{// Alocação da memória para as estruturas}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00037}00037     \mbox{\hyperlink{main_8c_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}} = malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{main_8c_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}}) * (\mbox{\hyperlink{main_8c_ab4cee453adc50fdf7fed706a78903134}{NC}} + 1));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00038}00038     \mbox{\hyperlink{main_8c_a90f21d9eb37bd18237e25667fe1985bd}{artigo}} = malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{main_8c_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}) * (\mbox{\hyperlink{main_8c_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}} + 1));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00039}00039     \mbox{\hyperlink{main_8c_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}} = malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{main_8c_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}) * (\mbox{\hyperlink{main_8c_ac83a8e317aabc0369638a0e4c4d3406b}{NE}} + 1));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00040}00040     \mbox{\hyperlink{main_8c_a69460b78379a912c83e65ba131e368e9}{runtime}} = malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{main_8c_a69460b78379a912c83e65ba131e368e9}{runtime}}));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00042}00042     \textcolor{comment}{// Permitir que os artigos "{}default"{} sejam utilizados}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00043}00043     \mbox{\hyperlink{data_8c_ace66f1e8600faf005e2f95c1f5e24ec4}{importDefaultData}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00044}00044     }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00045}00045     \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00046}00046         \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00047}00047         \mbox{\hyperlink{colors_8c_a161aec8a96c389795d228ca0c3a949d5}{blue}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n////////"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}(); printf(\textcolor{stringliteral}{"{} Menu "{}}); \mbox{\hyperlink{colors_8c_a161aec8a96c389795d228ca0c3a949d5}{blue}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)n\(\backslash\)n"{}}); }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00048}00048         \mbox{\hyperlink{colors_8c_a0df115437fbb77c0311e65300c65289e}{green}}(); printf(\textcolor{stringliteral}{"{}  [1] Clientes e Vendas\(\backslash\)n"{}}); }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00049}00049         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}  [2] Administração\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00050}00050         \mbox{\hyperlink{colors_8c_a59d9c08d69e42981f0d6fb680f5e6e26}{bold}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n  [0] Sair\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00051}00051         printf(\textcolor{stringliteral}{"{}\(\backslash\)nTipo de Utilizador> "{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00052}00052         scanf(\textcolor{stringliteral}{"{}\%d"{}}, \&op);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00053}00053         \textcolor{keywordflow}{switch} (op) \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00054}00054             \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00055}00055                 \mbox{\hyperlink{colors_8c_a161aec8a96c389795d228ca0c3a949d5}{blue}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)nObrigado por comprar na nossa loja :)\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00056}00056                 \mbox{\hyperlink{definitions_8h_a5ec3ba219271cd3cd14bf58108226c7c}{freeMemory}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00057}00057                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00059}00059             \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00060}00060                 \mbox{\hyperlink{definitions_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00061}00061                 \mbox{\hyperlink{colors_8c_a0df115437fbb77c0311e65300c65289e}{green}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Bem-\/vindo Cliente [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00062}00062                 \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00063}00063                 \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00064}00064                     \mbox{\hyperlink{colors_8c_a0df115437fbb77c0311e65300c65289e}{green}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n////////"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}(); printf(\textcolor{stringliteral}{"{} Menu Cliente "{}}); \mbox{\hyperlink{colors_8c_a0df115437fbb77c0311e65300c65289e}{green}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00065}00065                     printf(\textcolor{stringliteral}{"{}\(\backslash\)n[1] Realizar Compras\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00066}00066                     printf(\textcolor{stringliteral}{"{}[2] Registo Cliente\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00067}00067                     printf(\textcolor{stringliteral}{"{}[3] Mostrar as minhas Encomendas\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00068}00068                     printf(\textcolor{stringliteral}{"{}[4] Alterar Informação de Cliente\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00069}00069                     \mbox{\hyperlink{colors_8c_a0df115437fbb77c0311e65300c65289e}{green}}(); printf(\textcolor{stringliteral}{"{}[5] Login\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00070}00070                     \mbox{\hyperlink{colors_8c_ab0c10e6284be130a7973fa029a690ef7}{yellow}}(); printf(\textcolor{stringliteral}{"{}[6] Logout\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00071}00071                     \mbox{\hyperlink{colors_8c_af7082af28af567c98aa48add7be13826}{boldRed}}(); printf(\textcolor{stringliteral}{"{}[7] Cancelar Encomenda\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00072}00072                     \mbox{\hyperlink{colors_8c_a59d9c08d69e42981f0d6fb680f5e6e26}{bold}}(); printf(\textcolor{stringliteral}{"{}[0] Voltar\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00073}00073                     \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}[9] SAIR\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00075}00075                     printf(\textcolor{stringliteral}{"{}\(\backslash\)nOpção: "{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00076}00076                     scanf(\textcolor{stringliteral}{"{}\%d"{}}, \&opcao);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00078}00078                     \textcolor{keywordflow}{switch} (opcao)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00079}00079                     \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00080}00080                         \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00081}00081                             \mbox{\hyperlink{definitions_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00082}00082                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00083}00083                         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00084}00084                             \mbox{\hyperlink{definitions_8h_a10d6c88f1cbf1e60ed32e609f715a779}{doShopping}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00085}00085                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00086}00086                         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00087}00087                             \mbox{\hyperlink{clientes_8c_a8b6e5471fc3162030e02624aa4e0a71c}{addCliente}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00088}00088                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00089}00089                         \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00090}00090                             \mbox{\hyperlink{definitions_8h_a87b028e2e18b0b33e3eb58cb99af5523}{listEncomendas}}(60);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00091}00091                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00092}00092                         \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00093}00093                             \mbox{\hyperlink{clientes_8c_a384bbc94cc780349877dd70a46d111fd}{updateClient}}(0, 1);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00094}00094                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00095}00095                         \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00096}00096                             \mbox{\hyperlink{definitions_8h_a6f4f7a9a71ced3d5e9fb21198edb6ab2}{loginClient}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00097}00097                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00098}00098                         \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00099}00099                             \mbox{\hyperlink{definitions_8h_a2163242f3dbe460739c88c56f06ec34f}{logoutClient}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00100}00100                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00101}00101                         \textcolor{keywordflow}{case} 7:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00102}00102                             \mbox{\hyperlink{definitions_8h_a91ff19fa6805e0491dd0bcf68a12d4da}{cancelEncomenda}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00103}00103                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00105}00105                         \textcolor{keywordflow}{case} 9:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00106}00106                             \mbox{\hyperlink{colors_8c_a161aec8a96c389795d228ca0c3a949d5}{blue}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)nObrigado por comprar na nossa loja :)\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00107}00107                             \mbox{\hyperlink{definitions_8h_a5ec3ba219271cd3cd14bf58108226c7c}{freeMemory}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00109}00109                         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00110}00110                             \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Opção Inválida [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00111}00111                             \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00112}00112                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00113}00113                     \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00114}00114                 \} \textcolor{keywordflow}{while} (opcao != 0);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00115}00115                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00117}00117             \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00118}00118                 \mbox{\hyperlink{definitions_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00119}00119                 \mbox{\hyperlink{colors_8c_af7082af28af567c98aa48add7be13826}{boldRed}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Bem-\/vindo Administrador [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00120}00120                 \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00121}00121                 \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00122}00122                     \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n////////"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}(); printf(\textcolor{stringliteral}{"{} Menu Administrador "{}}); \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)n\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00123}00123                     \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}[[ Listagem de Artigos ]]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00124}00124                     printf(\textcolor{stringliteral}{"{}  [11] Geral\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00125}00125                     printf(\textcolor{stringliteral}{"{}  [12] Completa\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00126}00126                     printf(\textcolor{stringliteral}{"{}  [13] Específica\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00127}00127                     \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[[ Gestão de Artigos ]]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00128}00128                     printf(\textcolor{stringliteral}{"{}  [21] Adicionar\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00129}00129                     printf(\textcolor{stringliteral}{"{}  [22] Atualizar\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00130}00130                     printf(\textcolor{stringliteral}{"{}\(\backslash\)n[3] Gestão de Clientes\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00131}00131                     printf(\textcolor{stringliteral}{"{}\(\backslash\)n[4] Gestão de Desconto\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00132}00132                     \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[[ Listagem de Clientes ]]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00133}00133                     printf(\textcolor{stringliteral}{"{}  [51] Geral\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00134}00134                     printf(\textcolor{stringliteral}{"{}  [52] Cliente Específico\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00135}00135                     \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[[ Listagem de Encomendas ]]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00136}00136                     printf(\textcolor{stringliteral}{"{}  [61] Todas as Encomendas\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00137}00137                     printf(\textcolor{stringliteral}{"{}  [62] Encomendas de certo cliente\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00138}00138                     printf(\textcolor{stringliteral}{"{}  [63] Encomendas por intervalo de tempo\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00139}00139                     \mbox{\hyperlink{colors_8c_a59d9c08d69e42981f0d6fb680f5e6e26}{bold}}(); printf(\textcolor{stringliteral}{"{}  [64] Estatisticas\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00140}00140                     \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}  [65] Exportar Encomendas\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00141}00141                     \mbox{\hyperlink{colors_8c_a59d9c08d69e42981f0d6fb680f5e6e26}{bold}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n[0] Voltar\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00142}00142                     \mbox{\hyperlink{colors_8c_a0df115437fbb77c0311e65300c65289e}{green}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[7] Importar Dados\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00143}00143                     \mbox{\hyperlink{colors_8c_ab0c10e6284be130a7973fa029a690ef7}{yellow}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[8] Exportar Dados\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00144}00144                     \mbox{\hyperlink{colors_8c_af7082af28af567c98aa48add7be13826}{boldRed}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[9] Eliminar Dados\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00145}00145                     \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[10] Sair\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00147}00147                     printf(\textcolor{stringliteral}{"{}\(\backslash\)nOpcão: "{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00148}00148                     scanf(\textcolor{stringliteral}{"{}\%d"{}}, \&opcao);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00149}00149 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00150}00150                     \textcolor{keywordflow}{switch} (opcao) \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00151}00151                         \textcolor{keywordflow}{case} 11: \textcolor{keywordflow}{case} 12: \textcolor{keywordflow}{case} 13:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00152}00152                             \mbox{\hyperlink{definitions_8h_ab3cd5f6472e88b4f400d6f56aa6edd8c}{listArtigos}}(opcao);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00153}00153                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00154}00154                         \textcolor{keywordflow}{case} 21:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00155}00155                             \mbox{\hyperlink{administrador_8c_a7eadedef8af327c38812b981e440e9fd}{addArtigo}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00156}00156                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00157}00157                         \textcolor{keywordflow}{case} 22:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00158}00158                             \mbox{\hyperlink{administrador_8c_ab57c27349b4a343d5ec7736646cf4c7b}{updateArtigo}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00159}00159                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00160}00160                         \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00161}00161                             \mbox{\hyperlink{clientes_8c_a384bbc94cc780349877dd70a46d111fd}{updateClient}}(0, 0);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00162}00162                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00163}00163                         \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00164}00164                             \mbox{\hyperlink{administrador_8c_af720c7469de6c812fcf7ef357c36f9da}{updateDesconto}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00165}00165                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00166}00166                         \textcolor{keywordflow}{case} 51: \textcolor{keywordflow}{case} 52:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00167}00167                             \mbox{\hyperlink{definitions_8h_a7f710faa12da0cf1c324f192cee73e96}{listClientes}}(opcao);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00168}00168                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00169}00169                         \textcolor{keywordflow}{case} 61: \textcolor{keywordflow}{case} 62: \textcolor{keywordflow}{case} 63:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00170}00170                             \mbox{\hyperlink{definitions_8h_a87b028e2e18b0b33e3eb58cb99af5523}{listEncomendas}}(opcao);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00171}00171                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00172}00172                         \textcolor{keywordflow}{case} 64:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00173}00173                             \mbox{\hyperlink{definitions_8h_a8f37bef24fe15f40c71fca8327b44697}{statisticsEncomendas}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00174}00174                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00175}00175                         \textcolor{keywordflow}{case} 65:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00176}00176                             \mbox{\hyperlink{data_8c_a5ca14d2c3fb1cd90e8dc483afaf1b3d8}{exportEncomendas}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00177}00177                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00179}00179                         \textcolor{keywordflow}{case} 7:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00180}00180                             printf(\textcolor{stringliteral}{"{}\(\backslash\)nOs dados serão importados. Isto irá "{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00181}00181                             \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}apagar"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}(); printf(\textcolor{stringliteral}{"{} todos os dados existentes não guardados!\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00182}00182                             \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}Tem a certeza? [s/N]: "{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00183}00183                             \textcolor{keywordtype}{char} confirm[2];}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00184}00184                             scanf(\textcolor{stringliteral}{"{} \%c"{}}, confirm);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00185}00185 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00186}00186                             \textcolor{keywordflow}{if} (strcmp(confirm, \textcolor{stringliteral}{"{}s"{}}) == 0 || strcmp(confirm, \textcolor{stringliteral}{"{}S"{}}) == 0)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00187}00187                             \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00188}00188                                 \mbox{\hyperlink{data_8c_a8c0b39e19764089f83e1a337c0369676}{importData}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00189}00189                             \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00190}00190                             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00191}00191                             \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00192}00192                                 \mbox{\hyperlink{colors_8c_ab0c10e6284be130a7973fa029a690ef7}{yellow}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Dados não importados (cancelado pelo utilizador) [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00193}00193                                 \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00194}00194                             \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00195}00195                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00196}00196 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00197}00197                         \textcolor{keywordflow}{case} 8:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00198}00198                             \mbox{\hyperlink{data_8c_a845434be144bc6138804dd39b3760212}{exportData}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00199}00199                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00200}00200                         \textcolor{keywordflow}{case} 9:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00201}00201                             \mbox{\hyperlink{data_8c_a01374b232898f3d3c134623ffded84af}{deleteData}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00202}00202                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00203}00203                         \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00204}00204                             \mbox{\hyperlink{definitions_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00205}00205                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00206}00206 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00207}00207                         \textcolor{keywordflow}{case} 10:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00208}00208                             \mbox{\hyperlink{colors_8c_a161aec8a96c389795d228ca0c3a949d5}{blue}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)nObrigado por comprar na nossa loja :)\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00209}00209                             \mbox{\hyperlink{definitions_8h_a5ec3ba219271cd3cd14bf58108226c7c}{freeMemory}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00210}00210                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00211}00211 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00212}00212                         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00213}00213                             \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Opção Inválida [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00214}00214                             \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00215}00215                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00216}00216                     \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00217}00217                 \} \textcolor{keywordflow}{while} (opcao != 0);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00218}00218                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00219}00219                 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00220}00220             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00221}00221                 \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Opção Inválida [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00222}00222                 \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00223}00223                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00224}00224         \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00225}00225     \} \textcolor{keywordflow}{while} (op != 0);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00226}00226     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00227}00227 \}}
+
+\end{DoxyCode}

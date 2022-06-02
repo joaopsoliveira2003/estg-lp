@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.3" xml:lang="en-US">
+  <compounddef id="struct_clientes" kind="struct" language="C++" prot="public">
+    <compoundname>Clientes</compoundname>
+    <includes refid="definitions_8h" local="no">definitions.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_clientes_1aa9b5911a87665c3e73ce79013736729b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int codCliente</definition>
+        <argsstring></argsstring>
+        <name>codCliente</name>
+        <qualifiedname>Clientes::codCliente</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="13" column="9" bodyfile="definitions.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_clientes_1a5570d34879c05708dd50c08f3c0d4069" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char nome[SC]</definition>
+        <argsstring>[SC]</argsstring>
+        <name>nome</name>
+        <qualifiedname>Clientes::nome</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="14" column="10" bodyfile="definitions.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_clientes_1ad68c6985dce5a3d709f854778dedee19" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nif</definition>
+        <argsstring></argsstring>
+        <name>nif</name>
+        <qualifiedname>Clientes::nif</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="15" column="9" bodyfile="definitions.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_clientes_1a77927c48074d089e96eefd305edd0d9f" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char pais[SC]</definition>
+        <argsstring>[SC]</argsstring>
+        <name>pais</name>
+        <qualifiedname>Clientes::pais</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="16" column="10" bodyfile="definitions.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_clientes_1a72d010866bd83b41432d6286cb26adbd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool estado</definition>
+        <argsstring></argsstring>
+        <name>estado</name>
+        <qualifiedname>Clientes::estado</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="definitions.h" line="17" column="10" bodyfile="definitions.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="definitions.h" line="11" column="1" bodyfile="definitions.h" bodystart="12" bodyend="18"/>
+    <listofallmembers>
+      <member refid="struct_clientes_1aa9b5911a87665c3e73ce79013736729b" prot="public" virt="non-virtual"><scope>Clientes</scope><name>codCliente</name></member>
+      <member refid="struct_clientes_1a72d010866bd83b41432d6286cb26adbd" prot="public" virt="non-virtual"><scope>Clientes</scope><name>estado</name></member>
+      <member refid="struct_clientes_1ad68c6985dce5a3d709f854778dedee19" prot="public" virt="non-virtual"><scope>Clientes</scope><name>nif</name></member>
+      <member refid="struct_clientes_1a5570d34879c05708dd50c08f3c0d4069" prot="public" virt="non-virtual"><scope>Clientes</scope><name>nome</name></member>
+      <member refid="struct_clientes_1a77927c48074d089e96eefd305edd0d9f" prot="public" virt="non-virtual"><scope>Clientes</scope><name>pais</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

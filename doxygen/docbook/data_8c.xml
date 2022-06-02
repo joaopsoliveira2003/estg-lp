@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_data_8c" xml:lang="en-US">
+<title>data.c File Reference</title>
+<indexterm><primary>data.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdbool.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;time.h&gt;
+#include &quot;definitions.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_data_8c_1a8c0b39e19764089f83e1a337c0369676">importData</link> ()</para>
+
+<para>Importa os dados dos ficheiros binários. </para>
+</listitem>
+            <listitem><para>void <link linkend="_data_8c_1a845434be144bc6138804dd39b3760212">exportData</link> ()</para>
+
+<para>Exporta os dados dos ficheiros binários. </para>
+</listitem>
+            <listitem><para>void <link linkend="_data_8c_1ace66f1e8600faf005e2f95c1f5e24ec4">importDefaultData</link> ()</para>
+
+<para>Importa os dados padrão (default.bin) </para>
+</listitem>
+            <listitem><para>void <link linkend="_data_8c_1a90b381b5624a976ecadeaabacfde025e">exportDefaultData</link> ()</para>
+
+<para>Exporta os dados padrão do programa. </para>
+</listitem>
+            <listitem><para>void <link linkend="_data_8c_1a5ca14d2c3fb1cd90e8dc483afaf1b3d8">exportEncomendas</link> ()</para>
+
+<para>Exporta as encomendas para um ficheiro CSV. </para>
+</listitem>
+            <listitem><para>void <link linkend="_data_8c_1a01374b232898f3d3c134623ffded84af">deleteData</link> ()</para>
+
+<para>Apaga todos os dados em memória do programa. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_data_8c_1a01374b232898f3d3c134623ffded84af"/><section>
+    <title>deleteData()</title>
+<indexterm><primary>deleteData</primary><secondary>data.c</secondary></indexterm>
+<indexterm><primary>data.c</primary><secondary>deleteData</secondary></indexterm>
+<para><computeroutput>void deleteData ( )</computeroutput></para><para>
+
+<para>Apaga todos os dados em memória do programa. </para>
+</para>
+<para>
+Definition at line <link linkend="_data_8c_source_1l00274">274</link> of file <link linkend="_data_8c_source">data.c</link>.</para>
+</section>
+<anchor xml:id="_data_8c_1a845434be144bc6138804dd39b3760212"/><section>
+    <title>exportData()</title>
+<indexterm><primary>exportData</primary><secondary>data.c</secondary></indexterm>
+<indexterm><primary>data.c</primary><secondary>exportData</secondary></indexterm>
+<para><computeroutput>void exportData ( )</computeroutput></para><para>
+
+<para>Exporta os dados dos ficheiros binários. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Caso surja algum erro na escrita, o programa termina </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_data_8c_source_1l00071">71</link> of file <link linkend="_data_8c_source">data.c</link>.</para>
+</section>
+<anchor xml:id="_data_8c_1a90b381b5624a976ecadeaabacfde025e"/><section>
+    <title>exportDefaultData()</title>
+<indexterm><primary>exportDefaultData</primary><secondary>data.c</secondary></indexterm>
+<indexterm><primary>data.c</primary><secondary>exportDefaultData</secondary></indexterm>
+<para><computeroutput>void exportDefaultData ( )</computeroutput></para><para>
+
+<para>Exporta os dados padrão do programa. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Coloca os dados padrão em memória e em seguida exporta para o ficheiro default.bin </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_data_8c_source_1l00149">149</link> of file <link linkend="_data_8c_source">data.c</link>.</para>
+</section>
+<anchor xml:id="_data_8c_1a5ca14d2c3fb1cd90e8dc483afaf1b3d8"/><section>
+    <title>exportEncomendas()</title>
+<indexterm><primary>exportEncomendas</primary><secondary>data.c</secondary></indexterm>
+<indexterm><primary>data.c</primary><secondary>exportEncomendas</secondary></indexterm>
+<para><computeroutput>void exportEncomendas ( )</computeroutput></para><para>
+
+<para>Exporta as encomendas para um ficheiro CSV. </para>
+</para>
+<para>
+Definition at line <link linkend="_data_8c_source_1l00239">239</link> of file <link linkend="_data_8c_source">data.c</link>.</para>
+</section>
+<anchor xml:id="_data_8c_1a8c0b39e19764089f83e1a337c0369676"/><section>
+    <title>importData()</title>
+<indexterm><primary>importData</primary><secondary>data.c</secondary></indexterm>
+<indexterm><primary>data.c</primary><secondary>importData</secondary></indexterm>
+<para><computeroutput>void importData ( )</computeroutput></para><para>
+
+<para>Importa os dados dos ficheiros binários. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Caso nao exista algum ficheiro ou caso surja erro na leitura, o programa termina </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_data_8c_source_1l00015">15</link> of file <link linkend="_data_8c_source">data.c</link>.</para>
+</section>
+<anchor xml:id="_data_8c_1ace66f1e8600faf005e2f95c1f5e24ec4"/><section>
+    <title>importDefaultData()</title>
+<indexterm><primary>importDefaultData</primary><secondary>data.c</secondary></indexterm>
+<indexterm><primary>data.c</primary><secondary>importDefaultData</secondary></indexterm>
+<para><computeroutput>void importDefaultData ( )</computeroutput></para><para>
+
+<para>Importa os dados padrão (default.bin) </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Caso o ficheiro não exista a função <link linkend="_data_8c_1a90b381b5624a976ecadeaabacfde025e">exportDefaultData()</link> é chamada para criar o ficheiro com os dados padrão </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="_data_8c_source_1l00115">115</link> of file <link linkend="_data_8c_source">data.c</link>.</para>
+</section>
+</section>
+</section>

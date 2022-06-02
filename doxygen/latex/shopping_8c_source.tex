@@ -1,0 +1,370 @@
+\hypertarget{shopping_8c_source}{}\doxysection{shopping.\+c}
+\mbox{\hyperlink{shopping_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00001}00001 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00002}00002 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00003}00003 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00004}00004 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00005}00005 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00006}00006 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{definitions_8h}{definitions.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00009}\mbox{\hyperlink{shopping_8c_a975774baaa722d6932cb6cfd39020511}{00009}} \textcolor{preprocessor}{\#define IVA 1.23}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00011}00011 \textcolor{preprocessor}{\#pragma region GetEstadoEncomenda}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00017}\mbox{\hyperlink{definitions_8h_ac3e41774a08731e62fe348b9c8401ccb}{00017}} \textcolor{keywordtype}{char} *\mbox{\hyperlink{shopping_8c_ac3e41774a08731e62fe348b9c8401ccb}{getEstadoEncomenda}}(\textcolor{keywordtype}{int} estado)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00018}00018 \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00019}00019     \textcolor{keywordflow}{if} (estado == 1)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00020}00020     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00021}00021         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Disponível\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00022}00022     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00023}00023     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00024}00024     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00025}00025         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Indisponível\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00026}00026     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00027}00027 \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00028}00028 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00030}00030 \textcolor{preprocessor}{\#pragma region LoginClient}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00036}\mbox{\hyperlink{shopping_8c_a6f4f7a9a71ced3d5e9fb21198edb6ab2}{00036}} \textcolor{keywordtype}{void} \mbox{\hyperlink{shopping_8c_a6f4f7a9a71ced3d5e9fb21198edb6ab2}{loginClient}}()}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00037}00037 \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00038}00038     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_ab4cee453adc50fdf7fed706a78903134}{NC}} == -\/1)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00039}00039     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00040}00040         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Não existem clientes registados [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00041}00041         \mbox{\hyperlink{clientes_8c_a8b6e5471fc3162030e02624aa4e0a71c}{addCliente}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00042}00042     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00044}00044     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}} != 0)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00045}00045     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00046}00046         \mbox{\hyperlink{colors_8c_ab0c10e6284be130a7973fa029a690ef7}{yellow}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Já existe um cliente logado [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00047}00047         printf(\textcolor{stringliteral}{"{}\(\backslash\)n[1] Pretende voltar ao menu com o cliente \%s\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00048}00048         \textcolor{stringliteral}{"{}[2] Ou iniciar sessão com outro utilizador?\(\backslash\)n> "{}}, \mbox{\hyperlink{clientes_8c_a63ec96e80364598a0c5bfc3954f2dbbe}{getClientName}}(\mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}}));}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00049}00049         }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00050}00050         \textcolor{keywordtype}{int} opcao;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00051}00051         scanf(\textcolor{stringliteral}{"{}\%d"{}}, \&opcao);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00052}00052         \textcolor{keywordflow}{switch} (opcao)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00053}00053         \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00054}00054         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00055}00055             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00056}00056         }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00057}00057         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00058}00058             \mbox{\hyperlink{shopping_8c_a2163242f3dbe460739c88c56f06ec34f}{logoutClient}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00059}00059             \mbox{\hyperlink{shopping_8c_a6f4f7a9a71ced3d5e9fb21198edb6ab2}{loginClient}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00060}00060             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00062}00062         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00063}00063             \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}[!] Opção inválida [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00064}00064             \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00065}00065             \mbox{\hyperlink{shopping_8c_a6f4f7a9a71ced3d5e9fb21198edb6ab2}{loginClient}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00066}00066             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00067}00067         \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00068}00068     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00070}00070     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}} == 0)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00071}00071     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00072}00072         \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n\_\_\_\_\_\_\_ Login \_\_\_\_\_\_\_\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00073}00073         printf(\textcolor{stringliteral}{"{}\(\backslash\)nCódigo de Cliente: "{}});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00074}00074         scanf(\textcolor{stringliteral}{"{} \%d"{}}, \&\mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00075}00075     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00077}00077     \textcolor{keywordflow}{if} (\mbox{\hyperlink{clientes_8c_a918dfa81ea4cf833c9cb370987ff7521}{getEstadoCliente}}(\mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}}))}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00078}00078     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00079}00079         \mbox{\hyperlink{colors_8c_a0df115437fbb77c0311e65300c65289e}{green}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n*** Bem Vindo, \%s ***\(\backslash\)n"{}}, \mbox{\hyperlink{clientes_8c_a63ec96e80364598a0c5bfc3954f2dbbe}{getClientName}}(\mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}})); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00080}00080         sleep(1);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00081}00081         \mbox{\hyperlink{definitions_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00082}00082     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00083}00083     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00084}00084     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00085}00085         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Cliente não existe, indique um cliente válido [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00086}00086         \mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}} = 0;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00087}00087         \mbox{\hyperlink{shopping_8c_a6f4f7a9a71ced3d5e9fb21198edb6ab2}{loginClient}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00088}00088     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00089}00089 \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00090}00090 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00092}00092 \textcolor{preprocessor}{\#pragma region Logout}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00097}\mbox{\hyperlink{definitions_8h_a2163242f3dbe460739c88c56f06ec34f}{00097}} \textcolor{keywordtype}{void} \mbox{\hyperlink{shopping_8c_a2163242f3dbe460739c88c56f06ec34f}{logoutClient}}()}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00098}00098 \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00099}00099     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}} == 0)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00100}00100     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00101}00101         \mbox{\hyperlink{colors_8c_ab0c10e6284be130a7973fa029a690ef7}{yellow}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Não existe cliente logado [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00102}00102         sleep(2);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00103}00103         \mbox{\hyperlink{definitions_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00104}00104     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00105}00105     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00106}00106     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00107}00107         \mbox{\hyperlink{colors_8c_ab0c10e6284be130a7973fa029a690ef7}{yellow}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Logout Cliente \%s [!]\(\backslash\)n"{}}, \mbox{\hyperlink{clientes_8c_a63ec96e80364598a0c5bfc3954f2dbbe}{getClientName}}(\mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}})); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00108}00108         \mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}} = 0;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00109}00109     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00110}00110 \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00111}00111 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00113}00113 \textcolor{preprocessor}{\#pragma region Shopping}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00118}\mbox{\hyperlink{definitions_8h_a10d6c88f1cbf1e60ed32e609f715a779}{00118}} \textcolor{keywordtype}{void} \mbox{\hyperlink{shopping_8c_a10d6c88f1cbf1e60ed32e609f715a779}{doShopping}}()}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00119}00119 \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00121}00121     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{definitions_8h_a9efdb5ab1d7b26e54799af4e7cb59fa2}{loggedClient}}())}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00122}00122     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00123}00123         \mbox{\hyperlink{colors_8c_ab0c10e6284be130a7973fa029a690ef7}{yellow}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Por favor inicie sessão [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00124}00124         \mbox{\hyperlink{shopping_8c_a6f4f7a9a71ced3d5e9fb21198edb6ab2}{loginClient}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00125}00125     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00127}00127     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a6a2cf8faa74cf961cf0f42b4601b364c}{NA}} == -\/1) \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00128}00128         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Não existem artigos disponíveis [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00129}00129         \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00130}00130         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00131}00131     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00133}00133     \textcolor{keywordtype}{int} artigoComprar, quantidadeComprar, tamanhoComprar;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00134}00134     \textcolor{keywordtype}{char} codPromo[8];}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00135}00135     \mbox{\hyperlink{definitions_8h_a941fa13e3d505e5a9a3f9c082bfeff89}{reallocStruct}}(3);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00136}00136     \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}].\mbox{\hyperlink{struct_encomendas_aa9b5911a87665c3e73ce79013736729b}{codCliente}} = \mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00138}00138     \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00139}00139     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00140}00140         \mbox{\hyperlink{definitions_8h_ab3cd5f6472e88b4f400d6f56aa6edd8c}{listArtigos}}(10);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00141}00141         printf(\textcolor{stringliteral}{"{}\(\backslash\)nSelecionar o artigo a comprar (Código): "{}});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00142}00142         scanf(\textcolor{stringliteral}{"{}\%d"{}}, \&artigoComprar);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00143}00143     \} \textcolor{keywordflow}{while} (!\mbox{\hyperlink{definitions_8h_a52199f9c4b3c9c302cc8d4ab4a38bae5}{availableForOperation}}(3, artigoComprar, 0));}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00144}00144     \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}].\mbox{\hyperlink{struct_encomendas_a9b469e91df9bb9a07f1268125a065190}{codArtigo}} = artigoComprar;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00146}00146     \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00147}00147     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00148}00148         printf(\textcolor{stringliteral}{"{}\(\backslash\)nQuantidade de pares de \%s pretendidos: "{}}, \mbox{\hyperlink{definitions_8h_af4568fe8cae0d02992cc20eeaa4d309d}{getArtigoName}}(\mbox{\hyperlink{definitions_8h_a46d4eccec6d2c6e65ef4784ab4db0c78}{getArtigoIndex}}(artigoComprar)));}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00149}00149         scanf(\textcolor{stringliteral}{"{}\%d"{}}, \&quantidadeComprar);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00150}00150     \} \textcolor{keywordflow}{while} (!\mbox{\hyperlink{definitions_8h_a41532c4603b615920ea1c1216d1445ad}{checkNumber}}(quantidadeComprar));}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00151}00151     \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}].\mbox{\hyperlink{struct_encomendas_aab7e2f8a805bde3912f985c05be7d510}{quantidade}} = quantidadeComprar;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00152}00152     }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00153}00153     \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00154}00154     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00155}00155         printf(\textcolor{stringliteral}{"{}\(\backslash\)nTamanho pretendido: "{}});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00156}00156         scanf(\textcolor{stringliteral}{"{}\%d"{}}, \&tamanhoComprar);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00157}00157     \} \textcolor{keywordflow}{while} (!\mbox{\hyperlink{definitions_8h_a52199f9c4b3c9c302cc8d4ab4a38bae5}{availableForOperation}}(5, artigoComprar, tamanhoComprar));}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00158}00158     \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}].\mbox{\hyperlink{struct_encomendas_a0a06f50c808099546e057b445cc90c14}{tamanho}} = tamanhoComprar;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00160}00160     printf(\textcolor{stringliteral}{"{}\(\backslash\)n  Desconto Promocional\(\backslash\)n[Press ENTER caso não tenha]: "{}});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00161}00161     scanf(\textcolor{stringliteral}{"{}\%c"{}}, \&codPromo);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00162}00162     fgets(codPromo,5,stdin);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00166}00166     artigoComprar = \mbox{\hyperlink{definitions_8h_a46d4eccec6d2c6e65ef4784ab4db0c78}{getArtigoIndex}}(artigoComprar);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00168}00168     \textcolor{keywordtype}{double} subtotal = \mbox{\hyperlink{definitions_8h_a90f21d9eb37bd18237e25667fe1985bd}{artigo}}[artigoComprar].\mbox{\hyperlink{struct_artigos_ae7713476462c0345a8316df83ffe461f}{defaultPreco}} * (double) (quantidadeComprar);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00169}00169     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_ae81c93a074d4c3bdce4d8409997418f0}{checkCodPromo}}(codPromo))}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00170}00170     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00171}00171         subtotal -\/= \mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_abcccdaf615845e2019116c5ce4b90b3a}{percentageDesconto}};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00172}00172     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00173}00173     \textcolor{keywordtype}{double} totalIva = (double) (subtotal * \mbox{\hyperlink{shopping_8c_a975774baaa722d6932cb6cfd39020511}{IVA}});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00174}00174 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00175}00175     printf(\textcolor{stringliteral}{"{}\(\backslash\)n Subtotal: \%.2lf€"{}}, subtotal); \mbox{\hyperlink{colors_8c_a59d9c08d69e42981f0d6fb680f5e6e26}{bold}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00176}00176     printf(\textcolor{stringliteral}{"{}\(\backslash\)n Total a pagar (c/IVA): \%.2lf€\(\backslash\)n"{}}, totalIva);  \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00177}00177     \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}].\mbox{\hyperlink{struct_encomendas_ab5af64ba12e40aefe7080187c140895a}{total}} = totalIva;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00179}00179     \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}].\mbox{\hyperlink{struct_encomendas_a5eb4a4f2f14cb6227076ee3aaa9cb24c}{codEncomenda}} = \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}} + 1;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00181}00181     \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}].\mbox{\hyperlink{struct_encomendas_accb6c827099dc6ae91546671edc4c9ce}{horaminuto}} = \mbox{\hyperlink{definitions_8h_ae403fe07e86bc33933303d3e266b579d}{getDateInfo}}(1);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00182}00182     \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}].\mbox{\hyperlink{struct_encomendas_a3d1171ac670a8e8a672c481f22d1fa9f}{dia}} = \mbox{\hyperlink{definitions_8h_ae403fe07e86bc33933303d3e266b579d}{getDateInfo}}(2);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00183}00183     \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}].\mbox{\hyperlink{struct_encomendas_a9fc86758220eae0e735655f81fd9d9bc}{mes}} = \mbox{\hyperlink{definitions_8h_ae403fe07e86bc33933303d3e266b579d}{getDateInfo}}(3);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00184}00184     \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}].\mbox{\hyperlink{struct_encomendas_ac404d93cbf0169fd9e89edc17d0c5572}{ano}} = \mbox{\hyperlink{definitions_8h_ae403fe07e86bc33933303d3e266b579d}{getDateInfo}}(4);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00185}00185 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00186}00186     \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}].\mbox{\hyperlink{struct_encomendas_a72d010866bd83b41432d6286cb26adbd}{estado}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00187}00187 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00188}00188     \mbox{\hyperlink{colors_8c_a0df115437fbb77c0311e65300c65289e}{green}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] A encomenda foi registada com sucesso [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00189}00189 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00190}00190     printf(\textcolor{stringliteral}{"{}\(\backslash\)nDeseja adicionar mais algum artigo? (s/N): "{}});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00191}00191     \textcolor{keywordtype}{char} opcao;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00192}00192     scanf(\textcolor{stringliteral}{"{} \%c"{}}, \&opcao);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00193}00193     \textcolor{keywordflow}{if} (opcao == \textcolor{charliteral}{'s'} || opcao == \textcolor{charliteral}{'S'})}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00194}00194     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00195}00195         \mbox{\hyperlink{shopping_8c_a10d6c88f1cbf1e60ed32e609f715a779}{doShopping}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00196}00196     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00197}00197     \mbox{\hyperlink{definitions_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00198}00198 \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00199}00199 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00200}00200 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00201}00201 \textcolor{preprocessor}{\#pragma region ListEncomendas}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00208}\mbox{\hyperlink{definitions_8h_a87b028e2e18b0b33e3eb58cb99af5523}{00208}} \textcolor{keywordtype}{void} \mbox{\hyperlink{shopping_8c_a87b028e2e18b0b33e3eb58cb99af5523}{listEncomendas}}(\textcolor{keywordtype}{int} queryType)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00209}00209 \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00210}00210     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}} == -\/1) \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00211}00211         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Não existem encomendas! [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00212}00212         \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00213}00213         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00214}00214     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00215}00215 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00216}00216     \textcolor{keyword}{enum} queryType \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00217}00217         currentClient = 60,}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00218}00218         todas = 61,}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00219}00219         especifica = 62,}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00220}00220         dataEspecifica = 63,}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00221}00221     \};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00222}00222 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00223}00223     \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ Encomenda(s) -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00224}00224 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00225}00225     \textcolor{keywordtype}{int} count = 0, semanaExportar, loopDias, looper = 1, mes;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00226}00226     \textcolor{keywordflow}{switch} (queryType)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00227}00227     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00228}00228     \textcolor{keywordflow}{case} currentClient:}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00229}00229         \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}} == 0)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00230}00230         \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00231}00231             \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] O utilizador em questão não se encontra com sessão iniciada! [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00232}00232             \mbox{\hyperlink{shopping_8c_a6f4f7a9a71ced3d5e9fb21198edb6ab2}{loginClient}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00233}00233         \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00234}00234         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} enc = 0; enc <= \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}; enc++)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00235}00235         \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00236}00236             \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].estado \&\& \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].codCliente == \mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}})}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00237}00237             \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00238}00238                 \mbox{\hyperlink{definitions_8h_adf88e57666bc1bdbe2b9a532b5d8ee19}{printDataEncomenda}}(enc);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00239}00239                 count++;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00240}00240             \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00241}00241         \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00242}00242         \textcolor{keywordflow}{if} (count == 0)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00243}00243         \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00244}00244             \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Não existem encomendas para o cliente atual [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00245}00245             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00246}00246         \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00247}00247         \mbox{\hyperlink{colors_8c_a59d9c08d69e42981f0d6fb680f5e6e26}{bold}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n  [Total]: \%0.2f€\(\backslash\)n"{}}, \mbox{\hyperlink{definitions_8h_a2e948973437ab18cc4aa58f04f32b31d}{getTotalEncomenda}}()); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00248}00248         count = 0;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00249}00249         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00250}00250 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00251}00251     \textcolor{keywordflow}{case} todas:}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00252}00252         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} enc = 0; enc <= \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}; enc++)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00253}00253         \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00254}00254             \mbox{\hyperlink{definitions_8h_adf88e57666bc1bdbe2b9a532b5d8ee19}{printDataEncomenda}}(enc);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00255}00255         \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00256}00256         \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}} == -\/1)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00257}00257         \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00258}00258             \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Não existem encomendas registadas [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00259}00259             \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00260}00260         \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00261}00261         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00262}00262     }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00263}00263     \textcolor{keywordflow}{case} especifica:}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00266}00266         printf(\textcolor{stringliteral}{"{}\(\backslash\)nPesquisar Cliente por (N)ome ou (C)ódigo? "{}});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00267}00267         \textcolor{keywordtype}{char} internalQueryType[10];}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00268}00268         scanf(\textcolor{stringliteral}{"{} \%s"{}}, internalQueryType);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00269}00269         \textcolor{keywordflow}{if} (strcmp(internalQueryType, \textcolor{stringliteral}{"{}N"{}}) == 0 || strcmp(internalQueryType, \textcolor{stringliteral}{"{}n"{}}) == 0)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00270}00270         \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00271}00271             printf(\textcolor{stringliteral}{"{}\(\backslash\)nNome do Cliente: "{}});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00272}00272             \textcolor{keywordtype}{char} nomeCliente[\mbox{\hyperlink{definitions_8h_a6bb7a09d1931dfbdd6d373cfe6e23357}{SC}}];}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00273}00273             scanf(\textcolor{stringliteral}{"{} \%24s"{}}, nomeCliente);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00274}00274             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} enc = 0; enc <= \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}; enc++)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00275}00275             \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00276}00276                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].estado \&\& strcmp(\mbox{\hyperlink{definitions_8h_aaac738b47d017c7cb9d3cd1d4c27888c}{cliente}}[\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].codCliente].nome, nomeCliente) == 0)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00277}00277                 \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00278}00278                     \mbox{\hyperlink{definitions_8h_adf88e57666bc1bdbe2b9a532b5d8ee19}{printDataEncomenda}}(enc);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00279}00279                     count++;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00280}00280                 \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00281}00281             \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00282}00282         \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00283}00283         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strcmp(internalQueryType, \textcolor{stringliteral}{"{}C"{}}) == 0 || strcmp(internalQueryType, \textcolor{stringliteral}{"{}c"{}}) == 0)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00284}00284         \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00285}00285             printf(\textcolor{stringliteral}{"{}\(\backslash\)nCódigo do Cliente: "{}});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00286}00286             \textcolor{keywordtype}{int} codCliente;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00287}00287             scanf(\textcolor{stringliteral}{"{}\%d"{}}, \&codCliente);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00288}00288             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} enc = 0; enc <= \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}; enc++)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00289}00289             \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00290}00290                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].estado \&\& \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].codCliente == codCliente)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00291}00291                 \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00292}00292                     \mbox{\hyperlink{definitions_8h_adf88e57666bc1bdbe2b9a532b5d8ee19}{printDataEncomenda}}(enc);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00293}00293                     count++;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00294}00294                 \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00295}00295             \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00296}00296         \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00297}00297         \textcolor{keywordflow}{if} (count == 0)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00298}00298         \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00299}00299             \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Não existem encomendas para o cliente indicado [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00300}00300         \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00301}00301         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00302}00302     }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00303}00303     \textcolor{keywordflow}{case} dataEspecifica:}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00306}00306         printf(\textcolor{stringliteral}{"{}Indique a semana a exportar:"{}}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00307}00307         \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n[1] Semana Atual"{}}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00308}00308         \textcolor{stringliteral}{"{}\(\backslash\)n[2] Semana Anterior\(\backslash\)n> "{}});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00309}00309         scanf(\textcolor{stringliteral}{"{}\%d"{}}, \&semanaExportar);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00310}00310 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00311}00311         \textcolor{keywordflow}{switch} (semanaExportar)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00312}00312         \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00313}00313         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00314}00314             loopDias = \mbox{\hyperlink{definitions_8h_ae403fe07e86bc33933303d3e266b579d}{getDateInfo}}(2) + 6;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00315}00315             mes = \mbox{\hyperlink{definitions_8h_ae403fe07e86bc33933303d3e266b579d}{getDateInfo}}(3);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00316}00316             \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[Encomendas da Semana]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00317}00317             \textcolor{keywordflow}{while} (looper <= loopDias)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00318}00318             \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00319}00319                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} enc = 0; enc <= \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}; enc++)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00320}00320                 \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00321}00321                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].estado \&\& \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].dia == looper \&\& \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].mes == mes)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00322}00322                     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00323}00323                         \mbox{\hyperlink{definitions_8h_adf88e57666bc1bdbe2b9a532b5d8ee19}{printDataEncomenda}}(enc);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00324}00324                         count++;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00325}00325                     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00326}00326                 \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00327}00327                 looper++;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00328}00328             \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00329}00329             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00330}00330 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00331}00331         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00332}00332             loopDias = \mbox{\hyperlink{definitions_8h_ae403fe07e86bc33933303d3e266b579d}{getDateInfo}}(2) -\/ 6;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00333}00333             \mbox{\hyperlink{colors_8c_a52a6a14bd8e9463315ea114aceda1d92}{cyan}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[Encomendas da Semana Anterior]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00334}00334             \textcolor{keywordflow}{while} (looper <= loopDias)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00335}00335             \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00336}00336                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} enc = 0; enc <= \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}; enc++)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00337}00337                 \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00338}00338                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].estado \&\& \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].dia == looper)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00339}00339                     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00340}00340                         \mbox{\hyperlink{definitions_8h_adf88e57666bc1bdbe2b9a532b5d8ee19}{printDataEncomenda}}(enc);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00341}00341                         count++;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00342}00342                     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00343}00343                 \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00344}00344                 looper++;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00345}00345             \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00346}00346             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00347}00347         \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00348}00348         }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00349}00349         \textcolor{keywordflow}{if} (count == 0)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00350}00350         \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00351}00351             \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Não existem encomendas para a semana indicada [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00352}00352         \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00353}00353     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00354}00354     \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00355}00355 \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00356}00356 \textcolor{preprocessor}{\#pragma endregion}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00357}00357 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00358}00358 \textcolor{preprocessor}{\#pragma region CancelEncomenda}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00362}\mbox{\hyperlink{definitions_8h_a91ff19fa6805e0491dd0bcf68a12d4da}{00362}} \textcolor{keywordtype}{void} \mbox{\hyperlink{shopping_8c_a91ff19fa6805e0491dd0bcf68a12d4da}{cancelEncomenda}}()}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00363}00363 \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00364}00364     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}} == -\/1) \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00365}00365         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Não existem encomendas! [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00366}00366         \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00367}00367         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00368}00368     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00369}00369     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!\mbox{\hyperlink{definitions_8h_a9efdb5ab1d7b26e54799af4e7cb59fa2}{loggedClient}}())}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00370}00370     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00371}00371         \mbox{\hyperlink{colors_8c_ab0c10e6284be130a7973fa029a690ef7}{yellow}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Por favor inicie sessão [!]\(\backslash\)n"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00372}00372         \mbox{\hyperlink{shopping_8c_a6f4f7a9a71ced3d5e9fb21198edb6ab2}{loginClient}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00373}00373     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00374}00374     }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00375}00375     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} enc = 0; enc <= \mbox{\hyperlink{definitions_8h_ac83a8e317aabc0369638a0e4c4d3406b}{NE}}; enc++)}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00376}00376     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00377}00377         \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].estado \&\& \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[enc].codCliente == \mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}})}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00378}00378         \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00379}00379             \mbox{\hyperlink{definitions_8h_adf88e57666bc1bdbe2b9a532b5d8ee19}{printDataEncomenda}}(enc);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00380}00380         \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00381}00381     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00382}00382 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00383}00383     \textcolor{keywordtype}{int} encomendaToCancel;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00384}00384     printf(\textcolor{stringliteral}{"{}\(\backslash\)nIndique o número da encomenda a cancelar: "{}});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00385}00385     scanf(\textcolor{stringliteral}{"{}\%d"{}}, \&encomendaToCancel);}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00386}00386     encomendaToCancel-\/-\/;}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00387}00387 }
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00388}00388     \textcolor{keywordflow}{if} (\mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[encomendaToCancel].estado \&\& \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[encomendaToCancel].codCliente == \mbox{\hyperlink{definitions_8h_a69460b78379a912c83e65ba131e368e9}{runtime}}-\/>\mbox{\hyperlink{struct_runtime_a709195f9f9c987b9b2a5a950f7331c72}{currentClient}})}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00389}00389     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00390}00390         \mbox{\hyperlink{definitions_8h_a3c137582b2f5c552bde184eb2d023fbc}{encomenda}}[encomendaToCancel].\mbox{\hyperlink{struct_encomendas_a72d010866bd83b41432d6286cb26adbd}{estado}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00391}00391         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Encomenda cancelada com sucesso! [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00392}00392     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00393}00393     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00394}00394     \{}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00395}00395         \mbox{\hyperlink{colors_8c_a39abd40f68d03c40857be1e74407efb9}{red}}(); printf(\textcolor{stringliteral}{"{}\(\backslash\)n[!] Encomenda não encontrada! [!]"{}}); \mbox{\hyperlink{colors_8c_ac0fd834412eb7d5311f137d919db6788}{white}}();}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00396}00396     \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00397}00397     \mbox{\hyperlink{definitions_8h_a370ac4305d613dc116739f8b5a05e6fe}{pressEnter}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00398}00398 \}}
+\DoxyCodeLine{\Hypertarget{shopping_8c_source_l00399}00399 \textcolor{preprocessor}{\#pragma endregion}}
+
+\end{DoxyCode}

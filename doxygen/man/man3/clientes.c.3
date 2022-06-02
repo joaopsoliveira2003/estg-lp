@@ -1,0 +1,119 @@
+.TH "clientes.c" 3 "Fri Jan 14 2022" "Version Grupo 2" "Laboratório de Programação" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+clientes.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include 'definitions\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddCliente\fP ()"
+.br
+.RI "Função que permite adicionar um cliente\&. "
+.ti -1c
+.RI "void \fBupdateClient\fP (int clienteToChange, int via)"
+.br
+.RI "Função que permite atualizar um cliente\&. "
+.ti -1c
+.RI "bool \fBgetEstadoCliente\fP (int codCliente)"
+.br
+.RI "Função que verifica o estado do cliente indicado\&. "
+.ti -1c
+.RI "char * \fBgetClientName\fP (int codCliente)"
+.br
+.RI "Função que obtêm o nome do cliente\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void addCliente ()"
+
+.PP
+Função que permite adicionar um cliente\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIOs\fP parametros necessarios para a adição do cliente 
+.RE
+.PP
+
+.PP
+Definition at line \fB16\fP of file \fBclientes\&.c\fP\&.
+.SS "char * getClientName (int codCliente)"
+
+.PP
+Função que obtêm o nome do cliente\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIID\fP do cliente 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Retorna o nome do cliente (string) 
+.RE
+.PP
+
+.PP
+Definition at line \fB254\fP of file \fBclientes\&.c\fP\&.
+.SS "bool getEstadoCliente (int codCliente)"
+
+.PP
+Função que verifica o estado do cliente indicado\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIID\fP do cliente 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Retorna True - caso o cliente exista ou esteja disponivel False - caso o cliente não exista ou esteja indisponivel 
+.RE
+.PP
+
+.PP
+Definition at line \fB227\fP of file \fBclientes\&.c\fP\&.
+.SS "void updateClient (int clienteToChange, int via)"
+
+.PP
+Função que permite atualizar um cliente\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIclienteToChange\fP - Cliente a ser atualizado 
+.br
+\fIvia\fP - caso a função seja chamada via menu cliente, apenas permitir a alteração do cliente autenticado (e perguntando o seu código) 
+.RE
+.PP
+
+.PP
+\fBNote\fP
+.RS 4
+Via Menu Cliente, onde se realiza verificação de segurança
+.PP
+Via Menu Administrador
+.RE
+.PP
+
+.PP
+Definition at line \fB82\fP of file \fBclientes\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Laboratório de Programação from the source code\&.

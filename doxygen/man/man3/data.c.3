@@ -1,0 +1,120 @@
+.TH "data.c" 3 "Fri Jan 14 2022" "Version Grupo 2" "Laboratório de Programação" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+data.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdbool\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include 'definitions\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBimportData\fP ()"
+.br
+.RI "Importa os dados dos ficheiros binários\&. "
+.ti -1c
+.RI "void \fBexportData\fP ()"
+.br
+.RI "Exporta os dados dos ficheiros binários\&. "
+.ti -1c
+.RI "void \fBimportDefaultData\fP ()"
+.br
+.RI "Importa os dados padrão (default\&.bin) "
+.ti -1c
+.RI "void \fBexportDefaultData\fP ()"
+.br
+.RI "Exporta os dados padrão do programa\&. "
+.ti -1c
+.RI "void \fBexportEncomendas\fP ()"
+.br
+.RI "Exporta as encomendas para um ficheiro CSV\&. "
+.ti -1c
+.RI "void \fBdeleteData\fP ()"
+.br
+.RI "Apaga todos os dados em memória do programa\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void deleteData ()"
+
+.PP
+Apaga todos os dados em memória do programa\&. 
+.PP
+Definition at line \fB274\fP of file \fBdata\&.c\fP\&.
+.SS "void exportData ()"
+
+.PP
+Exporta os dados dos ficheiros binários\&. 
+.PP
+\fBNote\fP
+.RS 4
+Caso surja algum erro na escrita, o programa termina 
+.RE
+.PP
+
+.PP
+Definition at line \fB71\fP of file \fBdata\&.c\fP\&.
+.SS "void exportDefaultData ()"
+
+.PP
+Exporta os dados padrão do programa\&. 
+.PP
+\fBNote\fP
+.RS 4
+Coloca os dados padrão em memória e em seguida exporta para o ficheiro default\&.bin 
+.RE
+.PP
+
+.PP
+Definition at line \fB149\fP of file \fBdata\&.c\fP\&.
+.SS "void exportEncomendas ()"
+
+.PP
+Exporta as encomendas para um ficheiro CSV\&. 
+.PP
+Definition at line \fB239\fP of file \fBdata\&.c\fP\&.
+.SS "void importData ()"
+
+.PP
+Importa os dados dos ficheiros binários\&. 
+.PP
+\fBNote\fP
+.RS 4
+Caso nao exista algum ficheiro ou caso surja erro na leitura, o programa termina 
+.RE
+.PP
+
+.PP
+Definition at line \fB15\fP of file \fBdata\&.c\fP\&.
+.SS "void importDefaultData ()"
+
+.PP
+Importa os dados padrão (default\&.bin) 
+.PP
+\fBNote\fP
+.RS 4
+Caso o ficheiro não exista a função \fBexportDefaultData()\fP é chamada para criar o ficheiro com os dados padrão 
+.RE
+.PP
+
+.PP
+Definition at line \fB115\fP of file \fBdata\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Laboratório de Programação from the source code\&.

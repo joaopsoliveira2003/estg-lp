@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_clientes" xml:lang="en-US">
+<title>Clientes Struct Reference</title>
+<indexterm><primary>Clientes</primary></indexterm>
+<para>
+<computeroutput>#include &lt;definitions.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_clientes_1aa9b5911a87665c3e73ce79013736729b">codCliente</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_clientes_1a5570d34879c05708dd50c08f3c0d4069">nome</link> [<link linkend="_definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357">SC</link>]</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_clientes_1ad68c6985dce5a3d709f854778dedee19">nif</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_clientes_1a77927c48074d089e96eefd305edd0d9f">pais</link> [<link linkend="_definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357">SC</link>]</para>
+</listitem>
+            <listitem><para>bool <link linkend="_struct_clientes_1a72d010866bd83b41432d6286cb26adbd">estado</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_definitions_8h_source_1l00011">11</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_clientes_1aa9b5911a87665c3e73ce79013736729b"/><section>
+    <title>codCliente</title>
+<indexterm><primary>codCliente</primary><secondary>Clientes</secondary></indexterm>
+<indexterm><primary>Clientes</primary><secondary>codCliente</secondary></indexterm>
+<para><computeroutput>int codCliente</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00013">13</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<anchor xml:id="_struct_clientes_1a72d010866bd83b41432d6286cb26adbd"/><section>
+    <title>estado</title>
+<indexterm><primary>estado</primary><secondary>Clientes</secondary></indexterm>
+<indexterm><primary>Clientes</primary><secondary>estado</secondary></indexterm>
+<para><computeroutput>bool estado</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00017">17</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<anchor xml:id="_struct_clientes_1ad68c6985dce5a3d709f854778dedee19"/><section>
+    <title>nif</title>
+<indexterm><primary>nif</primary><secondary>Clientes</secondary></indexterm>
+<indexterm><primary>Clientes</primary><secondary>nif</secondary></indexterm>
+<para><computeroutput>int nif</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00015">15</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<anchor xml:id="_struct_clientes_1a5570d34879c05708dd50c08f3c0d4069"/><section>
+    <title>nome</title>
+<indexterm><primary>nome</primary><secondary>Clientes</secondary></indexterm>
+<indexterm><primary>Clientes</primary><secondary>nome</secondary></indexterm>
+<para><computeroutput>char nome[<link linkend="_definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357">SC</link>]</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00014">14</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<anchor xml:id="_struct_clientes_1a77927c48074d089e96eefd305edd0d9f"/><section>
+    <title>pais</title>
+<indexterm><primary>pais</primary><secondary>Clientes</secondary></indexterm>
+<indexterm><primary>Clientes</primary><secondary>pais</secondary></indexterm>
+<para><computeroutput>char pais[<link linkend="_definitions_8h_1a6bb7a09d1931dfbdd6d373cfe6e23357">SC</link>]</computeroutput></para><para>
+Definition at line <link linkend="_definitions_8h_source_1l00016">16</link> of file <link linkend="_definitions_8h_source">definitions.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+<link linkend="_definitions_8h">definitions.h</link></section>
+</section>
